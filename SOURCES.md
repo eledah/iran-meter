@@ -218,6 +218,26 @@ Rejected sources are listed at the bottom so they don't get re-added.
 
 ---
 
+## 14. پیمایش ملی «ارزش‌ها و نگرش‌های ایرانیان» 1402 — National Values & Attitudes Survey (confidential; leaked)
+
+- **Type:** official government national survey — **classified**; chapter 8
+  (religious attitudes & behaviors) leaked, published by BBC Persian
+  (Feb 2024). Prior waves: 1379, 1382, 1394.
+- **URLs:** https://www.bbc.com/persian/articles/cmlgj8j3xl1o · full ch.8 PDF
+  (BBC-hosted): https://downloads.bbc.co.uk/worldservice/persian/پیمایش ملی دینداری.۱۴۰۲.pdf
+- **Survey:** n=15,878, face-to-face, random sample, 31 provinces, autumn
+  1402 (2023).
+- **What's inside (1402):** separation of religion & politics **72.9%** agree
+  (vs 30.7% in 1394); 38% have no problem with no-hijab, only 12.5% would
+  admonish; 45.2% oppose mandatory hijab; never pray 22.2% (vs 3.1% in
+  1394); fast always/mostly 51.5% (vs 72.5%); congregational prayer
+  always/mostly 18.5%; **85%** say religiosity fell vs 5 years ago; 81.8%
+  expect further decline; "religion = pure heart even without prayer" 61.8%.
+- **Caveats:** classified document (leak); face-to-face + sensitive topic →
+  answers likely conservative (real secularization probably higher); hijab
+  question wording differs between waves (1394 «بدحجابی» vs 1402 «بی‌حجابی»)
+  — label comparisons.
+
 ## Optional follow-ups (not urgent)
 
 | Area | What's missing |

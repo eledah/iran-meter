@@ -331,6 +331,37 @@ Iranian calendar: 1403 = 2024–25, 1404 = 2025–26, 1405 = 2026–27.
 | Obstacles to Access sub-score | 7/25 | score | Jun 2023–May 2024 | FH 2024 | FOTN | primary |
 | Internet penetration (DataReportal via FH) | 81.7 | % | Jan 2024 | FH 2024 | FOTN | primary |
 
+## پیمایش ملی «ارزش‌ها و نگرش‌های ایرانیان» 1402 — religiosity (confidential gov survey; ch.8 leaked via BBC Persian)
+
+Context: n=15,878, face-to-face, random sample, all 31 provinces, autumn 1402
+(2023); prior waves 1379/1382/1394. Confidence: `leak` (classified doc via
+BBC). Caveat: face-to-face + sensitive topic → answers likely conservative;
+1394 vs 1402 wording differs on hijab questions.
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Separation of religion & politics (agree) | 72.9 | % | 1402 | Feb 2024 | bbc.com/persian/articles/cmlgj8j3xl1o | leak |
+| same (1394) | 30.7 | % | 1394 | 2015 | same | leak |
+| No problem with women's no-hijab | 38 | % | 1402 | Feb 2024 | same | leak |
+| Oppose no-hijab but won't intervene | 46 | % | 1402 | Feb 2024 | same | leak |
+| Would admonish on no-hijab | 12.5 | % | 1402 | Feb 2024 | same | leak |
+| Oppose mandatory hijab for all women | 45.2 | % (41% in favor) | 1402 | Feb 2024 | same | leak |
+| Religion must not matter in hiring | 61.9 | % agree | 1402 | Feb 2024 | same | leak |
+| Religiosity lower than 5 yrs ago | 85 | % | 1402 | Feb 2024 | same | leak |
+| Expect less religiosity in 5 yrs | 81.8 | % | 1402 | Feb 2024 | same | leak |
+| Self-rated very religious | 42.6 | % | 1402 | Feb 2024 | same | leak |
+| Self-rated not/none religious | 24.3 | % | 1402 | Feb 2024 | same | leak |
+| Belief in afterlife accounting | 77.4 | % agree (86.9% in 1394) | 1402 | Feb 2024 | same | leak |
+| Pray always/mostly | 54.8 | % (78.5% in 1394) | 1402 | Feb 2024 | same | leak |
+| Never pray | 22.2 | % (3.1% in 1394) | 1402 | Feb 2024 | same | leak |
+| Congregational prayer always/mostly | 18.5 | % (26.2% in 1394) | 1402 | Feb 2024 | same | leak |
+| Never congregational prayer | 44.9 | % (17.3% in 1394) | 1402 | Feb 2024 | same | leak |
+| Fast always/mostly | 51.5 | % (72.5% in 1394) | 1402 | Feb 2024 | same | leak |
+| Never fast | 27.4 | % (5.1% in 1394) | 1402 | Feb 2024 | same | leak |
+| "Religion = pure heart even without prayer" (agree) | 61.8 | % (39.4% in 1394) | 1402 | Feb 2024 | same | leak |
+| Full ch.8 PDF (BBC-hosted) | — | — | — | Feb 2024 | downloads.bbc.co.uk/worldservice/persian/پیمایش ملی دینداری.۱۴۰۲.pdf | leak |
+
 ---
 
-*All planned sources covered (13). Optional follow-ups: provincial splits, ISPA granular reports, WVS dataset mining for media trust/prayer frequency.*
+*Now 14 sources covered. Optional follow-ups: provincial splits, ISPA
+granular reports, WVS dataset mining for media trust/prayer frequency.*

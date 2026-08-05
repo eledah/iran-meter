@@ -44,3 +44,9 @@ Interactive quiz game about Iran based on official reported statistics
   **censorship/VPN** (IPRC official survey 81% VPN use; OONI 886 blocked
   domains; FH score 12/100). All 13 planned sources now covered,
   `INDEXES.md` ~190 rows. Next: convert to `data/*.yaml` + draft questions.
+
+- **2026-08-05 (7)** — Added **پیمایش ملی «ارزش‌ها و نگرش‌های ایرانیان»
+  1402** (user-requested): classified government religiosity survey
+  (n=15,878, autumn 1402), ch.8 leaked via BBC Persian — separation of
+  religion & politics 72.9%, never pray 22.2%, 85% say religiosity declined.
+  Source #14 in `SOURCES.md`; ~19 rows in `INDEXES.md`.
