@@ -10,8 +10,12 @@ Provenance rules:
 - `Ref. period` = the time the number describes (e.g. 2016 census, spring
   1403). `Report date` = when it was published.
 - Confidence tags: `primary` (seen on the org's own page) / `news` (via a
-  news article quoting the org) / `estimate` (modeled).
+  news article quoting the org) / `estimate` (computed or modeled).
 - Rows are added in batches as research subagents return findings.
+
+**Timeline note:** several 1405/2026 figures were collected during/after the
+wartime period (incl. a prolonged internet outage) — flagged per row where it
+matters. Iranian calendar: 1403 = 2024–25, 1404 = 2025–26, 1405 = 2026–27.
 
 ---
 
@@ -36,6 +40,105 @@ Provenance rules:
 | Age group 65+ | 6.1 | % of population | 2016 | 2016 | SCI census | same |
 | Iranian nationality share | 97.8 | % | 2016 | 2016 | SCI census | same |
 
+## SCI — Recent releases (post-census, via news quoting SCI)
+
+**Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):**
+
+| Index | Value | Unit | Ref. period | Report date | Source |
+|---|---|---|---|---|---|
+| Unemployment (15+) | 9.1 | % of labor force | Spring 1405 (2026) | 29 Jul 2026 | mehrnews.com/news/6902450 |
+| Youth unemployment (15–24) | 23.4 | % | Spring 1405 | 29 Jul 2026 | same |
+| Labor-force participation (15+) | 40.7 | % | Spring 1405 | 29 Jul 2026 | same |
+| Participation — men / women | 67.8 / 13.7 | % | Spring 1405 | 29 Jul 2026 | ISNA/IranIntl via SCI |
+| Unemployment — men / women | 7.5 / 16.7 | % | Spring 1405 | 29 Jul 2026 | same |
+| Employed (15+) | 24.672 | million | Spring 1405 | 29 Jul 2026 | mehrnews 6902450 |
+| Sector shares (services/industry/agriculture) | 53.8 / 31.0 / 15.1 | % | Spring 1405 | 29 Jul 2026 | same |
+
+**Labor Force Survey — Winter 1404 & annual:**
+
+| Index | Value | Unit | Ref. period | Report date | Source |
+|---|---|---|---|---|---|
+| Unemployment (15+) | 7.6 | % | Winter 1404 | 26 Apr 2026 | mehrnews.com/news/6811746 (headline errs 7.4; body 7.6) |
+| Youth unemployment (15–24) | 21.2 | % | Winter 1404 | 26 Apr 2026 | same |
+| Labor-force participation | 39.7 | % | Winter 1404 | 26 Apr 2026 | same |
+| Unemployment (annual avg) | 7.5 | % | Year 1404 | ~Jun 2026 | mehrnews 6874029 |
+
+**Household Income & Expenditure Survey — year 1403 (n = 19,347 urban + 18,158 rural):**
+
+| Index | Value | Unit | Ref. period | Report date | Source |
+|---|---|---|---|---|---|
+| Urban household annual net expenditure | 269.3 | M toman/yr | 1403 | 18 Aug 2025 | borna.news/fa/news/2248780 |
+| Urban household declared annual income | 343.2 | M toman/yr | 1403 | 18 Aug 2025 | same (+IRNA 85915124) |
+| Rural household annual net expenditure | 144.7 | M toman/yr | 1403 | 18 Aug 2025 | same |
+| Rural household declared annual income | 201.4 | M toman/yr | 1403 | 18 Aug 2025 | same |
+| Housing+fuel share of urban expenditure | 43.7 | % | 1403 | 18 Aug 2025 | same |
+| Housing+fuel share of rural expenditure | 23.5 | % | 1403 | 18 Aug 2025 | same |
+
+**Gini & income distribution — year 1403:**
+
+| Index | Value | Unit | Ref. period | Report date | Source |
+|---|---|---|---|---|---|
+| Gini coefficient — national | 0.3870 | index 0–1 | 1403 | 10 Feb 2026 | mehrnews.com/news/6744774 |
+| Gini — urban / rural | 0.3689 / 0.3532 | index | 1403 | 10 Feb 2026 | eghtesadnews 743227 |
+| Palma index | 1.84 | index | 1403 | 10 Feb 2026 | same |
+| Income share — top 20% | 46.24 | % | 1403 | 10 Feb 2026 | same |
+| Income share — bottom 20% | 6.07 | % | 1403 | 10 Feb 2026 | same |
+| Gini (comparison) | 0.3979 | index | 1402 | 2025 | donya-e-eqtesad 4111873 |
+
+**Housing tenure & population (note: tenure methodology differs from census 2016):**
+
+| Index | Value | Unit | Ref. period | Report date | Source |
+|---|---|---|---|---|---|
+| Urban owner-occupied households | 68.07 | % | 1401 (2022–23) | 6 Mar 2024 | tabnak.ir/fa/news/1225695 |
+| Urban renter households | 23.7 | % | 1401 | 6 Mar 2024 | same |
+| Rural owner-occupied households | 88.63 | % | 1401 | 6 Mar 2024 | same |
+| Population estimate | 85.96 | million | 1 Aban 1403 (23 Oct 2024) | 1 Oct 2024 | mizanonline.ir/fa/news/4796176 |
+| Urbanization | 77 | % | 1 Aban 1403 | 1 Oct 2024 | same |
+| Households | 27.65 | million | 1 Aban 1403 | 1 Oct 2024 | same |
+
+## ISPA (ایسپا) — national polls
+
+**«زیستبوم دیجیتال ایرانیان» (Digital Ecosystem of Iranians) — n=4,060 internet users, face-to-face, fielded 15–21 Jun 2026 (after the wartime internet outage); published 22 Jul 2026:**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| VPN / filter-breaker use | 74.4 | % of internet users | Jun 2026 | 22 Jul 2026 | ispa.ir/4500; khabaronline 2250105 | primary (headline-confirmed) |
+| VPN use among under-30s | 85 | % | Jun 2026 | 22 Jul 2026 | ispa.ir/4500 | primary |
+| Internet penetration (15+) | 89.3 | % of population 15+ | Jun 2026 | Jul–Aug 2026 | shafaqna/IRNA; khabaronline | news |
+| Oppose internet cutoff in crises | 57.6 | % | Jun 2026 | 22 Jul 2026 | khabaronline (ISNA) | news |
+| "Internet must never be cut" | ~67 | % (75% under-30) | Jun 2026 | 22 Jul 2026 | ispa.ir/4500 | primary |
+| Reopening intl internet = very right | 63.7 | % | Jun 2026 | 22 Jul 2026 | khabaronline (ISNA) | news |
+| Oppose officials' "class" internet | 61.1 | % | Jun 2026 | 22 Jul 2026 | ispa.ir/4500 | primary |
+| Unfiltering priority — Instagram | 47.8 | % | Jun 2026 | 22 Jul 2026 | khabaronline (ISNA) | news |
+| Unfiltering priority — Telegram | 20.9 | % | Jun 2026 | 22 Jul 2026 | same | news |
+| Unfiltering priority — YouTube | 8.4 | % | Jun 2026 | 22 Jul 2026 | same | news |
+| Avg daily internet use | 4 h 3 min | h:m | Jun 2026 | 22 Jul 2026 | same | news |
+| Dissatisfied with internet speed | 72.3 | % | Jun 2026 | 22 Jul 2026 | same | news |
+
+**Social-media consumption surveys (platform usage):**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Use ≥1 messenger/social network | 82.2 | % | Sep 2024 (n=3,990) | 29 Sep 2024 | ecoiran 72224 (ISPA PR) | news |
+| Instagram users | 50.6 | % | Sep 2024 | 29 Sep 2024 | same | news |
+| Telegram users | 39.3 | % | Sep 2024 | 29 Sep 2024 | same | news |
+| WhatsApp users | 33.3 | % | Sep 2024 | 29 Sep 2024 | same | news |
+| Eitaa users | 28.9 | % | Sep 2024 | 29 Sep 2024 | same | news |
+| Rubika users | 28.5 | % | Sep 2024 | 29 Sep 2024 | same | news |
+| Bale users | 9.7 | % | Sep 2024 | 29 Sep 2024 | same | news |
+| Avg daily social-media time | 2 h 8 min | h:m | Sep 2025 (n=1,502) | 17 Sep 2025 | sharghdaily 1051426 | news |
+| No social-media use | 13.7 | % | Sep 2025 | 17 Sep 2025 | same | news |
+
+**Media trust & economy:**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| IRIB as main news source | 37.9 | % | Oct–Nov 2023 (n=5,086) | Nov 2023 | digiato; ISNA 1402091208080 | news |
+| Social networks as main news source | 31 | % | Oct–Nov 2023 | Nov 2023 | same | news |
+| Preferred investment — land/housing | 36.8 | % (top pick) | Aug 2026 | Aug 2026 | donya-e-eqtesad 3822817 | news |
+| Preferred investment — gold/coins | ~10 | % | Aug 2026 | Aug 2026 | same | news |
+| Preferred investment — crypto | 3.1 | % | Aug 2026 | Aug 2026 | same | news |
+
 ## World Bank — Iran country page (primary)
 
 | Index | Value | Unit | Ref. period | Report date | Source | URL |
@@ -56,7 +159,24 @@ Provenance rules:
 | Intentional homicides | 2 | per 100k | 2014 | 2026 | World Bank | same |
 | Forest area | 6.6 | % of land | 2023 | 2026 | World Bank | same |
 
+## National Organization for Civil Registration (ثبت احوال) — vital stats
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Marriages | 470,372 | events | 1403 | 2025 | SCI yearbook / ثبت احوال data | news |
+| Marriages | ~431,800 | events | 1404 (−8.2%) | Apr–May 2026 | rokna 1225591; IRNA 86132278 | news |
+| Divorces | 194,078 | events | 1403 | 2025 | SCI yearbook | news |
+| Divorces | ~181,500 | events | 1404 (−6%) | Apr–May 2026 | rokna; iranstatis | news |
+| Divorce per 100 marriages | ~41 | ratio | 1403 | 2025–26 | computed; ثبت احوال warns ratio is misleading | estimate |
+| Avg age at first marriage — men | 28.3 | years | 1403 | 22 May 2025 | snn.ir/fa/news/1265084 | news (confirmed) |
+| Avg age at first marriage — women | 24.1 | years | 1403 | 22 May 2025 | same | news (confirmed) |
+| Births | 979,923 | events | 1403 | 21 May 2025 | inn.ir 99909 | news |
+| Births | ~892,300 | events | 1404 | Mar–Apr 2026 | rokna 1220777 | news |
+| Crude birth rate | ~11.4 | per 1,000 | 1403 | 2025–26 | iranstatis (computed) | estimate |
+| Deaths | 458,848 | events | 1403 | 21 May 2025 | inn.ir 99909 | news |
+| Deaths | ~451,700 | events | 1404 | Mar–Apr 2026 | rokna 1220777 | news |
+| Crude death rate | ~5.3 | per 1,000 | 1403 | 2025–26 | iranstatis (computed) | estimate |
+
 ---
 
-*Pending: subagent batches for ISPA, SCI recent surveys, NOCR vital stats,
-and further sources (CBI, WVS, ITU, …).*
+*Pending: batch 2 subagent findings (Central Bank of Iran, WVS Iran 2020, ITU).*

@@ -16,3 +16,10 @@ Interactive quiz game about Iran based on official reported statistics
   replacement), **World Bank** (full Iran indicator set), **WVS Wave 7
   Iran 2020** to `SOURCES.md`. Added **difficulty meter** spec (1–5 rubric +
   runtime calibration) to `DATA_MODEL.md`.
+
+- **2026-08-05 (3)** — Index hunt batch 1 (3 parallel subagents): ISPA, SCI
+  recent releases, NOCR ثبت احوال. ~90 verified rows added to new
+  `INDEXES.md`; spot-checked 4 headline numbers myself (VPN 74%, unemployment
+  9.1%, marriage age 28.3/24.1, household expenditure 269.3M toman) — all
+  confirmed. Wartime-context flags noted for 1405 figures. Batch 2 dispatched
+  (CBI, WVS, ITU).
