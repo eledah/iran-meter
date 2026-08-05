@@ -5,14 +5,18 @@ must trace back to an entry here.
 
 Format: org / type / urls / accessed / what's inside (key numbers we can use).
 
+**Source policy (2026-08-05):** prefer official Iranian institutions (SCI,
+ISPA) + established international bodies (World Bank, WVS). Rejected sources
+are listed at the bottom so they don't get re-added.
+
 ---
 
 ## 1. Statistical Centre of Iran (مرکز آمار ایران) — SCI
 
-- **Type:** official national census (internal source)
+- **Type:** official national statistics agency (internal source)
 - **URLs:**
   - Portal: https://www.amar.org.ir/
-  - English "Selected Results" slides (2016): https://irandataportal.syr.edu/wp-content/uploads/Iran_Census_2016_Selected_Results.pdf
+  - English "Selected Results" slides (2016 census): https://irandataportal.syr.edu/wp-content/uploads/Iran_Census_2016_Selected_Results.pdf
 - **Accessed:** 2026-08-05
 - **What's inside (key numbers):**
 
@@ -38,48 +42,105 @@ Format: org / type / urls / accessed / what's inside (key numbers we can use).
   | Rural — owner | 79.2% | 79.3% | 82.0% |
   | Rural — renter | 12.3% | 8.9% | 7.9% |
 
-  Also available: age pyramid (0–14: 24.0%, 65+: 6.1% in 2016), nationality
-  breakdown (97.8% Iranian, ~2% Afghan), province-level population & literacy.
+  Also: age pyramid (0–14: 24.0%, 65+: 6.1% in 2016), nationality (97.8%
+  Iranian, ~2% Afghan), province-level population & literacy.
 
-- **Quiz potential:** housing, demographics, literacy, urbanization — the
-  official backbone. Good for "how well do you know your own country" questions.
-- **Caveat:** 2016 census is dated; SCI publishes newer household
-  expenditure/income surveys (e.g. 1402/2023) — follow up for fresher numbers.
+- **Also publishes (more current than the census):** quarterly **Labor Force
+  Survey** (نیروی کار) and annual **Household Income & Expenditure Survey**
+  (هزینه و درآمد خانوار) — refresh targets for employment/income questions.
+- **Caveat:** census is 2016; prefer the newer surveys above where possible.
 
 ---
 
-## 2. GAMAAN — Group for Analyzing and Measuring Attitudes in Iran
+## 2. ISPA (ایسپا) — مرکز افکارسنجی دانشجویان ایران
 
-- **Type:** independent non-profit survey research foundation (external source,
-  registered in the Netherlands)
+- **Type:** national public-opinion polling agency, non-governmental,
+  affiliated with ACECR / جهاد دانشگاهی; member of WAPOR (World Association
+  for Public Opinion Research). Active since 1380 (2001). (internal source)
 - **URLs:**
-  - Methodology: https://gamaan.org/methodology/
-  - Media Survey 2023 (English PDF): https://gamaan.org/wp-content/uploads/2023/09/GAMAAN-Media-Survey-2023-English.pdf
+  - Site: https://ispa.ir/
+  - Telegram: @ispa_polling
 - **Accessed:** 2026-08-05
-- **Method:** anonymous online surveys distributed via social channels + VPN
-  providers (Psiphon, Lantern) to counter "fear-of-the-state bias"; weighted
-  samples. Media Survey 2023: 38,445 respondents, Jun 30 – Jul 9 2023; target
-  population literate 19+ (~90% of adults); 95% credibility, ±5% intervals.
-- **What's inside (key numbers):**
+- **What's inside:**
+  - National telephone surveys (مصاحبه تلفنی) on social attitudes, values,
+    economy, digital life — results published as report PDFs + news items.
+  - **«زیستبوم دیجیتال ایرانیان»** — national survey on Iranians' digital
+    behavior & attitudes in cyberspace (results presented July 2026). This is
+    our candidate source for **VPN / social-media / internet-habit stats**.
+  - Recently signed a cooperation MOU with SCI (Aug 2026) for data-driven
+    research — strengthens reliability.
+- **Caveat:** surveys are client-commissioned (incl. government bodies) and
+  published as reports — mine the actual report PDFs for exact figures,
+  sample sizes, and field dates.
 
-  - Internet penetration: ~80% of Iran's population are internet users (per
-    ITU, cited on methodology page); **~90% of internet users use censorship
-    circumvention tools (VPNs)** (in-country research cited by GAMAAN).
-  - News sources used "often": social media **68%**, satellite TV 35%,
-    state TV (IRIB) 12%, foreign radio 8%.
-  - 47% say state TV (IRIB) is *never* their news source.
-  - App use "often": Instagram **65%**, WhatsApp 46%, Telegram 43%, YouTube 17%,
-    Rubika 8%, Twitter 8%, Facebook 5%, Soroush 3%.
-  - Trust in media: Iran International 50%, Manoto 44%, VOA Persian 42%,
-    Radio Farda 40%, BBC Persian 34% — **IRIB only 21%**, and 59% have "no
-    trust at all" in IRIB.
-  - Protest news followed via: Iran International 57%, Manoto 30%, BBC Persian
-    26%, VOA 20%, IRIB 19%.
-  - Validation vs WVS 7: "religion very important" — GAMAAN 27.4% vs WVS 69.4%
-    (shows preference falsification in official-style surveys).
+---
 
-- **Quiz potential:** VPN usage, social media habits, media trust — the
-  "about ourselves" angle official stats can't capture.
-- **Caveat:** not a probability sample of the whole population; skews toward
-  internet-connected Iranians. Frame questions as "of internet users" where
-  appropriate, and keep the source noted next to each answer.
+## 3. World Bank — Iran, Islamic Rep. (external source)
+
+- **URL:** https://data.worldbank.org/country/iran-islamic-rep
+- **Accessed:** 2026-08-05
+- **What's inside (most recent values, as shown on country page):**
+
+  | Indicator | Value | Year |
+  |---|---|---|
+  | Individuals using the Internet | 85% | 2024 |
+  | Life expectancy at birth | 78 y | 2024 |
+  | Population | 92,417,681 | 2025 |
+  | Population growth | 0.9% | 2025 |
+  | GDP per capita | $3,924 | 2025 |
+  | GDP growth | −2.8% | 2025 |
+  | Inflation (CPI) | 42.2% | 2025 |
+  | Unemployment (ILO modeled) | 8.3% | 2025 |
+  | Poverty ($3.00/day, 2021 PPP) | 2.5% | 2023 |
+  | Access to electricity | 100% | 2024 |
+  | Women in national parliament | 5% | 2025 |
+  | Female labor-force participation | 14% (male 67.2%) | 2025 |
+  | Intentional homicides | 2 /100k | 2014 |
+  | Forest area | 6.6% | 2023 |
+
+- **Caveat:** some indicators are modeled estimates (ILO/UN inputs); sanctions
+  limit reporting, so treat cross-country comparisons loosely.
+
+---
+
+## 4. World Values Survey — Wave 7, Iran 2020 (external, academic)
+
+- **URL:** https://www.worldvaluessurvey.org/ (WV7 documentation & data
+  download; country list includes "Iran 2020")
+- **Accessed:** 2026-08-05
+- **What's inside:** representative national values survey (face-to-face) —
+  religiosity, trust, family/work priorities, gender attitudes, political
+  values. Iran 2020 wave data downloadable (SPSS/Stata/CSV).
+- **Caveat:** face-to-face mode can suffer "preference falsification" on
+  sensitive topics in Iran (documented in the literature). Use for
+  non-sensitive values or frame questions carefully.
+
+---
+
+## Other verified & reliable candidates (not yet mined)
+
+| Source | What it covers | Why reliable |
+|---|---|---|
+| Central Bank of Iran (https://cbi.ir) | inflation, FX rates, money supply, GDP | official internal |
+| National Organization for Civil Registration (https://www.sabteahval.ir) | births, deaths, **marriages, divorces, avg age at first marriage** | official internal vital stats |
+| SCI quarterly Labor Force Survey / annual Household Income–Expenditure | employment, income, housing (post-2016) | official internal |
+| ITU (https://datahub.itu.int) | internet/ICT penetration | UN specialized agency |
+| ILO / UNESCO / WHO / IMF | labor, education, health, macro | established international orgs |
+| Peer-reviewed academic studies (e.g., on VPN/censorship) | niche topics with no official stat | last resort, cite the paper |
+
+---
+
+## Rejected (do not use)
+
+- **GAMAAN** (Group for Analyzing and Measuring Attitudes in Iran) — rejected
+  by user on **2026-08-05**: funding transparency concerns. Previously noted
+  VPN/attitude numbers (e.g. ~90% of internet users use circumvention tools)
+  are **dropped** — they are not re-usable.
+
+## Gaps to fill (replacement needed)
+
+- **VPN / circumvention usage %** — candidate: ISPA «زیستبوم دیجیتال ایرانیان»
+  survey report; fallback: academic studies.
+- **Social-media platform usage (Instagram/Telegram %)** — same candidates.
+- **Marriage/divorce & age at first marriage** — NOCR (sabteahval.ir).
+- **Fresh home-ownership & housing (post-2016)** — SCI household surveys.
