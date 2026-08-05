@@ -76,3 +76,9 @@ Interactive quiz game about Iran based on official reported statistics
   myself via vision (forgiveness/altruism prevalent 48.1%, n=15,878);
   remaining ethics tables (eth-04…16) rendered locally for later.
   `INDEXES.md` ~390 rows.
+
+- **2026-08-05 (11)** — **Phase 1 (data hunt) complete**: 16 sources, ~390
+  rows, 11 commits. Repo tidied for phase 2: `README.md` added (repo map,
+  provenance rules, next-phase checklist). Scratch extraction dirs
+  (`/root/paymaiesh`, `/root/pimayesh`) stay outside the repo. Next phase:
+  `data/` YAML files + question bank + validation.
