@@ -470,7 +470,93 @@ Confidence: `leak`.
 | Internet as daily info source | 53.1 | % | 2020 | Q206 |
 | Daily newspaper | 4.3 | % (59.0 never) | 2020 | Q201 |
 
+## ISPA — additional mined numbers (digital-ecosystem detail, AI surveys, happiness)
+
+Digital-ecosystem survey detail (Jun 2026; n=4,545 aged 15+, 4,060 internet users; primary = ISPA release reproduced by ana.ir; news = zoomit/eghtesadnews):
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Starlink awareness | 43.4 | % of users | Jun 2026 | Aug 2026 | ana.ir (ISPA release) | primary |
+| Starlink should be legal (of aware) | 47.5 | % | Jun 2026 | Aug 2026 | ana.ir (flag: 31.9 per eghtesadnews) | primary |
+| Starlink current users (of aware) | 2.9 | % | Jun 2026 | Aug 2026 | ana.ir | primary |
+| Avg VPN monthly spend | 262,000 | toman/mo | Jun 2026 | Jul 2026 | zoomit | news |
+| VPN users: free | 66.7 | % | Jun 2026 | Aug 2026 | ana.ir | primary |
+| Online shopping (past yr) | 57.1 | % of users | Jun 2026 | Aug 2026 | ana.ir | primary |
+| Ride-hailing (Snapp/Tapsi) | 55.5 | % | Jun 2026 | Aug 2026 | ana.ir | primary |
+| Online education (past yr) | 37.9 | % | Jun 2026 | Aug 2026 | ana.ir | primary |
+| Income highly dependent on internet | 20.3 | % | Jun 2026 | Aug 2026 | ana.ir | primary |
+| AI: never heard of it | 37.6 | % | Jun 2026 | Aug 2026 | ana.ir | primary |
+| ChatGPT among AI users | 90.3 | % | Jun 2026 | Aug 2026 | ana.ir | primary |
+| AI use among under-30s | 54 | % | Jun 2026 | Jul 2026 | eghtesadnews | news |
+| Rubika popularity (top domestic platform) | 60.3 | % | Jun 2026 | Jul 2026 | zoomit | news |
+| Instagram: % of internet users / % of 15+ | 64.4 / 54.4 | % | Jun 2026 | Jul 2026 | zoomit | news |
+| Speed = #1 policy priority if user decides | 56.9 | % | Jun 2026 | Aug 2026 | ana.ir | primary |
+
+AI survey Sep 2025 (n=1,502, phone):
+
+| Index | Value | Unit | Ref. period | Source | Conf. |
+|---|---|---|---|---|---|
+| AI users (15+) | 32.3 | % | Sep 2025 | zoomit/ISNA | news |
+| AI use by age 15–29 / 30–49 / 50+ | 54.2 / 31.2 / 16.1 | % | Sep 2025 | same | news |
+| AI use capitals / other cities / rural | 43.7 / 31.8 / 12.4 | % | Sep 2025 | same | news |
+| High trust in AI answers | 53.6 | % | Sep 2025 | same | news |
+
+Platform trends & happiness:
+
+| Index | Value | Unit | Ref. period | Source | Conf. |
+|---|---|---|---|---|---|
+| Telegram use men / women | 41.4 / 37.1 | % | Sep 2024 | shargh (ISPA) | news |
+| Rubika baseline | ~24 | % | Jan 2023 | radiofarda (ISPA) | news |
+| Rubika growth | ~24 → 60.3 | % | Jan 2023 → Jun 2026 | radiofarda + zoomit | news |
+| National happiness index (wave 2 / wave 1) | 64.41 / 65.83 | /100 | Jun 2022 | ISPA via hamshahrionline | news |
+
+## «آنچه ایران می‌خواهد» ("What Iran Wants") — confidential presidency report (Ara Opinion Research Center survey, fielded Apr–May 2026; leaked via IranWire 13 Jul 2026)
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| High anger/rage in daily life | 63.6 | % — world's highest ever (Gallup record: 47%, Chad) | May 2026 | 13 Jul 2026 | iranwire.com/en/features/154845 | leak |
+| Anger increase vs Dec 2025 wave | +12 | pp | Dec 2025 → May 2026 | 13 Jul 2026 | same | leak |
+| Want fundamental reforms | 53 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Keep status quo | 9 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Want regime/system change | >19 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Hopeless about improvement | >50 | % (+8pp vs Dec) | May 2026 | 13 Jul 2026 | same | leak |
+| Sadness/depression | 47.7 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Constant fear/anxiety | 45.4 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Difficulty securing basic food | >81 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Income fails to cover expenses | 54 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Can't afford medical costs | 75 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Blame: official inefficiency / corruption / sanctions | 46.9 / 26.3 / 20.7 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Prefer ceasefire + continued negotiations | 44.3 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Favor accepting all US conditions | 19.9 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Favor preemptive strike on US/Israel | 16.4 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Identity: "Iranian" first | 36.8 | % (Muslim-Iranian 33.9; ethnic 12.4; Muslim only 11.6; global 4.4) | May 2026 | 13 Jul 2026 | same | leak |
+| Proud to be Iranian | 85.6 | % | May 2026 | 13 Jul 2026 | same | leak |
+| Fast during Ramadan | ~30 | % (1975: 79; 52% never fast) | 2026 | 16 Jul 2026 | iranintl.com/en/202607161900 | leak |
+| Would emigrate if possible | ~33 | % (≈half of under-30s) | May 2026 | 16 Jul 2026 | iranintl.com/202607160022 | leak |
+
+## Censored official vote-intention poll (Khabaronline, 28 Jan 2024 — deleted after publication; via VOA Farsi)
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Predicted turnout Mar 2024 elections — national | ~30 | % | Jan 2024 | 31 Jan 2024 | ir.voanews.com/a/...7464000.html | leak |
+| Predicted turnout — Tehran province | 22 | % | Jan 2024 | same | same | leak |
+| Predicted turnout — Tehran city | <15 | % | Jan 2024 | same | same | leak |
+
+## Public polls & context (not classified)
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| "Definitely will vote" (Mar 2024 elections) | 41.5 | % | Feb 2024 | 2024 | IRIB polling center | news |
+| "Definitely will vote" (Jun 2024 presidential) | 43.1 | % | Jun 2024 | 2024 | IRIB/IRNA claim | news |
+| ISPA turnout (Nov 2023): definitely 27.9 / won't vote 36 | % | Nov 2023 | 2024 | ISPA public | news |
+| Feel comfort/calm in life (MOIS, n=2,510) | 75 | % | Jun 2022 | 2022 | Ministry of Intelligence | news |
+| Income satisfaction (MOIS) | 45 | % | Jun 2022 | 2022 | MOIS | news |
+| Raisi approval (independent) | 28 | % | Jun 2022 | 2022 | Stasis/IranWire | news |
+| "My property is not safe" (values wave 4, via HamMihan) | 54.8 | % | 1402 | Sep 2024 | independentpersian.com/node/409576 | leak |
+
+⚠️ Note: two distinct "~92% dissatisfaction" figures exist — values-survey wave 4 (HamMihan, 2024) vs ISPA presidency-commissioned poll (Rouydad24, 2025). Do not merge.
+
 ---
 
-*Now 14 sources covered, ~260 rows. Optional follow-ups: ISPA granular
-reports, ethics chapter of the leaked survey, per-capita GDP by province.*
+*Now 15+ sources, ~320 rows. Remaining follow-ups: ethics chapter (retry),
+per-capita GDP by province, values-survey 1394 wave baseline.*

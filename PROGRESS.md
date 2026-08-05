@@ -59,3 +59,10 @@ Interactive quiz game about Iran based on official reported statistics
   Sistan-Baluchestan literacy 92.9/76.0, urbanization Qom 95.2 vs S&B 48.5,
   poverty 15.4 vs 58.2). **WVS gaps closed** via live WVS Online tool (pray
   daily 73.7%, press trust 60.1%, family 93.9%). `INDEXES.md` ~260 rows.
+
+- **2026-08-05 (9)** — Batch 6: **ISPA deep mine** (Starlink 43.4%, VPN spend
+  262k toman/mo, online shopping 57.1%, AI never-heard 37.6%, Rubika 60.3%,
+  happiness 64.41/100). **«آنچه ایران می‌خواهد» leak** (Ara center survey
+  May 2026: anger 63.6% world-record, reforms 53%, food difficulty >81%).
+  **Censored vote-intention poll** (turnout ~30% predicted). Ethics chapter
+  agent failed (503) — retry in batch 7. `INDEXES.md` ~320 rows.

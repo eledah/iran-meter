@@ -68,7 +68,11 @@ Rejected sources are listed at the bottom so they don't get re-added.
     ~10%, crypto 3.1%.
 - **Caveat:** client-commissioned polls; results published as report PDFs +
   news items — mine reports for exact methodology. Digital-ecosystem figures
-  reflect post-outage conditions.
+  reflect post-outage conditions. Additional mined numbers in `INDEXES.md`:
+  Starlink awareness 43.4%, avg VPN spend 262k toman/mo, online shopping
+  57.1%, ride-hailing 55.5%, AI never-heard 37.6%, Rubika 60.3% (Jun 2026,
+  up from ~24% Jan 2023), Instagram 64.4% of internet users, happiness index
+  64.41/100 (2022).
 
 ## 3. World Bank — Iran, Islamic Rep. (external source)
 
@@ -255,6 +259,35 @@ Rejected sources are listed at the bottom so they don't get re-added.
   differs between waves (1394 «بدحجابی» vs 1402 «بی‌حجابی»); Persian PDF
   digit-scrambling means figures were visually verified by the researcher —
   spot-check before publishing a question.
+
+## 15. «آنچه ایران می‌خواهد» ("What Iran Wants") — confidential presidency report (leaked)
+
+- **Type:** confidential report to officials, compiled by Ali Rabiei
+  (presidential social advisor) from a national survey by the **Ara Opinion
+  Research Center (مرکز افکارسنجی آرا)**, fielded Apr–May 2026; circulated
+  Jun 2026; published exclusively by IranWire 13 Jul 2026 (+ Iran Intl).
+- **URLs:** https://iranwire.com/en/features/154845-exclusive-what-iran-wants-president-advisor-confidential-report/
+  · https://www.iranintl.com/en/202607161900
+- **What's inside (May 2026, leak confidence):** anger/rage 63.6% (world's
+  highest ever — above Gallup's all-time record 47% Chad); +12pp vs Dec
+  2025; want fundamental reforms 53%, status quo 9%; hopelessness >50%;
+  sadness 47.7%, anxiety 45.4%; difficulty securing basic food >81%; income
+  shortfall 54%; medical costs 75% can't afford; blame official inefficiency
+  46.9% > corruption 26.3% > sanctions 20.7%; identity "Iranian first"
+  36.8%; proud Iranian 85.6%; Ramadan fasting ~30%; would emigrate ~33%.
+- **Caveats:** methodology/sample not disclosed; leaked doc; figures via
+  media write-ups (IranWire + Iran Intl), internally consistent.
+
+## 16. Censored official vote-intention poll (Khabaronline, Jan 2024)
+
+- **Type:** leak of a censored pre-election poll by an unnamed "credible
+  state institution"; Khabaronline published 28 Jan 2024, forced to delete
+  (29–30 Jan); reported by VOA Farsi; corroborated by Tabnak + reformist
+  figures.
+- **URL:** https://ir.voanews.com/a/iran-pressure-on-the-media-elections/7464000.html
+- **What's inside:** predicted Mar-2024 turnout ~30% national, 22% Tehran
+  province, <15% Tehran city.
+- **Caveat:** pre-election prediction, not an outcome; institution unnamed.
 
 ## Optional follow-ups (not urgent)
 
