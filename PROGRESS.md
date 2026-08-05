@@ -29,3 +29,11 @@ Interactive quiz game about Iran based on official reported statistics
   85.3%, mobile 174/100, 4G 94.2% — all primary) integrated into
   `INDEXES.md`. **WVS agent failed** (upstream model 503) — retried in batch
   3. Batch 3 dispatched: WVS (retry), ILO, WHO.
+
+- **2026-08-05 (5)** — Index hunt batch 3: **WVS** retry succeeded (values
+  from academic papers + official WVS Online tool: religion very important
+  70.6%, trust in armed forces ~70%, interpersonal trust 15%, pride 83.5%);
+  **ILO** (unemployment 7.6% survey / 8.3% modeled, NEET 24.3%, min wage
+  53M IRR); **WHO** (tobacco 12.5%, obesity 24%, health spending 6.03% GDP,
+  LE 74.7). Integrated into `INDEXES.md` (~150 rows total). Batch 4
+  dispatched: UNESCO, IMF, academic VPN/censorship studies.

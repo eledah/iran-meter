@@ -230,6 +230,63 @@ Iranian calendar: 1403 = 2024–25, 1404 = 2025–26, 1405 = 2026–27.
 | Fixed-broadband traffic | 564 | GB/subscription | 2024 | 2025 | i=13067 | primary |
 | Mobile-broadband traffic | 163 | GB/subscription | 2024 | 2025 | i=13068 | primary |
 
+## World Values Survey — Wave 7, Iran 2020 (n=1,499, fielded 24 Mar–17 Apr 2020, PAPI/phone; values via academic papers + official WVS Online tool)
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Life satisfaction (1–10) | 6.20 | mean | 2020 | live query | WVS Online tool (official) | citable-page |
+| Religion "very important" | 70.6 | % | 2020 | 2024 | Saleh 2024 (dergipark) | academic |
+| Self-identified "religious person" | 84.2 | % | 2020 | 2024 | Saleh 2024 | academic |
+| Trust in armed forces ("great deal") | 70.2–71 | % | 2020 | 2026/2024 | Marburg 2026 / Saleh 2024 | academic |
+| Trust in government | 18.9–20 | % | 2020 | 2026/2024 | same | academic |
+| Trust in parliament | 19.9–20 | % | 2020 | 2026/2024 | same | academic |
+| Interpersonal trust ("most people can be trusted") | 15 | % | 2020 | 2024 | Saleh 2024 | academic |
+| Complete trust in family | 85 | % | 2020 | 2024 | Saleh 2024 | academic |
+| Complete trust in neighbors | 18 | % | 2020 | 2024 | Saleh 2024 | academic |
+| Very proud of nationality | 83.5 | % | 2020 | 2026 | Marburg 2026 | academic |
+| "Men make better political leaders" (agree) | 44.3 | % | 2020 | 2025 | TWU MA thesis | academic |
+| "University more important for a boy" (agree) | 52.3 | % | 2020 | 2025 | TWU thesis | academic |
+| Media (press/TV) trust; family/work importance; prayer freq | not found | — | 2020 | — | dataset downloadable, needs analysis | not-found |
+
+## ILO — labor statistics (ILOSTAT; survey LFS 2024 + modeled ILOEST 2025)
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Unemployment (survey) | 7.6 | % of labor force | 2024 | ILOSTAT profile | ilostat.ilo.org/data/country-profiles/irn/ | primary |
+| Unemployment total (modeled) | 8.3 | % | 2025 | ILOEST | WB SL.UEM.TOTL.ZS | estimate |
+| Unemployment male / female (modeled) | 6.8 / 15.6 | % | 2025 | ILOEST | WB indicators | estimate |
+| Youth unemployment (15–24) | 21.9 (M 19.3 / F 32.0) | % | 2025 | ILOEST | WB SL.UEM.1524 | estimate |
+| LFPR total (survey / modeled) | 40.7 / 41 | % of pop 15+ | 2024/2025 | ILOSTAT | profile + WB | primary/estimate |
+| LFPR male / female (modeled) | 67 / 14 | % | 2025 | ILOEST | WB SL.TLF.CACT.* | estimate |
+| Youth NEET (15–24) | 24.3 | % of youth | 2024 | ILOSTAT | profile; WB SL.UEM.NEET.ZS | primary |
+| Women in management (SDG 5.5.2) | 20.4 | % | 2024 | ILOSTAT | profile | primary |
+| Average weekly hours | 46.8 | hours | 2024 | ILOSTAT | profile | primary |
+| Working >48 h/week | 31.7 | % of employed | 2024 | ILOSTAT | profile | primary |
+| Time-related underemployment | 6.3 | % | 2024 | ILOSTAT | profile | primary |
+| Working poverty (<US$3 PPP/day) | 0.8 | % | 2025 | ILOSTAT modeled | profile | estimate |
+| Minimum wage | 53,073,300 | IRR/month | 2024 | ILOSTAT | profile | primary |
+| Social protection coverage (SDG 1.3.1) | 100 | % | 2023 | ILOSTAT | profile | primary |
+| Informal employment | no data | — | — | — | ILOSTAT profile | n/a |
+
+## WHO — health statistics (GHO API / data.who.int, primary)
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Tobacco use (15+, age-std) | 12.5 (M 23.5 / F 1.6) | % | 2022 | Jan 2024 | data.who.int/countries/364 | primary |
+| Obesity (18+, BMI≥30) | 24.0 (F 29.9 / M 18.1) | % | 2022 | Feb 2024 | NCD_RisC via GHO | primary |
+| Current health expenditure | 6.03 | % of GDP | 2023 | latest GHED | ghoapi GHED_CHEGDP_SHA2011 | primary |
+| Physician density | 15.05 (2023: 18.11) | per 10,000 | 2018/2023 | Apr 2025 | HWF_0001 | primary |
+| Life expectancy at birth | 74.7 (F 76.4 / M 73.1) | years | 2021 | GHE 2021 | WHOSIS_000001 | primary |
+| Healthy life expectancy (HALE) | 64.0 | years | 2021 | GHE 2021 | same | primary |
+| Maternal mortality | 15.84 | per 100k live births | latest | GHO | data.who.int | primary |
+| Under-5 mortality | 12.18 | per 1,000 | latest | GHO | data.who.int | primary |
+| Road traffic mortality | 20.6 | per 100k | latest | GHO | data.who.int | primary |
+| Hypertension (30–79, age-std) | 26.2 | % | latest | GHO | data.who.int | primary |
+| Alcohol consumption (15+) | 0.07 | L pure/capita | latest | GHO | data.who.int | primary |
+| Skilled birth attendance | 99 | % | latest | GHO | data.who.int | primary |
+| DTP3 immunization (1-yr-olds) | 99 | % | latest | GHO | data.who.int | primary |
+| Population (WHO estimate) | 90,608,707 | persons | 2023 | WHO | data.who.int | primary |
+
 ---
 
-*Pending: batch 3 (WVS Iran 2020 retry, ILO, WHO).*
+*Pending: batch 4 (UNESCO, IMF, academic VPN/censorship studies).*

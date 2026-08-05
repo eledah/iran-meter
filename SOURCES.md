@@ -142,13 +142,40 @@ Rejected sources are listed at the bottom so they don't get re-added.
 
 ## 8. World Values Survey — Wave 7, Iran 2020 (external, academic)
 
-- **URL:** https://www.worldvaluessurvey.org/ (WV7; country list includes
-  "Iran 2020")
-- **Accessed:** 2026-08-05
-- **Status:** dataset confirmed available; values not yet extracted — batch-2
-  research attempt failed (infra error), being retried in batch 3.
-- **Caveat:** face-to-face mode → possible preference falsification on
-  sensitive topics in Iran; frame questions carefully.
+- **URL:** https://www.worldvaluessurvey.org/ (WV7; "Iran 2020")
+- **Accessed:** 2026-08-05 (batch 3 retry succeeded)
+- **Survey:** N=1,499, adults 18+, fielded 24 Mar–17 Apr 2020 (PAPI/phone
+  during COVID), Persian.
+- **What's inside (citable values):** life satisfaction mean 6.20/10; religion
+  "very important" 70.6%; self-identified religious 84.2%; trust armed forces
+  ~70%, government ~19%, parliament ~20%; interpersonal trust 15%; family
+  trust 85%, neighbors 18%; national pride 83.5%; "men better political
+  leaders" 44.3%; "university more important for a boy" 52.3%.
+- **Not yet extracted (dataset downloadable):** media trust %, family/work
+  importance %, prayer frequency.
+- **Caveat:** face-to-face/phone mode → possible preference falsification on
+  sensitive topics; values sourced via academic papers (Saleh 2024, Marburg
+  DP 2026, TWU thesis) + official WVS Online tool.
+
+## 9. ILO — International Labour Organization (external)
+
+- **URL:** https://ilostat.ilo.org/data/country-profiles/irn/
+- **Accessed:** 2026-08-05 (primary)
+- **What's inside:** survey-based (LFS 2024): unemployment 7.6%, LFPR 40.7%,
+  youth NEET 24.3%, women in management 20.4%, avg weekly hours 46.8,
+  minimum wage IRR 53.07M/month (≈5.3M toman). Modeled (ILOEST 2025):
+  unemployment 8.3% (M 6.8 / F 15.6), youth 21.9%, LFPR 41% (M 67 / F 14).
+  Informal employment: **no data for Iran**.
+
+## 10. WHO — World Health Organization (external)
+
+- **URL:** https://data.who.int/countries/364 (+ GHO OData API)
+- **Accessed:** 2026-08-05 (primary, GHO API verified)
+- **What's inside:** tobacco use 12.5% (2022; M 23.5 / F 1.6); obesity 24.0%
+  (2022; F 29.9 / M 18.1); health expenditure 6.03% of GDP (2023); physicians
+  15.05/10k (2018); life expectancy 74.7 (2021); HALE 64.0; maternal
+  mortality 15.84/100k; under-5 mortality 12.18/1,000; road traffic 20.6/100k;
+  hypertension 26.2%; alcohol 0.07 L/capita; skilled birth 99%; DTP3 99%.
 
 ---
 
@@ -156,11 +183,9 @@ Rejected sources are listed at the bottom so they don't get re-added.
 
 | Source | What it covers | Why reliable |
 |---|---|---|
-| ILO (https://ilostat.ilo.org) | labor indicators (unemployment, NEET, informality) | UN agency |
-| WHO (https://www.who.int/data/gho) | health: smoking, obesity, health spending | UN agency |
 | UNESCO (https://data.uis.unesco.org) | education: enrollment, literacy | UN agency |
 | IMF (https://www.imf.org/en/Countries/IRN) | macro: GDP growth, inflation projections | international org |
-| Peer-reviewed academic studies (e.g., on VPN/censorship) | niche topics with no official stat | last resort, cite the paper |
+| OONI / academic studies | censorship measurement, VPN studies | measurement org / peer-reviewed |
 
 ## Rejected (do not use)
 
