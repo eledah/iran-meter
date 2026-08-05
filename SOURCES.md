@@ -177,27 +177,69 @@ Rejected sources are listed at the bottom so they don't get re-added.
   mortality 15.84/100k; under-5 mortality 12.18/1,000; road traffic 20.6/100k;
   hypertension 26.2%; alcohol 0.07 L/capita; skilled birth 99%; DTP3 99%.
 
+## 11. UNESCO Institute for Statistics (external)
+
+- **URL:** https://api.uis.unesco.org/ (UIS API; Feb 2026 data release)
+- **Accessed:** 2026-08-05 (primary, UIS API verified)
+- **What's inside (2023 unless noted):** adult literacy 88.9% (F 85.1 / M
+  92.8); youth literacy 98.7%; tertiary gross enrollment 58.7% (2022);
+  education spending 2.8% of GDP; expected schooling 14.1 years (2022); mean
+  years of schooling 10.3 (2016); primary GER 102%, secondary 85.1%.
+
+## 12. IMF — WEO (external)
+
+- **URL:** https://www.imf.org/en/Countries/IRN (+ datamapper)
+- **Accessed:** 2026-08-05 (primary; WEO Apr 2026 + Jul 2026 update; last
+  Article IV: 2018)
+- **What's inside:** GDP growth +3.7% (2024) → −1.5% (2025) → −6.1% forecast
+  (2026, Jul update −5.4%) → +3.2% (2027); CPI inflation 32.5% → 50.9% →
+  **68.9% forecast 2026** (IMF: highest since WWII) → 39.6%; unemployment
+  7.6% → 8.0% → 9.2%; GDP/capita PPP ~$21k; current account +$13.2bn (2024)
+  → −$5.4bn (2026).
+
+## 13. Internet censorship & VPN — official + measurement orgs + academic
+
+- **Type:** mixed (internal official survey + OONI + Freedom House + papers)
+- **URLs:** ooni.org/post/iran-internet-censorship/ · freedomhouse.org/country/
+  iran/freedom-net/2024 · jcss.ut.ac.ir/article_90348.html · iranintl.com/
+  en/202502243980
+- **Accessed:** 2026-08-05
+- **What's inside:**
+  - **Iranian Parliament Research Center (IPRC) telephone survey, Dec 2024
+    (n=1,100): 81% of internet users bypass censorship with VPNs** (49.4% free
+    / 30.3% paid) — official internal source, reported via Iran International.
+  - OONI measurements: 886 domains blocked (2014–17); Sep 2022 WhatsApp/
+    Instagram blocks; Nov 2019 blackout BGP −33%.
+  - Freedom House FOTN: 12/100 (2024), 13/100 (2025) — "Not Free".
+  - Academic (J. Cyberspace Studies 2022): 10–12M VPN users (2018 official
+    est.), Telegram active users ~40% (2021), only 31.1% of top mobile apps
+    accessible.
+- **Caveat:** GAMAAN-linked figures explicitly excluded (see Rejected).
+
 ---
 
-## Other verified & reliable candidates (not yet mined)
+## Optional follow-ups (not urgent)
 
-| Source | What it covers | Why reliable |
-|---|---|---|
-| UNESCO (https://data.uis.unesco.org) | education: enrollment, literacy | UN agency |
-| IMF (https://www.imf.org/en/Countries/IRN) | macro: GDP growth, inflation projections | international org |
-| OONI / academic studies | censorship measurement, VPN studies | measurement org / peer-reviewed |
+| Area | What's missing |
+|---|---|
+| Provincial splits (SCI province-level data) | more granular, for "regional" questions |
+| ISPA granular report PDFs | exact sample/weighting details per survey |
+| WVS dataset mining | media trust %, family/work importance %, prayer frequency |
+| 1405 census/projection cycle | SCI next population update |
 
 ## Rejected (do not use)
 
 - **GAMAAN** (Group for Analyzing and Measuring Attitudes in Iran) — rejected
   by user on **2026-08-05**: funding transparency concerns. Its previously
   noted numbers (e.g. ~90% of internet users use circumvention tools) are
-  **dropped** and not re-usable.
+  **dropped** and not re-usable. A 2025 Tilburg paper by GAMAAN's founder
+  repeating "85% VPN" figures is likewise excluded.
 
-## Gaps to fill
+## Gaps — status
 
-- ~~VPN / circumvention usage %~~ → **filled** by ISPA digital-ecosystem
-  survey (74.4% of internet users, Jun 2026).
-- Social-media platform shares for 1405 (have 1403 + 1404 waves).
-- Fresh 1405 census/projection cycle (SCI).
-- Values/religion data from WVS Iran 2020 (batch 2).
+- VPN / circumvention usage % → **filled** (ISPA 74.4% Jun 2026 + IPRC 81%
+  Dec 2024 + academic 10–12M users).
+- Social-media platform shares → filled for 1403/1404 (ISPA); 1405 optional.
+- Marriage/divorce, age at first marriage → filled (ثبت احوال).
+- Fresh 1405 census/projection → pending SCI release.
+- Values/religion → filled (WVS 2020 via academic papers).

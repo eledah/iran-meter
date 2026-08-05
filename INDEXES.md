@@ -287,6 +287,50 @@ Iranian calendar: 1403 = 2024–25, 1404 = 2025–26, 1405 = 2026–27.
 | DTP3 immunization (1-yr-olds) | 99 | % | latest | GHO | data.who.int | primary |
 | Population (WHO estimate) | 90,608,707 | persons | 2023 | WHO | data.who.int | primary |
 
+## UNESCO Institute for Statistics (UIS API, primary; Feb 2026 data release)
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Adult literacy (15+) | 88.9 | % | 2023 | Feb 2026 | api.uis.unesco.org LR.AG15T99 | primary |
+| Youth literacy (15–24) | 98.7 | % | 2023 | Feb 2026 | LR.AG15T24 | primary |
+| Adult literacy — female / male | 85.1 / 92.8 | % | 2023 | Feb 2026 | WB SE.ADT.LITR.* | primary |
+| Tertiary gross enrollment | 58.7 | % | 2022 | Feb 2026 | GER.5T8 | primary |
+| Government education expenditure | 2.8 | % of GDP | 2023 | Feb 2026 | XGDP.FSGOV | primary |
+| Expected years of schooling | 14.1 | years | 2022 | Feb 2026 | SLE.1T8 | primary |
+| Mean years of schooling (25+) | 10.3 | years | 2016 | Feb 2026 | MYS.1T8.AG25T99 | primary |
+| Primary gross enrollment | 102.0 | % | 2023 | Feb 2026 | WB SE.PRM.ENRR | primary |
+| Secondary gross enrollment | 85.1 | % | 2023 | Feb 2026 | WB SE.SEC.ENRR | primary |
+| Out-of-school children (primary age) | 9,163 | children | 2023 | Feb 2026 | OFST.1.CP | primary |
+
+## IMF — WEO April 2026 (primary; Jul 2026 update; last Article IV was 2018)
+
+| Index | Value | Unit | Ref. period | Actual/Forecast | Report date | Source |
+|---|---|---|---|---|---|---|
+| Real GDP growth | +3.7 / −1.5 / −6.1 (−5.4 Jul) / +3.2 | % y/y | 2024/25/26/27 | A/E/F/F | Apr 2026 (Jul upd) | datamapper NGDP_RPCH |
+| CPI inflation (avg) | 32.5 / 50.9 / 68.9 / 39.6 | % y/y | 2024–2027 | A/E/F/F | Apr 2026 | PCPIPCH |
+| Unemployment | 7.6 / 8.0 / 9.2 | % | 2024/25/26 | A/E/F | Apr 2026 | LUR |
+| GDP per capita (PPP) | 21,145 / 21,200 / 20,279 | intl $ | 2024/25/26 | A/E/F | Apr 2026 | PPPPC |
+| GDP per capita (nominal) | 3,415 | USD | 2026 | F | Apr 2026 | NGDPDPC |
+| GDP (current prices) | 416.7 → 300.3 | USD bn | 2024 → 2026 | A → F | Apr 2026 | NGDPD |
+| Current account balance | +13.2 → −5.4 | USD bn | 2024 → 2026 | A → F | Apr 2026 | BCA |
+| General govt net lending/borrowing | −5.19 | % of GDP | 2026 | F | Apr 2026 | Fiscal Monitor |
+| Population (IMF) | 87.93 | million | 2026 | F | Apr 2026 | profile |
+
+## Internet censorship & VPN (official/internal + measurement orgs + academic)
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| VPN use among internet users (IPRC survey) | 81 | % | Dec 2024 | Feb 2025 | Iranian Parliament Research Center via Iran Intl | news (official survey) |
+| VPN — free / paid split | 49.4 / 30.3 | % | Dec 2024 | Feb 2025 | same | news (official survey) |
+| VPN users (official est.) | 10–12 | million | 2018 | 2022 | J. Cyberspace Studies 6(2) | academic |
+| Telegram users still active | ~40 | % | Jul 2021 | 2022 | JCS (citing ISPA) | academic |
+| Top mobile apps freely accessible | 31.1 | % (53/170) | 2021–22 | 2022 | JCS | academic |
+| Blocked domains (OONI 2014–17) | 886 | domains | 2014–2017 | 2017 | ooni.org/post/iran-internet-censorship | primary |
+| Nov 2019 blackout — BGP drop | 33 | % | Nov 2019 | 2019 | OONI | primary |
+| Internet freedom score (FH) | 12/100 (2024) · 13/100 (2025) | score | 2023–2025 | FH | freedomhouse.org FOTN | primary |
+| Obstacles to Access sub-score | 7/25 | score | Jun 2023–May 2024 | FH 2024 | FOTN | primary |
+| Internet penetration (DataReportal via FH) | 81.7 | % | Jan 2024 | FH 2024 | FOTN | primary |
+
 ---
 
-*Pending: batch 4 (UNESCO, IMF, academic VPN/censorship studies).*
+*All planned sources covered (13). Optional follow-ups: provincial splits, ISPA granular reports, WVS dataset mining for media trust/prayer frequency.*

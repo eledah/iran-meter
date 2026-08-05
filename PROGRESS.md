@@ -37,3 +37,10 @@ Interactive quiz game about Iran based on official reported statistics
   53M IRR); **WHO** (tobacco 12.5%, obesity 24%, health spending 6.03% GDP,
   LE 74.7). Integrated into `INDEXES.md` (~150 rows total). Batch 4
   dispatched: UNESCO, IMF, academic VPN/censorship studies.
+
+- **2026-08-05 (6)** — Index hunt batch 4 (final planned): **UNESCO UIS**
+  (literacy 88.9%, tertiary GER 58.7%, edu spending 2.8% GDP), **IMF WEO**
+  (2026 GDP −6.1% forecast, inflation 68.9% forecast — highest since WWII),
+  **censorship/VPN** (IPRC official survey 81% VPN use; OONI 886 blocked
+  domains; FH score 12/100). All 13 planned sources now covered,
+  `INDEXES.md` ~190 rows. Next: convert to `data/*.yaml` + draft questions.
