@@ -259,6 +259,13 @@ Rejected sources are listed at the bottom so they don't get re-added.
   differs between waves (1394 «بدحجابی» vs 1402 «بی‌حجابی»); Persian PDF
   digit-scrambling means figures were visually verified by the researcher —
   spot-check before publishing a question.
+- **Wave 3 (1394) baseline** available for comparison questions: official
+  718-page report (n=14,906, PI Javadi Yeganeh) at
+  https://ircud.ir/fa/content/283625 (PDF:
+  https://ircud.ir/Media/PDF/1400/04/12/637608720832709393.pdf); copy saved
+  at `references/values-survey-wave3/wave3_report.pdf`. ~40 primary-verified
+  1394 values in `INDEXES.md` (separation 30.7%, hijab-mandate agree 53.1%,
+  pray always/mostly 78.5%, trust IRIB 54.8%, trust gov 49.9%).
 
 ## 15. «آنچه ایران می‌خواهد» ("What Iran Wants") — confidential presidency report (leaked)
 

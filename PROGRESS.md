@@ -66,3 +66,13 @@ Interactive quiz game about Iran based on official reported statistics
   May 2026: anger 63.6% world-record, reforms 53%, food difficulty >81%).
   **Censored vote-intention poll** (turnout ~30% predicted). Ethics chapter
   agent failed (503) — retry in batch 7. `INDEXES.md` ~320 rows.
+
+- **2026-08-05 (10)** — Batch 7: **Wave-3 (1394) baseline** of the values
+  survey compiled from the official 718-page report (~40 primary values:
+  separation 30.7%, hijab agree 53.1%, pray 78.5%, trust gov 49.9%); report
+  archived at `references/values-survey-wave3/`. **Per-capita GDP by
+  province** (Bushehr 383M rials = 4.4× national; S&B lowest). **Ethics
+  chapter**: 3rd agent attempt failed (503) — extracted headline item
+  myself via vision (forgiveness/altruism prevalent 48.1%, n=15,878);
+  remaining ethics tables (eth-04…16) rendered locally for later.
+  `INDEXES.md` ~390 rows.

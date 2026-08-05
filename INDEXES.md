@@ -556,7 +556,71 @@ Platform trends & happiness:
 
 ⚠️ Note: two distinct "~92% dissatisfaction" figures exist — values-survey wave 4 (HamMihan, 2024) vs ISPA presidency-commissioned poll (Rouydad24, 2025). Do not merge.
 
+## Per-capita GDP by province (SCI regional accounts, via provincial MPOs)
+
+| Index | Value | Unit | Province/scope | Ref. period | Source | Conf. |
+|---|---|---|---|---|---|---|
+| GDP per capita (const. prices) | 383 | M rials — rank 1 of 31 | Bushehr | 1400 | imps.ac.ir/uploads/boshehr-16mehr.pdf (Bushehr MPO citing SCI) | primary |
+| GDP per capita (const.) — national avg | 87 | M rials | Iran | 1400 | same | primary |
+| Bushehr vs national average | 4.4× | ratio | — | 1400 | computed | estimate |
+| GDP per capita (const.) | 58 / 75 | M rials | Gilan (rank 18) / Mazandaran (rank 10) | 1399 | gilan-today.com/29942 (Gilan MPO) | news |
+| GDP per capita (const., implied) | ~30 | M rials | Sistan-Baluchestan (lowest) | 1400 | imps chart bar | estimate |
+| GDP per capita (current) | ~46 / ~6 | M toman | Bushehr / Sistan-Baluchestan | 1394 | donya-e-eqtesad 3380248 | news |
+| GDP per capita (current) | 1,072,595 / ~100–150k | thousand rials | Bushehr / Sistan-Baluchestan | 2020 | geocurrents.info (IranOpenData) | estimate |
+| Nominal GDP per capita (IMF, context) | ~4,250 | USD | Iran | 2026 | IMF | estimate |
+
+## Values survey wave 3 (1394) — baseline for comparison questions (official 718-page report, n=14,906, PI Javadi Yeganeh; ircud.ir; confidence primary)
+
+**Religiosity (1394):**
+
+| Index | Value | Unit | Wave | Source |
+|---|---|---|---|---|
+| Religion-politics separation: agree / oppose / neither | 30.7 / 36.3 / 33.0 | % | 1394 | official report Tab. 47/48-8 |
+| Mandatory hijab: agree / disagree / neither | 53.1 / 22.2 / 24.8 | % | 1394 | Tab. 49-8 |
+| بدحجابی: no problem / opposed-but-no-interference / admonish | 10.6 / 67.7 / 17.6 | % | 1394 | Tab. 51-8 |
+| Pray always/mostly / never | 78.5 / 3.1 | % | 1394 | Tab. 17-8 |
+| Congregational prayer always/mostly / never | 26.2 / 17.3 | % | 1394 | same |
+| Fast always/mostly / never | 72.5 / 5.1 | % | 1394 | same |
+| Read Quran always/mostly / never | 27.7 / 9.1 | % | 1394 | same |
+| Believe deeds accounted in afterlife | 86.9 | % | 1394 | Tab. 6-8 |
+| "Religion = pure heart even without prayer" | 39.4 | % | 1394 | same |
+| Religiosity decreased vs 5 yrs ago | 66.2 | % | 1394 | Tab. 1-7 |
+| Expect religiosity to decrease in 5 yrs | 64.8 | % | 1394 | Tab. 1-7 |
+
+**Trust in institutions (1394, high/very-high):**
+
+| Index | Value | Unit | Wave | Source |
+|---|---|---|---|---|
+| Trust IRIB | 54.8 | % | 1394 | Ch. 12 |
+| Trust satellite TV | 11.3 | % | 1394 | same |
+| Trust domestic papers/news sites | 36.9 | % | 1394 | same |
+| Trust internet/social media | 12.0 | % | 1394 | same |
+| Trust Majlis | 46.9 | % | 1394 | Tab. 10-12 |
+| Trust judiciary | 48.7 | % | 1394 | same |
+| Trust government | 49.9 | % | 1394 | same |
+| Trust municipality | 37.0 | % | 1394 | same |
+| Trust clergy | 44.4 | % | 1394 | Tab. 23-12 |
+
+**Politics (1394):**
+
+| Index | Value | Unit | Wave | Source |
+|---|---|---|---|---|
+| Political situation better than 5 yrs ago / worse | 46.4 / 22.2 | % | 1394 | Tab. 5-7 |
+| Expect political improvement next 5 yrs / worsening | 46.4 / 22.2 | % | 1394 | Tab. 5-7 |
+| Poverty/inequality increased vs 5 yrs ago | 56.0 | % | 1394 | Tab. 19-7 |
+| Negative moral traits will spread in 5 yrs | 76.3 | % | 1394 | Tab. 14-7 |
+
+## Ethics chapter (1402 values survey) — headline item (visually verified from rendered pages)
+
+| Index | Value | Unit | Ref. period | Source | Conf. |
+|---|---|---|---|---|---|
+| Forgiveness/altruism prevalent among people (high+very high) | 48.1 | % | 1402 | ethics ch. Table 1 (eth-02.png) | leak (visually-verified) |
+| Forgiveness/altruism low (low+very low) | 37.5 | % | 1402 | same | leak (visually-verified) |
+| Breakdown: very low 4.7 / low 32.8 / med 14.4 / high 45.3 / very high 2.8 | % | 1402 | same | leak (visually-verified) |
+
+Note: ethics tables eth-04…eth-16 are rendered locally (`/root/paymaiesh/pages/`) — further ethics items (lying, bribery…) extractable on request.
+
 ---
 
-*Now 15+ sources, ~320 rows. Remaining follow-ups: ethics chapter (retry),
-per-capita GDP by province, values-survey 1394 wave baseline.*
+*Now ~16 sources, ~390 rows. Remaining: ethics chapter extra tables (local),
+values-survey wave-1/2 baselines (1379/1382), provincial marriage/divorce.*
