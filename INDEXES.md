@@ -14,8 +14,9 @@ Provenance rules:
 - Rows are added in batches as research subagents return findings.
 
 **Timeline note:** several 1405/2026 figures were collected during/after the
-wartime period (incl. a prolonged internet outage) — flagged per row where it
-matters. Iranian calendar: 1403 = 2024–25, 1404 = 2025–26, 1405 = 2026–27.
+wartime period (incl. a prolonged internet outage; CBI withheld monetary
+statistics ~5 months, resumed Jun 2026) — flagged per row where it matters.
+Iranian calendar: 1403 = 2024–25, 1404 = 2025–26, 1405 = 2026–27.
 
 ---
 
@@ -177,6 +178,58 @@ matters. Iranian calendar: 1403 = 2024–25, 1404 = 2025–26, 1405 = 2026–27.
 | Deaths | ~451,700 | events | 1404 | Mar–Apr 2026 | rokna 1220777 | news |
 | Crude death rate | ~5.3 | per 1,000 | 1403 | 2025–26 | iranstatis (computed) | estimate |
 
+## Central Bank of Iran (بانک مرکزی) — monetary stats (via outlets quoting CBI; cbi.ir unreachable from research env)
+
+**Inflation (urban CPI, base year 1400=100):**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Point-to-point inflation | 83.9 | % y/y | Tir 1405 (Jul 2026) | 30–31 Jul 2026 | zoomit 464112; factnameh | news (CBI release) |
+| Annual avg (12-mo) inflation | 61.4 | % | 12 mo to Tir 1405 | 30–31 Jul 2026 | iranstatis; zoomit | news (CBI release) |
+| Monthly inflation | 3.6 | % m/m | Tir 1405 | 30–31 Jul 2026 | zoomit; iranstatis | news (CBI release) |
+| CPI index | 742.8 | index (1400=100) | Tir 1405 | 30–31 Jul 2026 | iranstatis | news (CBI release) |
+| P2P trend | 67 → 83.9 | % y/y | Farvardin→Tir 1405 | monthly | donya-e-eqtesad 4276600 | news (CBI release) |
+| SCI inflation (cross-check: SCI vs CBI differ) | annual 66 / p2p 87.9 | % | Tir 1405 | ~8 Aug 2026 | zoomit; IRNA 86193666 | news (SCIRI) |
+
+**Exchange rates (USD/IRR):**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Official/reference rate (دلار دولتی) | 1,472,440 | IRR per USD | 30 Jul 2026 | daily | tgju (CBI rate) | news/aggregator |
+| National exchange office sell (صرافی ملی) | 1,325,072 | IRR per USD | 2 Aug 2026 | daily | navasan.net | news/aggregator |
+| Trade (NIMA) transfer rate | 1,527,850 | IRR per USD | 30 Jul 2026 | daily | ibena via khabarpu | news |
+| Free-market rate | ~1,920,000–1,936,000 | IRR per USD | 30 Jul 2026 | daily | tgju | news/aggregator |
+
+**Liquidity & interest:**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Liquidity (نقدینگی) | 15,581 | trillion toman | end Esfand 1404 (Mar 2026) | late Jul 2026 | IRNA 86188998 | news (CBI release) |
+| Liquidity growth | 53.3 | % y/y | end Esfand 1404 | late Jul 2026 | IRNA 86188998 | news (CBI release) |
+| Base money growth | 61.5 | % y/y | end Esfand 1404 | late Jul 2026 | independentpersian 421079 | news (CBI release) |
+| Money multiplier | 7.434 | ratio | end Bahman 1404 | 15 Jun 2026 | tabnak 1379323 | news (CBI release) |
+| Interbank rate | 23.86 | % p.a. | week ending 29 Jul 2026 | ~11 Aug 2026 | khabaronline 2254417 | news (CBI release) |
+| Policy corridor | 17 / 23 / 24 | % p.a. (floor/repo/ceiling) | since ~Jun 2026 | 2026 | borna 2356585 | news |
+
+## ITU — ICT statistics, Iran (primary; WTID 2025 release)
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Individuals using the Internet | 85.3 | % | 2024 | 2025 | datahub.itu.int/data/?e=IRN&i=11624 | primary |
+| Mobile-cellular subscriptions | 174 | per 100 inhab. | 2024 | 2025 | datahub.itu.int/data/?e=IRN&i=178 | primary |
+| Active mobile-broadband subscriptions | 127 | per 100 inhab. | 2024 | 2025 | datahub.itu.int/data/?e=IRN&i=11632 | primary |
+| Fixed-broadband subscriptions | 12.06 (11.04M) | per 100 inhab. (subs) | 2024 | 2025 | data.worldbank.org/indicator/IT.NET.BBND.P2 | primary |
+| Smartphone ownership | 72.4 | % of individuals | 2021 | 2022 | datahub.itu.int/data/?e=IRN&i=28228 | primary |
+| Mobile phone ownership | 92 (2021) / 86.8 (2024) | % of individuals | 2021/2024 | 2022/2025 | i=9145 / i=28027 | primary |
+| 4G coverage | 94.2 | % of population | 2024 | 2025 | i=100095 | primary |
+| 5G coverage | 8.2 | % of population | 2024 | 2025 | same | primary |
+| 2G coverage | 99 | % of population | 2024 | 2025 | same | primary |
+| Households with home internet — rural / urban | 69.2 / 82.5 | % of households | 2021 | 2022 | i=12047 | primary |
+| Internet use — female / male | 77.7 / 79.5 | % of individuals | 2021 | 2022 | i=11624 by gender | primary |
+| Broadband basket cost (fixed / mobile 5GB) | 0.20 / 0.19 | % of GNI per capita | 2025 | 2025 | i=100122 | primary |
+| Fixed-broadband traffic | 564 | GB/subscription | 2024 | 2025 | i=13067 | primary |
+| Mobile-broadband traffic | 163 | GB/subscription | 2024 | 2025 | i=13068 | primary |
+
 ---
 
-*Pending: batch 2 subagent findings (Central Bank of Iran, WVS Iran 2020, ITU).*
+*Pending: batch 3 (WVS Iran 2020 retry, ILO, WHO).*

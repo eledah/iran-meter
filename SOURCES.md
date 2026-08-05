@@ -110,15 +110,56 @@ Rejected sources are listed at the bottom so they don't get re-added.
 - **Caveat:** small discrepancies (±50–900) between ثبت احوال and health-
   ministry counts due to late registration; mostly via-news sourcing.
 
+## 6. Central Bank of Iran (بانک مرکزی)
+
+- **Type:** official internal monetary authority
+- **URL:** https://cbi.ir/
+- **Accessed:** 2026-08-05 (cbi.ir itself unreachable from research env; all
+  figures via outlets/aggregators quoting CBI releases)
+- **What's inside (latest, wartime period):**
+  - Point-to-point inflation **83.9%** (Tir 1405 = Jul 2026); annual avg
+    61.4%; monthly 3.6%; CPI index 742.8 (1400=100). Note SCI's parallel
+    index says 66% annual / 87.9% p2p — the two agencies differ.
+  - USD official rate 1,472,440 IRR (30 Jul 2026); national exchange office
+    1,325,072; free market ~1.92M IRR.
+  - Liquidity 15,581 trillion toman (+53.3% y/y, end Esfand 1404); base
+    money +61.5%; interbank rate 23.86% (Jul 2026); policy corridor
+    17/23/24%.
+- **Caveat:** CBI withheld monetary data ~5 months (wartime), resumed Jun
+  2026; treat 1405 numbers as volatile.
+
+## 7. ITU — International Telecommunication Union (external)
+
+- **Type:** UN specialized agency, official ICT statistics
+- **URL:** https://datahub.itu.int/data/?e=IRN (WTID 2025 release)
+- **Accessed:** 2026-08-05 (primary, verified directly on DataHub)
+- **What's inside (2024 unless noted):** internet users 85.3%; mobile
+  subscriptions 174/100; active mobile-broadband 127/100; fixed broadband
+  12.06/100 (11.04M subs); 4G coverage 94.2%, 5G 8.2%, 2G 99%; smartphone
+  ownership 72.4% (2021); home internet rural 69.2% / urban 82.5% (2021);
+  internet by gender female 77.7% / male 79.5% (2021); broadband basket
+  0.20%/0.19% of GNI per capita (2025).
+
+## 8. World Values Survey — Wave 7, Iran 2020 (external, academic)
+
+- **URL:** https://www.worldvaluessurvey.org/ (WV7; country list includes
+  "Iran 2020")
+- **Accessed:** 2026-08-05
+- **Status:** dataset confirmed available; values not yet extracted — batch-2
+  research attempt failed (infra error), being retried in batch 3.
+- **Caveat:** face-to-face mode → possible preference falsification on
+  sensitive topics in Iran; frame questions carefully.
+
 ---
 
 ## Other verified & reliable candidates (not yet mined)
 
 | Source | What it covers | Why reliable |
 |---|---|---|
-| Central Bank of Iran (https://cbi.ir) | inflation (CPI), FX rates, money supply, GDP | official internal |
-| ITU (https://datahub.itu.int) | internet/ICT penetration | UN specialized agency |
-| ILO / UNESCO / WHO / IMF | labor, education, health, macro | established international orgs |
+| ILO (https://ilostat.ilo.org) | labor indicators (unemployment, NEET, informality) | UN agency |
+| WHO (https://www.who.int/data/gho) | health: smoking, obesity, health spending | UN agency |
+| UNESCO (https://data.uis.unesco.org) | education: enrollment, literacy | UN agency |
+| IMF (https://www.imf.org/en/Countries/IRN) | macro: GDP growth, inflation projections | international org |
 | Peer-reviewed academic studies (e.g., on VPN/censorship) | niche topics with no official stat | last resort, cite the paper |
 
 ## Rejected (do not use)
