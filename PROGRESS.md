@@ -50,3 +50,12 @@ Interactive quiz game about Iran based on official reported statistics
   (n=15,878, autumn 1402), ch.8 leaked via BBC Persian — separation of
   religion & politics 72.9%, never pray 22.2%, 85% say religiosity declined.
   Source #14 in `SOURCES.md`; ~19 rows in `INDEXES.md`.
+
+- **2026-08-05 (8)** — Batch 5: **all other leaked chapters** of the same
+  1402 survey found (7 chapter PDFs on Iran Data Portal/Syracuse + IranWire
+  trust chapter + Ham-Mihan social chapter): economy worse 80.3%, vote
+  turnout 43%, low trust IRIB 58%, ideal family 2 kids 50.9%, would emigrate
+  38.6%, inflation top problem 81.9%. **Provincial contrasts** (Tehran vs
+  Sistan-Baluchestan literacy 92.9/76.0, urbanization Qom 95.2 vs S&B 48.5,
+  poverty 15.4 vs 58.2). **WVS gaps closed** via live WVS Online tool (pray
+  daily 73.7%, press trust 60.1%, family 93.9%). `INDEXES.md` ~260 rows.

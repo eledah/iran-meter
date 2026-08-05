@@ -151,8 +151,10 @@ Rejected sources are listed at the bottom so they don't get re-added.
   ~70%, government ~19%, parliament ~20%; interpersonal trust 15%; family
   trust 85%, neighbors 18%; national pride 83.5%; "men better political
   leaders" 44.3%; "university more important for a boy" 52.3%.
-- **Not yet extracted (dataset downloadable):** media trust %, family/work
-  importance %, prayer frequency.
+- **Not yet extracted (dataset downloadable):** — now mostly filled via the
+  live WVS Online tool (see INDEXES.md): pray several times a day 63.7%;
+  trust press 60.1%, TV 79.4%; family very important 93.9%, work 77.5%;
+  religious services ≥weekly 26.1%; TV news daily 63.0%.
 - **Caveat:** face-to-face/phone mode → possible preference falsification on
   sensitive topics; values sourced via academic papers (Saleh 2024, Marburg
   DP 2026, TWU thesis) + official WVS Online tool.
@@ -220,23 +222,39 @@ Rejected sources are listed at the bottom so they don't get re-added.
 
 ## 14. پیمایش ملی «ارزش‌ها و نگرش‌های ایرانیان» 1402 — National Values & Attitudes Survey (confidential; leaked)
 
-- **Type:** official government national survey — **classified**; chapter 8
-  (religious attitudes & behaviors) leaked, published by BBC Persian
-  (Feb 2024). Prior waves: 1379, 1382, 1394.
-- **URLs:** https://www.bbc.com/persian/articles/cmlgj8j3xl1o · full ch.8 PDF
-  (BBC-hosted): https://downloads.bbc.co.uk/worldservice/persian/پیمایش ملی دینداری.۱۴۰۲.pdf
-- **Survey:** n=15,878, face-to-face, random sample, 31 provinces, autumn
-  1402 (2023).
-- **What's inside (1402):** separation of religion & politics **72.9%** agree
-  (vs 30.7% in 1394); 38% have no problem with no-hijab, only 12.5% would
-  admonish; 45.2% oppose mandatory hijab; never pray 22.2% (vs 3.1% in
-  1394); fast always/mostly 51.5% (vs 72.5%); congregational prayer
-  always/mostly 18.5%; **85%** say religiosity fell vs 5 years ago; 81.8%
-  expect further decline; "religion = pure heart even without prayer" 61.8%.
-- **Caveats:** classified document (leak); face-to-face + sensitive topic →
-  answers likely conservative (real secularization probably higher); hijab
-  question wording differs between waves (1394 «بدحجابی» vs 1402 «بی‌حجابی»)
-  — label comparisons.
+- **Type:** official government national survey — **classified** (Wave 4).
+  Commissioned by وزارت ارشاد national-projects office; n=15,878 (15+),
+  face-to-face, 31 provinces, Aban 1402 (Nov 2023); unveiled 30 Dey 1402.
+  Prior waves: 1379, 1382, 1394.
+- **URLs:**
+  - Religiosity chapter (ch.8) via BBC Persian: https://www.bbc.com/persian/articles/cmlgj8j3xl1o
+  - Ch.8 full PDF (BBC-hosted): https://downloads.bbc.co.uk/worldservice/persian/پیمایش ملی دینداری.۱۴۰۲.pdf
+  - Trust & family chapters via IranWire (Feb 2024): iranwire.com/fa/special-features/125791
+  - **7 full chapter PDFs (economy, politics, trust, family, social, ethics,
+    identity) hosted on Iran Data Portal, Syracuse University** —
+    irandataportal.syr.edu (copies saved under `references/paymaiesh-1402/`)
+  - Social-harms numbers via Ham-Mihan (Sep 2024).
+- **What's inside (1402, all leak confidence):**
+  - Religiosity: separation of religion & politics 72.9% agree (vs 30.7% in
+    1394); never pray 22.2% (vs 3.1%); fast always/mostly 51.5% (vs 72.5%);
+    85% say religiosity declined vs 5 yrs ago.
+  - Economy: economy worse than 5 yrs ago 80.3%; will worsen 70.9%; tax
+    unfair 77.8%; lower-middle class self-ID 43.8%.
+  - Politics: will vote next presidential 43.0% (vs 42.4% no); never attend
+    rallies 53.1%; "resistance axis" support 44.3% vs 44.5% against; US/West
+    ties if giving up nukes 27.3%.
+  - Trust: low trust IRIB 58%, parliament 63%, gov 57%, politicians 70%,
+    clergy ~56%; high trust doctors 73%, police ~63%.
+  - Family: ideal marriage age girls 21–25 (45.5%); approve premarital sex
+    only 7.3%; ideal family 2 children 50.9%.
+  - Identity: proud Iranian 83%; would emigrate 38.6% (Canada top 22%).
+  - Social: inflation top problem 81.9%; ~92% dissatisfied; only 8.2% say
+    situation acceptable.
+- **Caveats:** classified leak; face-to-face + sensitive topics → answers
+  likely conservative (real secularization probably higher); hijab wording
+  differs between waves (1394 «بدحجابی» vs 1402 «بی‌حجابی»); Persian PDF
+  digit-scrambling means figures were visually verified by the researcher —
+  spot-check before publishing a question.
 
 ## Optional follow-ups (not urgent)
 

@@ -361,7 +361,116 @@ BBC). Caveat: face-to-face + sensitive topic → answers likely conservative;
 | "Religion = pure heart even without prayer" (agree) | 61.8 | % (39.4% in 1394) | 1402 | Feb 2024 | same | leak |
 | Full ch.8 PDF (BBC-hosted) | — | — | — | Feb 2024 | downloads.bbc.co.uk/worldservice/persian/پیمایش ملی دینداری.۱۴۰۲.pdf | leak |
 
+## پیمایش ملی «ارزش‌ها و نگرش‌های ایرانیان» 1402 — OTHER leaked chapters (economy, politics, trust, family, identity, social harms)
+
+Context: Wave 4 of the survey, n=15,878 (15+), face-to-face, 31 provinces,
+Aban 1402 (Nov 2023); unveiled 30 Dey 1402; classified secret; commissioned
+by وزارت ارشاد. Chapters hosted as PDFs on Iran Data Portal (Syracuse);
+trust chapter via IranWire (Feb 2024); social-harms via Ham-Mihan.
+Confidence: `leak`.
+
+**Economic chapter:**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Tax collection unfair (agree) | 77.8 | % | 1402 | Feb 2024 | Syracuse PDF (نگرش‌های اقتصادی) | leak |
+| Taxes haven't improved gov services | 72.2 | % | 1402 | Feb 2024 | same | leak |
+| No tax needed if khums/zakat paid | 49.3 | % | 1402 | Feb 2024 | same | leak |
+| Economy worse than 5 yrs ago | 80.3 | % | 1402 | Feb 2024 | same | leak |
+| Economy will worsen in next 5 yrs | 70.9 | % | 1402 | Feb 2024 | same | leak |
+| Self-perceived lower-middle class | 43.8 | % | 1402 | Feb 2024 | same | leak |
+| Self-perceived lower class | 31.7 | % | 1402 | Feb 2024 | same | leak |
+
+**Politics chapter:**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Will vote in next presidential election | 43.0 (42.4 no) | % | 1402 | Feb 2024 | Syracuse PDF (سیاست) | leak |
+| Will vote in Majlis election | 40.3 (44.9 no) | % | 1402 | Feb 2024 | same | leak |
+| Never attend rallies (22 Bahman/Quds) | 53.1 | % | 1402 | Feb 2024 | same | leak |
+| Follow political news little/very little | 64.5 | % | 1402 | Feb 2024 | same | leak |
+| Main reference group: family | 58.4 | % | 1402 | Feb 2024 | same | leak |
+| Support "resistance axis" vs US/West | 44.3 (44.5 disagree) | % | 1402 | Feb 2024 | same | leak |
+| Approve fight for Quds liberation | 58.8 | % | 1402 | Feb 2024 | same | leak |
+| Approve US/West ties if giving up nuclear+missile | 27.3 (64.9 no) | % | 1402 | Feb 2024 | same | leak |
+
+**Trust & social capital chapter (via IranWire):**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Low trust in IRIB (1394: ~81% trusted) | 58 | % | 1402 | Feb 2024 | iranwire.com/fa/special-features/125791 | leak |
+| Low trust in parliament (1394: ~20%) | 63 | % | 1402 | Feb 2024 | same | leak |
+| Low trust in government (1394: ~18%) | 57 | % | 1402 | Feb 2024 | same | leak |
+| Low trust in judiciary (1394: ~20%) | 53 | % | 1402 | Feb 2024 | same | leak |
+| Low trust in politicians (high: 13%) | 70 | % | 1402 | Feb 2024 | same | leak |
+| Low trust in clergy (1394: 45% trusted) | ~56 | % | 1402 | Feb 2024 | same | leak |
+| High-ish trust in police / Sepah | ~63 / ~60 | % | 1402 | Feb 2024 | same | leak |
+| High trust in doctors | 73 | % | 1402 | Feb 2024 | same | leak |
+| "People trust each other little" (27% none) | 54 | % | 1402 | Feb 2024 | same | leak |
+
+**Family chapter:**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Ideal marriage age for girls 21–25 (mean 22.4) | 45.5 | % | 1402 | Feb 2024 | Syracuse PDF (خانوادگی) | leak |
+| Approve premarital sex (61.0 strongly disagree) | 7.3 | % | 1402 | Feb 2024 | same | leak |
+| Approve cohabitation without marriage | 10 | % | 1402 | Feb 2024 | same | leak |
+| Ideal family size: 2 children | 50.9 | % | 1402 | Feb 2024 | same | leak |
+| Give children freedom in lifestyle/dress | 46.1 | % | 1402 | Feb 2024 | same | leak |
+
+**Identity chapter:**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Proud to be Iranian (high/very high; 53.3 very) | 83 | % | 1402 | Feb 2024 | Syracuse PDF (هویت) | leak |
+| Would emigrate permanently if possible | 38.6 | % | 1402 | Feb 2024 | same | leak |
+| Top emigration destination: Canada | 22 | % (US 19, DE 16, TR 10) | 1402 | Feb 2024 | same | leak |
+| Low response to call to defend country | 51.6 | % | 1402 | Feb 2024 | same | leak |
+
+**Social harms (via Ham-Mihan, Sep 2024):**
+
+| Index | Value | Unit | Ref. period | Report date | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Inflation = most important national problem | 81.9 | % (multi-select) | 1402 | Sep 2024 | hammihanonline.ir | news |
+| Unemployment = top problem | 47.9 | % | 1402 | Sep 2024 | same | news |
+| Current situation acceptable/good | 8.2 | % | 1402 | Sep 2024 | same | news |
+| Dissatisfied with country's situation | ~91.8 | % | 1402 | Sep 2024 | same | news |
+| "Country can be improved through reforms" | 61.6 | % | 1402 | Sep 2024 | same | news |
+
+## Provincial contrasts (SCI census 2016 + releases; confidence primary unless noted)
+
+| Index | Value | Unit | Provinces (max / min) | Ref. period | Source | Conf. |
+|---|---|---|---|---|---|---|
+| Population | 13,267,637 / 580,158 | persons | Tehran / Ilam | 2016 | SCI census | primary |
+| Population estimate | 14.68M / 597k | persons | Tehran / Ilam | 1405 est. | iranstatis (SCI repub.) | med |
+| Literacy (6+) | 92.9 / 76.0 | % | Tehran / Sistan-Baluchestan | 2016 | SCI census | primary |
+| Urbanization | 95.2 / 48.5 | % | Qom / Sistan-Baluchestan | 2016 | SCI census | primary |
+| Unemployment (winter 1403, corroborated) | 15.2 | % | Kermanshah (max) | 2024–25 | donya-e-eqtesad | news |
+| Unemployment (winter 1404, ISNA) | 11.7 / 5.0 | % | Kermanshah / S. Khorasan | 2025–26 | eghtesadnews (ISNA) | news — **conflict: 16.5/3.5 elsewhere** |
+| Poverty rate | 58.2 / 15.4 | % | Sistan-Baluchestan / Tehran | 1400 | SNN (Min. of Welfare) | news |
+| GDP share of country | 22.1 | % | Tehran (max) | 1399 | SCI via Tabnak | news |
+| GDP (current) | 1,760k / 38.5k | bn toman | Tehran / South Khorasan | 1400 | ecoinan (SCI reg. accounts) | news |
+| Population growth 2011–16 | +3.02 | %/yr | South Khorasan (max) | 2016 | SCI census | primary |
+| Shrinking provinces | −0.11 / −0.23 | %/yr | N. Khorasan / Hamedan | 2016 | SCI census | primary |
+| Sex ratio | 114 / 100 | men per 100 women | Bushehr / Gilan | 2016 | SCI census | primary |
+
+## WVS Iran 2020 — additional values (live WVS Online tool, N=1,499; citable-page)
+
+| Index | Value | Unit | Ref. period | Source |
+|---|---|---|---|---|
+| Pray several times a day | 63.7 | % | 2020 | Q172 |
+| Pray at least once a day | 73.7 | % | 2020 | Q172 (63.7+10.0) |
+| Never pray | 5.4 | % | 2020 | Q172 |
+| Attend religious services ≥ once a week | 26.1 | % | 2020 | Q171 |
+| Trust in the press (a great deal + quite a lot) | 60.1 | % | 2020 | Q66 |
+| Trust in television | 79.4 | % | 2020 | Q67 |
+| Importance of family — "very important" | 93.9 | % | 2020 | Q1 |
+| Importance of work — "very important" | 77.5 | % | 2020 | Q5 |
+| TV news as daily info source | 63.0 | % | 2020 | Q202 |
+| Internet as daily info source | 53.1 | % | 2020 | Q206 |
+| Daily newspaper | 4.3 | % (59.0 never) | 2020 | Q201 |
+
 ---
 
-*Now 14 sources covered. Optional follow-ups: provincial splits, ISPA
-granular reports, WVS dataset mining for media trust/prayer frequency.*
+*Now 14 sources covered, ~260 rows. Optional follow-ups: ISPA granular
+reports, ethics chapter of the leaked survey, per-capita GDP by province.*
