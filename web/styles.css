@@ -141,21 +141,21 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 .truth-big.hidden { display: none; }
 #fb-truth-num { font-size: 2.6rem; font-weight: 900; }
 #fb-truth-unit { font-size: 1.3rem; font-weight: 700; margin-inline-start: 0.3rem; }
-/* Guess-vs-truth track: your marker against the true marker */
-.vs-track.hidden { display: none; }
-.vs-track {
-  position: relative; height: 12px; margin: 0.7rem 0 1.1rem;
-  background: var(--clay); border: 1px solid var(--ink); border-radius: 999px;
+/* Data labels on the original slider: guess pill above, truth pill below.
+   Overlay is forced LTR so % always maps to left%. */
+.range-wrap { position: relative; flex: 1; display: flex; align-items: center; }
+.range-wrap input[type="range"] { width: 100%; }
+.marks { position: absolute; inset: 0; pointer-events: none; direction: ltr; }
+.mark {
+  position: absolute; top: -1.7rem; transform: translateX(-50%);
+  font-size: 0.8rem; font-weight: 700; white-space: nowrap;
+  border: 2px solid var(--ink); border-radius: 999px; padding: 0 0.55rem;
+  background: var(--ticket); color: var(--ink);
 }
-.vs-zone { position: absolute; top: 0; bottom: 0; border-radius: 999px; transition: left 0.6s ease 1s, width 0.6s ease 1s; }
-.vs-zone.good { background: var(--pistachio); }
-.vs-zone.miss { background: var(--bazaar); }
-.vs-mark {
-  position: absolute; top: 50%; width: 16px; height: 16px;
-  transform: translate(-50%, -50%); border-radius: 50%;
-  border: 2px solid var(--ink); background: var(--ticket);
-}
-.vs-mark.truth { background: var(--marigold); width: 18px; height: 18px; }
+.mark-truth { top: auto; bottom: -1.9rem; background: var(--marigold); }
+.mark-truth.good { background: var(--pistachio); color: #fff; }
+.mark-truth.miss { background: var(--bazaar); color: #fff; }
+.slider-block { padding-bottom: 2.2rem; }
 /* Source as a small stamp chip */
 .source-chip { display: inline-block; margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); }
 .source-chip.hidden { display: none; }
@@ -183,16 +183,16 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
    so prefers-reduced-motion (animation: none) shows everything instantly. */
 #q-feedback:not(.hidden) .fb-result { animation: rise 0.4s ease both; }
 #q-feedback:not(.hidden) #fb-truth { animation: rise 0.45s ease 0.3s both; }
-#q-feedback:not(.hidden) #fb-track { animation: rise 0.45s ease 0.65s both; }
 #q-feedback:not(.hidden) .fb-gap { animation: rise 0.45s ease 0.95s both; }
 #q-feedback:not(.hidden) .fb-fact { animation: rise 0.45s ease 1.2s both; }
 #q-feedback:not(.hidden) #fb-source { animation: rise 0.45s ease 1.45s both; }
 #q-feedback:not(.hidden) #btn-next { animation: rise 0.45s ease 1.7s both; }
 @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
-#q-feedback:not(.hidden) .vs-mark { animation: markpop 0.4s ease 1.1s both; }
+#q-marks .mark { animation: markpop 0.35s ease both; }
+#q-marks .mark-truth { animation-delay: 0.25s; }
 @keyframes markpop {
-  from { transform: translate(-50%, -50%) scale(0); }
-  to { transform: translate(-50%, -50%) scale(1); }
+  from { transform: translateX(-50%) scale(0); }
+  to { transform: translateX(-50%) scale(1); }
 }
 /* Streak: the stakes (single inline readout under the thread) */
 .streak-inline { font-weight: 700; }

@@ -49,7 +49,10 @@
       <div id="q-options" class="options"></div>
       <div id="q-slider" class="slider-block hidden">
         <div class="slider-row">
-          <input id="q-range" type="range" min="0" max="100" step="1" value="50">
+          <div class="range-wrap">
+            <input id="q-range" type="range" min="0" max="100" step="1" value="50">
+            <div id="q-marks" class="marks" aria-hidden="true"></div>
+          </div>
           <output id="q-guess" for="q-range">۵۰٪</output>
         </div>
         <button id="btn-submit-guess" class="primary" type="button"></button>
@@ -59,11 +62,6 @@
           <p id="fb-result" class="fb-result"></p>
           <div id="fb-truth" class="truth-big hidden" aria-live="polite">
             <span id="fb-truth-num">۰</span><span id="fb-truth-unit"></span>
-          </div>
-          <div id="fb-track" class="vs-track hidden" aria-hidden="true">
-            <div id="fb-track-zone" class="vs-zone"></div>
-            <i id="fb-mark-guess" class="vs-mark guess"></i>
-            <i id="fb-mark-truth" class="vs-mark truth"></i>
           </div>
           <p id="fb-gap" class="fb-gap"></p>
           <p id="fb-fact" class="fb-fact"></p>

@@ -167,7 +167,9 @@ function sliderSpec(q) {
   if (!q.answer_stats || q.answer_stats.length !== 1 || !st) return null;
   const spec = SLIDER_UNITS[st.unit];
   if (!spec || typeof st.value !== "number") return null;
-  return { max: spec.max, tol: spec.tol, unit: st.unit, truth: st.value };
+  // ceiling leaves headroom past 100 when the truth runs hot (e.g. 83.9% inflation)
+  const max = Math.max(spec.max, Math.ceil((st.value * 1.25) / 10) * 10);
+  return { max, tol: spec.tol, unit: st.unit, truth: st.value };
 }
 const isSlider = (q) => sliderSpec(q) !== null;
 
@@ -216,6 +218,7 @@ function renderQuestion() {
     range.value = Math.round(spec.max / 2);
     range.disabled = false;
     $("btn-submit-guess").disabled = false;
+    $("q-marks").innerHTML = "";
     updateGuessOutput();
     $("btn-submit-guess").textContent = t.submit;
   } else {
@@ -260,22 +263,21 @@ function countUp(el, target, fmt) {
   requestAnimationFrame(step);
 }
 
-function paintTrack(guess, truth, max, ok) {
-  const track = $("fb-track");
-  track.classList.remove("hidden");
-  const pct = (v) => Math.max(0, Math.min(100, (v / max) * 100));
-  $("fb-mark-guess").style.left = pct(guess) + "%";
-  $("fb-mark-truth").style.left = pct(truth) + "%";
-  const zone = $("fb-track-zone");
-  const lo = Math.min(pct(guess), pct(truth)), hi = Math.max(pct(guess), pct(truth));
-  // grow the gap zone from nothing so it draws itself after the track lands
-  zone.style.transition = "none";
-  zone.style.left = lo + "%";
-  zone.style.width = "0%";
-  void zone.offsetWidth;
-  zone.style.transition = "";
-  zone.style.width = Math.max(hi - lo, 1.2) + "%";
-  zone.className = "vs-zone " + (ok ? "good" : "miss");
+function paintTrack(guess, spec, ok) {
+  // Data labels live ON the original slider: your-guess pill above the
+  // track, true-value pill below it. The overlay is LTR so % maps to left%.
+  const marks = $("q-marks");
+  marks.innerHTML = "";
+  const pct = (v) => Math.max(0, Math.min(100, (v / spec.max) * 100));
+  const mk = (v, cls, label) => {
+    const s = document.createElement("span");
+    s.className = "mark " + cls + (cls === "mark-truth" ? (ok ? " good" : " miss") : "");
+    s.style.left = pct(v) + "%";
+    s.textContent = label;
+    marks.appendChild(s);
+  };
+  mk(guess, "mark-guess", fmtV(guess, spec.unit));
+  mk(Math.round(spec.truth * 10) / 10, "mark-truth", fmtV(Math.round(spec.truth * 10) / 10, spec.unit));
 }
 
 function confettiBurst() {
@@ -311,7 +313,8 @@ function showFeedback(tier, tierClass, lines, reveal) {
   const r = $("fb-result");
   r.textContent = tier;
   r.className = "fb-result " + tierClass;
-  // Reveal card: big counted-up truth + guess-vs-truth track (slider Qs only)
+  // Reveal card: big counted-up truth (slider Qs also get labeled markers
+  // painted directly onto the original slider by paintTrack)
   const truthBox = $("fb-truth");
   if (reveal) {
     truthBox.classList.remove("hidden");
@@ -326,12 +329,11 @@ function showFeedback(tier, tierClass, lines, reveal) {
     // unit suffix after the animated number
     const unitEl = $("fb-truth-unit");
     unitEl.textContent = lang === "fa"
-      ? (reveal.unit === "years" ? " سال" : "٪")
-      : (reveal.unit === "years" ? " yrs" : "%");
-    paintTrack(reveal.guess, reveal.truth, reveal.max, reveal.ok);
+      ? (reveal.spec.unit === "years" ? " سال" : "٪")
+      : (reveal.spec.unit === "years" ? " yrs" : "%");
+    paintTrack(reveal.guess, reveal.spec, reveal.ok);
   } else {
     truthBox.classList.add("hidden");
-    $("fb-track").classList.add("hidden");
   }
   $("fb-gap").textContent = lines;
   const fact = lang === "fa" ? (q.fun_fact_fa || "") : (q.fun_fact_en || "");
@@ -389,7 +391,7 @@ function submitGuess() {
   const r1 = Math.round(diff * 10) / 10;
   showFeedback(tier, cls,
     `${t.yourGuess(guess, spec.unit)} — ${t.truth(Math.round(truth * 10) / 10, spec.unit)} — ${t.gap(r1, spec.unit)}`,
-    { guess, truth, max: spec.max, unit: spec.unit, ok });
+    { guess, truth, spec, ok });
 }
 
 function next() {
