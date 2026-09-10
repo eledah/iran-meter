@@ -1,0 +1,140 @@
+- id: sci-census-2016
+  org: Statistical Centre of Iran
+  org_fa: مرکز آمار ایران
+  title: Population and Housing Census 2016 (1395)
+  type: official_census
+  url: https://www.amar.org.ir/
+  doc_url: https://irandataportal.syr.edu/wp-content/uploads/Iran_Census_2016_Selected_Results.pdf
+  accessed: 2026-08-05
+  coverage_note: Full national census 2016 — population, households, literacy, tenure; baseline only, dated for current figures
+- id: sci-recent
+  org: Statistical Centre of Iran
+  org_fa: مرکز آمار ایران
+  title: SCI Recent Releases — Labor Force, Income/Expenditure, Gini, Population Estimate
+  type: official_survey
+  url: https://www.amar.org.ir/
+  accessed: 2026-08-05
+  coverage_note: Post-census surveys 1401-1405 — labor force, income/expenditure, Gini 0.3870, 85.96M population estimate
+- id: ispa-digital-2026
+  org: ISPA (Iranian Students Polling Agency)
+  org_fa: ایسپا
+  title: Digital Ecosystem of Iranians 2026 (زیستبوم دیجیتال ایرانیان) and media/social surveys
+  type: polling
+  url: https://ispa.ir/
+  accessed: 2026-08-05
+  coverage_note: National polling — VPN use 74.4%, internet penetration 89.3%, platform shares, media trust
+- id: world-bank-iran
+  org: World Bank
+  title: Iran, Islamic Rep. Country Data
+  type: international
+  url: https://data.worldbank.org/country/iran-islamic-rep
+  accessed: 2026-08-05
+  coverage_note: Macro/dev indicators — internet 85%, life expectancy 78, GDP/capita, inflation, poverty (partly modeled)
+- id: wvs-wave7-2020
+  org: World Values Survey
+  title: World Values Survey Wave 7, Iran 2020
+  type: academic
+  url: https://www.worldvaluessurvey.org/
+  accessed: 2026-08-05
+  coverage_note: National values survey N=1499 (2020) — religiosity, trust, gender attitudes, life satisfaction 6.2/10
+- id: noc-register
+  org: National Organization for Civil Registration
+  org_fa: سازمان ثبت احوال کشور
+  title: Vital Statistics Registry — Marriages, Divorces, Births, Deaths
+  type: official_survey
+  url: https://www.sabteahval.ir/
+  accessed: 2026-08-05
+  coverage_note: Official vital registry 1403-1404 — marriages, divorces, births ~980K, first-marriage ages 28.3/24.1
+- id: cbi-monetary
+  org: Central Bank of Iran
+  org_fa: بانک مرکزی
+  title: Monetary and Price Statistics — Inflation, Exchange Rates, Liquidity
+  type: official_survey
+  url: https://cbi.ir/
+  accessed: 2026-08-05
+  coverage_note: Monetary authority data via releases — p2p inflation 83.9% Tir 1405, liquidity, FX rates (volatile wartime)
+- id: itu-ict
+  org: International Telecommunication Union
+  title: ITU DataHub — Iran (IRN), WTID 2025 Release
+  type: international
+  url: https://datahub.itu.int/data/?e=IRN
+  accessed: 2026-08-05
+  coverage_note: Official ICT stats — internet users 85.3%, mobile 174/100, 4G 94.2%, 5G 8.2%
+- id: ilo-labor
+  org: International Labour Organization
+  title: ILOSTAT Country Profile — Iran (IRN)
+  type: international
+  url: https://ilostat.ilo.org/data/country-profiles/irn/
+  accessed: 2026-08-05
+  coverage_note: Labor stats — unemployment 7.6% (LFS 2024), LFPR 40.7%, NEET 24.3%; no informal-employment data
+- id: who-health
+  org: World Health Organization
+  title: WHO Data — Iran Country Profile and GHO API
+  type: international
+  url: https://data.who.int/countries/364
+  accessed: 2026-08-05
+  coverage_note: Health indicators — tobacco 12.5%, obesity 24%, life expectancy 74.7, road deaths 20.6/100k
+- id: unesco-uis
+  org: UNESCO Institute for Statistics
+  title: UIS Data — Iran Education Indicators (Feb 2026 Release)
+  type: international
+  url: https://api.uis.unesco.org/
+  accessed: 2026-08-05
+  coverage_note: Education stats — adult literacy 88.9%, youth 98.7%, tertiary enrollment 58.7%, spending 2.8% GDP
+- id: imf-weo
+  org: International Monetary Fund
+  title: World Economic Outlook — Iran (Apr 2026 + Jul 2026 Update)
+  type: international
+  url: https://www.imf.org/en/Countries/IRN
+  accessed: 2026-08-05
+  coverage_note: Macro outlook — growth -6.1% f2026, inflation 68.9% f2026 (highest since WWII), unemployment 9.2%
+- id: censorship-vpn
+  org: IPRC / OONI / Freedom House (mixed measurement)
+  title: Internet Censorship and VPN Use — IPRC Survey, OONI, Freedom House, Academic Studies
+  type: academic
+  url: https://ooni.org/post/iran-internet-censorship/
+  doc_url: https://freedomhouse.org/country/iran/freedom-net/2024
+  accessed: 2026-08-05
+  coverage_note: Mixed sources — IPRC 81% VPN use (Dec 2024), OONI blocks, Freedom House 12/100; GAMAAN excluded
+- id: values-survey-1402
+  org: Ministry of Culture and Islamic Guidance (national projects office)
+  org_fa: وزارت ارشاد
+  title: National Values and Attitudes Survey 1402 (پیمایش ملی ارزش‌ها و نگرش‌های ایرانیان)
+  type: leak
+  url: https://www.bbc.com/persian/articles/cmlgj8j3xl1o
+  doc_url: https://irandataportal.syr.edu
+  accessed: 2026-08-05
+  coverage_note: Classified Wave 4 leak n=15878 (2023) — secularization, distrust, 38.6% emigration intent; conservative bias likely
+- id: what-iran-wants-2026
+  org: Ara Opinion Research Center (via presidential social advisor)
+  org_fa: مرکز افکارسنجی آرا
+  title: What Iran Wants — Confidential Presidency Report (Apr-May 2026 survey)
+  type: leak
+  url: https://iranwire.com/en/features/154845-exclusive-what-iran-wants-president-advisor-confidential-report/
+  doc_url: https://www.iranintl.com/en/202607161900
+  accessed: 2026-08-05
+  coverage_note: Leaked May 2026 survey — anger 63.6%, reform demand 53%, 81% food insecurity; methodology undisclosed
+- id: vote-poll-2024
+  org: Unnamed state institution (via Khabaronline, censored)
+  title: Censored Official Vote-Intention Poll, Jan 2024 (March Majles Election Forecast)
+  type: leak
+  url: https://ir.voanews.com/a/iran-pressure-on-the-media-elections/7464000.html
+  accessed: 2026-08-05
+  coverage_note: Leaked pre-election prediction — ~30% national turnout, 22% Tehran province; prediction not outcome
+- id: ispa
+  org: ISPA (Iranian Students Polling Agency)
+  org_fa: ایسپا
+  title: ISPA General Polls — Social Media, Trust, Turnout, Happiness
+  type: polling
+  url: https://ispa.ir/
+  accessed: 2026-08-05
+  coverage_note: ISPA Sep-2024/2025 platform shares, media trust, turnout, happiness index 64.41/100; split from digital-ecosystem 2026 file
+- id: values-survey-1394
+  org: Ministry of Culture and Islamic Guidance (wave 3, PI Javadi Yeganeh)
+  org_fa: وزارت ارشاد
+  title: National Values and Attitudes Survey Wave 3, 1394 (official 718-page report)
+  type: official_survey
+  url: https://ircud.ir/fa/content/283625
+  doc_url: https://ircud.ir/Media/PDF/1400/04/12/637608720832709393.pdf
+  accessed: 2026-08-05
+  coverage_note: Official wave-3 baseline n=14906 (2015) — separation 30.7%, hijab-mandate agree 53.1%, trust gov 49.9%; archived at references/values-survey-wave3/
