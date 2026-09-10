@@ -3,7 +3,12 @@
 let DATA = null;
 let QUIZ = []; // shuffled subset per round
 const QUIZ_SIZE = 20;
-const SLIDER_TOL = 5; // ±pp counts as correct on slider questions
+/* Slider specs per stat unit: range max + tolerance that counts as correct */
+const SLIDER_UNITS = {
+  percent: { max: 100, tol: 5 },
+  years: { max: 100, tol: 3 },
+};
+const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let lang = "fa"; // default fa
 let idx = 0;
 let score = 0;
@@ -26,11 +31,13 @@ const STR = {
     startTitle: "ایران را چقدر می‌شناسید؟",
     startHook: "۲۰ حدس، یک زنجیره، یک لقب در پایان",
     startDesc: "۲۰ پرسش تصادفی درباره‌ی ایران بر اساس آمار رسمی و نظرسنجی‌ها. روی عدد چانه بزنید، زنجیره بسازید و بعد از هر پاسخ جواب درست و نکته‌ی جالب را ببینید.",
-    startRules: "حدس درصدی تا ۵ واحد خطا قبول است. پاسخ چندگزینه‌ای یا درست است یا نه. زنجیره با هر پاسخ درست بالا می‌رود و با یک اشتباه می‌شکند.",
+    startRules: "حدس عددی: درصدی‌ها تا ۵ واحد و سنی‌ها تا ۳ سال خطا قبول است. پاسخ چندگزینه‌ای یا درست است یا نه. زنجیره با هر پاسخ درست بالا می‌رود و با یک اشتباه می‌شکند.",
     start: "بزن بریم",
     next: "سؤال بعد", finish: "دیدن نتیجه",
     progress: (a, b) => `سؤال ${toFa(a)} از ${toFa(b)}`,
     submit: "ثبت حدس",
+    unitName: (u) => (u === "years" ? "سال" : "٪"),
+    fmtVal: (v, u) => (u === "years" ? `${toFa(v)} سال` : `${toFa(v)}٪`),
     source: (n) => `منبع: ${n}`,
     scoreTitle: "کارنامه‌ی شما بر پایه‌ی سختی",
     diffRow: (d, c, t) => `سطح ${toFa(d)}: ${toFa(c)} از ${toFa(t)} درست`,
@@ -44,9 +51,9 @@ const STR = {
     off: "خیلی دور بود",
     choiceOk: "درست گفتید",
     choiceBad: "اشتباه شد",
-    yourGuess: (g) => `حدس شما: ${toFa(g)}٪`,
-    truth: (v) => `عدد درست: ${toFa(v)}٪`,
-    gap: (d) => `فاصله‌ی شما: ${toFa(d)} واحد`,
+    yourGuess: (g, u) => `حدس شما: ${fmtV(g, u)}`,
+    truth: (v, u) => `عدد درست: ${fmtV(v, u)}`,
+    gap: (d, u) => `فاصله‌ی شما: ${toFa(d)} ${u === "years" ? "سال" : "واحد"}`,
     ranks: [
       [17, "ایران‌شناس"], [13, "آمارباز قهار"], [9, "چانه‌زن بازار"],
       [5, "حدس‌زن کنجکاو"], [0, "تازه‌وارد بازار"],
@@ -58,11 +65,13 @@ const STR = {
     startTitle: "How well do you know Iran?",
     startHook: "20 guesses, one streak, one title at the end",
     startDesc: "20 random questions about Iran from official stats and polls. Haggle over the number, build a streak, and after each answer see the true value and a fun fact.",
-    startRules: "Percent guesses count within 5 points. Multiple choice is right or wrong. Your streak grows with every correct answer and breaks on one miss.",
+    startRules: "Number guesses: percents count within 5 points, ages within 3 years. Multiple choice is right or wrong. Your streak grows with every correct answer and breaks on one miss.",
     start: "Deal me in",
     next: "Next question", finish: "See results",
     progress: (a, b) => `Question ${a} of ${b}`,
     submit: "Submit guess",
+    unitName: (u) => (u === "years" ? "yrs" : "%"),
+    fmtVal: (v, u) => (u === "years" ? `${v} yrs` : `${v}%`),
     source: (n) => `Source: ${n}`,
     scoreTitle: "Your report card by difficulty",
     diffRow: (d, c, t) => `Level ${d}: ${c} of ${t} correct`,
@@ -75,9 +84,9 @@ const STR = {
     off: "Way off",
     choiceOk: "You got it",
     choiceBad: "Not this time",
-    yourGuess: (g) => `Your guess: ${g}%`,
-    truth: (v) => `True value: ${v}%`,
-    gap: (d) => `You were off by ${d} points`,
+    yourGuess: (g, u) => `Your guess: ${fmtV(g, u)}`,
+    truth: (v, u) => `True value: ${fmtV(v, u)}`,
+    gap: (d, u) => `You were off by ${d} ${u === "years" ? "years" : "points"}`,
     ranks: [
       [17, "Iran knower"], [13, "Sharp stat-spotter"], [9, "Bazaar haggler"],
       [5, "Curious guesser"], [0, "New in the bazaar"],
@@ -87,6 +96,7 @@ const STR = {
 };
 
 const $ = (id) => document.getElementById(id);
+const fmtV = (v, u) => STR[lang].fmtVal(v, u);
 
 function rankFor(s) {
   for (const [min, name] of STR[lang].ranks) if (s >= min) return name;
@@ -150,18 +160,23 @@ function optLabel(opt) {
   return lang === "fa" ? (opt.label_fa || opt.label_en) : (opt.label_en || opt.label_fa);
 }
 
-/* Slider mode: single-stat percent questions are answered with a 0-100 guess. */
-function isSlider(q) {
+/* Slider mode: single-stat numeric questions (percents AND years) are
+   answered with a guess on a range. Returns {max, tol, unit} or null. */
+function sliderSpec(q) {
   const st = q.answer_stats && q.answer_stats[0];
-  return q.answer_stats && q.answer_stats.length === 1 &&
-    st && st.unit === "percent" && typeof st.value === "number";
+  if (!q.answer_stats || q.answer_stats.length !== 1 || !st) return null;
+  const spec = SLIDER_UNITS[st.unit];
+  if (!spec || typeof st.value !== "number") return null;
+  return { max: spec.max, tol: spec.tol, unit: st.unit, truth: st.value };
 }
+const isSlider = (q) => sliderSpec(q) !== null;
 
 function updateGuessOutput() {
   const el = $("q-guess");
-  if (!el) return;
+  if (!el || !QUIZ[idx]) return;
+  const spec = sliderSpec(QUIZ[idx]);
   const g = $("q-range") ? $("q-range").value : 50;
-  el.textContent = lang === "fa" ? toFa(g) + "٪" : g + "%";
+  el.textContent = fmtV(g, spec ? spec.unit : "percent");
 }
 
 function updateStreakUI(pop) {
@@ -190,10 +205,13 @@ function renderQuestion() {
   const slider = $("q-slider");
   box.innerHTML = "";
   if (isSlider(q)) {
+    const spec = sliderSpec(q);
     box.classList.add("hidden");
     slider.classList.remove("hidden");
-    $("q-range").value = 50;
-    $("q-range").disabled = false;
+    const range = $("q-range");
+    range.max = spec.max;
+    range.value = Math.round(spec.max / 2);
+    range.disabled = false;
     $("btn-submit-guess").disabled = false;
     updateGuessOutput();
     $("btn-submit-guess").textContent = t.submit;
@@ -225,18 +243,92 @@ function recordResult(ok) {
   if (ok) perDiff[d].correct++;
 }
 
-function showFeedback(tier, tierClass, lines) {
+/* Reveal helpers: count-up, guess-vs-truth track, confetti, shake.
+   All motion answers the user's action; skipped under reduced-motion. */
+function countUp(el, target, fmt) {
+  if (reduceMotion()) { el.textContent = fmt(target); return; }
+  const t0 = performance.now(), dur = 750;
+  const step = (now) => {
+    const p = Math.min(1, (now - t0) / dur);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = fmt(target * eased);
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+function paintTrack(guess, truth, max, ok) {
+  const track = $("fb-track");
+  track.classList.remove("hidden");
+  const pct = (v) => Math.max(0, Math.min(100, (v / max) * 100));
+  $("fb-mark-guess").style.left = pct(guess) + "%";
+  $("fb-mark-truth").style.left = pct(truth) + "%";
+  const zone = $("fb-track-zone");
+  const lo = Math.min(pct(guess), pct(truth)), hi = Math.max(pct(guess), pct(truth));
+  zone.style.left = lo + "%";
+  zone.style.width = Math.max(hi - lo, 1.2) + "%";
+  zone.className = "vs-zone " + (ok ? "good" : "miss");
+}
+
+function confettiBurst() {
+  if (reduceMotion()) return;
+  const ticket = document.querySelector(".ticket");
+  if (!ticket) return;
+  const colors = ["#b3402a", "#3e7a4e", "#d9a62e", "#23201a"];
+  for (let i = 0; i < 22; i++) {
+    const s = document.createElement("i");
+    s.className = "confetti";
+    s.style.background = colors[i % colors.length];
+    s.style.left = (20 + Math.random() * 60) + "%";
+    s.style.setProperty("--dx", (Math.random() * 160 - 80).toFixed(0) + "px");
+    s.style.setProperty("--rot", (Math.random() * 540 - 270).toFixed(0) + "deg");
+    s.style.animationDelay = (Math.random() * 0.15).toFixed(2) + "s";
+    ticket.appendChild(s);
+    s.addEventListener("animationend", () => s.remove());
+  }
+}
+
+function shakeTicket() {
+  if (reduceMotion()) return;
+  const ticket = document.querySelector(".ticket");
+  if (!ticket) return;
+  ticket.classList.remove("shake");
+  void ticket.offsetWidth;
+  ticket.classList.add("shake");
+}
+
+function showFeedback(tier, tierClass, lines, reveal) {
   const t = STR[lang];
   const q = QUIZ[idx];
   const r = $("fb-result");
   r.textContent = tier;
   r.className = "fb-result " + tierClass;
+  // Reveal card: big counted-up truth + guess-vs-truth track (slider Qs only)
+  const truthBox = $("fb-truth");
+  if (reveal) {
+    truthBox.classList.remove("hidden");
+    $("fb-truth-unit").textContent = "";
+    countUp($("fb-truth-num"), reveal.truth, (v) => {
+      const r1 = Math.round(v * 10) / 10;
+      return lang === "fa" ? toFa(r1) : String(r1);
+    });
+    // unit suffix after the animated number
+    const unitEl = $("fb-truth-unit");
+    unitEl.textContent = lang === "fa"
+      ? (reveal.unit === "years" ? " سال" : "٪")
+      : (reveal.unit === "years" ? " yrs" : "%");
+    paintTrack(reveal.guess, reveal.truth, reveal.max, reveal.ok);
+  } else {
+    truthBox.classList.add("hidden");
+    $("fb-track").classList.add("hidden");
+  }
   $("fb-gap").textContent = lines;
   const fact = lang === "fa" ? (q.fun_fact_fa || "") : (q.fun_fact_en || "");
   $("fb-fact").textContent = fact;
   const st0 = q.answer_stats && q.answer_stats[0];
   const srcName = (st0 && (lang === "fa" ? st0.source_name_fa : st0.source_name)) || "";
   $("fb-source").textContent = srcName ? t.source(srcName) : "";
+  $("fb-source").classList.toggle("hidden", !srcName);
   const last = idx === QUIZ.length - 1;
   $("btn-next").textContent = last ? t.finish : t.next;
   $("q-feedback").classList.remove("hidden");
@@ -267,20 +359,26 @@ function answerChoice(i) {
 function submitGuess() {
   const t = STR[lang];
   const q = QUIZ[idx];
-  const truth = q.answer_stats[0].value;
+  const spec = sliderSpec(q);
+  const truth = spec.truth;
   const guess = Number($("q-range").value);
   const diff = Math.abs(guess - truth);
-  const ok = diff <= SLIDER_TOL;
+  const ok = diff <= spec.tol;
   recordResult(ok);
   updateStreakUI(ok);
   $("q-range").disabled = true;
   $("btn-submit-guess").disabled = true;
   let tier, cls;
   if (diff <= 1) { tier = t.exact; cls = "tier-exact"; }
-  else if (diff <= SLIDER_TOL) { tier = t.close; cls = "tier-close"; }
-  else if (diff <= 12) { tier = t.near; cls = "tier-near"; }
+  else if (diff <= spec.tol) { tier = t.close; cls = "tier-close"; }
+  else if (diff <= spec.tol + 7) { tier = t.near; cls = "tier-near"; }
   else { tier = t.off; cls = "tier-off"; }
-  showFeedback(tier, cls, `${t.yourGuess(guess)} — ${t.truth(Math.round(truth * 10) / 10)} — ${t.gap(Math.round(diff * 10) / 10)}`);
+  if (cls === "tier-exact") confettiBurst();
+  if (cls === "tier-off") shakeTicket();
+  const r1 = Math.round(diff * 10) / 10;
+  showFeedback(tier, cls,
+    `${t.yourGuess(guess, spec.unit)} — ${t.truth(Math.round(truth * 10) / 10, spec.unit)} — ${t.gap(r1, spec.unit)}`,
+    { guess, truth, max: spec.max, unit: spec.unit, ok });
 }
 
 function next() {

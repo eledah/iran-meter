@@ -54,10 +54,20 @@
         <button id="btn-submit-guess" class="primary" type="button"></button>
       </div>
       <div id="q-feedback" class="feedback hidden">
-        <p id="fb-result" class="fb-result"></p>
-        <p id="fb-gap" class="fb-gap"></p>
-        <p id="fb-fact" class="fb-fact"></p>
-        <p id="fb-source" class="muted"></p>
+        <div class="reveal-card">
+          <p id="fb-result" class="fb-result"></p>
+          <div id="fb-truth" class="truth-big hidden" aria-live="polite">
+            <span id="fb-truth-num">۰</span><span id="fb-truth-unit"></span>
+          </div>
+          <div id="fb-track" class="vs-track hidden" aria-hidden="true">
+            <div id="fb-track-zone" class="vs-zone"></div>
+            <i id="fb-mark-guess" class="vs-mark guess"></i>
+            <i id="fb-mark-truth" class="vs-mark truth"></i>
+          </div>
+          <p id="fb-gap" class="fb-gap"></p>
+          <p id="fb-fact" class="fb-fact"></p>
+          <p id="fb-source" class="source-chip"></p>
+        </div>
         <button id="btn-next" class="primary" type="button"></button>
       </div>
     </article>

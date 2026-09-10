@@ -208,7 +208,6 @@
   prompt_en: Comparison — regular prayer (always/mostly) fell from 78.5% in 1394 to what level in 1402?
   prompt_fa: مقایسه — نمازخوانی منظم (همیشه/بیشتر اوقات) از ۷۸٫۵٪ در ۱۳۹۴ به چه سطحی در ۱۴۰۲ رسید؟
   stat_ids:
-  - pray-always-mostly-never-always-mostly-1394
   - pray-always-mostly-1402
   correct_index: 2
   fun_fact_en: Regular prayer fell from 78.5% (1394) to 54.8% (1402) — a 24-point drop in under a decade.
@@ -229,7 +228,6 @@
   prompt_en: Comparison — the share who never pray rose from 3.1% in 1394 to what in 1402?
   prompt_fa: مقایسه — سهم کسانی که هرگز نماز نمی‌خوانند از ۳٫۱٪ در ۱۳۹۴ به چه عددی در ۱۴۰۲ رسید؟
   stat_ids:
-  - pray-always-mostly-never-never-1394
   - never-pray-1402
   correct_index: 2
   fun_fact_en: Never-praying rose sevenfold, from 3.1% to 22.2% between the two values surveys.
@@ -270,7 +268,6 @@
   prompt_en: Comparison — 54.8% trusted IRIB in 1394; what share expressed LOW trust in 1402?
   prompt_fa: مقایسه — در ۱۳۹۴ حدود ۵۵٪ به صداوسیما اعتماد داشتند؛ در ۱۴۰۲ چند درصد اعتماد کمی داشتند؟
   stat_ids:
-  - trust-irib-1394
   - low-trust-in-irib-1394-81-trusted-1402
   correct_index: 2
   fun_fact_en: From 54.8% trust (1394) to 58% low trust (1402) — a complete reversal for state TV.
