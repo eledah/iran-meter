@@ -64,6 +64,8 @@ def main():
             "surprise_note": q.get("surprise_note"),
             "prompt_en": q.get("prompt_en"),
             "prompt_fa": q.get("prompt_fa"),
+            "hint_en": q.get("hint_en"),
+            "hint_fa": q.get("hint_fa"),
             "stat_ids": q.get("stat_ids") or [],
             "options": q.get("options") or [],
             "correct_index": q.get("correct_index"),

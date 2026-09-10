@@ -49,6 +49,8 @@
     guess far too high
   prompt_en: What is the female labor-force participation rate in Iran (2025)?
   prompt_fa: نرخ مشارکت نیروی کار زنان در ایران (۲۰۲۵) چقدر است؟
+  hint_en: Participation means the share of people 15+ who are working or looking for work.
+  hint_fa: مشارکت یعنی سهم افراد ۱۵ سال به بالا که یا شاغل‌اند یا دنبال کار می‌گردند.
   stat_ids:
   - female-labor-force-participation-2025
   correct_index: 1
@@ -69,6 +71,8 @@
   surprise_note: Obscure latest CBI print; several close distractors above 60%
   prompt_en: What was Iran's point-to-point inflation rate (1405, latest CBI print)?
   prompt_fa: نرخ تورم نقطه‌به‌نقطه ایران در سال ۱۴۰۵ چقدر اعلام شد؟
+  hint_en: Point-to-point means prices vs. the same month last year — not the yearly average.
+  hint_fa: تورم نقطه‌به‌نقطه یعنی افزایش قیمت‌ها نسبت به همین ماه در سال قبل — نه میانگین کل سال.
   stat_ids:
   - point-to-point-inflation-1405
   correct_index: 2
@@ -229,6 +233,8 @@
     level has close distractors
   prompt_en: What is Iran's youth unemployment rate (ages 15-24, 1405)?
   prompt_fa: نرخ بیکاری جوانان ایران (۱۵ تا ۲۴ سال، ۱۴۰۵) چقدر است؟
+  hint_en: The share of 15–24-year-olds in the labor force who don't have a job.
+  hint_fa: سهم جوانان ۱۵ تا ۲۴ ساله‌ی حاضر در بازار کار که شغلی ندارند.
   stat_ids:
   - youth-unemployment-1524-1405
   correct_index: 2
@@ -252,6 +258,8 @@
     in 1402?
   prompt_fa: مقایسه — در ۱۳۹۴ حدود ۵۵٪ به صداوسیما اعتماد داشتند؛ در ۱۴۰۲ چند درصد
     اعتماد کمی داشتند؟
+  hint_en: "Two different measures: trust in 1394 vs. distrust in 1402."
+  hint_fa: "دو سنجه متفاوت: اعتماد در ۱۳۹۴ در برابر بی‌اعتمادی در ۱۴۰۲."
   stat_ids:
   - low-trust-in-irib-1394-81-trusted-1402
   correct_index: 2
@@ -297,6 +305,8 @@
     on
   prompt_en: What was the predicted turnout in Tehran city for the March 2024 elections?
   prompt_fa: مشارکت پیش‌بینی‌شده در شهر تهران برای انتخابات اسفند ۱۴۰۲ چقدر بود؟
+  hint_en: A pre-election poll forecast, not the final result.
+  hint_fa: پیش‌بینی نظرسنجیِ پیش از انتخابات است، نه نتیجه نهایی.
   stat_ids:
   - predicted-turnout-tehran-city-2024
   correct_index: 0
@@ -340,6 +350,8 @@
   surprise_note: 41 per 100 reads shockingly high vs the traditional-family prior
   prompt_en: How many divorces were registered per 100 marriages (1403)?
   prompt_fa: در سال ۱۴۰۳ در برابر هر ۱۰۰ ازدواج چند طلاق ثبت شد؟
+  hint_en: Divorces in one year per 100 marriages that same year — not the fate of every 100 couples.
+  hint_fa: نسبت طلاق‌های یک سال به ازدواج‌های همان سال — نه سرنوشت هر ۱۰۰ زوج.
   stat_ids:
   - divorce-per-100-marriages-1403
   correct_index: 2
@@ -363,6 +375,8 @@
     digits or near-universal
   prompt_en: What is Iran's gross tertiary (university) enrollment ratio (2022)?
   prompt_fa: نسبت ناخالص ثبت‌نام دانشگاهی ایران (۲۰۲۲) چقدر است؟
+  hint_en: Gross ratio means all enrolled students divided by the college-age population, whatever their age.
+  hint_fa: نسبت ناخالص یعنی تعداد ثبت‌نام‌شدگان به کل جمعیت سن دانشگاه، حتی اگر سن‌شان بیشتر باشد.
   stat_ids:
   - tertiary-gross-enrollment-2022
   correct_index: 2
@@ -428,6 +442,8 @@
     countries
   prompt_en: What is Iran's labor-force participation rate (ages 15+, 1405)?
   prompt_fa: نرخ مشارکت نیروی کار ایران (۱۵+، ۱۴۰۵) چقدر است؟
+  hint_en: Participation means the share of people 15+ who are working or looking for work.
+  hint_fa: مشارکت یعنی سهم افراد ۱۵ سال به بالا که یا شاغل‌اند یا دنبال کار می‌گردند.
   stat_ids:
   - labor-force-participation-15-1405
   correct_index: 1

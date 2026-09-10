@@ -86,6 +86,9 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 .gauge i { width: 20px; height: 10px; border-radius: 999px; background: var(--clay); border: 1px solid var(--ink); }
 .gauge i.on { background: var(--ink); }
 #q-prompt { font-size: 1.3rem; font-weight: 700; line-height: 1.7; margin: 0.8rem 0 0; max-width: 34ch; }
+/* Explainer subtitle for jargon terms (gross ratio, point-to-point, participation…) */
+.hint { margin: 0.35rem 0 0; font-size: 0.95rem; color: var(--muted); max-width: 60ch; }
+.hint.hidden { display: none; }
 
 /* Options: bargaining slips */
 .options.hidden { display: none; }
