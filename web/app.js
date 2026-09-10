@@ -265,7 +265,12 @@ function paintTrack(guess, truth, max, ok) {
   $("fb-mark-truth").style.left = pct(truth) + "%";
   const zone = $("fb-track-zone");
   const lo = Math.min(pct(guess), pct(truth)), hi = Math.max(pct(guess), pct(truth));
+  // grow the gap zone from nothing so it draws itself after the track lands
+  zone.style.transition = "none";
   zone.style.left = lo + "%";
+  zone.style.width = "0%";
+  void zone.offsetWidth;
+  zone.style.transition = "";
   zone.style.width = Math.max(hi - lo, 1.2) + "%";
   zone.className = "vs-zone " + (ok ? "good" : "miss");
 }
@@ -308,10 +313,13 @@ function showFeedback(tier, tierClass, lines, reveal) {
   if (reveal) {
     truthBox.classList.remove("hidden");
     $("fb-truth-unit").textContent = "";
-    countUp($("fb-truth-num"), reveal.truth, (v) => {
+    // count-up trails the tier headline; instant under reduced motion
+    const doCount = () => countUp($("fb-truth-num"), reveal.truth, (v) => {
       const r1 = Math.round(v * 10) / 10;
       return lang === "fa" ? toFa(r1) : String(r1);
     });
+    if (reduceMotion()) doCount();
+    else setTimeout(doCount, 300);
     // unit suffix after the animated number
     const unitEl = $("fb-truth-unit");
     unitEl.textContent = lang === "fa"
