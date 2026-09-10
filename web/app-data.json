@@ -1,0 +1,1338 @@
+{
+ "sources": {
+  "sci-census-2016": {
+   "id": "sci-census-2016",
+   "org": "Statistical Centre of Iran",
+   "org_fa": "مرکز آمار ایران",
+   "title": "Population and Housing Census 2016 (1395)",
+   "type": "official_census",
+   "url": "https://www.amar.org.ir/",
+   "doc_url": "https://irandataportal.syr.edu/wp-content/uploads/Iran_Census_2016_Selected_Results.pdf",
+   "accessed": "2026-08-05",
+   "coverage_note": "Full national census 2016 — population, households, literacy, tenure; baseline only, dated for current figures"
+  },
+  "sci-recent": {
+   "id": "sci-recent",
+   "org": "Statistical Centre of Iran",
+   "org_fa": "مرکز آمار ایران",
+   "title": "SCI Recent Releases — Labor Force, Income/Expenditure, Gini, Population Estimate",
+   "type": "official_survey",
+   "url": "https://www.amar.org.ir/",
+   "accessed": "2026-08-05",
+   "coverage_note": "Post-census surveys 1401-1405 — labor force, income/expenditure, Gini 0.3870, 85.96M population estimate"
+  },
+  "ispa-digital-2026": {
+   "id": "ispa-digital-2026",
+   "org": "ISPA (Iranian Students Polling Agency)",
+   "org_fa": "ایسپا",
+   "title": "Digital Ecosystem of Iranians 2026 (زیستبوم دیجیتال ایرانیان) and media/social surveys",
+   "type": "polling",
+   "url": "https://ispa.ir/",
+   "accessed": "2026-08-05",
+   "coverage_note": "National polling — VPN use 74.4%, internet penetration 89.3%, platform shares, media trust"
+  },
+  "world-bank-iran": {
+   "id": "world-bank-iran",
+   "org": "World Bank",
+   "title": "Iran, Islamic Rep. Country Data",
+   "type": "international",
+   "url": "https://data.worldbank.org/country/iran-islamic-rep",
+   "accessed": "2026-08-05",
+   "coverage_note": "Macro/dev indicators — internet 85%, life expectancy 78, GDP/capita, inflation, poverty (partly modeled)"
+  },
+  "wvs-wave7-2020": {
+   "id": "wvs-wave7-2020",
+   "org": "World Values Survey",
+   "title": "World Values Survey Wave 7, Iran 2020",
+   "type": "academic",
+   "url": "https://www.worldvaluessurvey.org/",
+   "accessed": "2026-08-05",
+   "coverage_note": "National values survey N=1499 (2020) — religiosity, trust, gender attitudes, life satisfaction 6.2/10"
+  },
+  "noc-register": {
+   "id": "noc-register",
+   "org": "National Organization for Civil Registration",
+   "org_fa": "سازمان ثبت احوال کشور",
+   "title": "Vital Statistics Registry — Marriages, Divorces, Births, Deaths",
+   "type": "official_survey",
+   "url": "https://www.sabteahval.ir/",
+   "accessed": "2026-08-05",
+   "coverage_note": "Official vital registry 1403-1404 — marriages, divorces, births ~980K, first-marriage ages 28.3/24.1"
+  },
+  "cbi-monetary": {
+   "id": "cbi-monetary",
+   "org": "Central Bank of Iran",
+   "org_fa": "بانک مرکزی",
+   "title": "Monetary and Price Statistics — Inflation, Exchange Rates, Liquidity",
+   "type": "official_survey",
+   "url": "https://cbi.ir/",
+   "accessed": "2026-08-05",
+   "coverage_note": "Monetary authority data via releases — p2p inflation 83.9% Tir 1405, liquidity, FX rates (volatile wartime)"
+  },
+  "itu-ict": {
+   "id": "itu-ict",
+   "org": "International Telecommunication Union",
+   "title": "ITU DataHub — Iran (IRN), WTID 2025 Release",
+   "type": "international",
+   "url": "https://datahub.itu.int/data/?e=IRN",
+   "accessed": "2026-08-05",
+   "coverage_note": "Official ICT stats — internet users 85.3%, mobile 174/100, 4G 94.2%, 5G 8.2%"
+  },
+  "ilo-labor": {
+   "id": "ilo-labor",
+   "org": "International Labour Organization",
+   "title": "ILOSTAT Country Profile — Iran (IRN)",
+   "type": "international",
+   "url": "https://ilostat.ilo.org/data/country-profiles/irn/",
+   "accessed": "2026-08-05",
+   "coverage_note": "Labor stats — unemployment 7.6% (LFS 2024), LFPR 40.7%, NEET 24.3%; no informal-employment data"
+  },
+  "who-health": {
+   "id": "who-health",
+   "org": "World Health Organization",
+   "title": "WHO Data — Iran Country Profile and GHO API",
+   "type": "international",
+   "url": "https://data.who.int/countries/364",
+   "accessed": "2026-08-05",
+   "coverage_note": "Health indicators — tobacco 12.5%, obesity 24%, life expectancy 74.7, road deaths 20.6/100k"
+  },
+  "unesco-uis": {
+   "id": "unesco-uis",
+   "org": "UNESCO Institute for Statistics",
+   "title": "UIS Data — Iran Education Indicators (Feb 2026 Release)",
+   "type": "international",
+   "url": "https://api.uis.unesco.org/",
+   "accessed": "2026-08-05",
+   "coverage_note": "Education stats — adult literacy 88.9%, youth 98.7%, tertiary enrollment 58.7%, spending 2.8% GDP"
+  },
+  "imf-weo": {
+   "id": "imf-weo",
+   "org": "International Monetary Fund",
+   "title": "World Economic Outlook — Iran (Apr 2026 + Jul 2026 Update)",
+   "type": "international",
+   "url": "https://www.imf.org/en/Countries/IRN",
+   "accessed": "2026-08-05",
+   "coverage_note": "Macro outlook — growth -6.1% f2026, inflation 68.9% f2026 (highest since WWII), unemployment 9.2%"
+  },
+  "censorship-vpn": {
+   "id": "censorship-vpn",
+   "org": "IPRC / OONI / Freedom House (mixed measurement)",
+   "title": "Internet Censorship and VPN Use — IPRC Survey, OONI, Freedom House, Academic Studies",
+   "type": "academic",
+   "url": "https://ooni.org/post/iran-internet-censorship/",
+   "doc_url": "https://freedomhouse.org/country/iran/freedom-net/2024",
+   "accessed": "2026-08-05",
+   "coverage_note": "Mixed sources — IPRC 81% VPN use (Dec 2024), OONI blocks, Freedom House 12/100; GAMAAN excluded"
+  },
+  "values-survey-1402": {
+   "id": "values-survey-1402",
+   "org": "Ministry of Culture and Islamic Guidance (national projects office)",
+   "org_fa": "وزارت ارشاد",
+   "title": "National Values and Attitudes Survey 1402 (پیمایش ملی ارزش‌ها و نگرش‌های ایرانیان)",
+   "type": "leak",
+   "url": "https://www.bbc.com/persian/articles/cmlgj8j3xl1o",
+   "doc_url": "https://irandataportal.syr.edu",
+   "accessed": "2026-08-05",
+   "coverage_note": "Classified Wave 4 leak n=15878 (2023) — secularization, distrust, 38.6% emigration intent; conservative bias likely"
+  },
+  "what-iran-wants-2026": {
+   "id": "what-iran-wants-2026",
+   "org": "Ara Opinion Research Center (via presidential social advisor)",
+   "org_fa": "مرکز افکارسنجی آرا",
+   "title": "What Iran Wants — Confidential Presidency Report (Apr-May 2026 survey)",
+   "type": "leak",
+   "url": "https://iranwire.com/en/features/154845-exclusive-what-iran-wants-president-advisor-confidential-report/",
+   "doc_url": "https://www.iranintl.com/en/202607161900",
+   "accessed": "2026-08-05",
+   "coverage_note": "Leaked May 2026 survey — anger 63.6%, reform demand 53%, 81% food insecurity; methodology undisclosed"
+  },
+  "vote-poll-2024": {
+   "id": "vote-poll-2024",
+   "org": "Unnamed state institution (via Khabaronline, censored)",
+   "title": "Censored Official Vote-Intention Poll, Jan 2024 (March Majles Election Forecast)",
+   "type": "leak",
+   "url": "https://ir.voanews.com/a/iran-pressure-on-the-media-elections/7464000.html",
+   "accessed": "2026-08-05",
+   "coverage_note": "Leaked pre-election prediction — ~30% national turnout, 22% Tehran province; prediction not outcome"
+  },
+  "ispa": {
+   "id": "ispa",
+   "org": "ISPA (Iranian Students Polling Agency)",
+   "org_fa": "ایسپا",
+   "title": "ISPA General Polls — Social Media, Trust, Turnout, Happiness",
+   "type": "polling",
+   "url": "https://ispa.ir/",
+   "accessed": "2026-08-05",
+   "coverage_note": "ISPA Sep-2024/2025 platform shares, media trust, turnout, happiness index 64.41/100; split from digital-ecosystem 2026 file"
+  },
+  "values-survey-1394": {
+   "id": "values-survey-1394",
+   "org": "Ministry of Culture and Islamic Guidance (wave 3, PI Javadi Yeganeh)",
+   "org_fa": "وزارت ارشاد",
+   "title": "National Values and Attitudes Survey Wave 3, 1394 (official 718-page report)",
+   "type": "official_survey",
+   "url": "https://ircud.ir/fa/content/283625",
+   "doc_url": "https://ircud.ir/Media/PDF/1400/04/12/637608720832709393.pdf",
+   "accessed": "2026-08-05",
+   "coverage_note": "Official wave-3 baseline n=14906 (2015) — separation 30.7%, hijab-mandate agree 53.1%, trust gov 49.9%; archived at references/values-survey-wave3/"
+  }
+ },
+ "questions": [
+  {
+   "id": "q-housing-01",
+   "category": "housing",
+   "difficulty": 1,
+   "surprise_note": "Widely reported census figure; most players know ownership is around three-fifths",
+   "prompt_en": "What share of Iranian households own their home (2016 census, national)?",
+   "prompt_fa": "بر اساس سرشماری ۱۳۹۵، چند درصد از خانوارهای ایرانی مالک خانه‌شان هستند؟",
+   "stat_ids": [
+    "home-ownership-national-2016"
+   ],
+   "options": [
+    {
+     "label_en": "40%",
+     "label_fa": "٪۴۰"
+    },
+    {
+     "label_en": "60%",
+     "label_fa": "٪۶۰"
+    },
+    {
+     "label_en": "75%",
+     "label_fa": "٪۷۵"
+    },
+    {
+     "label_en": "90%",
+     "label_fa": "٪۹۰"
+    }
+   ],
+   "correct_index": 1,
+   "fun_fact_en": "The census value is 60.5% — but in cities it falls to about 54%.",
+   "fun_fact_fa": "عدد سرشماری ۶۰٫۵٪ است — اما در شهرها به حدود ۵۴٪ می‌رسد.",
+   "answer_stats": [
+    {
+     "id": "home-ownership-national-2016",
+     "name_en": "Home ownership — national",
+     "name_fa": null,
+     "value": 60.5,
+     "unit": "percent",
+     "year": 2016,
+     "scope": "national",
+     "source_id": "sci-census-2016",
+     "source_name": "Statistical Centre of Iran",
+     "source_name_fa": "مرکز آمار ایران"
+    }
+   ]
+  },
+  {
+   "id": "q-housing-02",
+   "category": "housing",
+   "difficulty": 3,
+   "surprise_note": "People anchor on the national 60% and miss how much lower urban ownership is",
+   "prompt_en": "What share of urban Iranian households own their home (2016 census)?",
+   "prompt_fa": "در سرشماری ۱۳۹۵، چند درصد از خانوارهای شهری مالک خانه‌شان بودند؟",
+   "stat_ids": [
+    "home-ownership-urban-urban-2016"
+   ],
+   "options": [
+    {
+     "label_en": "42%",
+     "label_fa": "٪۴۲"
+    },
+    {
+     "label_en": "54%",
+     "label_fa": "٪۵۴"
+    },
+    {
+     "label_en": "66%",
+     "label_fa": "٪۶۶"
+    },
+    {
+     "label_en": "78%",
+     "label_fa": "٪۷۸"
+    }
+   ],
+   "correct_index": 1,
+   "fun_fact_en": "Urban ownership is 54.5% — renting is the urban norm in big cities.",
+   "fun_fact_fa": "مالکیت شهری ۵۴٫۵٪ است — اجاره‌نشینی در شهرهای بزرگ رایج است.",
+   "answer_stats": [
+    {
+     "id": "home-ownership-urban-urban-2016",
+     "name_en": "Home ownership — urban",
+     "name_fa": null,
+     "value": 54.5,
+     "unit": "percent",
+     "year": 2016,
+     "scope": "urban",
+     "source_id": "sci-census-2016",
+     "source_name": "Statistical Centre of Iran",
+     "source_name_fa": "مرکز آمار ایران"
+    }
+   ]
+  },
+  {
+   "id": "q-internet-01",
+   "category": "internet",
+   "difficulty": 2,
+   "surprise_note": "High but familiar number; mild twist is that it covers ages 15+",
+   "prompt_en": "What share of Iranians aged 15+ use the internet (2026)?",
+   "prompt_fa": "چند درصد ایرانیان ۱۵ سال به بالا از اینترنت استفاده می‌کنند (۱۴۰۵)؟",
+   "stat_ids": [
+    "internet-penetration-15-2026"
+   ],
+   "options": [
+    {
+     "label_en": "89%",
+     "label_fa": "٪۸۹"
+    },
+    {
+     "label_en": "72%",
+     "label_fa": "٪۷۲"
+    },
+    {
+     "label_en": "61%",
+     "label_fa": "٪۶۱"
+    },
+    {
+     "label_en": "55%",
+     "label_fa": "٪۵۵"
+    }
+   ],
+   "correct_index": 0,
+   "fun_fact_en": "Penetration is 89.3% — nearly nine in ten Iranians 15+ are online.",
+   "fun_fact_fa": "ضریب نفوذ ۸۹٫۳٪ است — تقریباً نه نفر از هر ده ایرانی بالای ۱۵ سال آنلاین‌اند.",
+   "answer_stats": [
+    {
+     "id": "internet-penetration-15-2026",
+     "name_en": "Internet penetration (15+)",
+     "name_fa": null,
+     "value": 89.3,
+     "unit": "percent",
+     "year": 2026,
+     "scope": "national",
+     "source_id": "ispa-digital-2026",
+     "source_name": "ISPA (Iranian Students Polling Agency)",
+     "source_name_fa": "ایسپا"
+    }
+   ]
+  },
+  {
+   "id": "q-internet-02",
+   "category": "internet",
+   "difficulty": 3,
+   "surprise_note": "Counterintuitive scale of VPN use; one plausible distractor near 60%",
+   "prompt_en": "What share of Iranians use a VPN / filter-breaker (2026)?",
+   "prompt_fa": "چند درصد ایرانیان از وی‌پی‌ان یا فیلترشکن استفاده می‌کنند (۱۴۰۵)؟",
+   "stat_ids": [
+    "vpn-filter-breaker-use-2026"
+   ],
+   "options": [
+    {
+     "label_en": "41%",
+     "label_fa": "٪۴۱"
+    },
+    {
+     "label_en": "58%",
+     "label_fa": "٪۵۸"
+    },
+    {
+     "label_en": "74%",
+     "label_fa": "٪۷۴"
+    },
+    {
+     "label_en": "91%",
+     "label_fa": "٪۹۱"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "74.4% use a filter-breaker — among under-30s it reaches 85%.",
+   "fun_fact_fa": "۷۴٫۴٪ از فیلترشکن استفاده می‌کنند — در میان زیر ۳۰ ساله‌ها به ۸۵٪ می‌رسد.",
+   "answer_stats": [
+    {
+     "id": "vpn-filter-breaker-use-2026",
+     "name_en": "VPN / filter-breaker use",
+     "name_fa": null,
+     "value": 74.4,
+     "unit": "percent",
+     "year": 2026,
+     "scope": "national",
+     "source_id": "ispa-digital-2026",
+     "source_name": "ISPA (Iranian Students Polling Agency)",
+     "source_name_fa": "ایسپا"
+    }
+   ]
+  },
+  {
+   "id": "q-internet-03",
+   "category": "internet",
+   "difficulty": 4,
+   "surprise_note": "Both platforms are filtered yet huge; players underestimate the Instagram-Telegram gap",
+   "prompt_en": "Comparison — which platform do more Iranians use, Instagram (about 51%) or Telegram (about 39%)?",
+   "prompt_fa": "مقایسه — کاربران اینستاگرام (حدود ۵۱٪) بیشترند یا تلگرام (حدود ۳۹٪)؟",
+   "stat_ids": [
+    "instagram-users-2024",
+    "telegram-users-2024"
+   ],
+   "options": [
+    {
+     "label_en": "Telegram, ~39%",
+     "label_fa": "تلگرام، حدود ٪۳۹"
+    },
+    {
+     "label_en": "Instagram, ~51%",
+     "label_fa": "اینستاگرام، حدود ٪۵۱"
+    },
+    {
+     "label_en": "Equal, ~45% each",
+     "label_fa": "برابر، هر کدام حدود ٪۴۵"
+    },
+    {
+     "label_en": "Neither tops 30%",
+     "label_fa": "هیچ‌کدام به ٪۳۰ نمی‌رسد"
+    }
+   ],
+   "correct_index": 1,
+   "fun_fact_en": "Instagram leads at 50.6% vs Telegram at 39.3% (2024) — both filtered, both massive.",
+   "fun_fact_fa": "اینستاگرام با ۵۰٫۶٪ جلوتر از تلگرام با ۳۹٫۳٪ است (۱۴۰۳) — هر دو فیلتر، هر دو پرمخاطب.",
+   "answer_stats": [
+    {
+     "id": "instagram-users-2024",
+     "name_en": "Instagram users",
+     "name_fa": null,
+     "value": 50.6,
+     "unit": "percent",
+     "year": 2024,
+     "scope": "national",
+     "source_id": "ispa",
+     "source_name": "ISPA (Iranian Students Polling Agency)",
+     "source_name_fa": "ایسپا"
+    },
+    {
+     "id": "telegram-users-2024",
+     "name_en": "Telegram users",
+     "name_fa": null,
+     "value": 39.3,
+     "unit": "percent",
+     "year": 2024,
+     "scope": "national",
+     "source_id": "ispa",
+     "source_name": "ISPA (Iranian Students Polling Agency)",
+     "source_name_fa": "ایسپا"
+    }
+   ]
+  },
+  {
+   "id": "q-economy-01",
+   "category": "economy",
+   "difficulty": 3,
+   "surprise_note": "Annual-average inflation feels abstract; players confuse it with the higher point-to-point figure",
+   "prompt_en": "What was Iran's 12-month average inflation rate (1405)?",
+   "prompt_fa": "میانگین تورم دوازده‌ماهه ایران در سال ۱۴۰۵ چند درصد بود؟",
+   "stat_ids": [
+    "annual-avg-12-mo-inflation-1405"
+   ],
+   "options": [
+    {
+     "label_en": "38%",
+     "label_fa": "٪۳۸"
+    },
+    {
+     "label_en": "47%",
+     "label_fa": "٪۴۷"
+    },
+    {
+     "label_en": "61%",
+     "label_fa": "٪۶۱"
+    },
+    {
+     "label_en": "84%",
+     "label_fa": "٪۸۴"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "The 12-month average was 61.4% — while point-to-point hit 83.9%.",
+   "fun_fact_fa": "میانگین دوازده‌ماهه ۶۱٫۴٪ بود — در حالی که تورم نقطه‌به‌نقطه به ۸۳٫۹٪ رسید.",
+   "answer_stats": [
+    {
+     "id": "annual-avg-12-mo-inflation-1405",
+     "name_en": "Annual avg (12-mo) inflation",
+     "name_fa": null,
+     "value": 61.4,
+     "unit": "percent",
+     "year": 1405,
+     "scope": "national",
+     "source_id": "cbi-monetary",
+     "source_name": "Central Bank of Iran",
+     "source_name_fa": "بانک مرکزی"
+    }
+   ]
+  },
+  {
+   "id": "q-economy-02",
+   "category": "economy",
+   "difficulty": 5,
+   "surprise_note": "Obscure latest CBI print; several close distractors above 60%",
+   "prompt_en": "What was Iran's point-to-point inflation rate (1405, latest CBI print)?",
+   "prompt_fa": "نرخ تورم نقطه‌به‌نقطه ایران در سال ۱۴۰۵ چقدر اعلام شد؟",
+   "stat_ids": [
+    "point-to-point-inflation-1405"
+   ],
+   "options": [
+    {
+     "label_en": "61%",
+     "label_fa": "٪۶۱"
+    },
+    {
+     "label_en": "72%",
+     "label_fa": "٪۷۲"
+    },
+    {
+     "label_en": "84%",
+     "label_fa": "٪۸۴"
+    },
+    {
+     "label_en": "95%",
+     "label_fa": "٪۹۵"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "Point-to-point inflation hit 83.9% — far above the 61.4% annual average.",
+   "fun_fact_fa": "تورم نقطه‌به‌نقطه به ۸۳٫۹٪ رسید — بسیار بالاتر از میانگین سالانه ۶۱٫۴٪.",
+   "answer_stats": [
+    {
+     "id": "point-to-point-inflation-1405",
+     "name_en": "Point-to-point inflation",
+     "name_fa": null,
+     "value": 83.9,
+     "unit": "percent",
+     "year": 1405,
+     "scope": "national",
+     "source_id": "cbi-monetary",
+     "source_name": "Central Bank of Iran",
+     "source_name_fa": "بانک مرکزی"
+    }
+   ]
+  },
+  {
+   "id": "q-economy-03",
+   "category": "economy",
+   "difficulty": 3,
+   "surprise_note": "Players guess unemployment, but inflation dominates as the named top problem",
+   "prompt_en": "What share of Iranians name inflation as the country's most important problem (1402 values survey)?",
+   "prompt_fa": "چند درصد ایرانیان تورم را مهم‌ترین مشکل کشور می‌دانند (پیمایش ارزش‌ها ۱۴۰۲)؟",
+   "stat_ids": [
+    "inflation-most-important-national-problem-1402"
+   ],
+   "options": [
+    {
+     "label_en": "82%",
+     "label_fa": "٪۸۲"
+    },
+    {
+     "label_en": "64%",
+     "label_fa": "٪۶۴"
+    },
+    {
+     "label_en": "47%",
+     "label_fa": "٪۴۷"
+    },
+    {
+     "label_en": "33%",
+     "label_fa": "٪۳۳"
+    }
+   ],
+   "correct_index": 0,
+   "fun_fact_en": "81.9% name inflation the top national problem — an overwhelming consensus.",
+   "fun_fact_fa": "۸۱٫۹٪ تورم را مهم‌ترین مشکل کشور می‌دانند — اجماعی چشمگیر.",
+   "answer_stats": [
+    {
+     "id": "inflation-most-important-national-problem-1402",
+     "name_en": "Inflation = most important national problem",
+     "name_fa": null,
+     "value": 81.9,
+     "unit": "percent",
+     "year": 1402,
+     "scope": "national",
+     "source_id": "values-survey-1402",
+     "source_name": "Ministry of Culture and Islamic Guidance (national projects office)",
+     "source_name_fa": "وزارت ارشاد"
+    }
+   ]
+  },
+  {
+   "id": "q-demography-01",
+   "category": "demographics",
+   "difficulty": 1,
+   "surprise_note": "Classic census headline number; common knowledge",
+   "prompt_en": "What share of Iran's population lives in urban areas (2016 census)?",
+   "prompt_fa": "بر اساس سرشماری ۱۳۹۵، چند درصد جمعیت ایران شهرنشین است؟",
+   "stat_ids": [
+    "urbanization-rate-urban-2016"
+   ],
+   "options": [
+    {
+     "label_en": "52%",
+     "label_fa": "٪۵۲"
+    },
+    {
+     "label_en": "63%",
+     "label_fa": "٪۶۳"
+    },
+    {
+     "label_en": "74%",
+     "label_fa": "٪۷۴"
+    },
+    {
+     "label_en": "88%",
+     "label_fa": "٪۸۸"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "Three-quarters of Iranians (74%) live in cities.",
+   "fun_fact_fa": "سه‌چهارم ایرانیان (۷۴٪) شهرنشین‌اند.",
+   "answer_stats": [
+    {
+     "id": "urbanization-rate-urban-2016",
+     "name_en": "Urbanization rate",
+     "name_fa": null,
+     "value": 74,
+     "unit": "percent",
+     "year": 2016,
+     "scope": "urban",
+     "source_id": "sci-census-2016",
+     "source_name": "Statistical Centre of Iran",
+     "source_name_fa": "مرکز آمار ایران"
+    }
+   ]
+  },
+  {
+   "id": "q-demography-02",
+   "category": "demographics",
+   "difficulty": 3,
+   "surprise_note": "Naive guess skews younger (around 25); true median age of 30 surprises",
+   "prompt_en": "What was the median age of Iran's population (2016 census)?",
+   "prompt_fa": "میانه سنی جمعیت ایران در سرشماری ۱۳۹۵ چند سال بود؟",
+   "stat_ids": [
+    "median-age-2016"
+   ],
+   "options": [
+    {
+     "label_en": "24 years",
+     "label_fa": "۲۴ سال"
+    },
+    {
+     "label_en": "27 years",
+     "label_fa": "۲۷ سال"
+    },
+    {
+     "label_en": "30 years",
+     "label_fa": "۳۰ سال"
+    },
+    {
+     "label_en": "35 years",
+     "label_fa": "۳۵ سال"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "The median Iranian was exactly 30 — a young country, but aging fast.",
+   "fun_fact_fa": "میانه سنی دقیقاً ۳۰ سال بود — کشوری جوان، اما به‌سرعت رو به سالمندی.",
+   "answer_stats": [
+    {
+     "id": "median-age-2016",
+     "name_en": "Median age",
+     "name_fa": null,
+     "value": 30,
+     "unit": "years",
+     "year": 2016,
+     "scope": "national",
+     "source_id": "sci-census-2016",
+     "source_name": "Statistical Centre of Iran",
+     "source_name_fa": "مرکز آمار ایران"
+    }
+   ]
+  },
+  {
+   "id": "q-religiosity-01",
+   "category": "society",
+   "difficulty": 4,
+   "surprise_note": "The 1394 to 1402 drop (78.5% to 54.8%) is much steeper than most guess",
+   "prompt_en": "Comparison — regular prayer (always/mostly) fell from 78.5% in 1394 to what level in 1402?",
+   "prompt_fa": "مقایسه — نمازخوانی منظم (همیشه/بیشتر اوقات) از ۷۸٫۵٪ در ۱۳۹۴ به چه سطحی در ۱۴۰۲ رسید؟",
+   "stat_ids": [
+    "pray-always-mostly-never-always-mostly-1394",
+    "pray-always-mostly-1402"
+   ],
+   "options": [
+    {
+     "label_en": "69%",
+     "label_fa": "٪۶۹"
+    },
+    {
+     "label_en": "62%",
+     "label_fa": "٪۶۲"
+    },
+    {
+     "label_en": "55%",
+     "label_fa": "٪۵۵"
+    },
+    {
+     "label_en": "41%",
+     "label_fa": "٪۴۱"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "Regular prayer fell from 78.5% (1394) to 54.8% (1402) — a 24-point drop in under a decade.",
+   "fun_fact_fa": "نمازخوانی منظم از ۷۸٫۵٪ (۱۳۹۴) به ۵۴٫۸٪ (۱۴۰۲) سقوط کرد — حدود ۲۴ واحد در کمتر از یک دهه.",
+   "answer_stats": [
+    {
+     "id": "pray-always-mostly-never-always-mostly-1394",
+     "name_en": "Pray always/mostly / never — always-mostly",
+     "name_fa": null,
+     "value": 78.5,
+     "unit": "percent",
+     "year": 1394,
+     "scope": "national",
+     "source_id": "values-survey-1394",
+     "source_name": "Ministry of Culture and Islamic Guidance (wave 3, PI Javadi Yeganeh)",
+     "source_name_fa": "وزارت ارشاد"
+    },
+    {
+     "id": "pray-always-mostly-1402",
+     "name_en": "Pray always/mostly",
+     "name_fa": null,
+     "value": 54.8,
+     "unit": "percent",
+     "year": 1402,
+     "scope": "national",
+     "source_id": "values-survey-1402",
+     "source_name": "Ministry of Culture and Islamic Guidance (national projects office)",
+     "source_name_fa": "وزارت ارشاد"
+    }
+   ]
+  },
+  {
+   "id": "q-religiosity-02",
+   "category": "society",
+   "difficulty": 5,
+   "surprise_note": "The sevenfold rise in never-praying (3.1% to 22.2%) is the surveys' most shocking finding",
+   "prompt_en": "Comparison — the share who never pray rose from 3.1% in 1394 to what in 1402?",
+   "prompt_fa": "مقایسه — سهم کسانی که هرگز نماز نمی‌خوانند از ۳٫۱٪ در ۱۳۹۴ به چه عددی در ۱۴۰۲ رسید؟",
+   "stat_ids": [
+    "pray-always-mostly-never-never-1394",
+    "never-pray-1402"
+   ],
+   "options": [
+    {
+     "label_en": "9%",
+     "label_fa": "٪۹"
+    },
+    {
+     "label_en": "15%",
+     "label_fa": "٪۱۵"
+    },
+    {
+     "label_en": "22%",
+     "label_fa": "٪۲۲"
+    },
+    {
+     "label_en": "31%",
+     "label_fa": "٪۳۱"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "Never-praying rose sevenfold, from 3.1% to 22.2% between the two values surveys.",
+   "fun_fact_fa": "هرگزنمازخواندن هفت برابر شد، از ۳٫۱٪ به ۲۲٫۲٪ میان دو پیمایش ارزش‌ها.",
+   "answer_stats": [
+    {
+     "id": "pray-always-mostly-never-never-1394",
+     "name_en": "Pray always/mostly / never — never",
+     "name_fa": null,
+     "value": 3.1,
+     "unit": "percent",
+     "year": 1394,
+     "scope": "national",
+     "source_id": "values-survey-1394",
+     "source_name": "Ministry of Culture and Islamic Guidance (wave 3, PI Javadi Yeganeh)",
+     "source_name_fa": "وزارت ارشاد"
+    },
+    {
+     "id": "never-pray-1402",
+     "name_en": "Never pray",
+     "name_fa": null,
+     "value": 22.2,
+     "unit": "percent",
+     "year": 1402,
+     "scope": "national",
+     "source_id": "values-survey-1402",
+     "source_name": "Ministry of Culture and Islamic Guidance (national projects office)",
+     "source_name_fa": "وزارت ارشاد"
+    }
+   ]
+  },
+  {
+   "id": "q-trust-01",
+   "category": "society",
+   "difficulty": 3,
+   "surprise_note": "Doctors are the outlier of trust; players who anchor on institutional distrust guess too low",
+   "prompt_en": "What share of Iranians express high trust in doctors (1402 values survey)?",
+   "prompt_fa": "چند درصد ایرانیان به پزشکان اعتماد زیادی دارند (پیمایش ۱۴۰۲)؟",
+   "stat_ids": [
+    "high-trust-in-doctors-1402"
+   ],
+   "options": [
+    {
+     "label_en": "73%",
+     "label_fa": "٪۷۳"
+    },
+    {
+     "label_en": "58%",
+     "label_fa": "٪۵۸"
+    },
+    {
+     "label_en": "44%",
+     "label_fa": "٪۴۴"
+    },
+    {
+     "label_en": "31%",
+     "label_fa": "٪۳۱"
+    }
+   ],
+   "correct_index": 0,
+   "fun_fact_en": "Doctors enjoy 73% high trust — far above any political institution.",
+   "fun_fact_fa": "پزشکان با ۷۳٪ اعتماد بالا، بسیار بالاتر از هر نهاد سیاسی‌اند.",
+   "answer_stats": [
+    {
+     "id": "high-trust-in-doctors-1402",
+     "name_en": "High trust in doctors",
+     "name_fa": null,
+     "value": 73,
+     "unit": "percent",
+     "year": 1402,
+     "scope": "national",
+     "source_id": "values-survey-1402",
+     "source_name": "Ministry of Culture and Islamic Guidance (national projects office)",
+     "source_name_fa": "وزارت ارشاد"
+    }
+   ]
+  },
+  {
+   "id": "q-trust-02",
+   "category": "society",
+   "difficulty": 4,
+   "surprise_note": "In 1394 a majority trusted IRIB (54.8%); by 1402 a majority distrusts it (58% low trust) — a full reversal",
+   "prompt_en": "Comparison — 54.8% trusted IRIB in 1394; what share expressed LOW trust in 1402?",
+   "prompt_fa": "مقایسه — در ۱۳۹۴ حدود ۵۵٪ به صداوسیما اعتماد داشتند؛ در ۱۴۰۲ چند درصد اعتماد کمی داشتند؟",
+   "stat_ids": [
+    "trust-irib-1394",
+    "low-trust-in-irib-1394-81-trusted-1402"
+   ],
+   "options": [
+    {
+     "label_en": "34%",
+     "label_fa": "٪۳۴"
+    },
+    {
+     "label_en": "46%",
+     "label_fa": "٪۴۶"
+    },
+    {
+     "label_en": "58%",
+     "label_fa": "٪۵۸"
+    },
+    {
+     "label_en": "71%",
+     "label_fa": "٪۷۱"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "From 54.8% trust (1394) to 58% low trust (1402) — a complete reversal for state TV.",
+   "fun_fact_fa": "از ۵۴٫۸٪ اعتماد (۱۳۹۴) به ۵۸٪ بی‌اعتمادی (۱۴۰۲) — وارونگی کامل برای تلویزیون دولتی.",
+   "answer_stats": [
+    {
+     "id": "trust-irib-1394",
+     "name_en": "Trust IRIB",
+     "name_fa": null,
+     "value": 54.8,
+     "unit": "percent",
+     "year": 1394,
+     "scope": "national",
+     "source_id": "values-survey-1394",
+     "source_name": "Ministry of Culture and Islamic Guidance (wave 3, PI Javadi Yeganeh)",
+     "source_name_fa": "وزارت ارشاد"
+    },
+    {
+     "id": "low-trust-in-irib-1394-81-trusted-1402",
+     "name_en": "Low trust in IRIB (1394: ~81% trusted)",
+     "name_fa": null,
+     "value": 58,
+     "unit": "percent",
+     "year": 1402,
+     "scope": "national",
+     "source_id": "values-survey-1402",
+     "source_name": "Ministry of Culture and Islamic Guidance (national projects office)",
+     "source_name_fa": "وزارت ارشاد"
+    }
+   ]
+  },
+  {
+   "id": "q-emigration-01",
+   "category": "society",
+   "difficulty": 3,
+   "surprise_note": "True figure (about 39%) sits between alarmist (over 60%) and dismissive (under 20%) guesses",
+   "prompt_en": "What share of Iranians would emigrate permanently if they could (1402 values survey)?",
+   "prompt_fa": "چند درصد ایرانیان در صورت امکان برای همیشه مهاجرت می‌کنند (پیمایش ۱۴۰۲)؟",
+   "stat_ids": [
+    "would-emigrate-permanently-if-possible-1402"
+   ],
+   "options": [
+    {
+     "label_en": "19%",
+     "label_fa": "٪۱۹"
+    },
+    {
+     "label_en": "29%",
+     "label_fa": "٪۲۹"
+    },
+    {
+     "label_en": "39%",
+     "label_fa": "٪۳۹"
+    },
+    {
+     "label_en": "57%",
+     "label_fa": "٪۵۷"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "38.6% would leave permanently — the top named destination is Canada.",
+   "fun_fact_fa": "۳۸٫۶٪ برای همیشه می‌روند — مقصد اول اعلام‌شده کاناداست.",
+   "answer_stats": [
+    {
+     "id": "would-emigrate-permanently-if-possible-1402",
+     "name_en": "Would emigrate permanently if possible",
+     "name_fa": null,
+     "value": 38.6,
+     "unit": "percent",
+     "year": 1402,
+     "scope": "national",
+     "source_id": "values-survey-1402",
+     "source_name": "Ministry of Culture and Islamic Guidance (national projects office)",
+     "source_name_fa": "وزارت ارشاد"
+    }
+   ]
+  },
+  {
+   "id": "q-emigration-02",
+   "category": "society",
+   "difficulty": 2,
+   "surprise_note": "Canada as top pick is well-known; the twist is its modest 22% plurality",
+   "prompt_en": "Among would-be emigrants, what share name Canada as top destination (1402)?",
+   "prompt_fa": "در میان خواهان مهاجرت، چند درصد کانادا را مقصد اول می‌دانند (۱۴۰۲)؟",
+   "stat_ids": [
+    "top-emigration-destination-canada-1402"
+   ],
+   "options": [
+    {
+     "label_en": "12%",
+     "label_fa": "٪۱۲"
+    },
+    {
+     "label_en": "22%",
+     "label_fa": "٪۲۲"
+    },
+    {
+     "label_en": "38%",
+     "label_fa": "٪۳۸"
+    },
+    {
+     "label_en": "51%",
+     "label_fa": "٪۵۱"
+    }
+   ],
+   "correct_index": 1,
+   "fun_fact_en": "Canada leads with 22% — a plurality, not a majority, of emigration hopes.",
+   "fun_fact_fa": "کانادا با ۲۲٪ اول است — اکثریت نیست، بلکه کثرت آراست.",
+   "answer_stats": [
+    {
+     "id": "top-emigration-destination-canada-1402",
+     "name_en": "Top emigration destination: Canada",
+     "name_fa": null,
+     "value": 22,
+     "unit": "percent",
+     "year": 1402,
+     "scope": "national",
+     "source_id": "values-survey-1402",
+     "source_name": "Ministry of Culture and Islamic Guidance (national projects office)",
+     "source_name_fa": "وزارت ارشاد"
+    }
+   ]
+  },
+  {
+   "id": "q-health-01",
+   "category": "health",
+   "difficulty": 2,
+   "surprise_note": "Familiar World Bank headline; mild twist that Iran nears 80",
+   "prompt_en": "What is life expectancy at birth in Iran (2024)?",
+   "prompt_fa": "امید به زندگی در بدو تولد در ایران (۲۰۲۴) چند سال است؟",
+   "stat_ids": [
+    "life-expectancy-at-birth-2024"
+   ],
+   "options": [
+    {
+     "label_en": "71 years",
+     "label_fa": "۷۱ سال"
+    },
+    {
+     "label_en": "74 years",
+     "label_fa": "۷۴ سال"
+    },
+    {
+     "label_en": "78 years",
+     "label_fa": "۷۸ سال"
+    },
+    {
+     "label_en": "83 years",
+     "label_fa": "۸۳ سال"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "Life expectancy reached 78 years — above the global average.",
+   "fun_fact_fa": "امید به زندگی به ۷۸ سال رسید — بالاتر از میانگین جهانی.",
+   "answer_stats": [
+    {
+     "id": "life-expectancy-at-birth-2024",
+     "name_en": "Life expectancy at birth",
+     "name_fa": null,
+     "value": 78,
+     "unit": "years",
+     "year": 2024,
+     "scope": "national",
+     "source_id": "world-bank-iran",
+     "source_name": "World Bank",
+     "source_name_fa": "Iran, Islamic Rep. Country Data"
+    }
+   ]
+  },
+  {
+   "id": "q-health-02",
+   "category": "health",
+   "difficulty": 4,
+   "surprise_note": "Obesity prevalence (about 24%) reads high vs the naive 10% guess",
+   "prompt_en": "What share of Iranian adults (18+) live with obesity, BMI 30+ (2022)?",
+   "prompt_fa": "چند درصد بزرگسالان ایرانی (۱۸+) چاق‌اند (شاخص توده بدنی ۳۰+، ۲۰۲۲)؟",
+   "stat_ids": [
+    "obesity-18-bmi30-part1-2022"
+   ],
+   "options": [
+    {
+     "label_en": "11%",
+     "label_fa": "٪۱۱"
+    },
+    {
+     "label_en": "17%",
+     "label_fa": "٪۱۷"
+    },
+    {
+     "label_en": "24%",
+     "label_fa": "٪۲۴"
+    },
+    {
+     "label_en": "33%",
+     "label_fa": "٪۳۳"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "Nearly one in four adults (24%) lives with obesity, per WHO estimates.",
+   "fun_fact_fa": "نزدیک به یک نفر از هر چهار بزرگسال (۲۴٪) چاق است، بر اساس برآورد سازمان بهداشت جهانی.",
+   "answer_stats": [
+    {
+     "id": "obesity-18-bmi30-part1-2022",
+     "name_en": "Obesity (18+, BMI≥30) — part1",
+     "name_fa": null,
+     "value": 24,
+     "unit": "percent",
+     "year": 2022,
+     "scope": "national",
+     "source_id": "who-health",
+     "source_name": "World Health Organization",
+     "source_name_fa": "WHO Data — Iran Country Profile and GHO API"
+    }
+   ]
+  },
+  {
+   "id": "q-education-01",
+   "category": "education",
+   "difficulty": 2,
+   "surprise_note": "Near-90% literacy is familiar good news; distractors sit lower",
+   "prompt_en": "What is Iran's adult literacy rate (ages 15+, 2023)?",
+   "prompt_fa": "نرخ باسوادی بزرگسالان ایران (۱۵+، ۲۰۲۳) چند درصد است؟",
+   "stat_ids": [
+    "adult-literacy-15-2023"
+   ],
+   "options": [
+    {
+     "label_en": "76%",
+     "label_fa": "٪۷۶"
+    },
+    {
+     "label_en": "82%",
+     "label_fa": "٪۸۲"
+    },
+    {
+     "label_en": "89%",
+     "label_fa": "٪۸۹"
+    },
+    {
+     "label_en": "97%",
+     "label_fa": "٪۹۷"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "Adult literacy is 88.9% — youth literacy (15-24) is higher still.",
+   "fun_fact_fa": "باسوادی بزرگسالان ۸۸٫۹٪ است — باسوادی جوانان (۱۵ تا ۲۴) از آن هم بالاتر است.",
+   "answer_stats": [
+    {
+     "id": "adult-literacy-15-2023",
+     "name_en": "Adult literacy (15+)",
+     "name_fa": null,
+     "value": 88.9,
+     "unit": "percent",
+     "year": 2023,
+     "scope": "national",
+     "source_id": "unesco-uis",
+     "source_name": "UNESCO Institute for Statistics",
+     "source_name_fa": "UIS Data — Iran Education Indicators (Feb 2026 Release)"
+    }
+   ]
+  },
+  {
+   "id": "q-education-02",
+   "category": "education",
+   "difficulty": 3,
+   "surprise_note": "Tertiary enrollment (about 59%) surprises those who assume single digits or near-universal",
+   "prompt_en": "What is Iran's gross tertiary (university) enrollment ratio (2022)?",
+   "prompt_fa": "نسبت ناخالص ثبت‌نام دانشگاهی ایران (۲۰۲۲) چقدر است؟",
+   "stat_ids": [
+    "tertiary-gross-enrollment-2022"
+   ],
+   "options": [
+    {
+     "label_en": "31%",
+     "label_fa": "٪۳۱"
+    },
+    {
+     "label_en": "45%",
+     "label_fa": "٪۴۵"
+    },
+    {
+     "label_en": "59%",
+     "label_fa": "٪۵۹"
+    },
+    {
+     "label_en": "76%",
+     "label_fa": "٪۷۶"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "At 58.7%, well over half the college-age cohort is enrolled in tertiary education.",
+   "fun_fact_fa": "با ۵۸٫۷٪، بیش از نیمی از گروه سنی دانشگاه در آموزش عالی ثبت‌نام‌اند.",
+   "answer_stats": [
+    {
+     "id": "tertiary-gross-enrollment-2022",
+     "name_en": "Tertiary gross enrollment",
+     "name_fa": null,
+     "value": 58.7,
+     "unit": "percent",
+     "year": 2022,
+     "scope": "national",
+     "source_id": "unesco-uis",
+     "source_name": "UNESCO Institute for Statistics",
+     "source_name_fa": "UIS Data — Iran Education Indicators (Feb 2026 Release)"
+    }
+   ]
+  },
+  {
+   "id": "q-labor-01",
+   "category": "economy",
+   "difficulty": 3,
+   "surprise_note": "Official 9% reads low vs lived experience; distractors bracket it",
+   "prompt_en": "What is Iran's unemployment rate (ages 15+, 1405)?",
+   "prompt_fa": "نرخ بیکاری ایران (۱۵+، ۱۴۰۵) چند درصد است؟",
+   "stat_ids": [
+    "unemployment-15-1405"
+   ],
+   "options": [
+    {
+     "label_en": "5.2%",
+     "label_fa": "٪۵٫۲"
+    },
+    {
+     "label_en": "9.1%",
+     "label_fa": "٪۹٫۱"
+    },
+    {
+     "label_en": "14.8%",
+     "label_fa": "٪۱۴٫۸"
+    },
+    {
+     "label_en": "21.3%",
+     "label_fa": "٪۲۱٫۳"
+    }
+   ],
+   "correct_index": 1,
+   "fun_fact_en": "Official unemployment is 9.1% — but youth unemployment is nearly triple that.",
+   "fun_fact_fa": "بیکاری رسمی ۹٫۱٪ است — اما بیکاری جوانان تقریباً سه برابر آن است.",
+   "answer_stats": [
+    {
+     "id": "unemployment-15-1405",
+     "name_en": "Unemployment (15+)",
+     "name_fa": null,
+     "value": 9.1,
+     "unit": "percent",
+     "year": 1405,
+     "scope": "national",
+     "source_id": "sci-recent",
+     "source_name": "Statistical Centre of Iran",
+     "source_name_fa": "مرکز آمار ایران"
+    }
+   ]
+  },
+  {
+   "id": "q-labor-02",
+   "category": "economy",
+   "difficulty": 3,
+   "surprise_note": "The youth-to-overall ratio (about 2.5x) is the surprise; absolute level has close distractors",
+   "prompt_en": "What is Iran's youth unemployment rate (ages 15-24, 1405)?",
+   "prompt_fa": "نرخ بیکاری جوانان ایران (۱۵ تا ۲۴ سال، ۱۴۰۵) چقدر است؟",
+   "stat_ids": [
+    "youth-unemployment-1524-1405"
+   ],
+   "options": [
+    {
+     "label_en": "12.5%",
+     "label_fa": "٪۱۲٫۵"
+    },
+    {
+     "label_en": "18.0%",
+     "label_fa": "٪۱۸٫۰"
+    },
+    {
+     "label_en": "23.4%",
+     "label_fa": "٪۲۳٫۴"
+    },
+    {
+     "label_en": "31.9%",
+     "label_fa": "٪۳۱٫۹"
+    }
+   ],
+   "correct_index": 2,
+   "fun_fact_en": "Youth unemployment is 23.4% — about 2.5 times the overall rate.",
+   "fun_fact_fa": "بیکاری جوانان ۲۳٫۴٪ است — حدود ۲٫۵ برابر نرخ کلی.",
+   "answer_stats": [
+    {
+     "id": "youth-unemployment-1524-1405",
+     "name_en": "Youth unemployment (15–24)",
+     "name_fa": null,
+     "value": 23.4,
+     "unit": "percent",
+     "year": 1405,
+     "scope": "national",
+     "source_id": "sci-recent",
+     "source_name": "Statistical Centre of Iran",
+     "source_name_fa": "مرکز آمار ایران"
+    }
+   ]
+  },
+  {
+   "id": "q-labor-03",
+   "category": "economy",
+   "difficulty": 3,
+   "surprise_note": "Participation (about 41%) reads low to players used to 60%+ benchmark countries",
+   "prompt_en": "What is Iran's labor-force participation rate (ages 15+, 1405)?",
+   "prompt_fa": "نرخ مشارکت نیروی کار ایران (۱۵+، ۱۴۰۵) چقدر است؟",
+   "stat_ids": [
+    "labor-force-participation-15-1405"
+   ],
+   "options": [
+    {
+     "label_en": "28.4%",
+     "label_fa": "٪۲۸٫۴"
+    },
+    {
+     "label_en": "40.7%",
+     "label_fa": "٪۴۰٫۷"
+    },
+    {
+     "label_en": "55.2%",
+     "label_fa": "٪۵۵٫۲"
+    },
+    {
+     "label_en": "63.9%",
+     "label_fa": "٪۶۳٫۹"
+    }
+   ],
+   "correct_index": 1,
+   "fun_fact_en": "Only 40.7% participate — women's participation near 14% drives the low total.",
+   "fun_fact_fa": "فقط ۴۰٫۷٪ مشارکت می‌کنند — مشارکت زنان با حدود ۱۴٪ میانگین را پایین می‌کشد.",
+   "answer_stats": [
+    {
+     "id": "labor-force-participation-15-1405",
+     "name_en": "Labor-force participation (15+)",
+     "name_fa": null,
+     "value": 40.7,
+     "unit": "percent",
+     "year": 1405,
+     "scope": "national",
+     "source_id": "sci-recent",
+     "source_name": "Statistical Centre of Iran",
+     "source_name_fa": "مرکز آمار ایران"
+    }
+   ]
+  },
+  {
+   "id": "q-labor-04",
+   "category": "economy",
+   "difficulty": 4,
+   "surprise_note": "The gender gap is extreme; players from high-participation countries guess far too high",
+   "prompt_en": "What is the female labor-force participation rate in Iran (2025)?",
+   "prompt_fa": "نرخ مشارکت نیروی کار زنان در ایران (۲۰۲۵) چقدر است؟",
+   "stat_ids": [
+    "female-labor-force-participation-2025"
+   ],
+   "options": [
+    {
+     "label_en": "8%",
+     "label_fa": "٪۸"
+    },
+    {
+     "label_en": "14%",
+     "label_fa": "٪۱۴"
+    },
+    {
+     "label_en": "27%",
+     "label_fa": "٪۲۷"
+    },
+    {
+     "label_en": "39%",
+     "label_fa": "٪۳۹"
+    }
+   ],
+   "correct_index": 1,
+   "fun_fact_en": "Just 14% — one of the world's lowest female participation rates.",
+   "fun_fact_fa": "فقط ۱۴٪ — یکی از پایین‌ترین نرخ‌های مشارکت زنان در جهان.",
+   "answer_stats": [
+    {
+     "id": "female-labor-force-participation-2025",
+     "name_en": "Female labor-force participation",
+     "name_fa": null,
+     "value": 14,
+     "unit": "percent",
+     "year": 2025,
+     "scope": "national",
+     "source_id": "world-bank-iran",
+     "source_name": "World Bank",
+     "source_name_fa": "Iran, Islamic Rep. Country Data"
+    }
+   ]
+  }
+ ]
+}

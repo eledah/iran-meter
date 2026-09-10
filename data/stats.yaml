@@ -1,0 +1,3953 @@
+# Iran-meter stats — generated from INDEXES.md (see generator: tools/gen_stats.py)
+# rows: 439
+- id: population-2016
+  source_id: sci-census-2016
+  name_en: Population
+  value: 79926270
+  unit: count
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; irandataportal.syr.edu/wp-content/uploads/Iran_Census_2016_Selected_Results.pdf
+- id: households-2016
+  source_id: sci-census-2016
+  name_en: Households
+  value: 24196035
+  unit: count_households
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: avg-household-size-2016
+  source_id: sci-census-2016
+  name_en: Avg household size
+  value: 3.3
+  unit: count
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: urbanization-rate-urban-2016
+  source_id: sci-census-2016
+  name_en: Urbanization rate
+  value: 74
+  unit: percent
+  year: 2016
+  scope: urban
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: literacy-age-6-2016
+  source_id: sci-census-2016
+  name_en: Literacy (age 6+)
+  value: 87.6
+  unit: percent
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: literacy-age-1049-2016
+  source_id: sci-census-2016
+  name_en: Literacy (age 10–49)
+  value: 94.7
+  unit: percent
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: median-age-2016
+  source_id: sci-census-2016
+  name_en: Median age
+  value: 30
+  unit: years
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: 1-person-households-2016
+  source_id: sci-census-2016
+  name_en: 1-person households
+  value: 8.5
+  unit: percent
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: home-ownership-national-2016
+  source_id: sci-census-2016
+  name_en: Home ownership — national
+  value: 60.5
+  unit: percent
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: home-ownership-urban-urban-2016
+  source_id: sci-census-2016
+  name_en: Home ownership — urban
+  value: 54.5
+  unit: percent
+  year: 2016
+  scope: urban
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: home-ownership-rural-rural-2016
+  source_id: sci-census-2016
+  name_en: Home ownership — rural
+  value: 79.2
+  unit: percent
+  year: 2016
+  scope: rural
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: renting-national-2016
+  source_id: sci-census-2016
+  name_en: Renting — national
+  value: 30.7
+  unit: percent
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: renting-urban-urban-2016
+  source_id: sci-census-2016
+  name_en: Renting — urban
+  value: 36.7
+  unit: percent
+  year: 2016
+  scope: urban
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: age-group-014-2016
+  source_id: sci-census-2016
+  name_en: Age group 0–14
+  value: 24
+  unit: percent
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: age-group-65-2016
+  source_id: sci-census-2016
+  name_en: Age group 65+
+  value: 6.1
+  unit: percent
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: iranian-nationality-share-2016
+  source_id: sci-census-2016
+  name_en: Iranian nationality share
+  value: 97.8
+  unit: percent
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported 2016; SCI census; same
+- id: unemployment-15-1405
+  source_id: sci-recent
+  name_en: Unemployment (15+)
+  value: 9.1
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: news
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; mehrnews.com/news/6902450; Collected during/after wartime period incl. internet outage"
+- id: youth-unemployment-1524-1405
+  source_id: sci-recent
+  name_en: Youth unemployment (15–24)
+  value: 23.4
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; same; Collected during/after wartime period incl. internet outage"
+- id: labor-force-participation-15-1405
+  source_id: sci-recent
+  name_en: Labor-force participation (15+)
+  value: 40.7
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; same; Collected during/after wartime period incl. internet outage"
+- id: participation-men-women-men-1405
+  source_id: sci-recent
+  name_en: Participation — men / women — men
+  value: 67.8
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; ISNA/IranIntl via SCI; Collected during/after wartime period incl. internet outage"
+- id: participation-men-women-women-1405
+  source_id: sci-recent
+  name_en: Participation — men / women — women
+  value: 13.7
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; ISNA/IranIntl via SCI; Collected during/after wartime period incl. internet outage"
+- id: unemployment-men-women-men-1405
+  source_id: sci-recent
+  name_en: Unemployment — men / women — men
+  value: 7.5
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; same; Collected during/after wartime period incl. internet outage"
+- id: unemployment-men-women-women-1405
+  source_id: sci-recent
+  name_en: Unemployment — men / women — women
+  value: 16.7
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; same; Collected during/after wartime period incl. internet outage"
+- id: employed-15-1405
+  source_id: sci-recent
+  name_en: Employed (15+)
+  value: 24.672
+  unit: million_persons
+  year: 1405
+  scope: national
+  confidence: news
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; mehrnews 6902450; Collected during/after wartime period incl. internet outage"
+- id: sector-shares-services-industry-agriculture-services-1405
+  source_id: sci-recent
+  name_en: Sector shares (services/industry/agriculture) — services
+  value: 53.8
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; same; Collected during/after wartime period incl. internet outage"
+- id: sector-shares-services-industry-agriculture-industry-1405
+  source_id: sci-recent
+  name_en: Sector shares (services/industry/agriculture) — industry
+  value: 31
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; same; Collected during/after wartime period incl. internet outage"
+- id: sector-shares-services-industry-agriculture-agriculture-1405
+  source_id: sci-recent
+  name_en: Sector shares (services/industry/agriculture) — agriculture
+  value: 15.1
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Spring 1405 (wartime period; SCI-flagged):; reported 29 Jul 2026; same; Collected during/after wartime period incl. internet outage"
+- id: unemployment-15-1404
+  source_id: sci-recent
+  name_en: Unemployment (15+)
+  value: 7.6
+  unit: percent
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "Labor Force Survey — Winter 1404 & annual:; reported 26 Apr 2026; mehrnews.com/news/6811746 (headline errs 7.4; body 7.6); mehrnews.com/news/6811746 (headline errs 7.4; body 7.6)"
+- id: youth-unemployment-1524-1404
+  source_id: sci-recent
+  name_en: Youth unemployment (15–24)
+  value: 21.2
+  unit: percent
+  year: 1404
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Winter 1404 & annual:; reported 26 Apr 2026; same"
+- id: labor-force-participation-1404
+  source_id: sci-recent
+  name_en: Labor-force participation
+  value: 39.7
+  unit: percent
+  year: 1404
+  scope: national
+  confidence: primary
+  notes: "Labor Force Survey — Winter 1404 & annual:; reported 26 Apr 2026; same"
+- id: unemployment-annual-avg-1404
+  source_id: sci-recent
+  name_en: Unemployment (annual avg)
+  value: 7.5
+  unit: percent
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "Labor Force Survey — Winter 1404 & annual:; reported ~Jun 2026; mehrnews 6874029"
+- id: urban-household-annual-net-expenditure-urban-1403
+  source_id: sci-recent
+  name_en: Urban household annual net expenditure
+  value: 269.3
+  unit: million_toman_per_year
+  year: 1403
+  scope: urban
+  confidence: news
+  notes: "Household Income & Expenditure Survey — year 1403 (n = 19,347 urban + 18,158 rural):; reported 18 Aug 2025; borna.news/fa/news/2248780"
+- id: urban-household-declared-annual-income-urban-1403
+  source_id: sci-recent
+  name_en: Urban household declared annual income
+  value: 343.2
+  unit: million_toman_per_year
+  year: 1403
+  scope: urban
+  confidence: primary
+  notes: "Household Income & Expenditure Survey — year 1403 (n = 19,347 urban + 18,158 rural):; reported 18 Aug 2025; same (+IRNA 85915124)"
+- id: rural-household-annual-net-expenditure-rural-1403
+  source_id: sci-recent
+  name_en: Rural household annual net expenditure
+  value: 144.7
+  unit: million_toman_per_year
+  year: 1403
+  scope: rural
+  confidence: primary
+  notes: "Household Income & Expenditure Survey — year 1403 (n = 19,347 urban + 18,158 rural):; reported 18 Aug 2025; same"
+- id: rural-household-declared-annual-income-rural-1403
+  source_id: sci-recent
+  name_en: Rural household declared annual income
+  value: 201.4
+  unit: million_toman_per_year
+  year: 1403
+  scope: rural
+  confidence: primary
+  notes: "Household Income & Expenditure Survey — year 1403 (n = 19,347 urban + 18,158 rural):; reported 18 Aug 2025; same"
+- id: housing-fuel-share-of-urban-expenditure-urban-1403
+  source_id: sci-recent
+  name_en: Housing+fuel share of urban expenditure
+  value: 43.7
+  unit: percent
+  year: 1403
+  scope: urban
+  confidence: primary
+  notes: "Household Income & Expenditure Survey — year 1403 (n = 19,347 urban + 18,158 rural):; reported 18 Aug 2025; same"
+- id: housing-fuel-share-of-rural-expenditure-rural-1403
+  source_id: sci-recent
+  name_en: Housing+fuel share of rural expenditure
+  value: 23.5
+  unit: percent
+  year: 1403
+  scope: rural
+  confidence: primary
+  notes: "Household Income & Expenditure Survey — year 1403 (n = 19,347 urban + 18,158 rural):; reported 18 Aug 2025; same"
+- id: gini-coefficient-national-1403
+  source_id: sci-recent
+  name_en: Gini coefficient — national
+  value: 0.387
+  unit: index
+  year: 1403
+  scope: national
+  confidence: news
+  notes: "Gini & income distribution — year 1403:; reported 10 Feb 2026; mehrnews.com/news/6744774"
+- id: gini-urban-rural-urban-1403
+  source_id: sci-recent
+  name_en: Gini — urban / rural — urban
+  value: 0.3689
+  unit: index
+  year: 1403
+  scope: urban
+  confidence: news
+  notes: "Gini & income distribution — year 1403:; reported 10 Feb 2026; eghtesadnews 743227"
+- id: gini-urban-rural-rural-1403
+  source_id: sci-recent
+  name_en: Gini — urban / rural — rural
+  value: 0.3532
+  unit: index
+  year: 1403
+  scope: rural
+  confidence: news
+  notes: "Gini & income distribution — year 1403:; reported 10 Feb 2026; eghtesadnews 743227"
+- id: palma-index-1403
+  source_id: sci-recent
+  name_en: Palma index
+  value: 1.84
+  unit: index
+  year: 1403
+  scope: national
+  confidence: primary
+  notes: "Gini & income distribution — year 1403:; reported 10 Feb 2026; same"
+- id: income-share-top-20-1403
+  source_id: sci-recent
+  name_en: "Income share — top 20%"
+  value: 46.24
+  unit: percent
+  year: 1403
+  scope: national
+  confidence: primary
+  notes: "Gini & income distribution — year 1403:; reported 10 Feb 2026; same"
+- id: income-share-bottom-20-1403
+  source_id: sci-recent
+  name_en: "Income share — bottom 20%"
+  value: 6.07
+  unit: percent
+  year: 1403
+  scope: national
+  confidence: primary
+  notes: "Gini & income distribution — year 1403:; reported 10 Feb 2026; same"
+- id: gini-comparison-1402
+  source_id: sci-recent
+  name_en: Gini (comparison)
+  value: 0.3979
+  unit: index
+  year: 1402
+  scope: national
+  confidence: primary
+  notes: "Gini & income distribution — year 1403:; reported 2025; donya-e-eqtesad 4111873"
+- id: urban-owner-occupied-households-urban-1401
+  source_id: sci-census-2016
+  name_en: Urban owner-occupied households
+  value: 68.07
+  unit: percent
+  year: 1401
+  scope: urban
+  confidence: news
+  notes: "Housing tenure & population (note: tenure methodology differs from census 2016):; reported 6 Mar 2024; tabnak.ir/fa/news/1225695; Tenure methodology differs from census 2016"
+- id: urban-renter-households-urban-1401
+  source_id: sci-census-2016
+  name_en: Urban renter households
+  value: 23.7
+  unit: percent
+  year: 1401
+  scope: urban
+  confidence: primary
+  notes: "Housing tenure & population (note: tenure methodology differs from census 2016):; reported 6 Mar 2024; same; Tenure methodology differs from census 2016"
+- id: rural-owner-occupied-households-rural-1401
+  source_id: sci-census-2016
+  name_en: Rural owner-occupied households
+  value: 88.63
+  unit: percent
+  year: 1401
+  scope: rural
+  confidence: primary
+  notes: "Housing tenure & population (note: tenure methodology differs from census 2016):; reported 6 Mar 2024; same; Tenure methodology differs from census 2016"
+- id: population-estimate-1403
+  source_id: sci-census-2016
+  name_en: Population estimate
+  value: 85.96
+  unit: million_persons
+  year: 1403
+  scope: national
+  confidence: news
+  notes: "Housing tenure & population (note: tenure methodology differs from census 2016):; reported 1 Oct 2024; mizanonline.ir/fa/news/4796176; Tenure methodology differs from census 2016"
+- id: urbanization-urban-1403
+  source_id: sci-census-2016
+  name_en: Urbanization
+  value: 77
+  unit: percent
+  year: 1403
+  scope: urban
+  confidence: primary
+  notes: "Housing tenure & population (note: tenure methodology differs from census 2016):; reported 1 Oct 2024; same; Tenure methodology differs from census 2016"
+- id: households-1403
+  source_id: sci-census-2016
+  name_en: Households
+  value: 27.65
+  unit: million_persons
+  year: 1403
+  scope: national
+  confidence: primary
+  notes: "Housing tenure & population (note: tenure methodology differs from census 2016):; reported 1 Oct 2024; same; Tenure methodology differs from census 2016"
+- id: vpn-filter-breaker-use-2026
+  source_id: ispa-digital-2026
+  name_en: VPN / filter-breaker use
+  value: 74.4
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported 22 Jul 2026; ispa.ir/4500; khabaronline 2250105; primary (headline-confirmed); ispa.ir/4500; khabaronline 2250105; primary (headline-confirmed)
+- id: vpn-use-among-under-30s-2026
+  source_id: ispa-digital-2026
+  name_en: VPN use among under-30s
+  value: 85
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported 22 Jul 2026; ispa.ir/4500; primary
+- id: internet-penetration-15-2026
+  source_id: ispa-digital-2026
+  name_en: Internet penetration (15+)
+  value: 89.3
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported Jul–Aug 2026; shafaqna/IRNA; khabaronline; news
+- id: oppose-internet-cutoff-in-crises-2026
+  source_id: ispa-digital-2026
+  name_en: Oppose internet cutoff in crises
+  value: 57.6
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported 22 Jul 2026; khabaronline (ISNA); news
+- id: internet-must-never-be-cut-2026
+  source_id: ispa-digital-2026
+  name_en: "\"Internet must never be cut\""
+  value: 67
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: "reported 22 Jul 2026; ispa.ir/4500; primary; Approximate as reported: ~67"
+- id: reopening-intl-internet-very-right-2026
+  source_id: ispa-digital-2026
+  name_en: Reopening intl internet = very right
+  value: 63.7
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported 22 Jul 2026; khabaronline (ISNA); news
+- id: oppose-officials-class-internet-2026
+  source_id: ispa-digital-2026
+  name_en: "Oppose officials' \"class\" internet"
+  value: 61.1
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported 22 Jul 2026; ispa.ir/4500; primary
+- id: unfiltering-priority-instagram-2026
+  source_id: ispa-digital-2026
+  name_en: Unfiltering priority — Instagram
+  value: 47.8
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported 22 Jul 2026; khabaronline (ISNA); news
+- id: unfiltering-priority-telegram-2026
+  source_id: ispa-digital-2026
+  name_en: Unfiltering priority — Telegram
+  value: 20.9
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported 22 Jul 2026; same; news
+- id: unfiltering-priority-youtube-2026
+  source_id: ispa-digital-2026
+  name_en: Unfiltering priority — YouTube
+  value: 8.4
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported 22 Jul 2026; same; news
+- id: avg-daily-internet-use-2026
+  source_id: ispa-digital-2026
+  name_en: Avg daily internet use
+  value: 4.05
+  unit: hours
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported 22 Jul 2026; same; news
+- id: dissatisfied-with-internet-speed-2026
+  source_id: ispa-digital-2026
+  name_en: Dissatisfied with internet speed
+  value: 72.3
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported 22 Jul 2026; same; news
+- id: use-1-messenger-social-network-2024
+  source_id: ispa
+  name_en: Use ≥1 messenger/social network
+  value: 82.2
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: "Social-media consumption surveys (platform usage):; reported 29 Sep 2024; ecoiran 72224 (ISPA PR); news"
+- id: instagram-users-2024
+  source_id: ispa
+  name_en: Instagram users
+  value: 50.6
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: "Social-media consumption surveys (platform usage):; reported 29 Sep 2024; same; news"
+- id: telegram-users-2024
+  source_id: ispa
+  name_en: Telegram users
+  value: 39.3
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: "Social-media consumption surveys (platform usage):; reported 29 Sep 2024; same; news"
+- id: whatsapp-users-2024
+  source_id: ispa
+  name_en: WhatsApp users
+  value: 33.3
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: "Social-media consumption surveys (platform usage):; reported 29 Sep 2024; same; news"
+- id: eitaa-users-2024
+  source_id: ispa
+  name_en: Eitaa users
+  value: 28.9
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: "Social-media consumption surveys (platform usage):; reported 29 Sep 2024; same; news"
+- id: rubika-users-2024
+  source_id: ispa
+  name_en: Rubika users
+  value: 28.5
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: "Social-media consumption surveys (platform usage):; reported 29 Sep 2024; same; news"
+- id: bale-users-2024
+  source_id: ispa
+  name_en: Bale users
+  value: 9.7
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: "Social-media consumption surveys (platform usage):; reported 29 Sep 2024; same; news"
+- id: avg-daily-social-media-time-2025
+  source_id: ispa
+  name_en: Avg daily social-media time
+  value: 2.133
+  unit: hours
+  year: 2025
+  scope: national
+  confidence: news
+  notes: "Social-media consumption surveys (platform usage):; reported 17 Sep 2025; sharghdaily 1051426; news"
+- id: no-social-media-use-2025
+  source_id: ispa
+  name_en: No social-media use
+  value: 13.7
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: news
+  notes: "Social-media consumption surveys (platform usage):; reported 17 Sep 2025; same; news"
+- id: irib-as-main-news-source-2023
+  source_id: ispa
+  name_en: IRIB as main news source
+  value: 37.9
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: news
+  notes: "Media trust & economy:; reported Nov 2023; digiato; ISNA 1402091208080; news"
+- id: social-networks-as-main-news-source-2023
+  source_id: ispa
+  name_en: Social networks as main news source
+  value: 31
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: news
+  notes: "Media trust & economy:; reported Nov 2023; same; news"
+- id: preferred-investment-land-housing-2026
+  source_id: ispa
+  name_en: Preferred investment — land/housing
+  value: 36.8
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Media trust & economy:; reported Aug 2026; donya-e-eqtesad 3822817; news"
+- id: preferred-investment-gold-coins-2026
+  source_id: ispa
+  name_en: Preferred investment — gold/coins
+  value: 10
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Media trust & economy:; reported Aug 2026; same; news; Approximate as reported: ~10"
+- id: preferred-investment-crypto-2026
+  source_id: ispa
+  name_en: Preferred investment — crypto
+  value: 3.1
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Media trust & economy:; reported Aug 2026; same; news"
+- id: internet-users-2024
+  source_id: world-bank-iran
+  name_en: Internet users
+  value: 85
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; data.worldbank.org/country/iran-islamic-rep
+- id: life-expectancy-at-birth-2024
+  source_id: world-bank-iran
+  name_en: Life expectancy at birth
+  value: 78
+  unit: years
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: population-2025
+  source_id: world-bank-iran
+  name_en: Population
+  value: 92417681
+  unit: count
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: population-growth-2025
+  source_id: world-bank-iran
+  name_en: Population growth
+  value: 0.9
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: gdp-per-capita-2025
+  source_id: world-bank-iran
+  name_en: GDP per capita
+  value: 3924
+  unit: usd
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: gdp-growth-2025
+  source_id: world-bank-iran
+  name_en: GDP growth
+  value: -2.8
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: inflation-cpi-2025
+  source_id: world-bank-iran
+  name_en: Inflation (CPI)
+  value: 42.2
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: unemployment-ilo-modeled-2025
+  source_id: world-bank-iran
+  name_en: Unemployment (ILO modeled)
+  value: 8.3
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank (estimate); same
+- id: poverty-3-00-day-2021-ppp-2023
+  source_id: world-bank-iran
+  name_en: "Poverty ($3.00/day, 2021 PPP)"
+  value: 2.5
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: access-to-electricity-2024
+  source_id: world-bank-iran
+  name_en: Access to electricity
+  value: 100
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: women-in-parliament-2025
+  source_id: world-bank-iran
+  name_en: Women in parliament
+  value: 5
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: female-labor-force-participation-2025
+  source_id: world-bank-iran
+  name_en: Female labor-force participation
+  value: 14
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: male-labor-force-participation-2025
+  source_id: world-bank-iran
+  name_en: Male labor-force participation
+  value: 67.2
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: intentional-homicides-2014
+  source_id: world-bank-iran
+  name_en: Intentional homicides
+  value: 2
+  unit: per_100
+  year: 2014
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: forest-area-2023
+  source_id: world-bank-iran
+  name_en: Forest area
+  value: 6.6
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported 2026; World Bank; same
+- id: marriages-1403
+  source_id: noc-register
+  name_en: Marriages
+  value: 470372
+  unit: count
+  year: 1403
+  scope: national
+  confidence: news
+  notes: reported 2025; SCI yearbook / ثبت احوال data; news
+- id: marriages-1404
+  source_id: noc-register
+  name_en: Marriages
+  value: 431800
+  unit: count
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "reported Apr–May 2026; rokna 1225591; IRNA 86132278; news; Approximate as reported: ~431,800"
+- id: divorces-1403
+  source_id: noc-register
+  name_en: Divorces
+  value: 194078
+  unit: count
+  year: 1403
+  scope: national
+  confidence: news
+  notes: reported 2025; SCI yearbook; news
+- id: divorces-1404
+  source_id: noc-register
+  name_en: Divorces
+  value: 181500
+  unit: count
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "reported Apr–May 2026; rokna; iranstatis; news; Approximate as reported: ~181,500"
+- id: divorce-per-100-marriages-1403
+  source_id: noc-register
+  name_en: Divorce per 100 marriages
+  value: 41
+  unit: ratio
+  year: 1403
+  scope: national
+  confidence: estimate
+  notes: "reported 2025–26; computed; ثبت احوال warns ratio is misleading; estimate; ثبت احوال warns this ratio is misleading; Approximate as reported: ~41"
+- id: avg-age-at-first-marriage-men-1403
+  source_id: noc-register
+  name_en: Avg age at first marriage — men
+  value: 28.3
+  unit: years
+  year: 1403
+  scope: national
+  confidence: news
+  notes: reported 22 May 2025; snn.ir/fa/news/1265084; news (confirmed)
+- id: avg-age-at-first-marriage-women-1403
+  source_id: noc-register
+  name_en: Avg age at first marriage — women
+  value: 24.1
+  unit: years
+  year: 1403
+  scope: national
+  confidence: news
+  notes: reported 22 May 2025; same; news (confirmed)
+- id: births-1403
+  source_id: noc-register
+  name_en: Births
+  value: 979923
+  unit: count
+  year: 1403
+  scope: national
+  confidence: news
+  notes: reported 21 May 2025; inn.ir 99909; news
+- id: births-1404
+  source_id: noc-register
+  name_en: Births
+  value: 892300
+  unit: count
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "reported Mar–Apr 2026; rokna 1220777; news; Approximate as reported: ~892,300"
+- id: crude-birth-rate-1403
+  source_id: noc-register
+  name_en: Crude birth rate
+  value: 11.4
+  unit: per_1000
+  year: 1403
+  scope: national
+  confidence: estimate
+  notes: "reported 2025–26; iranstatis (computed); estimate; Approximate as reported: ~11.4"
+- id: deaths-1403
+  source_id: noc-register
+  name_en: Deaths
+  value: 458848
+  unit: count
+  year: 1403
+  scope: national
+  confidence: news
+  notes: reported 21 May 2025; inn.ir 99909; news
+- id: deaths-1404
+  source_id: noc-register
+  name_en: Deaths
+  value: 451700
+  unit: count
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "reported Mar–Apr 2026; rokna 1220777; news; Approximate as reported: ~451,700"
+- id: crude-death-rate-1403
+  source_id: noc-register
+  name_en: Crude death rate
+  value: 5.3
+  unit: per_1000
+  year: 1403
+  scope: national
+  confidence: estimate
+  notes: "reported 2025–26; iranstatis (computed); estimate; Approximate as reported: ~5.3"
+- id: point-to-point-inflation-1405
+  source_id: cbi-monetary
+  name_en: Point-to-point inflation
+  value: 83.9
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: news
+  notes: "Inflation (urban CPI, base year 1400=100):; reported 30–31 Jul 2026; zoomit 464112; factnameh; news (CBI release)"
+- id: annual-avg-12-mo-inflation-1405
+  source_id: cbi-monetary
+  name_en: Annual avg (12-mo) inflation
+  value: 61.4
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: news
+  notes: "Inflation (urban CPI, base year 1400=100):; reported 30–31 Jul 2026; iranstatis; zoomit; news (CBI release)"
+- id: monthly-inflation-1405
+  source_id: cbi-monetary
+  name_en: Monthly inflation
+  value: 3.6
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: news
+  notes: "Inflation (urban CPI, base year 1400=100):; reported 30–31 Jul 2026; zoomit; iranstatis; news (CBI release)"
+- id: cpi-index-1405
+  source_id: cbi-monetary
+  name_en: CPI index
+  value: 742.8
+  unit: index
+  year: 1405
+  scope: national
+  confidence: news
+  notes: "Inflation (urban CPI, base year 1400=100):; reported 30–31 Jul 2026; iranstatis; news (CBI release)"
+- id: p2p-trend-1405
+  source_id: cbi-monetary
+  name_en: P2P trend
+  value: 83.9
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: news
+  notes: "Inflation (urban CPI, base year 1400=100):; reported monthly; donya-e-eqtesad 4276600; news (CBI release); trend as reported: 67 → 83.9"
+- id: sci-inflation-cross-check-sci-vs-cbi-differ-part1-1405
+  source_id: sci-recent
+  name_en: "SCI inflation (cross-check: SCI vs CBI differ) — part1"
+  value: 66
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: news
+  notes: "Inflation (urban CPI, base year 1400=100):; reported ~8 Aug 2026; zoomit; IRNA 86193666; news (SCIRI); SCI vs CBI inflation differ; kept separate"
+- id: sci-inflation-cross-check-sci-vs-cbi-differ-part2-1405
+  source_id: sci-recent
+  name_en: "SCI inflation (cross-check: SCI vs CBI differ) — part2"
+  value: 2
+  unit: percent
+  year: 1405
+  scope: national
+  confidence: news
+  notes: "Inflation (urban CPI, base year 1400=100):; reported ~8 Aug 2026; zoomit; IRNA 86193666; news (SCIRI); SCI vs CBI inflation differ; kept separate"
+- id: official-reference-rate-2026
+  source_id: cbi-monetary
+  name_en: Official/reference rate (دلار دولتی)
+  value: 1472440
+  unit: irr_per_usd
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Exchange rates (USD/IRR):; reported daily; tgju (CBI rate); news/aggregator"
+- id: national-exchange-office-sell-2026
+  source_id: cbi-monetary
+  name_en: National exchange office sell (صرافی ملی)
+  value: 1325072
+  unit: irr_per_usd
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Exchange rates (USD/IRR):; reported daily; navasan.net; news/aggregator"
+- id: trade-nima-transfer-rate-2026
+  source_id: cbi-monetary
+  name_en: Trade (NIMA) transfer rate
+  value: 1527850
+  unit: irr_per_usd
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Exchange rates (USD/IRR):; reported daily; ibena via khabarpu; news"
+- id: free-market-rate-2026
+  source_id: cbi-monetary
+  name_en: Free-market rate
+  value: 1920000
+  unit: irr_per_usd
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Exchange rates (USD/IRR):; reported daily; tgju; news/aggregator; Approximate as reported: ~1,920,000–1,936,000; range as reported: ~1,920,000–1,936,000 (kept lower/primary)"
+- id: liquidity-1404
+  source_id: cbi-monetary
+  name_en: Liquidity (نقدینگی)
+  value: 15581
+  unit: trillion_toman
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "Liquidity & interest:; reported late Jul 2026; IRNA 86188998; news (CBI release)"
+- id: liquidity-growth-1404
+  source_id: cbi-monetary
+  name_en: Liquidity growth
+  value: 53.3
+  unit: percent
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "Liquidity & interest:; reported late Jul 2026; IRNA 86188998; news (CBI release)"
+- id: base-money-growth-1404
+  source_id: cbi-monetary
+  name_en: Base money growth
+  value: 61.5
+  unit: percent
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "Liquidity & interest:; reported late Jul 2026; independentpersian 421079; news (CBI release)"
+- id: money-multiplier-1404
+  source_id: cbi-monetary
+  name_en: Money multiplier
+  value: 7.434
+  unit: ratio
+  year: 1404
+  scope: national
+  confidence: news
+  notes: "Liquidity & interest:; reported 15 Jun 2026; tabnak 1379323; news (CBI release)"
+- id: interbank-rate-2026
+  source_id: cbi-monetary
+  name_en: Interbank rate
+  value: 23.86
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Liquidity & interest:; reported ~11 Aug 2026; khabaronline 2254417; news (CBI release)"
+- id: policy-corridor-p-a-floor-2026
+  source_id: cbi-monetary
+  name_en: Policy corridor — p-a-floor
+  value: 17
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Liquidity & interest:; reported 2026; borna 2356585; news"
+- id: policy-corridor-repo-2026
+  source_id: cbi-monetary
+  name_en: Policy corridor — repo
+  value: 23
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Liquidity & interest:; reported 2026; borna 2356585; news"
+- id: policy-corridor-ceiling-2026
+  source_id: cbi-monetary
+  name_en: Policy corridor — ceiling
+  value: 24
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: "Liquidity & interest:; reported 2026; borna 2356585; news"
+- id: individuals-using-the-internet-2024
+  source_id: itu-ict
+  name_en: Individuals using the Internet
+  value: 85.3
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: "reported 2025; datahub.itu.int/data/?e=IRN&i=11624; primary"
+- id: mobile-cellular-subscriptions-2024
+  source_id: itu-ict
+  name_en: Mobile-cellular subscriptions
+  value: 174
+  unit: per_100
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: "reported 2025; datahub.itu.int/data/?e=IRN&i=178; primary"
+- id: active-mobile-broadband-subscriptions-2024
+  source_id: itu-ict
+  name_en: Active mobile-broadband subscriptions
+  value: 127
+  unit: per_100
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: "reported 2025; datahub.itu.int/data/?e=IRN&i=11632; primary"
+- id: fixed-broadband-subscriptions-2024
+  source_id: itu-ict
+  name_en: Fixed-broadband subscriptions
+  value: 12.06
+  unit: count
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported 2025; data.worldbank.org/indicator/IT.NET.BBND.P2; primary
+- id: smartphone-ownership-2021
+  source_id: itu-ict
+  name_en: Smartphone ownership
+  value: 72.4
+  unit: percent
+  year: 2021
+  scope: national
+  confidence: primary
+  notes: "reported 2022; datahub.itu.int/data/?e=IRN&i=28228; primary"
+- id: mobile-phone-ownership-part1-2021
+  source_id: itu-ict
+  name_en: Mobile phone ownership — part1
+  value: 92
+  unit: percent
+  year: 2021
+  scope: national
+  confidence: primary
+  notes: reported 2022/2025; i=9145 / i=28027; primary
+- id: mobile-phone-ownership-part2-2021
+  source_id: itu-ict
+  name_en: Mobile phone ownership — part2
+  value: 86.8
+  unit: percent
+  year: 2021
+  scope: national
+  confidence: primary
+  notes: reported 2022/2025; i=9145 / i=28027; primary
+- id: 4g-coverage-2024
+  source_id: itu-ict
+  name_en: 4G coverage
+  value: 94.2
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported 2025; i=100095; primary
+- id: 5g-coverage-2024
+  source_id: itu-ict
+  name_en: 5G coverage
+  value: 8.2
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported 2025; same; primary
+- id: 2g-coverage-2024
+  source_id: itu-ict
+  name_en: 2G coverage
+  value: 99
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported 2025; same; primary
+- id: households-with-home-internet-rural-urban-rural-2021
+  source_id: itu-ict
+  name_en: Households with home internet — rural / urban — rural
+  value: 69.2
+  unit: percent
+  year: 2021
+  scope: rural
+  confidence: primary
+  notes: reported 2022; i=12047; primary
+- id: households-with-home-internet-rural-urban-urban-2021
+  source_id: itu-ict
+  name_en: Households with home internet — rural / urban — urban
+  value: 82.5
+  unit: percent
+  year: 2021
+  scope: urban
+  confidence: primary
+  notes: reported 2022; i=12047; primary
+- id: internet-use-female-male-women-2021
+  source_id: itu-ict
+  name_en: Internet use — female / male — women
+  value: 77.7
+  unit: percent
+  year: 2021
+  scope: national
+  confidence: primary
+  notes: reported 2022; i=11624 by gender; primary
+- id: internet-use-female-male-men-2021
+  source_id: itu-ict
+  name_en: Internet use — female / male — men
+  value: 79.5
+  unit: percent
+  year: 2021
+  scope: national
+  confidence: primary
+  notes: reported 2022; i=11624 by gender; primary
+- id: broadband-basket-cost-fixed-mobile-5gb-part1-2025
+  source_id: itu-ict
+  name_en: Broadband basket cost (fixed / mobile 5GB) — part1
+  value: 0.2
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2025; i=100122; primary
+- id: broadband-basket-cost-fixed-mobile-5gb-part2-2025
+  source_id: itu-ict
+  name_en: Broadband basket cost (fixed / mobile 5GB) — part2
+  value: 0.19
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: primary
+  notes: reported 2025; i=100122; primary
+- id: fixed-broadband-traffic-2024
+  source_id: itu-ict
+  name_en: Fixed-broadband traffic
+  value: 564
+  unit: count
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported 2025; i=13067; primary
+- id: mobile-broadband-traffic-2024
+  source_id: itu-ict
+  name_en: Mobile-broadband traffic
+  value: 163
+  unit: count
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported 2025; i=13068; primary
+- id: life-satisfaction-110-2020
+  source_id: wvs-wave7-2020
+  name_en: Life satisfaction (1–10)
+  value: 6.2
+  unit: index
+  year: 2020
+  scope: national
+  confidence: citable-page
+  notes: reported live query; WVS Online tool (official); citable-page
+- id: religion-very-important-2020
+  source_id: wvs-wave7-2020
+  name_en: "Religion \"very important\""
+  value: 70.6
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported 2024; Saleh 2024 (dergipark); academic
+- id: self-identified-religious-person-2020
+  source_id: wvs-wave7-2020
+  name_en: "Self-identified \"religious person\""
+  value: 84.2
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported 2024; Saleh 2024; academic
+- id: trust-in-armed-forces-great-deal-2020
+  source_id: wvs-wave7-2020
+  name_en: "Trust in armed forces (\"great deal\")"
+  value: 70.2
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: "reported 2026/2024; Marburg 2026 / Saleh 2024; academic; range as reported: 70.2–71 (kept lower/primary)"
+- id: trust-in-government-2020
+  source_id: wvs-wave7-2020
+  name_en: Trust in government
+  value: 18.9
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: "reported 2026/2024; same; academic; range as reported: 18.9–20 (kept lower/primary)"
+- id: trust-in-parliament-2020
+  source_id: wvs-wave7-2020
+  name_en: Trust in parliament
+  value: 19.9
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: "reported 2026/2024; same; academic; range as reported: 19.9–20 (kept lower/primary)"
+- id: interpersonal-trust-most-people-can-be-trusted-2020
+  source_id: wvs-wave7-2020
+  name_en: "Interpersonal trust (\"most people can be trusted\")"
+  value: 15
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported 2024; Saleh 2024; academic
+- id: complete-trust-in-family-2020
+  source_id: wvs-wave7-2020
+  name_en: Complete trust in family
+  value: 85
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported 2024; Saleh 2024; academic
+- id: complete-trust-in-neighbors-2020
+  source_id: wvs-wave7-2020
+  name_en: Complete trust in neighbors
+  value: 18
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported 2024; Saleh 2024; academic
+- id: very-proud-of-nationality-2020
+  source_id: wvs-wave7-2020
+  name_en: Very proud of nationality
+  value: 83.5
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported 2026; Marburg 2026; academic
+- id: men-make-better-political-leaders-agree-2020
+  source_id: wvs-wave7-2020
+  name_en: "\"Men make better political leaders\" (agree)"
+  value: 44.3
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported 2025; TWU MA thesis; academic
+- id: university-more-important-for-a-boy-agree-2020
+  source_id: wvs-wave7-2020
+  name_en: "\"University more important for a boy\" (agree)"
+  value: 52.3
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported 2025; TWU thesis; academic
+- id: unemployment-survey-2024
+  source_id: ilo-labor
+  name_en: Unemployment (survey)
+  value: 7.6
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT profile; ilostat.ilo.org/data/country-profiles/irn/; primary
+- id: unemployment-total-modeled-2025
+  source_id: ilo-labor
+  name_en: Unemployment total (modeled)
+  value: 8.3
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: estimate
+  notes: reported ILOEST; WB SL.UEM.TOTL.ZS; estimate
+- id: unemployment-male-female-modeled-men-2025
+  source_id: ilo-labor
+  name_en: Unemployment male / female (modeled) — men
+  value: 6.8
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: estimate
+  notes: reported ILOEST; WB indicators; estimate
+- id: unemployment-male-female-modeled-women-2025
+  source_id: ilo-labor
+  name_en: Unemployment male / female (modeled) — women
+  value: 15.6
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: estimate
+  notes: reported ILOEST; WB indicators; estimate
+- id: youth-unemployment-1524-2025
+  source_id: ilo-labor
+  name_en: Youth unemployment (15–24)
+  value: 21.9
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: estimate
+  notes: reported ILOEST; WB SL.UEM.1524; estimate; headline; gender split in sub-rows
+- id: youth-unemployment-1524-men-2025
+  source_id: ilo-labor
+  name_en: Youth unemployment (15–24) — men
+  value: 19.3
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: estimate
+  notes: reported ILOEST; WB SL.UEM.1524; estimate
+- id: youth-unemployment-1524-women-2025
+  source_id: ilo-labor
+  name_en: Youth unemployment (15–24) — women
+  value: 32
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: estimate
+  notes: reported ILOEST; WB SL.UEM.1524; estimate
+- id: lfpr-total-survey-modeled-part1-2024
+  source_id: ilo-labor
+  name_en: LFPR total (survey / modeled) — part1
+  value: 40.7
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT; profile + WB; primary/estimate
+- id: lfpr-total-survey-modeled-part2-2024
+  source_id: ilo-labor
+  name_en: LFPR total (survey / modeled) — part2
+  value: 41
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT; profile + WB; primary/estimate
+- id: lfpr-male-female-modeled-men-2025
+  source_id: ilo-labor
+  name_en: LFPR male / female (modeled) — men
+  value: 67
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: estimate
+  notes: "reported ILOEST; WB SL.TLF.CACT.*; estimate"
+- id: lfpr-male-female-modeled-women-2025
+  source_id: ilo-labor
+  name_en: LFPR male / female (modeled) — women
+  value: 14
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: estimate
+  notes: "reported ILOEST; WB SL.TLF.CACT.*; estimate"
+- id: youth-neet-1524-2024
+  source_id: ilo-labor
+  name_en: Youth NEET (15–24)
+  value: 24.3
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT; profile; WB SL.UEM.NEET.ZS; primary
+- id: women-in-management-sdg-5-5-2-2024
+  source_id: ilo-labor
+  name_en: Women in management (SDG 5.5.2)
+  value: 20.4
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT; profile; primary
+- id: average-weekly-hours-2024
+  source_id: ilo-labor
+  name_en: Average weekly hours
+  value: 46.8
+  unit: hours
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT; profile; primary
+- id: working-48-h-week-2024
+  source_id: ilo-labor
+  name_en: "Working >48 h/week"
+  value: 31.7
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT; profile; primary
+- id: time-related-underemployment-2024
+  source_id: ilo-labor
+  name_en: Time-related underemployment
+  value: 6.3
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT; profile; primary
+- id: working-poverty-us-3-ppp-day-2025
+  source_id: ilo-labor
+  name_en: Working poverty (<US$3 PPP/day)
+  value: 0.8
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: estimate
+  notes: reported ILOSTAT modeled; profile; estimate
+- id: minimum-wage-2024
+  source_id: ilo-labor
+  name_en: Minimum wage
+  value: 53073300
+  unit: irr_per_month
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT; profile; primary
+- id: social-protection-coverage-sdg-1-3-1-2023
+  source_id: ilo-labor
+  name_en: Social protection coverage (SDG 1.3.1)
+  value: 100
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported ILOSTAT; profile; primary
+- id: tobacco-use-15-age-std-part1-2022
+  source_id: who-health
+  name_en: "Tobacco use (15+, age-std) — part1"
+  value: 12.5
+  unit: percent
+  year: 2022
+  scope: national
+  confidence: primary
+  notes: reported Jan 2024; data.who.int/countries/364; primary
+- id: tobacco-use-15-age-std-part2-2022
+  source_id: who-health
+  name_en: "Tobacco use (15+, age-std) — part2"
+  value: 1.6
+  unit: percent
+  year: 2022
+  scope: national
+  confidence: primary
+  notes: reported Jan 2024; data.who.int/countries/364; primary
+- id: obesity-18-bmi30-part1-2022
+  source_id: who-health
+  name_en: "Obesity (18+, BMI≥30) — part1"
+  value: 24
+  unit: percent
+  year: 2022
+  scope: national
+  confidence: primary
+  notes: reported Feb 2024; NCD_RisC via GHO; primary
+- id: obesity-18-bmi30-part2-2022
+  source_id: who-health
+  name_en: "Obesity (18+, BMI≥30) — part2"
+  value: 18.1
+  unit: percent
+  year: 2022
+  scope: national
+  confidence: primary
+  notes: reported Feb 2024; NCD_RisC via GHO; primary
+- id: current-health-expenditure-2023
+  source_id: who-health
+  name_en: Current health expenditure
+  value: 6.03
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported latest GHED; ghoapi GHED_CHEGDP_SHA2011; primary
+- id: physician-density-2018
+  source_id: who-health
+  name_en: Physician density
+  value: 15.05
+  unit: per_10000
+  year: 2018
+  scope: national
+  confidence: primary
+  notes: reported Apr 2025; HWF_0001; primary
+- id: life-expectancy-at-birth-part1-2021
+  source_id: who-health
+  name_en: Life expectancy at birth — part1
+  value: 74.7
+  unit: years
+  year: 2021
+  scope: national
+  confidence: primary
+  notes: reported GHE 2021; WHOSIS_000001; primary
+- id: life-expectancy-at-birth-part2-2021
+  source_id: who-health
+  name_en: Life expectancy at birth — part2
+  value: 73.1
+  unit: years
+  year: 2021
+  scope: national
+  confidence: primary
+  notes: reported GHE 2021; WHOSIS_000001; primary
+- id: healthy-life-expectancy-hale-2021
+  source_id: who-health
+  name_en: Healthy life expectancy (HALE)
+  value: 64
+  unit: years
+  year: 2021
+  scope: national
+  confidence: primary
+  notes: reported GHE 2021; same; primary
+- id: maternal-mortality-latest
+  source_id: who-health
+  name_en: Maternal mortality
+  value: 15.84
+  unit: per_100
+  year: latest
+  scope: national
+  confidence: primary
+  notes: reported GHO; data.who.int; primary
+- id: under-5-mortality-latest
+  source_id: who-health
+  name_en: Under-5 mortality
+  value: 12.18
+  unit: per_1000
+  year: latest
+  scope: national
+  confidence: primary
+  notes: reported GHO; data.who.int; primary
+- id: road-traffic-mortality-latest
+  source_id: who-health
+  name_en: Road traffic mortality
+  value: 20.6
+  unit: per_100
+  year: latest
+  scope: national
+  confidence: primary
+  notes: reported GHO; data.who.int; primary
+- id: hypertension-3079-age-std-latest
+  source_id: who-health
+  name_en: "Hypertension (30–79, age-std)"
+  value: 26.2
+  unit: percent
+  year: latest
+  scope: national
+  confidence: primary
+  notes: reported GHO; data.who.int; primary
+- id: alcohol-consumption-15-latest
+  source_id: who-health
+  name_en: Alcohol consumption (15+)
+  value: 0.07
+  unit: liters
+  year: latest
+  scope: national
+  confidence: primary
+  notes: reported GHO; data.who.int; primary
+- id: skilled-birth-attendance-latest
+  source_id: who-health
+  name_en: Skilled birth attendance
+  value: 99
+  unit: percent
+  year: latest
+  scope: national
+  confidence: primary
+  notes: reported GHO; data.who.int; primary
+- id: dtp3-immunization-1-yr-olds-latest
+  source_id: who-health
+  name_en: DTP3 immunization (1-yr-olds)
+  value: 99
+  unit: percent
+  year: latest
+  scope: national
+  confidence: primary
+  notes: reported GHO; data.who.int; primary
+- id: population-who-estimate-2023
+  source_id: who-health
+  name_en: Population (WHO estimate)
+  value: 90608707
+  unit: count
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported WHO; data.who.int; primary
+- id: adult-literacy-15-2023
+  source_id: unesco-uis
+  name_en: Adult literacy (15+)
+  value: 88.9
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported Feb 2026; api.uis.unesco.org LR.AG15T99; primary
+- id: youth-literacy-1524-2023
+  source_id: unesco-uis
+  name_en: Youth literacy (15–24)
+  value: 98.7
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported Feb 2026; LR.AG15T24; primary
+- id: adult-literacy-female-male-women-2023
+  source_id: unesco-uis
+  name_en: Adult literacy — female / male — women
+  value: 85.1
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: "reported Feb 2026; WB SE.ADT.LITR.*; primary"
+- id: adult-literacy-female-male-men-2023
+  source_id: unesco-uis
+  name_en: Adult literacy — female / male — men
+  value: 92.8
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: "reported Feb 2026; WB SE.ADT.LITR.*; primary"
+- id: tertiary-gross-enrollment-2022
+  source_id: unesco-uis
+  name_en: Tertiary gross enrollment
+  value: 58.7
+  unit: percent
+  year: 2022
+  scope: national
+  confidence: primary
+  notes: reported Feb 2026; GER.5T8; primary
+- id: government-education-expenditure-2023
+  source_id: unesco-uis
+  name_en: Government education expenditure
+  value: 2.8
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported Feb 2026; XGDP.FSGOV; primary
+- id: expected-years-of-schooling-2022
+  source_id: unesco-uis
+  name_en: Expected years of schooling
+  value: 14.1
+  unit: years
+  year: 2022
+  scope: national
+  confidence: primary
+  notes: reported Feb 2026; SLE.1T8; primary
+- id: mean-years-of-schooling-25-2016
+  source_id: unesco-uis
+  name_en: Mean years of schooling (25+)
+  value: 10.3
+  unit: years
+  year: 2016
+  scope: national
+  confidence: primary
+  notes: reported Feb 2026; MYS.1T8.AG25T99; primary
+- id: primary-gross-enrollment-2023
+  source_id: unesco-uis
+  name_en: Primary gross enrollment
+  value: 102
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported Feb 2026; WB SE.PRM.ENRR; primary
+- id: secondary-gross-enrollment-2023
+  source_id: unesco-uis
+  name_en: Secondary gross enrollment
+  value: 85.1
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported Feb 2026; WB SE.SEC.ENRR; primary
+- id: out-of-school-children-primary-age-2023
+  source_id: unesco-uis
+  name_en: Out-of-school children (primary age)
+  value: 9163
+  unit: count
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported Feb 2026; OFST.1.CP; primary
+- id: real-gdp-growth-part1-2024
+  source_id: imf-weo
+  name_en: Real GDP growth — part1
+  value: 3.7
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F/F; Apr 2026 (Jul upd); datamapper NGDP_RPCH
+- id: real-gdp-growth-part2-2024
+  source_id: imf-weo
+  name_en: Real GDP growth — part2
+  value: -1.5
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F/F; Apr 2026 (Jul upd); datamapper NGDP_RPCH
+- id: real-gdp-growth-part3-2024
+  source_id: imf-weo
+  name_en: Real GDP growth — part3
+  value: -6.1
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F/F; Apr 2026 (Jul upd); datamapper NGDP_RPCH
+- id: real-gdp-growth-part4-2024
+  source_id: imf-weo
+  name_en: Real GDP growth — part4
+  value: 3.2
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F/F; Apr 2026 (Jul upd); datamapper NGDP_RPCH
+- id: cpi-inflation-avg-part1-2024
+  source_id: imf-weo
+  name_en: CPI inflation (avg) — part1
+  value: 32.5
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F/F; Apr 2026; PCPIPCH
+- id: cpi-inflation-avg-part2-2024
+  source_id: imf-weo
+  name_en: CPI inflation (avg) — part2
+  value: 50.9
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F/F; Apr 2026; PCPIPCH
+- id: cpi-inflation-avg-part3-2024
+  source_id: imf-weo
+  name_en: CPI inflation (avg) — part3
+  value: 68.9
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F/F; Apr 2026; PCPIPCH
+- id: cpi-inflation-avg-part4-2024
+  source_id: imf-weo
+  name_en: CPI inflation (avg) — part4
+  value: 39.6
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F/F; Apr 2026; PCPIPCH
+- id: unemployment-part1-2024
+  source_id: imf-weo
+  name_en: Unemployment — part1
+  value: 7.6
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F; Apr 2026; LUR
+- id: unemployment-part2-2024
+  source_id: imf-weo
+  name_en: Unemployment — part2
+  value: 8
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F; Apr 2026; LUR
+- id: unemployment-part3-2024
+  source_id: imf-weo
+  name_en: Unemployment — part3
+  value: 9.2
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F; Apr 2026; LUR
+- id: gdp-per-capita-ppp-part1-2024
+  source_id: imf-weo
+  name_en: GDP per capita (PPP) — part1
+  value: 21145
+  unit: usd
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F; Apr 2026; PPPPC
+- id: gdp-per-capita-ppp-part2-2024
+  source_id: imf-weo
+  name_en: GDP per capita (PPP) — part2
+  value: 21200
+  unit: usd
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F; Apr 2026; PPPPC
+- id: gdp-per-capita-ppp-part3-2024
+  source_id: imf-weo
+  name_en: GDP per capita (PPP) — part3
+  value: 20279
+  unit: usd
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported A/E/F; Apr 2026; PPPPC
+- id: gdp-per-capita-nominal-2026
+  source_id: imf-weo
+  name_en: GDP per capita (nominal)
+  value: 3415
+  unit: usd
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported F; Apr 2026; NGDPDPC
+- id: gdp-current-prices-2024
+  source_id: imf-weo
+  name_en: GDP (current prices)
+  value: 300.3
+  unit: usd
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: "reported A → F; Apr 2026; NGDPD; trend as reported: 416.7 → 300.3"
+- id: current-account-balance-2024
+  source_id: imf-weo
+  name_en: Current account balance
+  value: -5.4
+  unit: usd
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: "reported A → F; Apr 2026; BCA; trend as reported: +13.2 → −5.4"
+- id: general-govt-net-lending-borrowing-2026
+  source_id: imf-weo
+  name_en: General govt net lending/borrowing
+  value: -5.19
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported F; Apr 2026; Fiscal Monitor
+- id: population-imf-2026
+  source_id: imf-weo
+  name_en: Population (IMF)
+  value: 87.93
+  unit: million_persons
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported F; Apr 2026; profile
+- id: vpn-use-among-internet-users-iprc-survey-2024
+  source_id: censorship-vpn
+  name_en: VPN use among internet users (IPRC survey)
+  value: 81
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: reported Feb 2025; Iranian Parliament Research Center via Iran Intl; news (official survey)
+- id: vpn-free-paid-split-free-2024
+  source_id: censorship-vpn
+  name_en: VPN — free / paid split — free
+  value: 49.4
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: reported Feb 2025; same; news (official survey)
+- id: vpn-free-paid-split-paid-2024
+  source_id: censorship-vpn
+  name_en: VPN — free / paid split — paid
+  value: 30.3
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: reported Feb 2025; same; news (official survey)
+- id: vpn-users-official-est-2018
+  source_id: censorship-vpn
+  name_en: VPN users (official est.)
+  value: 10
+  unit: million_persons
+  year: 2018
+  scope: national
+  confidence: academic
+  notes: "reported 2022; J. Cyberspace Studies 6(2); academic; range as reported: 10–12 (kept lower/primary)"
+- id: telegram-users-still-active-2021
+  source_id: ispa
+  name_en: Telegram users still active
+  value: 40
+  unit: percent
+  year: 2021
+  scope: national
+  confidence: academic
+  notes: "reported 2022; JCS (citing ISPA); academic; Approximate as reported: ~40"
+- id: top-mobile-apps-freely-accessible-2021
+  source_id: censorship-vpn
+  name_en: Top mobile apps freely accessible
+  value: 31.1
+  unit: percent
+  year: 2021
+  scope: national
+  confidence: academic
+  notes: reported 2022; JCS; academic
+- id: blocked-domains-ooni-201417-2014
+  source_id: censorship-vpn
+  name_en: Blocked domains (OONI 2014–17)
+  value: 886
+  unit: count
+  year: 2014
+  scope: national
+  confidence: primary
+  notes: reported 2017; ooni.org/post/iran-internet-censorship; primary
+- id: nov-2019-blackout-bgp-drop-2019
+  source_id: censorship-vpn
+  name_en: Nov 2019 blackout — BGP drop
+  value: 33
+  unit: percent
+  year: 2019
+  scope: national
+  confidence: primary
+  notes: reported 2019; OONI; primary
+- id: internet-freedom-score-fh-part1-2023
+  source_id: censorship-vpn
+  name_en: Internet freedom score (FH) — part1
+  value: 12
+  unit: index
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported FH; freedomhouse.org FOTN; primary
+- id: internet-freedom-score-fh-part2-2023
+  source_id: censorship-vpn
+  name_en: Internet freedom score (FH) — part2
+  value: 100
+  unit: index
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported FH; freedomhouse.org FOTN; primary
+- id: internet-freedom-score-fh-part3-2023
+  source_id: censorship-vpn
+  name_en: Internet freedom score (FH) — part3
+  value: 100
+  unit: index
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported FH; freedomhouse.org FOTN; primary
+- id: obstacles-to-access-sub-score-part1-2023
+  source_id: censorship-vpn
+  name_en: Obstacles to Access sub-score — part1
+  value: 7
+  unit: index
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported FH 2024; FOTN; primary
+- id: obstacles-to-access-sub-score-part2-2023
+  source_id: censorship-vpn
+  name_en: Obstacles to Access sub-score — part2
+  value: 25
+  unit: index
+  year: 2023
+  scope: national
+  confidence: primary
+  notes: reported FH 2024; FOTN; primary
+- id: internet-penetration-datareportal-via-fh-2024
+  source_id: censorship-vpn
+  name_en: Internet penetration (DataReportal via FH)
+  value: 81.7
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: primary
+  notes: reported FH 2024; FOTN; primary
+- id: separation-of-religion-politics-agree-1402
+  source_id: values-survey-1402
+  name_en: "Separation of religion & politics (agree)"
+  value: 72.9
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; bbc.com/persian/articles/cmlgj8j3xl1o; leak
+- id: same-1394-1394
+  source_id: values-survey-1402
+  name_en: same (1394)
+  value: 30.7
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: leak
+  notes: reported 2015; same; leak
+- id: no-problem-with-women-s-no-hijab-1402
+  source_id: values-survey-1402
+  name_en: "No problem with women's no-hijab"
+  value: 38
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: oppose-no-hijab-but-won-t-intervene-1402
+  source_id: values-survey-1402
+  name_en: "Oppose no-hijab but won't intervene"
+  value: 46
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: would-admonish-on-no-hijab-1402
+  source_id: values-survey-1402
+  name_en: Would admonish on no-hijab
+  value: 12.5
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: oppose-mandatory-hijab-for-all-women-1402
+  source_id: values-survey-1402
+  name_en: Oppose mandatory hijab for all women
+  value: 45.2
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: religion-must-not-matter-in-hiring-1402
+  source_id: values-survey-1402
+  name_en: Religion must not matter in hiring
+  value: 61.9
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: religiosity-lower-than-5-yrs-ago-1402
+  source_id: values-survey-1402
+  name_en: Religiosity lower than 5 yrs ago
+  value: 85
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: expect-less-religiosity-in-5-yrs-1402
+  source_id: values-survey-1402
+  name_en: Expect less religiosity in 5 yrs
+  value: 81.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: self-rated-very-religious-1402
+  source_id: values-survey-1402
+  name_en: Self-rated very religious
+  value: 42.6
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: self-rated-not-none-religious-1402
+  source_id: values-survey-1402
+  name_en: Self-rated not/none religious
+  value: 24.3
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: belief-in-afterlife-accounting-1402
+  source_id: values-survey-1402
+  name_en: Belief in afterlife accounting
+  value: 77.4
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: pray-always-mostly-1402
+  source_id: values-survey-1402
+  name_en: Pray always/mostly
+  value: 54.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: never-pray-1402
+  source_id: values-survey-1402
+  name_en: Never pray
+  value: 22.2
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: congregational-prayer-always-mostly-1402
+  source_id: values-survey-1402
+  name_en: Congregational prayer always/mostly
+  value: 18.5
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: never-congregational-prayer-1402
+  source_id: values-survey-1402
+  name_en: Never congregational prayer
+  value: 44.9
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: fast-always-mostly-1402
+  source_id: values-survey-1402
+  name_en: Fast always/mostly
+  value: 51.5
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: never-fast-1402
+  source_id: values-survey-1402
+  name_en: Never fast
+  value: 27.4
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: religion-pure-heart-even-without-prayer-agree-1402
+  source_id: values-survey-1402
+  name_en: "\"Religion = pure heart even without prayer\" (agree)"
+  value: 61.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Feb 2024; same; leak
+- id: tax-collection-unfair-agree-1402
+  source_id: values-survey-1402
+  name_en: Tax collection unfair (agree)
+  value: 77.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Economic chapter:; reported Feb 2024; Syracuse PDF (نگرش‌های اقتصادی); leak"
+- id: taxes-haven-t-improved-gov-services-1402
+  source_id: values-survey-1402
+  name_en: "Taxes haven't improved gov services"
+  value: 72.2
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Economic chapter:; reported Feb 2024; same; leak"
+- id: no-tax-needed-if-khums-zakat-paid-1402
+  source_id: values-survey-1402
+  name_en: No tax needed if khums/zakat paid
+  value: 49.3
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Economic chapter:; reported Feb 2024; same; leak"
+- id: economy-worse-than-5-yrs-ago-1402
+  source_id: values-survey-1402
+  name_en: Economy worse than 5 yrs ago
+  value: 80.3
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Economic chapter:; reported Feb 2024; same; leak"
+- id: economy-will-worsen-in-next-5-yrs-1402
+  source_id: values-survey-1402
+  name_en: Economy will worsen in next 5 yrs
+  value: 70.9
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Economic chapter:; reported Feb 2024; same; leak"
+- id: self-perceived-lower-middle-class-1402
+  source_id: values-survey-1402
+  name_en: Self-perceived lower-middle class
+  value: 43.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Economic chapter:; reported Feb 2024; same; leak"
+- id: self-perceived-lower-class-1402
+  source_id: values-survey-1402
+  name_en: Self-perceived lower class
+  value: 31.7
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Economic chapter:; reported Feb 2024; same; leak"
+- id: will-vote-in-next-presidential-election-1402
+  source_id: values-survey-1402
+  name_en: Will vote in next presidential election
+  value: 43
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Politics chapter:; reported Feb 2024; Syracuse PDF (سیاست); leak"
+- id: will-vote-in-majlis-election-1402
+  source_id: values-survey-1402
+  name_en: Will vote in Majlis election
+  value: 40.3
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Politics chapter:; reported Feb 2024; same; leak"
+- id: never-attend-rallies-22-bahman-quds-1402
+  source_id: values-survey-1402
+  name_en: Never attend rallies (22 Bahman/Quds)
+  value: 53.1
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Politics chapter:; reported Feb 2024; same; leak"
+- id: follow-political-news-little-very-little-1402
+  source_id: values-survey-1402
+  name_en: Follow political news little/very little
+  value: 64.5
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Politics chapter:; reported Feb 2024; same; leak"
+- id: main-reference-group-family-1402
+  source_id: values-survey-1402
+  name_en: "Main reference group: family"
+  value: 58.4
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Politics chapter:; reported Feb 2024; same; leak"
+- id: support-resistance-axis-vs-us-west-1402
+  source_id: values-survey-1402
+  name_en: "Support \"resistance axis\" vs US/West"
+  value: 44.3
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Politics chapter:; reported Feb 2024; same; leak"
+- id: approve-fight-for-quds-liberation-1402
+  source_id: values-survey-1402
+  name_en: Approve fight for Quds liberation
+  value: 58.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Politics chapter:; reported Feb 2024; same; leak"
+- id: approve-us-west-ties-if-giving-up-nuclear-missile-1402
+  source_id: values-survey-1402
+  name_en: Approve US/West ties if giving up nuclear+missile
+  value: 27.3
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Politics chapter:; reported Feb 2024; same; leak"
+- id: low-trust-in-irib-1394-81-trusted-1402
+  source_id: values-survey-1402
+  name_en: "Low trust in IRIB (1394: ~81% trusted)"
+  value: 58
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; iranwire.com/fa/special-features/125791; leak"
+- id: low-trust-in-parliament-1394-20-1402
+  source_id: values-survey-1402
+  name_en: "Low trust in parliament (1394: ~20%)"
+  value: 63
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; same; leak"
+- id: low-trust-in-government-1394-18-1402
+  source_id: values-survey-1402
+  name_en: "Low trust in government (1394: ~18%)"
+  value: 57
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; same; leak"
+- id: low-trust-in-judiciary-1394-20-1402
+  source_id: values-survey-1402
+  name_en: "Low trust in judiciary (1394: ~20%)"
+  value: 53
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; same; leak"
+- id: low-trust-in-politicians-high-13-1402
+  source_id: values-survey-1402
+  name_en: "Low trust in politicians (high: 13%)"
+  value: 70
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; same; leak"
+- id: low-trust-in-clergy-1394-45-trusted-1402
+  source_id: values-survey-1402
+  name_en: "Low trust in clergy (1394: 45% trusted)"
+  value: 56
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; same; leak; Approximate as reported: ~56"
+- id: high-ish-trust-in-police-sepah-part1-1402
+  source_id: values-survey-1402
+  name_en: High-ish trust in police / Sepah — part1
+  value: 63
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; same; leak; Approximate as reported: ~63 / ~60"
+- id: high-ish-trust-in-police-sepah-part2-1402
+  source_id: values-survey-1402
+  name_en: High-ish trust in police / Sepah — part2
+  value: 60
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; same; leak; Approximate as reported: ~63 / ~60"
+- id: high-trust-in-doctors-1402
+  source_id: values-survey-1402
+  name_en: High trust in doctors
+  value: 73
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; same; leak"
+- id: people-trust-each-other-little-27-none-1402
+  source_id: values-survey-1402
+  name_en: "\"People trust each other little\" (27% none)"
+  value: 54
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Trust & social capital chapter (via IranWire):; reported Feb 2024; same; leak"
+- id: ideal-marriage-age-for-girls-2125-mean-22-4-1402
+  source_id: values-survey-1402
+  name_en: Ideal marriage age for girls 21–25 (mean 22.4)
+  value: 45.5
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Family chapter:; reported Feb 2024; Syracuse PDF (خانوادگی); leak"
+- id: approve-premarital-sex-61-0-strongly-disagree-1402
+  source_id: values-survey-1402
+  name_en: Approve premarital sex (61.0 strongly disagree)
+  value: 7.3
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Family chapter:; reported Feb 2024; same; leak"
+- id: approve-cohabitation-without-marriage-1402
+  source_id: values-survey-1402
+  name_en: Approve cohabitation without marriage
+  value: 10
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Family chapter:; reported Feb 2024; same; leak"
+- id: ideal-family-size-2-children-1402
+  source_id: values-survey-1402
+  name_en: "Ideal family size: 2 children"
+  value: 50.9
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Family chapter:; reported Feb 2024; same; leak"
+- id: give-children-freedom-in-lifestyle-dress-1402
+  source_id: values-survey-1402
+  name_en: Give children freedom in lifestyle/dress
+  value: 46.1
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Family chapter:; reported Feb 2024; same; leak"
+- id: proud-to-be-iranian-high-very-high-53-3-very-1402
+  source_id: values-survey-1402
+  name_en: Proud to be Iranian (high/very high; 53.3 very)
+  value: 83
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Identity chapter:; reported Feb 2024; Syracuse PDF (هویت); leak"
+- id: would-emigrate-permanently-if-possible-1402
+  source_id: values-survey-1402
+  name_en: Would emigrate permanently if possible
+  value: 38.6
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Identity chapter:; reported Feb 2024; same; leak"
+- id: top-emigration-destination-canada-1402
+  source_id: values-survey-1402
+  name_en: "Top emigration destination: Canada"
+  value: 22
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Identity chapter:; reported Feb 2024; same; leak"
+- id: low-response-to-call-to-defend-country-1402
+  source_id: values-survey-1402
+  name_en: Low response to call to defend country
+  value: 51.6
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: "Identity chapter:; reported Feb 2024; same; leak"
+- id: inflation-most-important-national-problem-1402
+  source_id: values-survey-1402
+  name_en: Inflation = most important national problem
+  value: 81.9
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: news
+  notes: "Social harms (via Ham-Mihan, Sep 2024):; reported Sep 2024; hammihanonline.ir; news"
+- id: unemployment-top-problem-1402
+  source_id: values-survey-1402
+  name_en: Unemployment = top problem
+  value: 47.9
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: news
+  notes: "Social harms (via Ham-Mihan, Sep 2024):; reported Sep 2024; same; news"
+- id: current-situation-acceptable-good-1402
+  source_id: values-survey-1402
+  name_en: Current situation acceptable/good
+  value: 8.2
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: news
+  notes: "Social harms (via Ham-Mihan, Sep 2024):; reported Sep 2024; same; news"
+- id: dissatisfied-with-country-s-situation-1402
+  source_id: values-survey-1402
+  name_en: "Dissatisfied with country's situation"
+  value: 91.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: news
+  notes: "Social harms (via Ham-Mihan, Sep 2024):; reported Sep 2024; same; news; Approximate as reported: ~91.8"
+- id: country-can-be-improved-through-reforms-1402
+  source_id: values-survey-1402
+  name_en: "\"Country can be improved through reforms\""
+  value: 61.6
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: news
+  notes: "Social harms (via Ham-Mihan, Sep 2024):; reported Sep 2024; same; news"
+- id: population-tehran-2016
+  source_id: sci-census-2016
+  name_en: Population — Tehran
+  value: 13267637
+  unit: count
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: Tehran / Ilam; raw value: 13,267,637 / 580,158"
+- id: population-ilam-2016
+  source_id: sci-census-2016
+  name_en: Population — Ilam
+  value: 580158
+  unit: count
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: Tehran / Ilam; raw value: 13,267,637 / 580,158"
+- id: population-estimate-tehran-1405
+  source_id: sci-recent
+  name_en: Population estimate — Tehran
+  value: 14.68
+  unit: count
+  year: 1405
+  scope: by-province
+  confidence: primary
+  notes: "iranstatis (SCI repub.); med; max/min pair as reported: Tehran / Ilam; raw value: 14.68M / 597k"
+- id: population-estimate-ilam-1405
+  source_id: sci-recent
+  name_en: Population estimate — Ilam
+  value: 597
+  unit: count
+  year: 1405
+  scope: by-province
+  confidence: primary
+  notes: "iranstatis (SCI repub.); med; max/min pair as reported: Tehran / Ilam; raw value: 14.68M / 597k"
+- id: literacy-6-tehran-2016
+  source_id: sci-census-2016
+  name_en: Literacy (6+) — Tehran
+  value: 92.9
+  unit: percent
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: Tehran / Sistan-Baluchestan; raw value: 92.9 / 76.0"
+- id: literacy-6-sistan-baluchestan-2016
+  source_id: sci-census-2016
+  name_en: Literacy (6+) — Sistan-Baluchestan
+  value: 76
+  unit: percent
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: Tehran / Sistan-Baluchestan; raw value: 92.9 / 76.0"
+- id: urbanization-qom-2016
+  source_id: sci-census-2016
+  name_en: Urbanization — Qom
+  value: 95.2
+  unit: percent
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: Qom / Sistan-Baluchestan; raw value: 95.2 / 48.5"
+- id: urbanization-sistan-baluchestan-2016
+  source_id: sci-census-2016
+  name_en: Urbanization — Sistan-Baluchestan
+  value: 48.5
+  unit: percent
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: Qom / Sistan-Baluchestan; raw value: 95.2 / 48.5"
+- id: unemployment-winter-1403-corroborated-kermanshah-max-2024
+  source_id: sci-recent
+  name_en: "Unemployment (winter 1403, corroborated) — Kermanshah (max)"
+  value: 15.2
+  unit: percent
+  year: 2024
+  scope: by-province
+  confidence: news
+  notes: "donya-e-eqtesad; news; province: Kermanshah (max)"
+- id: unemployment-winter-1404-isna-kermanshah-2025
+  source_id: sci-recent
+  name_en: "Unemployment (winter 1404, ISNA) — Kermanshah"
+  value: 11.7
+  unit: percent
+  year: 2025
+  scope: by-province
+  confidence: news
+  notes: "eghtesadnews (ISNA); news — **conflict: 16.5/3.5 elsewhere**; Conflicting provincial figures reported elsewhere: eghtesadnews (ISNA); news — **conflict: 16.5/3.5 elsewhere**; max/min pair as reported: Kermanshah / S. Khorasan; raw value: 11.7 / 5.0"
+- id: unemployment-winter-1404-isna-s-khorasan-2025
+  source_id: sci-recent
+  name_en: "Unemployment (winter 1404, ISNA) — S. Khorasan"
+  value: 5
+  unit: percent
+  year: 2025
+  scope: by-province
+  confidence: news
+  notes: "eghtesadnews (ISNA); news — **conflict: 16.5/3.5 elsewhere**; Conflicting provincial figures reported elsewhere: eghtesadnews (ISNA); news — **conflict: 16.5/3.5 elsewhere**; max/min pair as reported: Kermanshah / S. Khorasan; raw value: 11.7 / 5.0"
+- id: poverty-rate-sistan-baluchestan-1400
+  source_id: sci-recent
+  name_en: Poverty rate — Sistan-Baluchestan
+  value: 58.2
+  unit: percent
+  year: 1400
+  scope: by-province
+  confidence: news
+  notes: "SNN (Min. of Welfare); news; max/min pair as reported: Sistan-Baluchestan / Tehran; raw value: 58.2 / 15.4"
+- id: poverty-rate-tehran-1400
+  source_id: sci-recent
+  name_en: Poverty rate — Tehran
+  value: 15.4
+  unit: percent
+  year: 1400
+  scope: by-province
+  confidence: news
+  notes: "SNN (Min. of Welfare); news; max/min pair as reported: Sistan-Baluchestan / Tehran; raw value: 58.2 / 15.4"
+- id: gdp-share-of-country-tehran-max-1399
+  source_id: sci-recent
+  name_en: GDP share of country — Tehran (max)
+  value: 22.1
+  unit: percent
+  year: 1399
+  scope: by-province
+  confidence: news
+  notes: "SCI via Tabnak; news; province: Tehran (max)"
+- id: gdp-current-tehran-1400
+  source_id: sci-census-2016
+  name_en: GDP (current) — Tehran
+  value: 1760
+  unit: billion_toman
+  year: 1400
+  scope: by-province
+  confidence: news
+  notes: "ecoinan (SCI reg. accounts); news; max/min pair as reported: Tehran / South Khorasan; raw value: 1,760k / 38.5k"
+- id: gdp-current-south-khorasan-1400
+  source_id: sci-census-2016
+  name_en: GDP (current) — South Khorasan
+  value: 38.5
+  unit: billion_toman
+  year: 1400
+  scope: by-province
+  confidence: news
+  notes: "ecoinan (SCI reg. accounts); news; max/min pair as reported: Tehran / South Khorasan; raw value: 1,760k / 38.5k"
+- id: population-growth-201116-south-khorasan-max-2016
+  source_id: sci-census-2016
+  name_en: Population growth 2011–16 — South Khorasan (max)
+  value: 3.02
+  unit: percent
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; province: South Khorasan (max)"
+- id: shrinking-provinces-n-khorasan-2016
+  source_id: sci-census-2016
+  name_en: Shrinking provinces — N. Khorasan
+  value: -0.11
+  unit: percent
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: N. Khorasan / Hamedan; raw value: −0.11 / −0.23"
+- id: shrinking-provinces-hamedan-2016
+  source_id: sci-census-2016
+  name_en: Shrinking provinces — Hamedan
+  value: -0.23
+  unit: percent
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: N. Khorasan / Hamedan; raw value: −0.11 / −0.23"
+- id: sex-ratio-bushehr-2016
+  source_id: sci-census-2016
+  name_en: Sex ratio — Bushehr
+  value: 114
+  unit: men_per_100_women
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: Bushehr / Gilan; raw value: 114 / 100"
+- id: sex-ratio-gilan-2016
+  source_id: sci-census-2016
+  name_en: Sex ratio — Gilan
+  value: 100
+  unit: men_per_100_women
+  year: 2016
+  scope: by-province
+  confidence: primary
+  notes: "SCI census; primary; max/min pair as reported: Bushehr / Gilan; raw value: 114 / 100"
+- id: pray-several-times-a-day-2020
+  source_id: wvs-wave7-2020
+  name_en: Pray several times a day
+  value: 63.7
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q172
+- id: pray-at-least-once-a-day-2020
+  source_id: wvs-wave7-2020
+  name_en: Pray at least once a day
+  value: 73.7
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q172 (63.7+10.0)
+- id: never-pray-2020
+  source_id: wvs-wave7-2020
+  name_en: Never pray
+  value: 5.4
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q172
+- id: attend-religious-services-once-a-week-2020
+  source_id: wvs-wave7-2020
+  name_en: Attend religious services ≥ once a week
+  value: 26.1
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q171
+- id: trust-in-the-press-a-great-deal-quite-a-lot-2020
+  source_id: wvs-wave7-2020
+  name_en: Trust in the press (a great deal + quite a lot)
+  value: 60.1
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q66
+- id: trust-in-television-2020
+  source_id: wvs-wave7-2020
+  name_en: Trust in television
+  value: 79.4
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q67
+- id: importance-of-family-very-important-2020
+  source_id: wvs-wave7-2020
+  name_en: "Importance of family — \"very important\""
+  value: 93.9
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q1
+- id: importance-of-work-very-important-2020
+  source_id: wvs-wave7-2020
+  name_en: "Importance of work — \"very important\""
+  value: 77.5
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q5
+- id: tv-news-as-daily-info-source-2020
+  source_id: wvs-wave7-2020
+  name_en: TV news as daily info source
+  value: 63
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q202
+- id: internet-as-daily-info-source-2020
+  source_id: wvs-wave7-2020
+  name_en: Internet as daily info source
+  value: 53.1
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q206
+- id: daily-newspaper-2020
+  source_id: wvs-wave7-2020
+  name_en: Daily newspaper
+  value: 4.3
+  unit: percent
+  year: 2020
+  scope: national
+  confidence: academic
+  notes: reported Q201
+- id: starlink-awareness-2026
+  source_id: ispa-digital-2026
+  name_en: Starlink awareness
+  value: 43.4
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir (ISPA release); primary
+- id: starlink-should-be-legal-of-aware-2026
+  source_id: ispa-digital-2026
+  name_en: Starlink should be legal (of aware)
+  value: 47.5
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: "reported Aug 2026; ana.ir (flag: 31.9 per eghtesadnews); primary"
+- id: starlink-current-users-of-aware-2026
+  source_id: ispa-digital-2026
+  name_en: Starlink current users (of aware)
+  value: 2.9
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir; primary
+- id: avg-vpn-monthly-spend-2026
+  source_id: ispa-digital-2026
+  name_en: Avg VPN monthly spend
+  value: 262000
+  unit: irr
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported Jul 2026; zoomit; news
+- id: vpn-users-free-2026
+  source_id: ispa-digital-2026
+  name_en: "VPN users: free"
+  value: 66.7
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir; primary
+- id: online-shopping-past-yr-2026
+  source_id: ispa-digital-2026
+  name_en: Online shopping (past yr)
+  value: 57.1
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir; primary
+- id: ride-hailing-snapp-tapsi-2026
+  source_id: ispa-digital-2026
+  name_en: Ride-hailing (Snapp/Tapsi)
+  value: 55.5
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir; primary
+- id: online-education-past-yr-2026
+  source_id: ispa-digital-2026
+  name_en: Online education (past yr)
+  value: 37.9
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir; primary
+- id: income-highly-dependent-on-internet-2026
+  source_id: ispa-digital-2026
+  name_en: Income highly dependent on internet
+  value: 20.3
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir; primary
+- id: ai-never-heard-of-it-2026
+  source_id: ispa-digital-2026
+  name_en: "AI: never heard of it"
+  value: 37.6
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir; primary
+- id: chatgpt-among-ai-users-2026
+  source_id: ispa-digital-2026
+  name_en: ChatGPT among AI users
+  value: 90.3
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir; primary
+- id: ai-use-among-under-30s-2026
+  source_id: ispa-digital-2026
+  name_en: AI use among under-30s
+  value: 54
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported Jul 2026; eghtesadnews; news
+- id: rubika-popularity-top-domestic-platform-2026
+  source_id: ispa-digital-2026
+  name_en: Rubika popularity (top domestic platform)
+  value: 60.3
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported Jul 2026; zoomit; news
+- id: instagram-of-internet-users-of-15-part1-2026
+  source_id: ispa-digital-2026
+  name_en: "Instagram: % of internet users / % of 15+ — part1"
+  value: 64.4
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported Jul 2026; zoomit; news
+- id: instagram-of-internet-users-of-15-part2-2026
+  source_id: ispa-digital-2026
+  name_en: "Instagram: % of internet users / % of 15+ — part2"
+  value: 54.4
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: news
+  notes: reported Jul 2026; zoomit; news
+- id: speed-1-policy-priority-if-user-decides-2026
+  source_id: ispa-digital-2026
+  name_en: "Speed = #1 policy priority if user decides"
+  value: 56.9
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: primary
+  notes: reported Aug 2026; ana.ir; primary
+- id: ai-users-15-2025
+  source_id: ispa-digital-2026
+  name_en: AI users (15+)
+  value: 32.3
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: news
+  notes: reported zoomit/ISNA; news
+- id: ai-use-by-age-1529-3049-50-part1-2025
+  source_id: ispa-digital-2026
+  name_en: AI use by age 15–29 / 30–49 / 50+ — part1
+  value: 54.2
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: news
+  notes: reported same; news
+- id: ai-use-by-age-1529-3049-50-part2-2025
+  source_id: ispa-digital-2026
+  name_en: AI use by age 15–29 / 30–49 / 50+ — part2
+  value: 31.2
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: news
+  notes: reported same; news
+- id: ai-use-by-age-1529-3049-50-part3-2025
+  source_id: ispa-digital-2026
+  name_en: AI use by age 15–29 / 30–49 / 50+ — part3
+  value: 16.1
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: news
+  notes: reported same; news
+- id: ai-use-capitals-other-cities-rural-capitals-2025
+  source_id: ispa-digital-2026
+  name_en: AI use capitals / other cities / rural — capitals
+  value: 43.7
+  unit: percent
+  year: 2025
+  scope: rural
+  confidence: news
+  notes: reported same; news
+- id: ai-use-capitals-other-cities-rural-other-cities-2025
+  source_id: ispa-digital-2026
+  name_en: AI use capitals / other cities / rural — other-cities
+  value: 31.8
+  unit: percent
+  year: 2025
+  scope: rural
+  confidence: news
+  notes: reported same; news
+- id: ai-use-capitals-other-cities-rural-rural-2025
+  source_id: ispa-digital-2026
+  name_en: AI use capitals / other cities / rural — rural
+  value: 12.4
+  unit: percent
+  year: 2025
+  scope: rural
+  confidence: news
+  notes: reported same; news
+- id: high-trust-in-ai-answers-2025
+  source_id: ispa-digital-2026
+  name_en: High trust in AI answers
+  value: 53.6
+  unit: percent
+  year: 2025
+  scope: national
+  confidence: news
+  notes: reported same; news
+- id: telegram-use-men-women-men-2024
+  source_id: ispa
+  name_en: Telegram use men / women — men
+  value: 41.4
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: reported shargh (ISPA); news
+- id: telegram-use-men-women-women-2024
+  source_id: ispa
+  name_en: Telegram use men / women — women
+  value: 37.1
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: reported shargh (ISPA); news
+- id: rubika-baseline-2023
+  source_id: ispa
+  name_en: Rubika baseline
+  value: 24
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: news
+  notes: "reported radiofarda (ISPA); news; Approximate as reported: ~24"
+- id: rubika-growth-2023
+  source_id: ispa
+  name_en: Rubika growth
+  value: 60.3
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: news
+  notes: "reported radiofarda + zoomit; news; Approximate as reported: ~24 → 60.3; trend as reported: ~24 → 60.3"
+- id: national-happiness-index-wave-2-wave-1-part1-2022
+  source_id: ispa
+  name_en: National happiness index (wave 2 / wave 1) — part1
+  value: 64.41
+  unit: index
+  year: 2022
+  scope: national
+  confidence: news
+  notes: reported ISPA via hamshahrionline; news
+- id: national-happiness-index-wave-2-wave-1-part2-2022
+  source_id: ispa
+  name_en: National happiness index (wave 2 / wave 1) — part2
+  value: 65.83
+  unit: index
+  year: 2022
+  scope: national
+  confidence: news
+  notes: reported ISPA via hamshahrionline; news
+- id: high-anger-rage-in-daily-life-2026
+  source_id: what-iran-wants-2026
+  name_en: High anger/rage in daily life
+  value: 63.6
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; iranwire.com/en/features/154845; leak
+- id: anger-increase-vs-dec-2025-wave-2025
+  source_id: what-iran-wants-2026
+  name_en: Anger increase vs Dec 2025 wave
+  value: 12
+  unit: pp
+  year: 2025
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: want-fundamental-reforms-2026
+  source_id: what-iran-wants-2026
+  name_en: Want fundamental reforms
+  value: 53
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: keep-status-quo-2026
+  source_id: what-iran-wants-2026
+  name_en: Keep status quo
+  value: 9
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: want-regime-system-change-2026
+  source_id: what-iran-wants-2026
+  name_en: Want regime/system change
+  value: 19
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: "reported 13 Jul 2026; same; leak; Approximate as reported: >19"
+- id: hopeless-about-improvement-2026
+  source_id: what-iran-wants-2026
+  name_en: Hopeless about improvement
+  value: 50
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: "reported 13 Jul 2026; same; leak; Approximate as reported: >50"
+- id: sadness-depression-2026
+  source_id: what-iran-wants-2026
+  name_en: Sadness/depression
+  value: 47.7
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: constant-fear-anxiety-2026
+  source_id: what-iran-wants-2026
+  name_en: Constant fear/anxiety
+  value: 45.4
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: difficulty-securing-basic-food-2026
+  source_id: what-iran-wants-2026
+  name_en: Difficulty securing basic food
+  value: 81
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: "reported 13 Jul 2026; same; leak; Approximate as reported: >81"
+- id: income-fails-to-cover-expenses-2026
+  source_id: what-iran-wants-2026
+  name_en: Income fails to cover expenses
+  value: 54
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: can-t-afford-medical-costs-2026
+  source_id: what-iran-wants-2026
+  name_en: "Can't afford medical costs"
+  value: 75
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: blame-official-inefficiency-corruption-sanctions-part1-2026
+  source_id: what-iran-wants-2026
+  name_en: "Blame: official inefficiency / corruption / sanctions — part1"
+  value: 46.9
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: blame-official-inefficiency-corruption-sanctions-part2-2026
+  source_id: what-iran-wants-2026
+  name_en: "Blame: official inefficiency / corruption / sanctions — part2"
+  value: 26.3
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: blame-official-inefficiency-corruption-sanctions-part3-2026
+  source_id: what-iran-wants-2026
+  name_en: "Blame: official inefficiency / corruption / sanctions — part3"
+  value: 20.7
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: prefer-ceasefire-continued-negotiations-2026
+  source_id: what-iran-wants-2026
+  name_en: Prefer ceasefire + continued negotiations
+  value: 44.3
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: favor-accepting-all-us-conditions-2026
+  source_id: what-iran-wants-2026
+  name_en: Favor accepting all US conditions
+  value: 19.9
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: favor-preemptive-strike-on-us-israel-2026
+  source_id: what-iran-wants-2026
+  name_en: Favor preemptive strike on US/Israel
+  value: 16.4
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: identity-iranian-first-2026
+  source_id: what-iran-wants-2026
+  name_en: "Identity: \"Iranian\" first"
+  value: 36.8
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: proud-to-be-iranian-2026
+  source_id: what-iran-wants-2026
+  name_en: Proud to be Iranian
+  value: 85.6
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: reported 13 Jul 2026; same; leak
+- id: fast-during-ramadan-2026
+  source_id: what-iran-wants-2026
+  name_en: Fast during Ramadan
+  value: 30
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: "reported 16 Jul 2026; iranintl.com/en/202607161900; leak; Approximate as reported: ~30"
+- id: would-emigrate-if-possible-2026
+  source_id: what-iran-wants-2026
+  name_en: Would emigrate if possible
+  value: 33
+  unit: percent
+  year: 2026
+  scope: national
+  confidence: leak
+  notes: "reported 16 Jul 2026; iranintl.com/202607160022; leak; Approximate as reported: ~33"
+- id: predicted-turnout-mar-2024-elections-national-2024
+  source_id: vote-poll-2024
+  name_en: Predicted turnout Mar 2024 elections — national
+  value: 30
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: leak
+  notes: "reported 31 Jan 2024; ir.voanews.com/a/...7464000.html; leak; Approximate as reported: ~30"
+- id: predicted-turnout-tehran-province-2024
+  source_id: vote-poll-2024
+  name_en: Predicted turnout — Tehran province
+  value: 22
+  unit: percent
+  year: 2024
+  scope: by-province
+  confidence: leak
+  notes: reported same; same; leak
+- id: predicted-turnout-tehran-city-2024
+  source_id: vote-poll-2024
+  name_en: Predicted turnout — Tehran city
+  value: 15
+  unit: percent
+  year: 2024
+  scope: by-province
+  confidence: leak
+  notes: "reported same; same; leak; Approximate as reported: <15"
+- id: definitely-will-vote-mar-2024-elections-2024
+  source_id: vote-poll-2024
+  name_en: "\"Definitely will vote\" (Mar 2024 elections)"
+  value: 41.5
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: reported 2024; IRIB polling center; news
+- id: definitely-will-vote-jun-2024-presidential-2024
+  source_id: vote-poll-2024
+  name_en: "\"Definitely will vote\" (Jun 2024 presidential)"
+  value: 43.1
+  unit: percent
+  year: 2024
+  scope: national
+  confidence: news
+  notes: reported 2024; IRIB/IRNA claim; news
+- id: ispa-turnout-definitely-2023-11
+  source_id: ispa
+  name_en: "ISPA turnout Nov 2023: definitely will vote"
+  value: 2023
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: news
+  notes: reported ISPA public; news; Nov 2023 ISPA public poll
+- id: ispa-turnout-wont-vote-2023-11
+  source_id: ispa
+  name_en: "ISPA turnout Nov 2023: won't vote"
+  value: 27.9
+  unit: percent
+  year: 2023
+  scope: national
+  confidence: news
+  notes: reported ISPA public; news; Nov 2023 ISPA public poll
+- id: feel-comfort-calm-in-life-mois-n-2-510-2022
+  source_id: vote-poll-2024
+  name_en: "Feel comfort/calm in life (MOIS, n=2,510)"
+  value: 75
+  unit: percent
+  year: 2022
+  scope: national
+  confidence: news
+  notes: reported 2022; Ministry of Intelligence; news
+- id: income-satisfaction-mois-2022
+  source_id: vote-poll-2024
+  name_en: Income satisfaction (MOIS)
+  value: 45
+  unit: percent
+  year: 2022
+  scope: national
+  confidence: news
+  notes: reported 2022; MOIS; news
+- id: raisi-approval-independent-2022
+  source_id: vote-poll-2024
+  name_en: Raisi approval (independent)
+  value: 28
+  unit: percent
+  year: 2022
+  scope: national
+  confidence: news
+  notes: reported 2022; Stasis/IranWire; news
+- id: my-property-is-not-safe-values-wave-4-via-hammihan-1402
+  source_id: values-survey-1402
+  name_en: "\"My property is not safe\" (values wave 4, via HamMihan)"
+  value: 54.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported Sep 2024; independentpersian.com/node/409576; leak
+- id: gdp-per-capita-const-prices-bushehr-1400
+  source_id: sci-recent
+  name_en: GDP per capita (const. prices) — Bushehr
+  value: 383
+  unit: million_rials
+  year: 1400
+  scope: by-province
+  confidence: primary
+  notes: "imps.ac.ir/uploads/boshehr-16mehr.pdf (Bushehr MPO citing SCI); primary; province: Bushehr"
+- id: gdp-per-capita-const-national-avg-iran-1400
+  source_id: sci-recent
+  name_en: GDP per capita (const.) — national avg — Iran
+  value: 87
+  unit: million_rials
+  year: 1400
+  scope: by-province
+  confidence: primary
+  notes: "same; primary; province: Iran"
+- id: bushehr-vs-national-average-1400
+  source_id: sci-recent
+  name_en: Bushehr vs national average — —
+  value: 4.4
+  unit: ratio
+  year: 1400
+  scope: by-province
+  confidence: estimate
+  notes: "computed; estimate; province: —"
+- id: gdp-per-capita-const-gilan-rank-18-1399
+  source_id: sci-recent
+  name_en: GDP per capita (const.) — Gilan (rank 18)
+  value: 58
+  unit: million_rials
+  year: 1399
+  scope: by-province
+  confidence: news
+  notes: "gilan-today.com/29942 (Gilan MPO); news; max/min pair as reported: Gilan (rank 18) / Mazandaran (rank 10); raw value: 58 / 75"
+- id: gdp-per-capita-const-mazandaran-rank-10-1399
+  source_id: sci-recent
+  name_en: GDP per capita (const.) — Mazandaran (rank 10)
+  value: 75
+  unit: million_rials
+  year: 1399
+  scope: by-province
+  confidence: news
+  notes: "gilan-today.com/29942 (Gilan MPO); news; max/min pair as reported: Gilan (rank 18) / Mazandaran (rank 10); raw value: 58 / 75"
+- id: gdp-per-capita-const-implied-sistan-baluchestan-lowest-1400
+  source_id: sci-recent
+  name_en: "GDP per capita (const., implied) — Sistan-Baluchestan (lowest)"
+  value: 30
+  unit: million_rials
+  year: 1400
+  scope: by-province
+  confidence: estimate
+  notes: "imps chart bar; estimate; Approximate as reported: ~30; province: Sistan-Baluchestan (lowest)"
+- id: gdp-per-capita-current-bushehr-1394
+  source_id: sci-recent
+  name_en: GDP per capita (current) — Bushehr
+  value: 46
+  unit: million_toman
+  year: 1394
+  scope: by-province
+  confidence: news
+  notes: "donya-e-eqtesad 3380248; news; Approximate as reported: ~46 / ~6; max/min pair as reported: Bushehr / Sistan-Baluchestan; raw value: ~46 / ~6"
+- id: gdp-per-capita-current-sistan-baluchestan-1394
+  source_id: sci-recent
+  name_en: GDP per capita (current) — Sistan-Baluchestan
+  value: 6
+  unit: million_toman
+  year: 1394
+  scope: by-province
+  confidence: news
+  notes: "donya-e-eqtesad 3380248; news; Approximate as reported: ~46 / ~6; max/min pair as reported: Bushehr / Sistan-Baluchestan; raw value: ~46 / ~6"
+- id: gdp-per-capita-current-bushehr-2020
+  source_id: sci-recent
+  name_en: GDP per capita (current) — Bushehr
+  value: 1072595
+  unit: thousand_rials
+  year: 2020
+  scope: by-province
+  confidence: estimate
+  notes: "geocurrents.info (IranOpenData); estimate; max/min pair as reported: Bushehr / Sistan-Baluchestan; raw value: 1,072,595 / ~100–150k"
+- id: gdp-per-capita-current-sistan-baluchestan-2020
+  source_id: sci-recent
+  name_en: GDP per capita (current) — Sistan-Baluchestan
+  value: 100
+  unit: thousand_rials
+  year: 2020
+  scope: by-province
+  confidence: estimate
+  notes: "geocurrents.info (IranOpenData); estimate; max/min pair as reported: Bushehr / Sistan-Baluchestan; raw value: 1,072,595 / ~100–150k"
+- id: nominal-gdp-per-capita-imf-context-iran-2026
+  source_id: imf-weo
+  name_en: "Nominal GDP per capita (IMF, context) — Iran"
+  value: 4250
+  unit: usd
+  year: 2026
+  scope: by-province
+  confidence: estimate
+  notes: "IMF; estimate; Approximate as reported: ~4,250; province: Iran"
+- id: religion-politics-separation-agree-oppose-neither-agree-1394
+  source_id: values-survey-1394
+  name_en: "Religion-politics separation: agree / oppose / neither — agree"
+  value: 30.7
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported official report Tab. 47/48-8"
+- id: religion-politics-separation-agree-oppose-neither-disagree-1
+  source_id: values-survey-1394
+  name_en: "Religion-politics separation: agree / oppose / neither — disagree"
+  value: 36.3
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported official report Tab. 47/48-8"
+- id: religion-politics-separation-agree-oppose-neither-neither-13
+  source_id: values-survey-1394
+  name_en: "Religion-politics separation: agree / oppose / neither — neither"
+  value: 33
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported official report Tab. 47/48-8"
+- id: mandatory-hijab-agree-disagree-neither-agree-1394
+  source_id: values-survey-1394
+  name_en: "Mandatory hijab: agree / disagree / neither — agree"
+  value: 53.1
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 49-8"
+- id: mandatory-hijab-agree-disagree-neither-disagree-1394
+  source_id: values-survey-1394
+  name_en: "Mandatory hijab: agree / disagree / neither — disagree"
+  value: 22.2
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 49-8"
+- id: mandatory-hijab-agree-disagree-neither-neither-1394
+  source_id: values-survey-1394
+  name_en: "Mandatory hijab: agree / disagree / neither — neither"
+  value: 24.8
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 49-8"
+- id: no-problem-opposed-but-no-interference-admonish-no-problem-1
+  source_id: values-survey-1394
+  name_en: "بدحجابی: no problem / opposed-but-no-interference / admonish — no-problem"
+  value: 10.6
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 51-8"
+- id: no-problem-opposed-but-no-interference-admonish-opposed-no-i
+  source_id: values-survey-1394
+  name_en: "بدحجابی: no problem / opposed-but-no-interference / admonish — opposed-no-interference"
+  value: 67.7
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 51-8"
+- id: no-problem-opposed-but-no-interference-admonish-admonish-139
+  source_id: values-survey-1394
+  name_en: "بدحجابی: no problem / opposed-but-no-interference / admonish — admonish"
+  value: 17.6
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 51-8"
+- id: pray-always-mostly-never-always-mostly-1394
+  source_id: values-survey-1394
+  name_en: Pray always/mostly / never — always-mostly
+  value: 78.5
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 17-8"
+- id: pray-always-mostly-never-never-1394
+  source_id: values-survey-1394
+  name_en: Pray always/mostly / never — never
+  value: 3.1
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 17-8"
+- id: congregational-prayer-always-mostly-never-always-mostly-1394
+  source_id: values-survey-1394
+  name_en: Congregational prayer always/mostly / never — always-mostly
+  value: 26.2
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported same"
+- id: congregational-prayer-always-mostly-never-never-1394
+  source_id: values-survey-1394
+  name_en: Congregational prayer always/mostly / never — never
+  value: 17.3
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported same"
+- id: fast-always-mostly-never-always-mostly-1394
+  source_id: values-survey-1394
+  name_en: Fast always/mostly / never — always-mostly
+  value: 72.5
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported same"
+- id: fast-always-mostly-never-never-1394
+  source_id: values-survey-1394
+  name_en: Fast always/mostly / never — never
+  value: 5.1
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported same"
+- id: read-quran-always-mostly-never-always-mostly-1394
+  source_id: values-survey-1394
+  name_en: Read Quran always/mostly / never — always-mostly
+  value: 27.7
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported same"
+- id: read-quran-always-mostly-never-never-1394
+  source_id: values-survey-1394
+  name_en: Read Quran always/mostly / never — never
+  value: 9.1
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported same"
+- id: believe-deeds-accounted-in-afterlife-1394
+  source_id: values-survey-1394
+  name_en: Believe deeds accounted in afterlife
+  value: 86.9
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 6-8"
+- id: religion-pure-heart-even-without-prayer-1394
+  source_id: values-survey-1394
+  name_en: "\"Religion = pure heart even without prayer\""
+  value: 39.4
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported same"
+- id: religiosity-decreased-vs-5-yrs-ago-1394
+  source_id: values-survey-1394
+  name_en: Religiosity decreased vs 5 yrs ago
+  value: 66.2
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 1-7"
+- id: expect-religiosity-to-decrease-in-5-yrs-1394
+  source_id: values-survey-1394
+  name_en: Expect religiosity to decrease in 5 yrs
+  value: 64.8
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Religiosity (1394):; reported Tab. 1-7"
+- id: trust-irib-1394
+  source_id: values-survey-1394
+  name_en: Trust IRIB
+  value: 54.8
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Trust in institutions (1394, high/very-high):; reported Ch. 12"
+- id: trust-satellite-tv-1394
+  source_id: values-survey-1394
+  name_en: Trust satellite TV
+  value: 11.3
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Trust in institutions (1394, high/very-high):; reported same"
+- id: trust-domestic-papers-news-sites-1394
+  source_id: values-survey-1394
+  name_en: Trust domestic papers/news sites
+  value: 36.9
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Trust in institutions (1394, high/very-high):; reported same"
+- id: trust-internet-social-media-1394
+  source_id: values-survey-1394
+  name_en: Trust internet/social media
+  value: 12
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Trust in institutions (1394, high/very-high):; reported same"
+- id: trust-majlis-1394
+  source_id: values-survey-1394
+  name_en: Trust Majlis
+  value: 46.9
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Trust in institutions (1394, high/very-high):; reported Tab. 10-12"
+- id: trust-judiciary-1394
+  source_id: values-survey-1394
+  name_en: Trust judiciary
+  value: 48.7
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Trust in institutions (1394, high/very-high):; reported same"
+- id: trust-government-1394
+  source_id: values-survey-1394
+  name_en: Trust government
+  value: 49.9
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Trust in institutions (1394, high/very-high):; reported same"
+- id: trust-municipality-1394
+  source_id: values-survey-1394
+  name_en: Trust municipality
+  value: 37
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Trust in institutions (1394, high/very-high):; reported same"
+- id: trust-clergy-1394
+  source_id: values-survey-1394
+  name_en: Trust clergy
+  value: 44.4
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Trust in institutions (1394, high/very-high):; reported Tab. 23-12"
+- id: political-situation-better-than-5-yrs-ago-worse-better-1394
+  source_id: values-survey-1394
+  name_en: Political situation better than 5 yrs ago / worse — better
+  value: 46.4
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Politics (1394):; reported Tab. 5-7"
+- id: political-situation-better-than-5-yrs-ago-worse-worse-1394
+  source_id: values-survey-1394
+  name_en: Political situation better than 5 yrs ago / worse — worse
+  value: 22.2
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Politics (1394):; reported Tab. 5-7"
+- id: expect-political-improvement-next-5-yrs-worsening-improve-13
+  source_id: values-survey-1394
+  name_en: Expect political improvement next 5 yrs / worsening — improve
+  value: 46.4
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Politics (1394):; reported Tab. 5-7"
+- id: expect-political-improvement-next-5-yrs-worsening-worsen-139
+  source_id: values-survey-1394
+  name_en: Expect political improvement next 5 yrs / worsening — worsen
+  value: 22.2
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Politics (1394):; reported Tab. 5-7"
+- id: poverty-inequality-increased-vs-5-yrs-ago-1394
+  source_id: values-survey-1394
+  name_en: Poverty/inequality increased vs 5 yrs ago
+  value: 56
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Politics (1394):; reported Tab. 19-7"
+- id: negative-moral-traits-will-spread-in-5-yrs-1394
+  source_id: values-survey-1394
+  name_en: Negative moral traits will spread in 5 yrs
+  value: 76.3
+  unit: percent
+  year: 1394
+  scope: national
+  confidence: news
+  notes: "Politics (1394):; reported Tab. 14-7"
+- id: forgiveness-altruism-prevalent-among-people-high-very-high-1
+  source_id: values-survey-1402
+  name_en: Forgiveness/altruism prevalent among people (high+very high)
+  value: 48.1
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported ethics ch. Table 1 (eth-02.png); leak (visually-verified)
+- id: forgiveness-altruism-low-low-very-low-1402
+  source_id: values-survey-1402
+  name_en: Forgiveness/altruism low (low+very low)
+  value: 37.5
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: reported same; leak (visually-verified)
+- id: ethics-forgiveness-very-low-1402
+  source_id: values-survey-1402
+  name_en: "Forgiveness/altruism among people: very low (1402 ethics ch.)"
+  value: 4.7
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: Breakdown from ethics ch. Table 1; visually verified
+- id: ethics-forgiveness-low-1402
+  source_id: values-survey-1402
+  name_en: "Forgiveness/altruism among people: low (1402 ethics ch.)"
+  value: 32.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: Breakdown from ethics ch. Table 1; visually verified
+- id: ethics-forgiveness-med-1402
+  source_id: values-survey-1402
+  name_en: "Forgiveness/altruism among people: med (1402 ethics ch.)"
+  value: 14.4
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: Breakdown from ethics ch. Table 1; visually verified
+- id: ethics-forgiveness-high-1402
+  source_id: values-survey-1402
+  name_en: "Forgiveness/altruism among people: high (1402 ethics ch.)"
+  value: 45.3
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: Breakdown from ethics ch. Table 1; visually verified
+- id: ethics-forgiveness-very-high-1402
+  source_id: values-survey-1402
+  name_en: "Forgiveness/altruism among people: very high (1402 ethics ch.)"
+  value: 2.8
+  unit: percent
+  year: 1402
+  scope: national
+  confidence: leak
+  notes: Breakdown from ethics ch. Table 1; visually verified
