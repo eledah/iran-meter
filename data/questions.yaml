@@ -6,12 +6,12 @@
   surprise_note: Counterintuitive scale of VPN use; one plausible distractor near
     60%
   prompt_en: What share of Iranians use a VPN / filter-breaker (2026)?
-  prompt_fa: چند درصد ایرانیان از وی‌پی‌ان یا فیلترشکن استفاده می‌کنند (۱۴۰۵)؟
+  prompt_fa: به نظرت چند درصد مردم ایران وی‌پی‌ان یا فیلترشکن دارند؟ (۱۴۰۵)
   stat_ids:
   - vpn-filter-breaker-use-2026
   correct_index: 2
   fun_fact_en: 74.4% use a filter-breaker — among under-30s it reaches 85%.
-  fun_fact_fa: ۷۴٫۴٪ از فیلترشکن استفاده می‌کنند — در میان زیر ۳۰ ساله‌ها به ۸۵٪ می‌رسد.
+  fun_fact_fa: ۷۴٫۴٪ فیلترشکن دارند. بین زیر ۳۰ ساله‌ها این عدد به ۸۵٪ می‌رسد.
   options:
   - label_en: 41%
     label_fa: ٪۴۱
@@ -27,12 +27,12 @@
   surprise_note: Players expect hardship but balk at four-in-five struggling for basic
     food
   prompt_en: What share of Iranians report difficulty securing basic food (2026)?
-  prompt_fa: چند درصد ایرانیان در تأمین غذای اولیه خود با دشواری روبه‌رو‌اند (۱۴۰۵)؟
+  prompt_fa: چند درصد مردم می‌گویند به‌سختی غذای روزانه‌شان را جور می‌کنند؟ (۱۴۰۵)
   stat_ids:
   - difficulty-securing-basic-food-2026
   correct_index: 2
   fun_fact_en: 81% struggle to secure basic food — and 75% can't afford medical costs.
-  fun_fact_fa: ۸۱٪ در تأمین غذای اولیه مشکل دارند — و ۷۵٪ از پس هزینه‌های درمانی برنمی‌آیند.
+  fun_fact_fa: ۸۱٪ برای غذای روزانه تنگنا دارند. ۷۵٪ هم می‌گویند از پس هزینه درمان برنمی‌آیند.
   options:
   - label_en: 52%
     label_fa: ٪۵۲
@@ -48,14 +48,14 @@
   surprise_note: The gender gap is extreme; players from high-participation countries
     guess far too high
   prompt_en: What is the female labor-force participation rate in Iran (2025)?
-  prompt_fa: نرخ مشارکت نیروی کار زنان در ایران (۲۰۲۵) چقدر است؟
+  prompt_fa: زن‌ها چقدر در بازار کار ایران حاضرند؟ (۲۰۲۵)
   hint_en: Participation means the share of people 15+ who are working or looking for work.
-  hint_fa: مشارکت یعنی سهم افراد ۱۵ سال به بالا که یا شاغل‌اند یا دنبال کار می‌گردند.
+  hint_fa: مشارکت یعنی چند درصد آدم‌های بالای ۱۵ سال یا کار می‌کنند یا دنبال کارند.
   stat_ids:
   - female-labor-force-participation-2025
   correct_index: 1
   fun_fact_en: Just 14% — one of the world's lowest female participation rates.
-  fun_fact_fa: فقط ۱۴٪ — یکی از پایین‌ترین نرخ‌های مشارکت زنان در جهان.
+  fun_fact_fa: فقط ۱۴٪. جزو پایین‌ترین عددهای جهان است.
   options:
   - label_en: 8%
     label_fa: ٪۸
@@ -70,14 +70,14 @@
   difficulty: 5
   surprise_note: Obscure latest CBI print; several close distractors above 60%
   prompt_en: What was Iran's point-to-point inflation rate (1405, latest CBI print)?
-  prompt_fa: نرخ تورم نقطه‌به‌نقطه ایران در سال ۱۴۰۵ چقدر اعلام شد؟
+  prompt_fa: آخرین عدد بانک مرکزی برای تورم نقطه‌به‌نقطه چقدر بود؟ (۱۴۰۵)
   hint_en: Point-to-point means prices vs. the same month last year — not the yearly average.
-  hint_fa: تورم نقطه‌به‌نقطه یعنی افزایش قیمت‌ها نسبت به همین ماه در سال قبل — نه میانگین کل سال.
+  hint_fa: تورم نقطه‌به‌نقطه یعنی قیمت‌ها در برابر همان ماه پارسال. نه میانگین کل سال.
   stat_ids:
   - point-to-point-inflation-1405
   correct_index: 2
   fun_fact_en: Point-to-point inflation hit 83.9% — far above the 61.4% annual average.
-  fun_fact_fa: تورم نقطه‌به‌نقطه به ۸۳٫۹٪ رسید — بسیار بالاتر از میانگین سالانه ۶۱٫۴٪.
+  fun_fact_fa: تورم نقطه‌به‌نقطه ۸۳٫۹٪ شد. خیلی بالاتر از میانگین سالانه که ۶۱٫۴٪ بود.
   options:
   - label_en: 61%
     label_fa: ٪۶۱
@@ -94,15 +94,15 @@
     guess
   prompt_en: Comparison — regular prayer (always/mostly) fell from 78.5% in 1394 to
     what level in 1402?
-  prompt_fa: مقایسه — نمازخوانی منظم (همیشه/بیشتر اوقات) از ۷۸٫۵٪ در ۱۳۹۴ به چه سطحی
-    در ۱۴۰۲ رسید؟
+  prompt_fa: کسانی که همیشه یا بیشتر وقت‌ها نماز می‌خوانند در ۱۳۹۴ حدود ۷۸٫۵٪ بودند.
+    در ۱۴۰۲ به چند درصد رسیدند؟
   stat_ids:
   - pray-always-mostly-1402
   correct_index: 2
   fun_fact_en: Regular prayer fell from 78.5% (1394) to 54.8% (1402) — a 24-point
     drop in under a decade.
-  fun_fact_fa: نمازخوانی منظم از ۷۸٫۵٪ (۱۳۹۴) به ۵۴٫۸٪ (۱۴۰۲) سقوط کرد — حدود ۲۴ واحد
-    در کمتر از یک دهه.
+  fun_fact_fa: از ۷۸٫۵٪ در ۱۳۹۴ به ۵۴٫۸٪ در ۱۴۰۲ رسید. افتی حدود ۲۴ واحدی در کمتر
+    از ده سال.
   options:
   - label_en: 69%
     label_fa: ٪۶۹
@@ -119,13 +119,13 @@
     era
   prompt_en: What share of Iranians agree that religion and politics should be separate
     (1402 values survey)?
-  prompt_fa: در پیمایش ارزش‌های ۱۴۰۲، چند درصد ایرانیان با جدایی دین از سیاست موافق‌اند؟
+  prompt_fa: در پیمایش ۱۴۰۲، چند درصد مردم گفتند دین باید از سیاست جدا باشد؟
   stat_ids:
   - separation-of-religion-politics-agree-1402
   correct_index: 2
   fun_fact_en: Agreement leapt from 30.7% (1394) to 72.9% (1402) — a generational
     flip.
-  fun_fact_fa: موافقت از ۳۰٫۷٪ (۱۳۹۴) به ۷۲٫۹٪ (۱۴۰۲) جهید — چرخشی نسلی.
+  fun_fact_fa: از ۳۰٫۷٪ در ۱۳۹۴ به ۷۲٫۹٪ در ۱۴۰۲ رسید. یک نسل کامل عوض شده است.
   options:
   - label_en: 51%
     label_fa: ٪۵۱
@@ -142,14 +142,14 @@
     most shocking finding
   prompt_en: Comparison — the share who never pray rose from 3.1% in 1394 to what
     in 1402?
-  prompt_fa: مقایسه — سهم کسانی که هرگز نماز نمی‌خوانند از ۳٫۱٪ در ۱۳۹۴ به چه عددی
-    در ۱۴۰۲ رسید؟
+  prompt_fa: کسانی که هیچ‌وقت نماز نمی‌خوانند در ۱۳۹۴ فقط ۳٫۱٪ بودند. در ۱۴۰۲ به چند
+    درصد رسیدند؟
   stat_ids:
   - never-pray-1402
   correct_index: 2
   fun_fact_en: Never-praying rose sevenfold, from 3.1% to 22.2% between the two values
     surveys.
-  fun_fact_fa: هرگزنمازخواندن هفت برابر شد، از ۳٫۱٪ به ۲۲٫۲٪ میان دو پیمایش ارزش‌ها.
+  fun_fact_fa: از ۳٫۱٪ به ۲۲٫۲٪ رسید. یعنی حدود هفت برابر، بین دو پیمایش.
   options:
   - label_en: 9%
     label_fa: ٪۹
@@ -166,13 +166,12 @@
     top problem
   prompt_en: What share of Iranians name inflation as the country's most important
     problem (1402 values survey)?
-  prompt_fa: چند درصد ایرانیان تورم را مهم‌ترین مشکل کشور می‌دانند (پیمایش ارزش‌ها
-    ۱۴۰۲)؟
+  prompt_fa: چند درصد مردم می‌گویند تورم مهم‌ترین مشکل کشور است؟ (پیمایش ۱۴۰۲)
   stat_ids:
   - inflation-most-important-national-problem-1402
   correct_index: 0
   fun_fact_en: 81.9% name inflation the top national problem — an overwhelming consensus.
-  fun_fact_fa: ۸۱٫۹٪ تورم را مهم‌ترین مشکل کشور می‌دانند — اجماعی چشمگیر.
+  fun_fact_fa: ۸۱٫۹٪ تورم را مشکل اول کشور می‌دانند. تقریبا همه هم‌نظرند.
   options:
   - label_en: 82%
     label_fa: ٪۸۲
@@ -189,12 +188,13 @@
     (under 20%) guesses
   prompt_en: What share of Iranians would emigrate permanently if they could (1402
     values survey)?
-  prompt_fa: چند درصد ایرانیان در صورت امکان برای همیشه مهاجرت می‌کنند (پیمایش ۱۴۰۲)؟
+  prompt_fa: اگر راهش را داشتند، چند درصد مردم برای همیشه از ایران می‌رفتند؟ (پیمایش
+    ۱۴۰۲)
   stat_ids:
   - would-emigrate-permanently-if-possible-1402
   correct_index: 2
   fun_fact_en: 38.6% would leave permanently — the top named destination is Canada.
-  fun_fact_fa: ۳۸٫۶٪ برای همیشه می‌روند — مقصد اول اعلام‌شده کاناداست.
+  fun_fact_fa: ۳۸٫۶٪ برای همیشه می‌رفتند. کانادا پرتکرارترین مقصدی بود که گفتند.
   options:
   - label_en: 19%
     label_fa: ٪۱۹
@@ -210,13 +210,13 @@
   surprise_note: World-record 63.6% daily anger — players guess far lower, near global
     averages
   prompt_en: What share of Iranians report high anger or rage in daily life (2026)?
-  prompt_fa: چند درصد ایرانیان از خشم یا عصبانیت شدید در زندگی روزمره می‌گویند (۱۴۰۵)؟
+  prompt_fa: چند درصد مردم می‌گویند در زندگی روزمره خیلی عصبانی یا خشمگین‌اند؟ (۱۴۰۵)
   stat_ids:
   - high-anger-rage-in-daily-life-2026
   correct_index: 2
   fun_fact_en: At 63.6%, a world-record level of everyday anger — up 12 points since
     Dec 2025.
-  fun_fact_fa: با ۶۳٫۶٪، رکوردی جهانی از خشم روزمره است — ۱۲ واحد بیشتر از آذر ۱۴۰۴.
+  fun_fact_fa: ۶۳٫۶٪. بالاترین عدد جهان است. از آذر ۱۴۰۴ تا حالا ۱۲ واحد بالا رفته.
   options:
   - label_en: 38%
     label_fa: ٪۳۸
@@ -232,14 +232,14 @@
   surprise_note: The youth-to-overall ratio (about 2.5x) is the surprise; absolute
     level has close distractors
   prompt_en: What is Iran's youth unemployment rate (ages 15-24, 1405)?
-  prompt_fa: نرخ بیکاری جوانان ایران (۱۵ تا ۲۴ سال، ۱۴۰۵) چقدر است؟
+  prompt_fa: بیکاری جوان‌های ۱۵ تا ۲۴ ساله چقدر است؟ (۱۴۰۵)
   hint_en: The share of 15–24-year-olds in the labor force who don't have a job.
-  hint_fa: سهم جوانان ۱۵ تا ۲۴ ساله‌ی حاضر در بازار کار که شغلی ندارند.
+  hint_fa: یعنی چند درصد جوان‌های ۱۵ تا ۲۴ ساله‌ای که در بازار کارند، کاری ندارند.
   stat_ids:
   - youth-unemployment-1524-1405
   correct_index: 2
   fun_fact_en: Youth unemployment is 23.4% — about 2.5 times the overall rate.
-  fun_fact_fa: بیکاری جوانان ۲۳٫۴٪ است — حدود ۲٫۵ برابر نرخ کلی.
+  fun_fact_fa: ۲۳٫۴٪. حدود دو و نیم برابر نرخ کلی بیکاری.
   options:
   - label_en: 12.5%
     label_fa: ٪۱۲٫۵
@@ -256,17 +256,17 @@
     it (58% low trust) — a full reversal
   prompt_en: Comparison — 54.8% trusted IRIB in 1394; what share expressed LOW trust
     in 1402?
-  prompt_fa: مقایسه — در ۱۳۹۴ حدود ۵۵٪ به صداوسیما اعتماد داشتند؛ در ۱۴۰۲ چند درصد
-    اعتماد کمی داشتند؟
+  prompt_fa: در ۱۳۹۴ حدود ۵۵٪ به صداوسیما اعتماد داشتند. در ۱۴۰۲ چند درصد گفتند اعتمادشان
+    کم است؟
   hint_en: "Two different measures: trust in 1394 vs. distrust in 1402."
-  hint_fa: "دو سنجه متفاوت: اعتماد در ۱۳۹۴ در برابر بی‌اعتمادی در ۱۴۰۲."
+  hint_fa: دقت کن که یکی درباره اعتماد در ۱۳۹۴ است و دیگری درباره بی‌اعتمادی در ۱۴۰۲.
   stat_ids:
   - low-trust-in-irib-1394-81-trusted-1402
   correct_index: 2
   fun_fact_en: From 54.8% trust (1394) to 58% low trust (1402) — a complete reversal
     for state TV.
-  fun_fact_fa: از ۵۴٫۸٪ اعتماد (۱۳۹۴) به ۵۸٪ بی‌اعتمادی (۱۴۰۲) — وارونگی کامل برای
-    تلویزیون دولتی.
+  fun_fact_fa: از ۵۴٫۸٪ اعتماد در ۱۳۹۴ به ۵۸٪ بی‌اعتمادی در ۱۴۰۲ رسید. ورق کاملا
+    برگشته است.
   options:
   - label_en: 34%
     label_fa: ٪۳۴
@@ -283,12 +283,12 @@
     minority
   prompt_en: What share of Iranians are dissatisfied with the country's situation
     (1402)?
-  prompt_fa: چند درصد ایرانیان از وضعیت کشور ناراضی‌اند (۱۴۰۲)؟
+  prompt_fa: چند درصد مردم از وضعیت کشور ناراضی‌اند؟ (۱۴۰۲)
   stat_ids:
   - dissatisfied-with-country-s-situation-1402
   correct_index: 2
   fun_fact_en: 91.8% dissatisfied — only 8.2% call the situation acceptable or good.
-  fun_fact_fa: ۹۱٫۸٪ ناراضی‌اند — فقط ۸٫۲٪ وضعیت را قابل‌قبول یا خوب می‌دانند.
+  fun_fact_fa: ۹۱٫۸٪ ناراضی‌اند. فقط ۸٫۲٪ وضعیت را خوب یا قابل‌قبول می‌دانند.
   options:
   - label_en: 63%
     label_fa: ٪۶۳
@@ -304,14 +304,14 @@
   surprise_note: Tehran-city 15% is far below the 30% national figure players anchor
     on
   prompt_en: What was the predicted turnout in Tehran city for the March 2024 elections?
-  prompt_fa: مشارکت پیش‌بینی‌شده در شهر تهران برای انتخابات اسفند ۱۴۰۲ چقدر بود؟
+  prompt_fa: پیش‌بینی مشارکت تهرانی‌ها در انتخابات اسفند ۱۴۰۲ چقدر بود؟
   hint_en: A pre-election poll forecast, not the final result.
-  hint_fa: پیش‌بینی نظرسنجیِ پیش از انتخابات است، نه نتیجه نهایی.
+  hint_fa: این عدد پیش‌بینی نظرسنجی پیش از انتخابات است. نتیجه نهایی نیست.
   stat_ids:
   - predicted-turnout-tehran-city-2024
   correct_index: 0
   fun_fact_en: Just 15% in Tehran city — vs 30% nationally and 22% in Tehran province.
-  fun_fact_fa: فقط ۱۵٪ در شهر تهران — در برابر ۳۰٪ در کل کشور و ۲۲٪ در استان تهران.
+  fun_fact_fa: در شهر تهران فقط ۱۵٪. در کل کشور ۳۰٪ بود و در استان تهران ۲۲٪.
   options:
   - label_en: 15%
     label_fa: ٪۱۵
@@ -327,14 +327,14 @@
   surprise_note: Three-in-four unable to afford care shocks players used to universal-care
     assumptions
   prompt_en: What share of Iranians say they can't afford medical costs (2026)?
-  prompt_fa: چند درصد ایرانیان می‌گویند از پس هزینه‌های درمانی برنمی‌آیند (۱۴۰۵)؟
+  prompt_fa: چند درصد مردم می‌گویند از پس هزینه‌های درمان برنمی‌آیند؟ (۱۴۰۵)
   stat_ids:
   - can-t-afford-medical-costs-2026
   correct_index: 2
   fun_fact_en: Three in four (75%) can't afford medical costs — alongside 81% struggling
     for food.
-  fun_fact_fa: سه نفر از هر چهار نفر (۷۵٪) از پس هزینه درمان برنمی‌آیند — در کنار
-    ۸۱٪ درگیر تأمین غذا.
+  fun_fact_fa: از هر چهار نفر سه نفر، یعنی ۷۵٪، از پس هزینه درمان برنمی‌آیند. ۸۱٪
+    هم برای غذا تنگنا دارند.
   options:
   - label_en: 48%
     label_fa: ٪۴۸
@@ -349,16 +349,17 @@
   difficulty: 4
   surprise_note: 41 per 100 reads shockingly high vs the traditional-family prior
   prompt_en: How many divorces were registered per 100 marriages (1403)?
-  prompt_fa: در سال ۱۴۰۳ در برابر هر ۱۰۰ ازدواج چند طلاق ثبت شد؟
+  prompt_fa: در ۱۴۰۳ به‌ازای هر ۱۰۰ ازدواج چند طلاق ثبت شد؟
   hint_en: Divorces in one year per 100 marriages that same year — not the fate of every 100 couples.
-  hint_fa: نسبت طلاق‌های یک سال به ازدواج‌های همان سال — نه سرنوشت هر ۱۰۰ زوج.
+  hint_fa: یعنی طلاق‌های یک سال را با ازدواج‌های همان سال می‌سنجیم. ربطی به این ندارد
+    که هر صد عروس و داماد چه شدند.
   stat_ids:
   - divorce-per-100-marriages-1403
   correct_index: 2
   fun_fact_en: 41 divorces per 100 marriages — ثبت احوال itself warns this same-year
     ratio is statistically misleading, but its rise still signals deep family change.
-  fun_fact_fa: ۴۱ طلاق در برابر هر ۱۰۰ ازدواج — خود ثبت احوال هشدار می‌دهد این نسبت
-    هم‌سال از نظر آماری گمراه‌کننده است، اما رشد آن نشانه دگرگونی عمیق خانواده است.
+  fun_fact_fa: ۴۱ طلاق به‌ازای هر ۱۰۰ ازدواج. خود ثبت احوال می‌گوید این سنجه هم‌سال
+    از نظر آماری گمراه‌کننده است، ولی بالا رفتنش از تغییر عمیق خانواده خبر می‌دهد.
   options:
   - label_en: 18 per 100
     label_fa: ۱۸ در هر ۱۰۰
@@ -374,15 +375,15 @@
   surprise_note: Tertiary enrollment (about 59%) surprises those who assume single
     digits or near-universal
   prompt_en: What is Iran's gross tertiary (university) enrollment ratio (2022)?
-  prompt_fa: نسبت ناخالص ثبت‌نام دانشگاهی ایران (۲۰۲۲) چقدر است؟
+  prompt_fa: چند درصد جوان‌های سن دانشگاه در ایران دانشگاه می‌روند؟ (۲۰۲۲)
   hint_en: Gross ratio means all enrolled students divided by the college-age population, whatever their age.
-  hint_fa: نسبت ناخالص یعنی تعداد ثبت‌نام‌شدگان به کل جمعیت سن دانشگاه، حتی اگر سن‌شان بیشتر باشد.
+  hint_fa: نسبت ناخالص یعنی همه دانشجوها، به هر سنی، تقسیم بر جمعیت سن دانشگاه.
   stat_ids:
   - tertiary-gross-enrollment-2022
   correct_index: 2
   fun_fact_en: At 58.7%, well over half the college-age cohort is enrolled in tertiary
     education.
-  fun_fact_fa: با ۵۸٫۷٪، بیش از نیمی از گروه سنی دانشگاه در آموزش عالی ثبت‌نام‌اند.
+  fun_fact_fa: ۵۸٫۷٪. یعنی بیش از نیمی از جوان‌های سن دانشگاه در آموزش عالی‌اند.
   options:
   - label_en: 31%
     label_fa: ٪۳۱
@@ -398,12 +399,12 @@
   surprise_note: Two-thirds absolutist 'never cut' stance is stronger than players
     expect
   prompt_en: What share of Iranians say the internet must never be cut off (2026)?
-  prompt_fa: چند درصد ایرانیان معتقدند اینترنت هرگز نباید قطع شود (۱۴۰۵)؟
+  prompt_fa: چند درصد مردم می‌گویند اینترنت را هیچ‌وقت نباید قطع کرد؟ (۱۴۰۵)
   stat_ids:
   - internet-must-never-be-cut-2026
   correct_index: 2
   fun_fact_en: 67% say never — and 57.6% oppose even crisis-time cutoffs.
-  fun_fact_fa: ۶۷٪ می‌گویند هرگز — و ۵۷٫۶٪ حتی با قطع اینترنت در بحران‌ها مخالف‌اند.
+  fun_fact_fa: ۶۷٪ می‌گویند هیچ‌وقت. ۵۷٫۶٪ حتی با قطعی اینترنت در بحران هم مخالف‌اند.
   options:
   - label_en: 44%
     label_fa: ٪۴۴
@@ -419,13 +420,12 @@
   surprise_note: 85% youth saturation beats the already-high 74% national figure players
     know
   prompt_en: What share of Iranians under 30 use a VPN / filter-breaker (2026)?
-  prompt_fa: چند درصد ایرانیان زیر ۳۰ سال از وی‌پی‌ان یا فیلترشکن استفاده می‌کنند
-    (۱۴۰۵)؟
+  prompt_fa: بین زیر ۳۰ ساله‌ها، چند درصد وی‌پی‌ان یا فیلترشکن دارند؟ (۱۴۰۵)
   stat_ids:
   - vpn-use-among-under-30s-2026
   correct_index: 2
   fun_fact_en: 85% of under-30s — vs 74.4% of the whole population.
-  fun_fact_fa: ۸۵٪ زیر ۳۰ ساله‌ها — در برابر ۷۴٫۴٪ کل جمعیت.
+  fun_fact_fa: ۸۵٪ زیر ۳۰ ساله‌ها. در کل جمعیت ۷۴٫۴٪ است.
   options:
   - label_en: 58%
     label_fa: ٪۵۸
@@ -441,16 +441,16 @@
   surprise_note: Participation (about 41%) reads low to players used to 60%+ benchmark
     countries
   prompt_en: What is Iran's labor-force participation rate (ages 15+, 1405)?
-  prompt_fa: نرخ مشارکت نیروی کار ایران (۱۵+، ۱۴۰۵) چقدر است؟
+  prompt_fa: چند درصد آدم‌های بالای ۱۵ سال در بازار کارند؟ (۱۴۰۵)
   hint_en: Participation means the share of people 15+ who are working or looking for work.
-  hint_fa: مشارکت یعنی سهم افراد ۱۵ سال به بالا که یا شاغل‌اند یا دنبال کار می‌گردند.
+  hint_fa: مشارکت یعنی چند درصد آدم‌های بالای ۱۵ سال یا کار می‌کنند یا دنبال کارند.
   stat_ids:
   - labor-force-participation-15-1405
   correct_index: 1
   fun_fact_en: Only 40.7% participate — women's participation near 14% drives the
     low total.
-  fun_fact_fa: فقط ۴۰٫۷٪ مشارکت می‌کنند — مشارکت زنان با حدود ۱۴٪ میانگین را پایین
-    می‌کشد.
+  fun_fact_fa: فقط ۴۰٫۷٪. مشارکت پایین زنان، با حدود ۱۴٪، میانگین کل را پایین نگه
+    داشته است.
   options:
   - label_en: 28.4%
     label_fa: ٪۲۸٫۴

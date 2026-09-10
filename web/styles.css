@@ -144,11 +144,12 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 /* Data labels on the original slider: guess pill above, truth pill below.
    Overlay is forced LTR so % always maps to left%. */
 .range-wrap { position: relative; flex: 1; display: flex; align-items: center; }
-.range-wrap input[type="range"] { width: 100%; }
-.marks { position: absolute; inset: 0; pointer-events: none; direction: ltr; }
+.range-wrap input[type="range"] { width: 100%; direction: ltr; }
+.marks { position: absolute; top: 0; bottom: 0; left: 10px; right: 10px; pointer-events: none; direction: ltr; }
 .mark {
   position: absolute; top: -1.7rem; transform: translateX(-50%);
   font-size: 0.8rem; font-weight: 700; white-space: nowrap;
+  max-width: 44%; overflow: hidden; text-overflow: ellipsis;
   border: 2px solid var(--ink); border-radius: 999px; padding: 0 0.55rem;
   background: var(--ticket); color: var(--ink);
 }
@@ -224,6 +225,8 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 }
 .primary:hover { filter: brightness(1.08); }
 .primary:disabled { opacity: 0.5; cursor: default; }
+/* Quiz actions span the full card width */
+#btn-submit-guess, #btn-next { display: block; width: 100%; }
 
 /* ONE orchestrated start moment: ticket deals in */
 body.dealing .ticket, body.dealing .hook-ticket { animation: deal 0.55s ease; }

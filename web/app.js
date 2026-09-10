@@ -268,7 +268,7 @@ function paintTrack(guess, spec, ok) {
   // track, true-value pill below it. The overlay is LTR so % maps to left%.
   const marks = $("q-marks");
   marks.innerHTML = "";
-  const pct = (v) => Math.max(0, Math.min(100, (v / spec.max) * 100));
+  const pct = (v) => Math.max(6, Math.min(94, (v / spec.max) * 100));
   const mk = (v, cls, label) => {
     const s = document.createElement("span");
     s.className = "mark " + cls + (cls === "mark-truth" ? (ok ? " good" : " miss") : "");
@@ -384,7 +384,7 @@ function submitGuess() {
   let tier, cls;
   if (diff <= 1) { tier = t.exact; cls = "tier-exact"; }
   else if (diff <= spec.tol) { tier = t.close; cls = "tier-close"; }
-  else if (diff <= spec.tol + 7) { tier = t.near; cls = "tier-near"; }
+  else if (diff <= 15) { tier = t.near; cls = "tier-near"; }
   else { tier = t.off; cls = "tier-off"; }
   if (cls === "tier-exact") confettiBurst();
   if (cls === "tier-off") shakeTicket();
