@@ -659,7 +659,6 @@
    "prompt_en": "Comparison — regular prayer (always/mostly) fell from 78.5% in 1394 to what level in 1402?",
    "prompt_fa": "مقایسه — نمازخوانی منظم (همیشه/بیشتر اوقات) از ۷۸٫۵٪ در ۱۳۹۴ به چه سطحی در ۱۴۰۲ رسید؟",
    "stat_ids": [
-    "pray-always-mostly-never-always-mostly-1394",
     "pray-always-mostly-1402"
    ],
    "options": [
@@ -685,18 +684,6 @@
    "fun_fact_fa": "نمازخوانی منظم از ۷۸٫۵٪ (۱۳۹۴) به ۵۴٫۸٪ (۱۴۰۲) سقوط کرد — حدود ۲۴ واحد در کمتر از یک دهه.",
    "answer_stats": [
     {
-     "id": "pray-always-mostly-never-always-mostly-1394",
-     "name_en": "Pray always/mostly / never — always-mostly",
-     "name_fa": null,
-     "value": 78.5,
-     "unit": "percent",
-     "year": 1394,
-     "scope": "national",
-     "source_id": "values-survey-1394",
-     "source_name": "Ministry of Culture and Islamic Guidance (wave 3, PI Javadi Yeganeh)",
-     "source_name_fa": "وزارت ارشاد"
-    },
-    {
      "id": "pray-always-mostly-1402",
      "name_en": "Pray always/mostly",
      "name_fa": null,
@@ -718,7 +705,6 @@
    "prompt_en": "Comparison — the share who never pray rose from 3.1% in 1394 to what in 1402?",
    "prompt_fa": "مقایسه — سهم کسانی که هرگز نماز نمی‌خوانند از ۳٫۱٪ در ۱۳۹۴ به چه عددی در ۱۴۰۲ رسید؟",
    "stat_ids": [
-    "pray-always-mostly-never-never-1394",
     "never-pray-1402"
    ],
    "options": [
@@ -743,18 +729,6 @@
    "fun_fact_en": "Never-praying rose sevenfold, from 3.1% to 22.2% between the two values surveys.",
    "fun_fact_fa": "هرگزنمازخواندن هفت برابر شد، از ۳٫۱٪ به ۲۲٫۲٪ میان دو پیمایش ارزش‌ها.",
    "answer_stats": [
-    {
-     "id": "pray-always-mostly-never-never-1394",
-     "name_en": "Pray always/mostly / never — never",
-     "name_fa": null,
-     "value": 3.1,
-     "unit": "percent",
-     "year": 1394,
-     "scope": "national",
-     "source_id": "values-survey-1394",
-     "source_name": "Ministry of Culture and Islamic Guidance (wave 3, PI Javadi Yeganeh)",
-     "source_name_fa": "وزارت ارشاد"
-    },
     {
      "id": "never-pray-1402",
      "name_en": "Never pray",
@@ -823,7 +797,6 @@
    "prompt_en": "Comparison — 54.8% trusted IRIB in 1394; what share expressed LOW trust in 1402?",
    "prompt_fa": "مقایسه — در ۱۳۹۴ حدود ۵۵٪ به صداوسیما اعتماد داشتند؛ در ۱۴۰۲ چند درصد اعتماد کمی داشتند؟",
    "stat_ids": [
-    "trust-irib-1394",
     "low-trust-in-irib-1394-81-trusted-1402"
    ],
    "options": [
@@ -848,18 +821,6 @@
    "fun_fact_en": "From 54.8% trust (1394) to 58% low trust (1402) — a complete reversal for state TV.",
    "fun_fact_fa": "از ۵۴٫۸٪ اعتماد (۱۳۹۴) به ۵۸٪ بی‌اعتمادی (۱۴۰۲) — وارونگی کامل برای تلویزیون دولتی.",
    "answer_stats": [
-    {
-     "id": "trust-irib-1394",
-     "name_en": "Trust IRIB",
-     "name_fa": null,
-     "value": 54.8,
-     "unit": "percent",
-     "year": 1394,
-     "scope": "national",
-     "source_id": "values-survey-1394",
-     "source_name": "Ministry of Culture and Islamic Guidance (wave 3, PI Javadi Yeganeh)",
-     "source_name_fa": "وزارت ارشاد"
-    },
     {
      "id": "low-trust-in-irib-1394-81-trusted-1402",
      "name_en": "Low trust in IRIB (1394: ~81% trusted)",

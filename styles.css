@@ -114,6 +114,12 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 /* Reveal: the payoff, color answers the action */
 .feedback { margin-top: 1rem; border-top: 2px dashed var(--clay); padding-top: 0.9rem; }
 .feedback.hidden { display: none; }
+.reveal-card {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 0.9rem 1rem 1rem;
+}
 .fb-result { font-size: 1.2rem; font-weight: 900; margin: 0; }
 .fb-result.tier-exact { color: var(--pistachio); }
 .fb-result.tier-close { color: var(--pistachio); }
@@ -122,7 +128,52 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 .fb-result.tier-choice-ok { color: var(--pistachio); }
 .fb-result.tier-choice-bad { color: var(--bazaar); }
 .fb-gap { font-weight: 700; margin: 0.2rem 0; }
-.fb-fact { margin: 0.4rem 0; max-width: 60ch; }
+.fb-fact {
+  margin: 0.6rem 0; max-width: 60ch;
+  border-inline-start: 4px solid var(--marigold);
+  padding-inline-start: 0.7rem;
+}
+/* Big counted-up truth number */
+.truth-big { margin: 0.2rem 0 0; line-height: 1.2; }
+.truth-big.hidden { display: none; }
+#fb-truth-num { font-size: 2.6rem; font-weight: 900; }
+#fb-truth-unit { font-size: 1.3rem; font-weight: 700; margin-inline-start: 0.3rem; }
+/* Guess-vs-truth track: your marker against the true marker */
+.vs-track.hidden { display: none; }
+.vs-track {
+  position: relative; height: 12px; margin: 0.7rem 0 1.1rem;
+  background: var(--clay); border: 1px solid var(--ink); border-radius: 999px;
+}
+.vs-zone { position: absolute; top: 0; bottom: 0; border-radius: 999px; }
+.vs-zone.good { background: var(--pistachio); }
+.vs-zone.miss { background: var(--bazaar); }
+.vs-mark {
+  position: absolute; top: 50%; width: 16px; height: 16px;
+  transform: translate(-50%, -50%); border-radius: 50%;
+  border: 2px solid var(--ink); background: var(--ticket);
+}
+.vs-mark.truth { background: var(--marigold); width: 18px; height: 18px; }
+/* Source as a small stamp chip */
+.source-chip { display: inline-block; margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.source-chip.hidden { display: none; }
+.source-chip:not(.hidden) {
+  border: 1px dashed var(--muted); border-radius: 999px; padding: 0 0.7rem;
+}
+/* Celebration + commiseration (JS-gated on reduced motion) */
+.ticket { position: relative; overflow: hidden; }
+.confetti {
+  position: absolute; top: -8px; width: 8px; height: 12px; border-radius: 2px;
+  animation: fall 0.95s ease-in forwards; pointer-events: none;
+}
+@keyframes fall {
+  to { transform: translate(var(--dx, 0), 340px) rotate(var(--rot, 180deg)); opacity: 0; }
+}
+.shake { animation: shake 0.4s ease; }
+@keyframes shake {
+  0%, 100% { transform: none; }
+  25% { transform: translateX(-7px) rotate(-0.4deg); }
+  60% { transform: translateX(6px) rotate(0.4deg); }
+}
 
 /* Streak: the stakes (single inline readout under the thread) */
 .streak-inline { font-weight: 700; }
