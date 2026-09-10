@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Iran-meter Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,7 +22,7 @@
   <!-- start screen -->
   <section id="screen-start" class="screen">
     <h2 id="start-title">ایران را چقدر می‌شناسید؟</h2>
-    <p id="start-desc">۲۴ پرسش درباره‌ی ایران بر اساس آمار رسمی و نظرسنجی‌ها. بعد از هر پاسخ، جواب درست و نکته‌ی جالب را می‌بینید.</p>
+    <p id="start-desc">۲۰ پرسش تصادفی درباره‌ی ایران بر اساس آمار رسمی و نظرسنجی‌ها. بعد از هر پاسخ، جواب درست و نکته‌ی جالب را می‌بینید.</p>
     <button id="btn-start" class="primary" type="button">شروع آزمون</button>
   </section>
 
@@ -34,6 +37,13 @@
       </div>
       <h2 id="q-prompt"></h2>
       <div id="q-options" class="options"></div>
+      <div id="q-slider" class="slider-block hidden">
+        <div class="slider-row">
+          <input id="q-range" type="range" min="0" max="100" step="1" value="50">
+          <output id="q-guess" for="q-range">۵۰٪</output>
+        </div>
+        <button id="btn-submit-guess" class="primary" type="button"></button>
+      </div>
       <div id="q-feedback" class="feedback hidden">
         <p id="fb-result" class="fb-result"></p>
         <p id="fb-fact" class="fb-fact"></p>
