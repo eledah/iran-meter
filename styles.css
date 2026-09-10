@@ -144,7 +144,7 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
   position: relative; height: 12px; margin: 0.7rem 0 1.1rem;
   background: var(--clay); border: 1px solid var(--ink); border-radius: 999px;
 }
-.vs-zone { position: absolute; top: 0; bottom: 0; border-radius: 999px; }
+.vs-zone { position: absolute; top: 0; bottom: 0; border-radius: 999px; transition: left 0.6s ease 1s, width 0.6s ease 1s; }
 .vs-zone.good { background: var(--pistachio); }
 .vs-zone.miss { background: var(--bazaar); }
 .vs-mark {
@@ -175,6 +175,22 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
   60% { transform: translateX(6px) rotate(0.4deg); }
 }
 
+/* Staged reveal: the payoff arrives beat by beat, not all at once.
+   Base styles stay fully visible; keyframes only describe the entrance,
+   so prefers-reduced-motion (animation: none) shows everything instantly. */
+#q-feedback:not(.hidden) .fb-result { animation: rise 0.4s ease both; }
+#q-feedback:not(.hidden) #fb-truth { animation: rise 0.45s ease 0.3s both; }
+#q-feedback:not(.hidden) #fb-track { animation: rise 0.45s ease 0.65s both; }
+#q-feedback:not(.hidden) .fb-gap { animation: rise 0.45s ease 0.95s both; }
+#q-feedback:not(.hidden) .fb-fact { animation: rise 0.45s ease 1.2s both; }
+#q-feedback:not(.hidden) #fb-source { animation: rise 0.45s ease 1.45s both; }
+#q-feedback:not(.hidden) #btn-next { animation: rise 0.45s ease 1.7s both; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+#q-feedback:not(.hidden) .vs-mark { animation: markpop 0.4s ease 1.1s both; }
+@keyframes markpop {
+  from { transform: translate(-50%, -50%) scale(0); }
+  to { transform: translate(-50%, -50%) scale(1); }
+}
 /* Streak: the stakes (single inline readout under the thread) */
 .streak-inline { font-weight: 700; }
 .streak-inline.hidden { display: none; }
