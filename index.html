@@ -3,13 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Iran-meter Quiz</title>
+<title>ایران‌متر | Iran-meter Quiz</title>
+<meta name="description" content="ایران‌متر: ۲۰ سؤال دوزبانه (فارسی/English) درباره‌ی ایران از آمار و نظرسنجی‌های رسمی — حدس بزن، زنجیره بساز، عدد واقعی را ببین. Iran-meter: a bilingual fa/en quiz — 20 guesses about Iran from official stats and polls.">
+<meta name="theme-color" content="#f7f3ea">
+<meta property="og:title" content="ایران‌متر | Iran-meter Quiz">
+<meta property="og:description" content="۲۰ حدس دوزبانه درباره‌ی ایران — زنجیره بساز و عدد واقعی را ببین. A bilingual fa/en quiz: 20 guesses about Iran, build a streak, see the true number.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eledah.github.io/iran-meter/">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='5' y='5' width='54' height='54' rx='10' fill='%23d9a62e' stroke='%2323201a' stroke-width='4'/%3E%3Cline x1='5' y1='32' x2='59' y2='32' stroke='%2323201a' stroke-width='3' stroke-dasharray='7 6'/%3E%3Ccircle cx='32' cy='17' r='6' fill='%23fffdf7' stroke='%2323201a' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#app">پرش به محتوا / Skip to content</a>
 <header class="topbar">
   <h1 id="app-title">ایران‌متر</h1>
   <div class="topbar-side">
@@ -20,7 +30,7 @@
   </div>
 </header>
 
-<main id="app">
+<main id="app" tabindex="-1">
   <!-- start screen: the hook is the quiz itself -->
   <section id="screen-start" class="screen start">
     <div class="hook-ticket">
@@ -50,7 +60,7 @@
       <div id="q-slider" class="slider-block hidden">
         <div class="slider-row">
           <div class="range-wrap">
-            <input id="q-range" type="range" min="0" max="100" step="1" value="50">
+            <input id="q-range" type="range" min="0" max="100" step="1" value="50" aria-describedby="q-prompt">
             <div id="q-marks" class="marks" aria-hidden="true"></div>
           </div>
           <output id="q-guess" for="q-range">۵۰٪</output>

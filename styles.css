@@ -21,6 +21,13 @@ body {
 }
 button, input, output { font-family: inherit; }
 :focus-visible { outline: 3px solid var(--bazaar); outline-offset: 2px; }
+/* Skip link: off-screen until keyboard focus */
+.skip-link {
+  position: absolute; top: -100px; inset-inline-start: 1rem; z-index: 10;
+  background: var(--ink); color: var(--paper); font-weight: 700;
+  padding: 0.5rem 1rem; border-radius: 0 0 10px 10px; text-decoration: none;
+}
+.skip-link:focus { top: 0; }
 
 /* Top bar: slim ledger strip */
 .topbar {
@@ -143,8 +150,8 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 #fb-truth-unit { font-size: 1.3rem; font-weight: 700; margin-inline-start: 0.3rem; }
 /* Data labels on the original slider: guess pill above, truth pill below.
    Overlay is forced LTR so % always maps to left%. */
-.range-wrap { position: relative; flex: 1; display: flex; align-items: center; }
-.range-wrap input[type="range"] { width: 100%; direction: ltr; }
+.range-wrap { position: relative; flex: 1; min-width: 0; display: flex; align-items: center; }
+.range-wrap input[type="range"] { width: 100%; min-width: 0; direction: ltr; }
 .marks { position: absolute; top: 0; bottom: 0; left: 10px; right: 10px; pointer-events: none; direction: ltr; }
 .mark {
   position: absolute; top: -1.7rem; transform: translateX(-50%);
@@ -239,6 +246,14 @@ body.dealing .ticket, body.dealing .hook-ticket { animation: deal 0.55s ease; }
   .hook-ticket h2 { font-size: 1.5rem; }
   #q-prompt { font-size: 1.15rem; }
   main { padding: 1rem 0.75rem 2.5rem; }
+  /* 360px: keep the ticket row, slider, and payoff inside the viewport */
+  .topbar { flex-wrap: wrap; }
+  .ticket-row { flex-wrap: wrap; }
+  .chip { min-width: 0; overflow-wrap: anywhere; }
+  .slider-row { gap: 0.5rem; }
+  .slider-row output { min-width: 4rem; font-size: 1.2rem; }
+  #fb-truth-num { font-size: 2rem; }
+  #fb-truth-unit { font-size: 1.1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none; transition: none; }
