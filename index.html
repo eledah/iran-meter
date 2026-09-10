@@ -6,34 +6,43 @@
 <title>Iran-meter Quiz</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="topbar">
   <h1 id="app-title">ایران‌متر</h1>
-  <div class="lang-toggle" role="group" aria-label="Language">
-    <button id="btn-fa" class="active" type="button">فارسی</button>
-    <button id="btn-en" type="button">EN</button>
+  <div class="topbar-side">
+    <div class="lang-toggle" role="group" aria-label="Language / زبان">
+      <button id="btn-fa" class="active" type="button">فارسی</button>
+      <button id="btn-en" type="button">English</button>
+    </div>
   </div>
 </header>
 
 <main id="app">
-  <!-- start screen -->
-  <section id="screen-start" class="screen">
-    <h2 id="start-title">ایران را چقدر می‌شناسید؟</h2>
-    <p id="start-desc">۲۰ پرسش تصادفی درباره‌ی ایران بر اساس آمار رسمی و نظرسنجی‌ها. بعد از هر پاسخ، جواب درست و نکته‌ی جالب را می‌بینید.</p>
-    <button id="btn-start" class="primary" type="button">شروع آزمون</button>
+  <!-- start screen: the hook is the quiz itself -->
+  <section id="screen-start" class="screen start">
+    <div class="hook-ticket">
+      <h2 id="start-title">ایران را چقدر می‌شناسید؟</h2>
+      <p id="start-hook" class="hook-line"></p>
+      <p id="start-desc"></p>
+      <button id="btn-start" class="primary" type="button">شروع آزمون</button>
+      <p id="start-rules" class="muted"></p>
+    </div>
   </section>
 
   <!-- question screen -->
   <section id="screen-quiz" class="screen hidden">
-    <div class="progress"><div id="progress-fill"></div></div>
-    <p id="progress-label" class="muted"></p>
-    <div class="card">
-      <div class="meta-row">
+    <div class="thread" aria-hidden="true"><div id="progress-fill"></div></div>
+    <div class="quiz-head">
+      <p id="progress-label" class="muted"></p>
+      <p id="quiz-streak" class="streak-inline hidden" aria-live="polite"></p>
+    </div>
+    <article class="ticket">
+      <div class="ticket-row">
         <span id="q-category" class="chip"></span>
-        <span id="q-gauge" class="gauge" title=""></span>
+        <span id="q-gauge" class="gauge"></span>
       </div>
       <h2 id="q-prompt"></h2>
       <div id="q-options" class="options"></div>
@@ -46,18 +55,23 @@
       </div>
       <div id="q-feedback" class="feedback hidden">
         <p id="fb-result" class="fb-result"></p>
+        <p id="fb-gap" class="fb-gap"></p>
         <p id="fb-fact" class="fb-fact"></p>
         <p id="fb-source" class="muted"></p>
         <button id="btn-next" class="primary" type="button"></button>
       </div>
-    </div>
+    </article>
   </section>
 
   <!-- score screen -->
   <section id="screen-score" class="screen hidden">
-    <h2 id="score-title"></h2>
-    <p id="score-total"></p>
+    <div class="rank-stamp">
+      <h2 id="score-rank"></h2>
+      <p id="score-total"></p>
+    </div>
+    <h3 id="score-title" class="score-sub"></h3>
     <ul id="score-breakdown" class="breakdown"></ul>
+    <p id="score-best" class="muted"></p>
     <button id="btn-restart" class="primary" type="button"></button>
   </section>
 </main>
