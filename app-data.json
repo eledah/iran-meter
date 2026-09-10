@@ -185,6 +185,8 @@
    "surprise_note": "Counterintuitive scale of VPN use; one plausible distractor near 60%",
    "prompt_en": "What share of Iranians use a VPN / filter-breaker (2026)?",
    "prompt_fa": "چند درصد ایرانیان از وی‌پی‌ان یا فیلترشکن استفاده می‌کنند (۱۴۰۵)؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "vpn-filter-breaker-use-2026"
    ],
@@ -231,6 +233,8 @@
    "surprise_note": "Players expect hardship but balk at four-in-five struggling for basic food",
    "prompt_en": "What share of Iranians report difficulty securing basic food (2026)?",
    "prompt_fa": "چند درصد ایرانیان در تأمین غذای اولیه خود با دشواری روبه‌رو‌اند (۱۴۰۵)؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "difficulty-securing-basic-food-2026"
    ],
@@ -277,6 +281,8 @@
    "surprise_note": "The gender gap is extreme; players from high-participation countries guess far too high",
    "prompt_en": "What is the female labor-force participation rate in Iran (2025)?",
    "prompt_fa": "نرخ مشارکت نیروی کار زنان در ایران (۲۰۲۵) چقدر است؟",
+   "hint_en": "Participation means the share of people 15+ who are working or looking for work.",
+   "hint_fa": "مشارکت یعنی سهم افراد ۱۵ سال به بالا که یا شاغل‌اند یا دنبال کار می‌گردند.",
    "stat_ids": [
     "female-labor-force-participation-2025"
    ],
@@ -323,6 +329,8 @@
    "surprise_note": "Obscure latest CBI print; several close distractors above 60%",
    "prompt_en": "What was Iran's point-to-point inflation rate (1405, latest CBI print)?",
    "prompt_fa": "نرخ تورم نقطه‌به‌نقطه ایران در سال ۱۴۰۵ چقدر اعلام شد؟",
+   "hint_en": "Point-to-point means prices vs. the same month last year — not the yearly average.",
+   "hint_fa": "تورم نقطه‌به‌نقطه یعنی افزایش قیمت‌ها نسبت به همین ماه در سال قبل — نه میانگین کل سال.",
    "stat_ids": [
     "point-to-point-inflation-1405"
    ],
@@ -369,6 +377,8 @@
    "surprise_note": "The 1394 to 1402 drop (78.5% to 54.8%) is much steeper than most guess",
    "prompt_en": "Comparison — regular prayer (always/mostly) fell from 78.5% in 1394 to what level in 1402?",
    "prompt_fa": "مقایسه — نمازخوانی منظم (همیشه/بیشتر اوقات) از ۷۸٫۵٪ در ۱۳۹۴ به چه سطحی در ۱۴۰۲ رسید؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "pray-always-mostly-1402"
    ],
@@ -415,6 +425,8 @@
    "surprise_note": "Agreement was only 30.7% in 1394 — players anchor on the old religious-consensus era",
    "prompt_en": "What share of Iranians agree that religion and politics should be separate (1402 values survey)?",
    "prompt_fa": "در پیمایش ارزش‌های ۱۴۰۲، چند درصد ایرانیان با جدایی دین از سیاست موافق‌اند؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "separation-of-religion-politics-agree-1402"
    ],
@@ -461,6 +473,8 @@
    "surprise_note": "The sevenfold rise in never-praying (3.1% to 22.2%) is the surveys' most shocking finding",
    "prompt_en": "Comparison — the share who never pray rose from 3.1% in 1394 to what in 1402?",
    "prompt_fa": "مقایسه — سهم کسانی که هرگز نماز نمی‌خوانند از ۳٫۱٪ در ۱۳۹۴ به چه عددی در ۱۴۰۲ رسید؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "never-pray-1402"
    ],
@@ -507,6 +521,8 @@
    "surprise_note": "Players guess unemployment, but inflation dominates as the named top problem",
    "prompt_en": "What share of Iranians name inflation as the country's most important problem (1402 values survey)?",
    "prompt_fa": "چند درصد ایرانیان تورم را مهم‌ترین مشکل کشور می‌دانند (پیمایش ارزش‌ها ۱۴۰۲)؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "inflation-most-important-national-problem-1402"
    ],
@@ -553,6 +569,8 @@
    "surprise_note": "True figure (about 39%) sits between alarmist (over 60%) and dismissive (under 20%) guesses",
    "prompt_en": "What share of Iranians would emigrate permanently if they could (1402 values survey)?",
    "prompt_fa": "چند درصد ایرانیان در صورت امکان برای همیشه مهاجرت می‌کنند (پیمایش ۱۴۰۲)؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "would-emigrate-permanently-if-possible-1402"
    ],
@@ -599,6 +617,8 @@
    "surprise_note": "World-record 63.6% daily anger — players guess far lower, near global averages",
    "prompt_en": "What share of Iranians report high anger or rage in daily life (2026)?",
    "prompt_fa": "چند درصد ایرانیان از خشم یا عصبانیت شدید در زندگی روزمره می‌گویند (۱۴۰۵)؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "high-anger-rage-in-daily-life-2026"
    ],
@@ -645,6 +665,8 @@
    "surprise_note": "The youth-to-overall ratio (about 2.5x) is the surprise; absolute level has close distractors",
    "prompt_en": "What is Iran's youth unemployment rate (ages 15-24, 1405)?",
    "prompt_fa": "نرخ بیکاری جوانان ایران (۱۵ تا ۲۴ سال، ۱۴۰۵) چقدر است؟",
+   "hint_en": "The share of 15–24-year-olds in the labor force who don't have a job.",
+   "hint_fa": "سهم جوانان ۱۵ تا ۲۴ ساله‌ی حاضر در بازار کار که شغلی ندارند.",
    "stat_ids": [
     "youth-unemployment-1524-1405"
    ],
@@ -691,6 +713,8 @@
    "surprise_note": "In 1394 a majority trusted IRIB (54.8%); by 1402 a majority distrusts it (58% low trust) — a full reversal",
    "prompt_en": "Comparison — 54.8% trusted IRIB in 1394; what share expressed LOW trust in 1402?",
    "prompt_fa": "مقایسه — در ۱۳۹۴ حدود ۵۵٪ به صداوسیما اعتماد داشتند؛ در ۱۴۰۲ چند درصد اعتماد کمی داشتند؟",
+   "hint_en": "Two different measures: trust in 1394 vs. distrust in 1402.",
+   "hint_fa": "دو سنجه متفاوت: اعتماد در ۱۳۹۴ در برابر بی‌اعتمادی در ۱۴۰۲.",
    "stat_ids": [
     "low-trust-in-irib-1394-81-trusted-1402"
    ],
@@ -737,6 +761,8 @@
    "surprise_note": "Near-unanimity (91.8%) surprises players who expect a large satisfied minority",
    "prompt_en": "What share of Iranians are dissatisfied with the country's situation (1402)?",
    "prompt_fa": "چند درصد ایرانیان از وضعیت کشور ناراضی‌اند (۱۴۰۲)؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "dissatisfied-with-country-s-situation-1402"
    ],
@@ -783,6 +809,8 @@
    "surprise_note": "Tehran-city 15% is far below the 30% national figure players anchor on",
    "prompt_en": "What was the predicted turnout in Tehran city for the March 2024 elections?",
    "prompt_fa": "مشارکت پیش‌بینی‌شده در شهر تهران برای انتخابات اسفند ۱۴۰۲ چقدر بود؟",
+   "hint_en": "A pre-election poll forecast, not the final result.",
+   "hint_fa": "پیش‌بینی نظرسنجیِ پیش از انتخابات است، نه نتیجه نهایی.",
    "stat_ids": [
     "predicted-turnout-tehran-city-2024"
    ],
@@ -829,6 +857,8 @@
    "surprise_note": "Three-in-four unable to afford care shocks players used to universal-care assumptions",
    "prompt_en": "What share of Iranians say they can't afford medical costs (2026)?",
    "prompt_fa": "چند درصد ایرانیان می‌گویند از پس هزینه‌های درمانی برنمی‌آیند (۱۴۰۵)؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "can-t-afford-medical-costs-2026"
    ],
@@ -875,6 +905,8 @@
    "surprise_note": "41 per 100 reads shockingly high vs the traditional-family prior",
    "prompt_en": "How many divorces were registered per 100 marriages (1403)?",
    "prompt_fa": "در سال ۱۴۰۳ در برابر هر ۱۰۰ ازدواج چند طلاق ثبت شد؟",
+   "hint_en": "Divorces in one year per 100 marriages that same year — not the fate of every 100 couples.",
+   "hint_fa": "نسبت طلاق‌های یک سال به ازدواج‌های همان سال — نه سرنوشت هر ۱۰۰ زوج.",
    "stat_ids": [
     "divorce-per-100-marriages-1403"
    ],
@@ -921,6 +953,8 @@
    "surprise_note": "Tertiary enrollment (about 59%) surprises those who assume single digits or near-universal",
    "prompt_en": "What is Iran's gross tertiary (university) enrollment ratio (2022)?",
    "prompt_fa": "نسبت ناخالص ثبت‌نام دانشگاهی ایران (۲۰۲۲) چقدر است؟",
+   "hint_en": "Gross ratio means all enrolled students divided by the college-age population, whatever their age.",
+   "hint_fa": "نسبت ناخالص یعنی تعداد ثبت‌نام‌شدگان به کل جمعیت سن دانشگاه، حتی اگر سن‌شان بیشتر باشد.",
    "stat_ids": [
     "tertiary-gross-enrollment-2022"
    ],
@@ -967,6 +1001,8 @@
    "surprise_note": "Two-thirds absolutist 'never cut' stance is stronger than players expect",
    "prompt_en": "What share of Iranians say the internet must never be cut off (2026)?",
    "prompt_fa": "چند درصد ایرانیان معتقدند اینترنت هرگز نباید قطع شود (۱۴۰۵)؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "internet-must-never-be-cut-2026"
    ],
@@ -1013,6 +1049,8 @@
    "surprise_note": "85% youth saturation beats the already-high 74% national figure players know",
    "prompt_en": "What share of Iranians under 30 use a VPN / filter-breaker (2026)?",
    "prompt_fa": "چند درصد ایرانیان زیر ۳۰ سال از وی‌پی‌ان یا فیلترشکن استفاده می‌کنند (۱۴۰۵)؟",
+   "hint_en": null,
+   "hint_fa": null,
    "stat_ids": [
     "vpn-use-among-under-30s-2026"
    ],
@@ -1059,6 +1097,8 @@
    "surprise_note": "Participation (about 41%) reads low to players used to 60%+ benchmark countries",
    "prompt_en": "What is Iran's labor-force participation rate (ages 15+, 1405)?",
    "prompt_fa": "نرخ مشارکت نیروی کار ایران (۱۵+، ۱۴۰۵) چقدر است؟",
+   "hint_en": "Participation means the share of people 15+ who are working or looking for work.",
+   "hint_fa": "مشارکت یعنی سهم افراد ۱۵ سال به بالا که یا شاغل‌اند یا دنبال کار می‌گردند.",
    "stat_ids": [
     "labor-force-participation-15-1405"
    ],

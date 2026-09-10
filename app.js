@@ -201,6 +201,9 @@ function renderQuestion() {
   g.title = `${DIFF_LABEL[lang][q.difficulty] || ""} (${num(q.difficulty)}/${num(5)})`;
   g.setAttribute("aria-label", g.title);
   $("q-prompt").textContent = lang === "fa" ? q.prompt_fa : q.prompt_en;
+  const hintText = lang === "fa" ? (q.hint_fa || "") : (q.hint_en || "");
+  $("q-hint").textContent = hintText;
+  $("q-hint").classList.toggle("hidden", !hintText);
   const box = $("q-options");
   const slider = $("q-slider");
   box.innerHTML = "";
