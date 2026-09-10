@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iran-meter Quiz</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <h1 id="app-title">ایران‌متر</h1>
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button id="btn-fa" class="active" type="button">فارسی</button>
+    <button id="btn-en" type="button">EN</button>
+  </div>
+</header>
+
+<main id="app">
+  <!-- start screen -->
+  <section id="screen-start" class="screen">
+    <h2 id="start-title">ایران را چقدر می‌شناسید؟</h2>
+    <p id="start-desc">۲۴ پرسش درباره‌ی ایران بر اساس آمار رسمی و نظرسنجی‌ها. بعد از هر پاسخ، جواب درست و نکته‌ی جالب را می‌بینید.</p>
+    <button id="btn-start" class="primary" type="button">شروع آزمون</button>
+  </section>
+
+  <!-- question screen -->
+  <section id="screen-quiz" class="screen hidden">
+    <div class="progress"><div id="progress-fill"></div></div>
+    <p id="progress-label" class="muted"></p>
+    <div class="card">
+      <div class="meta-row">
+        <span id="q-category" class="chip"></span>
+        <span id="q-gauge" class="gauge" title=""></span>
+      </div>
+      <h2 id="q-prompt"></h2>
+      <div id="q-options" class="options"></div>
+      <div id="q-feedback" class="feedback hidden">
+        <p id="fb-result" class="fb-result"></p>
+        <p id="fb-fact" class="fb-fact"></p>
+        <p id="fb-source" class="muted"></p>
+        <button id="btn-next" class="primary" type="button"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- score screen -->
+  <section id="screen-score" class="screen hidden">
+    <h2 id="score-title"></h2>
+    <p id="score-total"></p>
+    <ul id="score-breakdown" class="breakdown"></ul>
+    <button id="btn-restart" class="primary" type="button"></button>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
