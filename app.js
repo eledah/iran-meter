@@ -29,28 +29,28 @@ const STR = {
   fa: {
     title: "ایران‌متر",
     startTitle: "ایران را چقدر می‌شناسید؟",
-    startHook: "۲۰ حدس، یک زنجیره، یک لقب در پایان",
-    startDesc: "۲۰ پرسش تصادفی درباره‌ی ایران بر اساس آمار رسمی و نظرسنجی‌ها. روی عدد چانه بزنید، زنجیره بسازید و بعد از هر پاسخ جواب درست و نکته‌ی جالب را ببینید.",
-    startRules: "حدس عددی: درصدی‌ها تا ۵ واحد و سنی‌ها تا ۳ سال خطا قبول است. پاسخ چندگزینه‌ای یا درست است یا نه. زنجیره با هر پاسخ درست بالا می‌رود و با یک اشتباه می‌شکند.",
+    startHook: "۲۰ حدس بزن و آخرش لقب بگیر",
+    startDesc: "۲۰ سؤال تصادفی درباره ایران داریم. همه از آمار رسمی و نظرسنجی‌هاست. حدس بزن و زنجیره بساز. بعد هر جواب، عدد درست را با نکته پشتش می‌بینی.",
+    startRules: "درصدی‌ها تا ۵ واحد خطا قبول است. سنی‌ها تا ۳ سال. چندگزینه‌ای یا درست است یا غلط. هر جواب درست زنجیره را یکی بیشتر می‌کند. با یک غلط زنجیره می‌پرد.",
     start: "بزن بریم",
-    next: "سؤال بعد", finish: "دیدن نتیجه",
+    next: "سؤال بعدی", finish: "نتیجه را ببین",
     progress: (a, b) => `سؤال ${toFa(a)} از ${toFa(b)}`,
     submit: "ثبت حدس",
     unitName: (u) => (u === "years" ? "سال" : "٪"),
     fmtVal: (v, u) => (u === "years" ? `${toFa(v)} سال` : `${toFa(v)}٪`),
     source: (n) => `منبع: ${n}`,
-    scoreTitle: "کارنامه‌ی شما بر پایه‌ی سختی",
+    scoreTitle: "کارنامه‌ات بر اساس سختی سؤال‌ها",
     diffRow: (d, c, t) => `سطح ${toFa(d)}: ${toFa(c)} از ${toFa(t)} درست`,
     restart: "یک دست دیگر",
-    loadErr: "خطا در بارگذاری app-data.json",
+    loadErr: "app-data.json بارگذاری نشد",
     streak: (s) => `زنجیره‌ی ${toFa(s)}تایی`,
     // slider closeness tiers
-    exact: "دقیق زدید",
-    close: "درست است، نزدیک بود",
+    exact: "آفرین، دقیق زدید",
+    close: "درست است و خیلی نزدیک",
     near: "نزدیک بود ولی نشد",
-    off: "خیلی دور بود",
-    choiceOk: "درست گفتید",
-    choiceBad: "اشتباه شد",
+    off: "این یکی خیلی دور بود",
+    choiceOk: "آفرین، درست است",
+    choiceBad: "این را اشتباه گفتید",
     yourGuess: (g, u) => `حدس شما: ${fmtV(g, u)}`,
     truth: (v, u) => `عدد درست: ${fmtV(v, u)}`,
     gap: (d, u) => `فاصله‌ی شما: ${toFa(d)} ${u === "years" ? "سال" : "واحد"}`,
@@ -390,7 +390,7 @@ function submitGuess() {
   if (cls === "tier-off") shakeTicket();
   const r1 = Math.round(diff * 10) / 10;
   showFeedback(tier, cls,
-    `${t.yourGuess(guess, spec.unit)} — ${t.truth(Math.round(truth * 10) / 10, spec.unit)} — ${t.gap(r1, spec.unit)}`,
+    `${t.yourGuess(guess, spec.unit)} • ${t.truth(Math.round(truth * 10) / 10, spec.unit)} • ${t.gap(r1, spec.unit)}`,
     { guess, truth, spec, ok });
 }
 
