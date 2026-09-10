@@ -84,8 +84,8 @@
   category: internet
   difficulty: 4
   surprise_note: Both platforms are filtered yet huge; players underestimate the Instagram-Telegram gap
-  prompt_en: Comparison — which platform do more Iranians use, Instagram (about 51%) or Telegram (about 39%)?
-  prompt_fa: مقایسه — کاربران اینستاگرام (حدود ۵۱٪) بیشترند یا تلگرام (حدود ۳۹٪)؟
+  prompt_en: Comparison — which platform do more Iranians use, Instagram or Telegram?
+  prompt_fa: مقایسه — کاربران کدام پیام‌رسان/شبکه بیشترند، اینستاگرام یا تلگرام؟
   stat_ids:
   - instagram-users-2024
   - telegram-users-2024
@@ -93,14 +93,14 @@
   fun_fact_en: Instagram leads at 50.6% vs Telegram at 39.3% (2024) — both filtered, both massive.
   fun_fact_fa: اینستاگرام با ۵۰٫۶٪ جلوتر از تلگرام با ۳۹٫۳٪ است (۱۴۰۳) — هر دو فیلتر، هر دو پرمخاطب.
   options:
-  - label_en: Telegram, ~39%
-    label_fa: تلگرام، حدود ٪۳۹
-  - label_en: Instagram, ~51%
-    label_fa: اینستاگرام، حدود ٪۵۱
-  - label_en: Equal, ~45% each
-    label_fa: برابر، هر کدام حدود ٪۴۵
-  - label_en: Neither tops 30%
-    label_fa: هیچ‌کدام به ٪۳۰ نمی‌رسد
+  - label_en: Telegram has more users
+    label_fa: کاربران تلگرام بیشترند
+  - label_en: Instagram has more users
+    label_fa: کاربران اینستاگرام بیشترند
+  - label_en: They are about equal
+    label_fa: تقریباً برابرند
+  - label_en: Neither reaches a third of Iranians
+    label_fa: هیچ‌کدام به یک‌سوم ایرانیان نمی‌رسد
 - id: q-economy-01
   category: economy
   difficulty: 3
