@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Iran-meter source-backed index inventory">
+  <title>فهرست شاخص‌ها | ایران‌متر</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="indexes.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">پرش به جدول</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">◌</span><span>ایران‌متر / Observatory</span></a>
+    <nav aria-label="ناوبری"><a href="index.html" data-fa="بازگشت به آزمون" data-en="Back to quiz">بازگشت به آزمون</a><button id="language-toggle" type="button">English</button></nav>
+  </header>
+  <main id="main" class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">OBSERVATORY · DATA INVENTORY</p>
+      <h1 id="page-title"><span data-fa="فهرست شاخص‌ها" data-en="Index inventory">فهرست شاخص‌ها</span></h1>
+      <p class="lede" data-fa="این فهرست، مشاهده‌های ثبت‌شده و منبع‌محور درباره ایران را کنار هم می‌گذارد؛ نه فهرست همه اعداد سال جاری است و نه تعریف‌های یکتای همه شاخص‌ها." data-en="A source-backed inventory of recorded observations about Iran—not a list of all current-year figures or a set of unique indicator definitions.">این فهرست، مشاهده‌های ثبت‌شده و منبع‌محور درباره ایران را کنار هم می‌گذارد؛ نه فهرست همه اعداد سال جاری است و نه تعریف‌های یکتای همه شاخص‌ها.</p>
+      <p class="notice" data-fa="نام‌های اصلی منبع حفظ شده‌اند؛ در نبود نام فارسی، نام انگلیسی نمایش داده می‌شود. این جدول شامل پاسخ‌های آزمون هم هست." data-en="Source labels are retained; where no Persian name exists, the English label is shown. This inventory includes quiz answers.">نام‌های اصلی منبع حفظ شده‌اند؛ در نبود نام فارسی، نام انگلیسی نمایش داده می‌شود. این جدول شامل پاسخ‌های آزمون هم هست.</p>
+    </section>
+    <section class="summary" aria-label="خلاصه فهرست">
+      <div><strong id="total-records">—</strong><span data-fa="رکورد ثبت‌شده" data-en="recorded observations">رکورد ثبت‌شده</span></div>
+      <div><strong id="total-sources">—</strong><span data-fa="منبع" data-en="sources">منبع</span></div>
+      <div><strong id="quiz-records">—</strong><span data-fa="رکورد استفاده‌شده در آزمون" data-en="quiz-referenced records">رکورد استفاده‌شده در آزمون</span></div>
+    </section>
+    <section class="controls" aria-labelledby="filters-title">
+      <div class="controls-heading"><h2 id="filters-title" data-fa="جست‌وجو و فیلتر" data-en="Search and filter">جست‌وجو و فیلتر</h2><button class="button secondary" id="clear-filters" type="button" data-fa="پاک‌کردن فیلترها" data-en="Clear filters">پاک‌کردن فیلترها</button></div>
+      <label class="search-label" for="search"><span data-fa="جست‌وجو در شناسه، نام، منبع، دوره، واحد و یادداشت‌ها" data-en="Search ID, name, source, period, unit and notes">جست‌وجو در شناسه، نام، منبع، دوره، واحد و یادداشت‌ها</span><input id="search" data-filter="query" type="search" autocomplete="off" placeholder="مثلاً inflation یا تورم"></label>
+      <div class="filter-grid">
+        <label><span data-fa="منبع" data-en="Source">منبع</span><select id="source-filter" data-filter="source"><option value="">همه</option></select></label>
+        <label><span data-fa="اعتماد" data-en="Confidence">اعتماد</span><select id="confidence-filter" data-filter="confidence"><option value="">همه</option></select></label>
+        <label><span data-fa="واحد" data-en="Unit">واحد</span><select id="unit-filter" data-filter="unit"><option value="">همه</option></select></label>
+        <label><span data-fa="محدوده" data-en="Scope">محدوده</span><select id="scope-filter" data-filter="scope"><option value="">همه</option></select></label>
+        <label><span data-fa="استفاده در آزمون" data-en="Quiz usage">استفاده در آزمون</span><select id="quiz-filter"><option value="">همه</option><option value="used">استفاده‌شده</option><option value="unused">استفاده‌نشده</option></select></label>
+      </div>
+    </section>
+    <section class="table-section" aria-labelledby="table-title">
+      <div class="table-heading"><div><h2 id="table-title" data-fa="همه رکوردها" data-en="All records">همه رکوردها</h2><p id="result-count" aria-live="polite">در حال بارگذاری…</p></div><button class="button primary" id="export-csv" type="button" disabled>دانلود CSV</button></div>
+      <div id="loading-state" class="state-message">در حال بارگذاری داده‌ها…</div>
+      <div id="error-state" class="state-message error" hidden><p>بارگذاری داده‌ها ناموفق بود.</p><button id="retry-load" class="button secondary" type="button">تلاش دوباره</button></div>
+      <div id="empty-state" class="state-message" hidden><p>رکوردی با این فیلترها پیدا نشد.</p><button class="button secondary" type="button" id="empty-clear">پاک‌کردن فیلترها</button></div>
+      <div class="table-wrap"><table id="index-table"><caption class="sr-only">فهرست کامل شاخص‌های منبع‌محور</caption><thead><tr><th scope="col"><button type="button" data-sort="name_en" aria-sort="none">نام / جزئیات</button></th><th scope="col"><button type="button" data-sort="id" aria-sort="ascending">شناسه</button></th><th scope="col"><button type="button" data-sort="value" aria-sort="none">مقدار</button></th><th scope="col">واحد</th><th scope="col"><button type="button" data-sort="period" aria-sort="none">دوره مرجع</button></th><th scope="col">محدوده</th><th scope="col"><button type="button" data-sort="source" aria-sort="none">منبع</button></th><th scope="col">اعتماد</th><th scope="col"><button type="button" data-sort="quiz" aria-sort="none">آزمون</button></th></tr></thead><tbody id="index-body"></tbody></table></div>
+      <div class="table-footer"><span id="result-range"></span><span id="live-status" class="sr-only" aria-live="polite"></span><label><span data-fa="تعداد در صفحه" data-en="Rows per page">تعداد در صفحه</span><select id="page-size"><option value="50">50</option><option value="100">100</option><option value="all">همه</option></select></label><button id="prev-page" class="button secondary" type="button">قبلی</button><span id="page-number" aria-live="polite">1 / 1</span><button id="next-page" class="button secondary" type="button">بعدی</button></div>
+    </section>
+  </main>
+  <script src="indexes.js"></script>
+</body>
+</html>

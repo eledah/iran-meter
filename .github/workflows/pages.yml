@@ -40,7 +40,7 @@ jobs:
       - name: Export and verify static data
         run: |
           python tools/export_web.py
-          if [ -f tools/export_indexes.py ]; then python tools/export_indexes.py; fi
+          python tools/export_indexes.py
           git diff --exit-code -- web/
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
