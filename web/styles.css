@@ -8,6 +8,7 @@
   --bazaar: #b3402a;
   --pistachio: #3e7a4e;
   --marigold: #d9a62e;
+  --amber: #c26a1b;
   --muted: #6f675a;
 }
 * { box-sizing: border-box; }
@@ -135,14 +136,18 @@ main {
 .feedback.hidden { display: none; }
 /* Reveal flows with the question — no separate box, the answer completes it */
 .reveal-card { margin-top: 0.6rem; }
-.fb-result { font-size: 1.2rem; font-weight: 900; margin: 0; }
+/* Tier verdicts read as stamps, not sentences */
+.fb-result {
+  display: inline-block; font-size: 1.5rem; font-weight: 900; margin: 0;
+  border: 3px solid currentColor; border-radius: 10px;
+  padding: 0.05rem 1rem; transform: rotate(-1.5deg);
+}
 .fb-result.tier-exact { color: var(--pistachio); }
 .fb-result.tier-close { color: var(--pistachio); }
-.fb-result.tier-near { color: var(--bazaar); }
+.fb-result.tier-near { color: var(--amber); }
 .fb-result.tier-off { color: var(--bazaar); }
 .fb-result.tier-choice-ok { color: var(--pistachio); }
 .fb-result.tier-choice-bad { color: var(--bazaar); }
-.fb-gap { font-weight: 700; margin: 0.2rem 0; }
 .fb-fact {
   margin: 0.6rem 0; max-width: 60ch;
   border-inline-start: 4px solid var(--marigold);
@@ -179,6 +184,20 @@ main {
 .range-wrap input[type="range"]:disabled::-moz-range-thumb { background: var(--clay); cursor: default; }
 /* Data points on the slider: guess pill above, big truth pill below,
    colored zone spanning the distance between them. */
+/* Live drag bubble: rides above the thumb with the current value */
+.bubble {
+  position: absolute; top: -2.5rem; transform: translateX(-50%);
+  font-size: 1rem; font-weight: 900; white-space: nowrap;
+  background: var(--ink); color: var(--paper);
+  border-radius: 999px; padding: 0 0.7rem;
+  pointer-events: none;
+}
+.bubble.hidden { display: none; }
+#q-bubble {
+  position: absolute; top: 0; bottom: 0; left: 13px; right: 13px;
+  pointer-events: none; direction: ltr;
+}
+#q-bubble.hidden { display: none; }
 .marks { position: absolute; top: 0; bottom: 0; left: 13px; right: 13px; pointer-events: none; direction: ltr; }
 .zone {
   position: absolute; top: 50%; height: 8px; transform: translateY(-50%);
@@ -186,6 +205,14 @@ main {
 }
 .zone.good { background: var(--pistachio); }
 .zone.miss { background: var(--bazaar); }
+/* the answer's own circle, sitting on the track */
+.dot-truth {
+  position: absolute; top: 50%; width: 18px; height: 18px;
+  transform: translate(-50%, -50%); border-radius: 50%;
+  background: var(--marigold); border: 3px solid var(--ink);
+}
+.dot-truth.good { background: var(--pistachio); }
+.dot-truth.miss { background: var(--bazaar); }
 .mark {
   position: absolute; top: -1.7rem; transform: translateX(-50%);
   font-size: 0.8rem; font-weight: 700; white-space: nowrap;
@@ -229,7 +256,6 @@ main {
    Base styles stay fully visible; keyframes only describe the entrance,
    so prefers-reduced-motion (animation: none) shows everything instantly. */
 #q-feedback:not(.hidden) .fb-result { animation: rise 0.4s ease both; }
-#q-feedback:not(.hidden) .fb-gap { animation: rise 0.45s ease 0.95s both; }
 #q-feedback:not(.hidden) .fb-fact { animation: rise 0.45s ease 1.2s both; }
 #q-feedback:not(.hidden) #btn-next { animation: rise 0.45s ease 1.7s both; }
 @keyframes rise { from { opacity: 0; transform: translateY(12px); } }

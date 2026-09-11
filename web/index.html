@@ -60,6 +60,7 @@
         <div class="slider-row">
           <div class="range-wrap">
             <input id="q-range" type="range" min="0" max="100" step="1" value="50" aria-describedby="q-prompt">
+            <div id="q-bubble" class="hidden"><span id="q-bubble-val" class="bubble"></span></div>
             <div id="q-marks" class="marks" aria-hidden="true"></div>
           </div>
         </div>
@@ -68,7 +69,6 @@
       <div id="q-feedback" class="feedback hidden">
         <div class="reveal-card">
           <p id="fb-result" class="fb-result"></p>
-          <p id="fb-gap" class="fb-gap"></p>
           <p id="fb-fact" class="fb-fact"></p>
         </div>
         <button id="btn-next" class="primary" type="button"></button>

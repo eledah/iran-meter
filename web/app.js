@@ -18,13 +18,21 @@ let bestStreak = 0;
 let perDiff = {}; // difficulty -> {total, correct}
 
 const FA_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
+const CAT_FA = {
+  internet: "اینترنت",
+  economy: "اقتصاد",
+  society: "جامعه",
+  health: "سلامت",
+  demographics: "جمعیت",
+  education: "آموزش",
+};
 const toFa = (n) => String(n).replace(/[0-9]/g, (d) => FA_DIGITS[d]);
 
 const STR = {
   fa: {
     title: "ایران‌متر",
-    startTitle: "ایران را چقدر می‌شناسید؟",
-    startHook: "۲۰ حدس بزن و آخرش لقب بگیر",
+    startTitle: "ایران را چقدر می‌شناسی؟",
+    startHook: "می‌گی می‌شناسی؟ بزن بریم سراغ آمارها",
     startDesc: "۲۰ سؤال تصادفی درباره ایران داریم. همه از آمار رسمی و نظرسنجی‌هاست. حدس بزن و زنجیره بساز. بعد هر جواب، عدد درست را با نکته پشتش می‌بینی.",
     startRules: "درصدی‌ها تا ۵ واحد خطا قبول است. سنی‌ها تا ۳ سال. چندگزینه‌ای یا درست است یا غلط. هر جواب درست زنجیره را یکی بیشتر می‌کند. با یک غلط زنجیره می‌پرد.",
     start: "بزن بریم",
@@ -60,7 +68,7 @@ const STR = {
   en: {
     title: "Iran-meter",
     startTitle: "How well do you know Iran?",
-    startHook: "20 guesses, one streak, one title at the end",
+    startHook: "Well, let's check with the statistics",
     startDesc: "20 random questions about Iran from official stats and polls. Haggle over the number, build a streak, and after each answer see the true value and a fun fact.",
     startRules: "Number guesses: percents count within 5 points, ages within 3 years. Multiple choice is right or wrong. Your streak grows with every correct answer and breaks on one miss.",
     start: "Deal me in",
@@ -199,13 +207,26 @@ function updateStreakUI(pop) {
   if (pop && showIt) { void el.offsetWidth; el.classList.add("pop"); }
 }
 
+/* Live drag bubble: follows the thumb with the current value. */
+function updateBubble() {
+  const b = $("q-bubble-val");
+  if (!b || !QUIZ[idx]) return;
+  const spec = sliderSpec(QUIZ[idx]);
+  const range = $("q-range");
+  const g = Number(range.value);
+  const pct = Math.max(0, Math.min(100, (g / spec.max) * 100));
+  b.style.left = pct + "%";
+  b.textContent = fmtV(g, spec.unit);
+  range.setAttribute("aria-valuetext", fmtV(g, spec.unit));
+}
+
 function renderQuestion() {
   const t = STR[lang];
   const q = QUIZ[idx];
   $("progress-fill").style.width = `${(idx / QUIZ.length) * 100}%`;
   $("progress-fill").parentElement.setAttribute("aria-valuenow", String(Math.round((idx / QUIZ.length) * 100)));
   $("progress-label").textContent = t.progress(idx + 1, QUIZ.length);
-  $("q-category").textContent = q.category || "";
+  $("q-category").textContent = lang === "fa" ? (CAT_FA[q.category] || q.category || "") : (q.category || "");
   $("q-prompt").textContent = lang === "fa" ? q.prompt_fa : q.prompt_en;
   $("q-range").setAttribute("aria-label", $("q-prompt").textContent);
   const hintText = lang === "fa" ? (q.hint_fa || "") : (q.hint_en || "");
@@ -230,6 +251,8 @@ function renderQuestion() {
     $("btn-submit-guess").disabled = false;
     $("btn-submit-guess").classList.remove("hidden");
     $("q-marks").innerHTML = "";
+    $("q-bubble").classList.remove("hidden");
+    updateBubble();
     $("btn-submit-guess").textContent = t.submit;
   } else {
     slider.classList.add("hidden");
@@ -276,6 +299,11 @@ function paintTrack(guess, spec, ok) {
   zone.style.left = lo + "%";
   zone.style.width = Math.max(hi - lo, 1.5) + "%";
   marks.appendChild(zone);
+  // the answer's own circle, sitting on the track
+  const dot = document.createElement("span");
+  dot.className = "dot-truth " + (ok ? "good" : "miss");
+  dot.style.left = pct(truth) + "%";
+  marks.appendChild(dot);
   const mk = (v, cls, label) => {
     const s = document.createElement("span");
     s.className = "mark " + cls + (cls === "mark-truth" ? (ok ? " good" : " miss") : "");
@@ -314,16 +342,15 @@ function shakeTicket() {
   ticket.classList.add("shake");
 }
 
-function showFeedback(tier, tierClass, lines, reveal) {
+function showFeedback(tier, tierClass, reveal) {
   const t = STR[lang];
   const q = QUIZ[idx];
   const r = $("fb-result");
   r.textContent = tier;
   r.className = "fb-result " + tierClass;
   // Reveal: tier + labeled markers painted onto the original slider.
-  // No repeated answer number — the slider's truth pill is the answer.
+  // No repeated answer number, no gap line — the slider says it all.
   if (reveal) paintTrack(reveal.guess, reveal.spec, reveal.ok);
-  $("fb-gap").textContent = lines;
   const fact = lang === "fa" ? (q.fun_fact_fa || "") : (q.fun_fact_en || "");
   $("fb-fact").textContent = fact;
   const last = idx === QUIZ.length - 1;
@@ -349,8 +376,7 @@ function answerChoice(i) {
   });
   showFeedback(
     ok ? t.choiceOk : t.choiceBad,
-    ok ? "tier-choice-ok" : "tier-choice-bad",
-    ""
+    ok ? "tier-choice-ok" : "tier-choice-bad"
   );
 }
 
@@ -367,6 +393,7 @@ function submitGuess() {
   $("q-range").disabled = true;
   $("btn-submit-guess").disabled = true;
   $("btn-submit-guess").classList.add("hidden");
+  $("q-bubble").classList.add("hidden");
   let tier, cls;
   if (diff <= 1) { tier = t.exact; cls = "tier-exact"; }
   else if (diff <= spec.tol) { tier = t.close; cls = "tier-close"; }
@@ -374,11 +401,7 @@ function submitGuess() {
   else { tier = t.off; cls = "tier-off"; }
   if (cls === "tier-exact") confettiBurst();
   if (cls === "tier-off") shakeTicket();
-  const r1 = Math.round(diff * 10) / 10;
-  // markers already show guess + truth — the line only notes the gap when it matters
-  const lines = (cls === "tier-near" || cls === "tier-off") ? t.gap(r1, spec.unit) : "";
-  showFeedback(tier, cls, lines,
-    { guess, truth, spec, ok });
+  showFeedback(tier, cls, { guess, truth, spec, ok });
 }
 
 function next() {
@@ -412,6 +435,7 @@ async function init() {
   $("btn-next").addEventListener("click", next);
   $("btn-restart").addEventListener("click", startQuiz);
   setupFullscreen();
+  $("q-range").addEventListener("input", updateBubble);
   const thread = $("progress-fill").parentElement;
   thread.setAttribute("role", "progressbar");
   thread.setAttribute("aria-valuemin", "0");
