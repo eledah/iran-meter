@@ -106,9 +106,6 @@ main {
   padding: 0 0.8rem;
   font-size: 0.85rem; font-weight: 500;
 }
-.gauge { display: inline-flex; gap: 4px; }
-.gauge i { width: 20px; height: 10px; border-radius: 999px; background: var(--clay); border: 1px solid var(--ink); }
-.gauge i.on { background: var(--ink); }
 #q-prompt { font-size: 1.45rem; font-weight: 700; line-height: 1.7; margin: 0.8rem 0 0; max-width: 34ch; }
 /* Explainer subtitle for jargon terms (gross ratio, point-to-point, participation…) */
 .hint { margin: 0.35rem 0 0; font-size: 0.95rem; color: var(--muted); max-width: 60ch; }
@@ -132,11 +129,6 @@ main {
 .slider-block.hidden { display: none; }
 .slider-block { margin-top: 1.2rem; }
 .slider-row { display: flex; align-items: center; gap: 0.9rem; }
-.slider-row input[type="range"] { flex: 1; accent-color: var(--bazaar); min-height: 44px; }
-.slider-row output {
-  min-width: 5.5rem; text-align: center; font-size: 1.8rem; font-weight: 900;
-  border: 2px solid var(--ink); border-radius: 10px; background: var(--paper); padding: 0 0.4rem;
-}
 
 /* Reveal: the payoff, color answers the action */
 .feedback { margin-top: 1rem; border-top: 2px dashed var(--clay); padding-top: 0.9rem; }
@@ -156,11 +148,7 @@ main {
   border-inline-start: 4px solid var(--marigold);
   padding-inline-start: 0.7rem;
 }
-/* Big counted-up truth number */
-.truth-big { margin: 0.2rem 0 0; line-height: 1.2; }
-.truth-big.hidden { display: none; }
-#fb-truth-num { font-size: 2.6rem; font-weight: 900; }
-#fb-truth-unit { font-size: 1.3rem; font-weight: 700; margin-inline-start: 0.3rem; }
+/* answer lives on the slider's truth pill — no separate number block */
 /* Data labels on the original slider: guess pill above, truth pill below.
    Overlay is forced LTR so % always maps to left%. */
 .range-wrap { position: relative; flex: 1; min-width: 0; display: flex; align-items: center; }
@@ -189,7 +177,15 @@ main {
 }
 .range-wrap input[type="range"]:disabled::-webkit-slider-thumb { background: var(--clay); cursor: default; }
 .range-wrap input[type="range"]:disabled::-moz-range-thumb { background: var(--clay); cursor: default; }
+/* Data points on the slider: guess pill above, big truth pill below,
+   colored zone spanning the distance between them. */
 .marks { position: absolute; top: 0; bottom: 0; left: 13px; right: 13px; pointer-events: none; direction: ltr; }
+.zone {
+  position: absolute; top: 50%; height: 8px; transform: translateY(-50%);
+  border-radius: 999px;
+}
+.zone.good { background: var(--pistachio); }
+.zone.miss { background: var(--bazaar); }
 .mark {
   position: absolute; top: -1.7rem; transform: translateX(-50%);
   font-size: 0.8rem; font-weight: 700; white-space: nowrap;
@@ -197,10 +193,15 @@ main {
   border: 2px solid var(--ink); border-radius: 999px; padding: 0 0.55rem;
   background: var(--ticket); color: var(--ink);
 }
-.mark-truth { top: auto; bottom: -1.9rem; background: var(--marigold); }
+.mark-truth {
+  top: auto; bottom: -2.1rem; background: var(--marigold);
+  font-size: 1.05rem; font-weight: 900; padding: 0.1rem 0.9rem;
+  border-width: 3px; max-width: 60%;
+}
 .mark-truth.good { background: var(--pistachio); color: #fff; }
 .mark-truth.miss { background: var(--bazaar); color: #fff; }
-.slider-block { padding-bottom: 2.2rem; }
+.slider-block { padding-bottom: 2.6rem; }
+#btn-submit-guess.hidden { display: none; }
 /* Source as a small stamp chip */
 .source-chip { display: inline-block; margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); }
 .source-chip.hidden { display: none; }
@@ -228,7 +229,6 @@ main {
    Base styles stay fully visible; keyframes only describe the entrance,
    so prefers-reduced-motion (animation: none) shows everything instantly. */
 #q-feedback:not(.hidden) .fb-result { animation: rise 0.4s ease both; }
-#q-feedback:not(.hidden) #fb-truth { animation: rise 0.45s ease 0.3s both; }
 #q-feedback:not(.hidden) .fb-gap { animation: rise 0.45s ease 0.95s both; }
 #q-feedback:not(.hidden) .fb-fact { animation: rise 0.45s ease 1.2s both; }
 #q-feedback:not(.hidden) #btn-next { animation: rise 0.45s ease 1.7s both; }
@@ -287,9 +287,6 @@ body.dealing .ticket, body.dealing .hook-ticket { animation: deal 0.55s ease; }
   .ticket-row { flex-wrap: wrap; }
   .chip { min-width: 0; overflow-wrap: anywhere; }
   .slider-row { gap: 0.5rem; }
-  .slider-row output { min-width: 4rem; font-size: 1.2rem; }
-  #fb-truth-num { font-size: 2rem; }
-  #fb-truth-unit { font-size: 1.1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none; transition: none; }

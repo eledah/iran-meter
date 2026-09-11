@@ -17,14 +17,8 @@ let streak = 0;
 let bestStreak = 0;
 let perDiff = {}; // difficulty -> {total, correct}
 
-const DIFF_LABEL = {
-  fa: { 1: "خیلی آسان", 2: "آسان", 3: "متوسط", 4: "سخت", 5: "خیلی سخت" },
-  en: { 1: "Trivial", 2: "Easy", 3: "Medium", 4: "Hard", 5: "Expert" },
-};
-
 const FA_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
 const toFa = (n) => String(n).replace(/[0-9]/g, (d) => FA_DIGITS[d]);
-const num = (n) => (lang === "fa" ? toFa(n) : String(n));
 
 const STR = {
   fa: {
@@ -144,16 +138,9 @@ function applyLang() {
   syncFullLabel();
   $("btn-fa").classList.toggle("active", lang === "fa");
   $("btn-en").classList.toggle("active", lang === "en");
-  updateGuessOutput();
   updateStreakUI(false);
   if (!$("screen-quiz").classList.contains("hidden")) renderQuestion();
   if (!$("screen-score").classList.contains("hidden")) renderScore();
-}
-
-function gaugeHTML(level) {
-  let s = "";
-  for (let i = 1; i <= 5; i++) s += `<i class="${i <= level ? "on" : ""}"></i>`;
-  return s;
 }
 
 function show(id) {
@@ -201,14 +188,6 @@ function sliderSpec(q) {
 }
 const isSlider = (q) => sliderSpec(q) !== null;
 
-function updateGuessOutput() {
-  const el = $("q-guess");
-  if (!el || !QUIZ[idx]) return;
-  const spec = sliderSpec(QUIZ[idx]);
-  const g = $("q-range") ? $("q-range").value : 50;
-  el.textContent = fmtV(g, spec ? spec.unit : "percent");
-}
-
 function updateStreakUI(pop) {
   const t = STR[lang];
   const showIt = streak >= 2;
@@ -227,10 +206,6 @@ function renderQuestion() {
   $("progress-fill").parentElement.setAttribute("aria-valuenow", String(Math.round((idx / QUIZ.length) * 100)));
   $("progress-label").textContent = t.progress(idx + 1, QUIZ.length);
   $("q-category").textContent = q.category || "";
-  const g = $("q-gauge");
-  g.innerHTML = gaugeHTML(q.difficulty);
-  g.title = `${DIFF_LABEL[lang][q.difficulty] || ""} (${num(q.difficulty)}/${num(5)})`;
-  g.setAttribute("aria-label", g.title);
   $("q-prompt").textContent = lang === "fa" ? q.prompt_fa : q.prompt_en;
   $("q-range").setAttribute("aria-label", $("q-prompt").textContent);
   const hintText = lang === "fa" ? (q.hint_fa || "") : (q.hint_en || "");
@@ -253,8 +228,8 @@ function renderQuestion() {
     range.value = Math.round(spec.max / 2);
     range.disabled = false;
     $("btn-submit-guess").disabled = false;
+    $("btn-submit-guess").classList.remove("hidden");
     $("q-marks").innerHTML = "";
-    updateGuessOutput();
     $("btn-submit-guess").textContent = t.submit;
   } else {
     slider.classList.add("hidden");
@@ -284,35 +259,32 @@ function recordResult(ok) {
   if (ok) perDiff[d].correct++;
 }
 
-/* Reveal helpers: count-up, guess-vs-truth track, confetti, shake.
+/* Reveal helpers: slider data points, confetti, shake.
    All motion answers the user's action; skipped under reduced-motion. */
-function countUp(el, target, fmt) {
-  if (reduceMotion()) { el.textContent = fmt(target); return; }
-  const t0 = performance.now(), dur = 750;
-  const step = (now) => {
-    const p = Math.min(1, (now - t0) / dur);
-    const eased = 1 - Math.pow(1 - p, 3);
-    el.textContent = fmt(target * eased);
-    if (p < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-}
-
 function paintTrack(guess, spec, ok) {
-  // Data labels live ON the original slider: your-guess pill above the
-  // track, true-value pill below it. The overlay is LTR so % maps to left%.
+  // Data points right on the custom slider: your-guess pill above,
+  // true-value pill below, and a colored zone spanning the distance.
+  // Overlay is LTR so % maps to left%.
   const marks = $("q-marks");
   marks.innerHTML = "";
-  const pct = (v) => Math.max(6, Math.min(94, (v / spec.max) * 100));
+  const truth = Math.round(spec.truth * 10) / 10;
+  const pct = (v) => Math.max(0, Math.min(100, (v / spec.max) * 100));
+  const pctPill = (v) => Math.max(6, Math.min(94, pct(v))); // pills stay inside
+  const zone = document.createElement("span");
+  zone.className = "zone " + (ok ? "good" : "miss");
+  const lo = Math.min(pct(guess), pct(truth)), hi = Math.max(pct(guess), pct(truth));
+  zone.style.left = lo + "%";
+  zone.style.width = Math.max(hi - lo, 1.5) + "%";
+  marks.appendChild(zone);
   const mk = (v, cls, label) => {
     const s = document.createElement("span");
     s.className = "mark " + cls + (cls === "mark-truth" ? (ok ? " good" : " miss") : "");
-    s.style.left = pct(v) + "%";
+    s.style.left = pctPill(v) + "%";
     s.textContent = label;
     marks.appendChild(s);
   };
   mk(guess, "mark-guess", fmtV(guess, spec.unit));
-  mk(Math.round(spec.truth * 10) / 10, "mark-truth", fmtV(Math.round(spec.truth * 10) / 10, spec.unit));
+  mk(truth, "mark-truth", fmtV(truth, spec.unit));
 }
 
 function confettiBurst() {
@@ -348,28 +320,9 @@ function showFeedback(tier, tierClass, lines, reveal) {
   const r = $("fb-result");
   r.textContent = tier;
   r.className = "fb-result " + tierClass;
-  // Reveal card: big counted-up truth (slider Qs also get labeled markers
-  // painted directly onto the original slider by paintTrack)
-  const truthBox = $("fb-truth");
-  if (reveal) {
-    truthBox.classList.remove("hidden");
-    $("fb-truth-unit").textContent = "";
-    // count-up trails the tier headline; instant under reduced motion
-    const doCount = () => countUp($("fb-truth-num"), reveal.truth, (v) => {
-      const r1 = Math.round(v * 10) / 10;
-      return lang === "fa" ? toFa(r1) : String(r1);
-    });
-    if (reduceMotion()) doCount();
-    else setTimeout(doCount, 300);
-    // unit suffix after the animated number
-    const unitEl = $("fb-truth-unit");
-    unitEl.textContent = lang === "fa"
-      ? (reveal.spec.unit === "years" ? " سال" : reveal.spec.unit === "ratio" ? " از ۱۰۰" : "٪")
-      : (reveal.spec.unit === "years" ? " yrs" : reveal.spec.unit === "ratio" ? " per 100" : "%");
-    paintTrack(reveal.guess, reveal.spec, reveal.ok);
-  } else {
-    truthBox.classList.add("hidden");
-  }
+  // Reveal: tier + labeled markers painted onto the original slider.
+  // No repeated answer number — the slider's truth pill is the answer.
+  if (reveal) paintTrack(reveal.guess, reveal.spec, reveal.ok);
   $("fb-gap").textContent = lines;
   const fact = lang === "fa" ? (q.fun_fact_fa || "") : (q.fun_fact_en || "");
   $("fb-fact").textContent = fact;
@@ -413,6 +366,7 @@ function submitGuess() {
   updateStreakUI(ok);
   $("q-range").disabled = true;
   $("btn-submit-guess").disabled = true;
+  $("btn-submit-guess").classList.add("hidden");
   let tier, cls;
   if (diff <= 1) { tier = t.exact; cls = "tier-exact"; }
   else if (diff <= spec.tol) { tier = t.close; cls = "tier-close"; }
@@ -458,7 +412,6 @@ async function init() {
   $("btn-next").addEventListener("click", next);
   $("btn-restart").addEventListener("click", startQuiz);
   setupFullscreen();
-  $("q-range").addEventListener("input", updateGuessOutput);
   const thread = $("progress-fill").parentElement;
   thread.setAttribute("role", "progressbar");
   thread.setAttribute("aria-valuemin", "0");

@@ -51,11 +51,10 @@
     <article class="ticket">
       <div class="ticket-row">
         <span id="q-category" class="chip"></span>
-        <span id="q-gauge" class="gauge"></span>
+        <span id="q-source" class="source-chip"></span>
       </div>
       <h2 id="q-prompt"></h2>
       <p id="q-hint" class="hint"></p>
-      <p id="q-source" class="source-chip"></p>
       <div id="q-options" class="options"></div>
       <div id="q-slider" class="slider-block hidden">
         <div class="slider-row">
@@ -63,16 +62,12 @@
             <input id="q-range" type="range" min="0" max="100" step="1" value="50" aria-describedby="q-prompt">
             <div id="q-marks" class="marks" aria-hidden="true"></div>
           </div>
-          <output id="q-guess" for="q-range">۵۰٪</output>
         </div>
         <button id="btn-submit-guess" class="primary" type="button"></button>
       </div>
       <div id="q-feedback" class="feedback hidden">
         <div class="reveal-card">
           <p id="fb-result" class="fb-result"></p>
-          <div id="fb-truth" class="truth-big hidden" aria-live="polite">
-            <span id="fb-truth-num">۰</span><span id="fb-truth-unit"></span>
-          </div>
           <p id="fb-gap" class="fb-gap"></p>
           <p id="fb-fact" class="fb-fact"></p>
         </div>
