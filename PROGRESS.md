@@ -82,3 +82,16 @@ Interactive quiz game about Iran based on official reported statistics
   provenance rules, next-phase checklist). Scratch extraction dirs
   (`/root/paymaiesh`, `/root/pimayesh`) stay outside the repo. Next phase:
   `data/` YAML files + question bank + validation.
+
+- **2026-09-10** — **Phase 2 data done**: `data/sources.yaml` (18 sources) +
+  `data/stats.yaml` (439 rows) + `data/questions.yaml` (24 bilingual Qs) +
+  `scripts/validate.py` + `tests/test_validate.py`, all 6 rules PASS.
+- **2026-09-10** — **Web UI live locally**: static bilingual (fa/en) game in
+  `web/` (`tools/export_web.py` → `app-data.json`); percent-slider answers,
+  Vazirmatn font, bazaar-showdown theme with streaks and graded reveals.
+- **2026-09-10** — **Top-20 graded bank**: stats scored importance ×
+  worldview-shift, capped ~3/theme; `data/questions.yaml` rebuilt to 20 slider
+  Qs with staged reveals; method in `data/selection.md`.
+- **2026-09-10** — **Deployed to GitHub Pages** (`gh-pages` branch):
+  https://eledah.github.io/iran-meter/ — fa default with native rewrites,
+  SEO/OG/favicon/skip-link/mobile-360 polish.

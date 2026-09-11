@@ -1,19 +1,17 @@
 # Iran-meter
 
-Interactive quiz game about Iran, built on **verified statistics** about Iran
-and its people (working name — final name TBD).
-
-Players answer questions like "What share of Iranian households own their
-home?" or "What share of internet users use a VPN?" and learn something real
-about the country along the way.
+▶ **Play: https://eledah.github.io/iran-meter/** — bilingual (fa/en) quiz: guess 20 numbers about Iran, see the real stat.
 
 ## Status
 
-- **Phase 1 — data hunting: complete.** ~390 verified index rows from 16
-  sources (official Iranian institutions + international orgs + leaked
-  official surveys + measurement projects).
-- **Phase 2 — build: next.** Convert `INDEXES.md` → `data/` YAML files,
-  add validation, draft 20–30 questions with the difficulty meter.
+- **Phase 1 — data hunt: complete.** 18 sources, 439 verified stat rows
+  (official Iranian institutions + international orgs + leaked official
+  surveys + measurement projects).
+- **Phase 2 — build: complete.** `data/` YAMLs (18 sources / 439 stats),
+  20-question graded bank (`data/questions.yaml`, graded by
+  importance × worldview-shift — see `data/selection.md`), validation
+  (`scripts/validate.py` + `tests/test_validate.py`, all rules pass),
+  static bilingual web UI (`web/`) **live on GitHub Pages**.
 
 ## Repo map
 
@@ -22,9 +20,16 @@ about the country along the way.
 | `PROGRESS.md` | Minimal running log (one entry per milestone) |
 | `SOURCES.md` | Source registry: org, type, URLs, what's inside, caveats; rejected sources |
 | `INDEXES.md` | **The data layer** — flat table of every statistic: value, unit, reference period, report date, URL, confidence tag |
-| `DATA_MODEL.md` | Proposed data model (sources → stats → questions) + difficulty meter spec |
+| `DATA_MODEL.md` | Data model (sources → stats → questions) + difficulty meter spec |
+| `data/sources.yaml` | 18 source records (registry) |
+| `data/stats.yaml` | 439 stat rows (one per number) |
+| `data/questions.yaml` | 20-question quiz bank, bilingual (fa/en) |
+| `data/selection.md` | How the top 20 were graded and picked from the 439-stat bank |
+| `scripts/validate.py` | Validation: ids unique, stat refs resolve, correct_index in range, difficulty in [1,5] |
+| `tests/test_validate.py` | Tests for the validator |
+| `tools/export_web.py` | Exports `data/*.yaml` → `web/app-data.json` |
+| `web/` | Static game UI (`index.html`, `app.js`, `styles.css`, `app-data.json`) |
 | `references/` | Archived source documents (leaked 1402 survey chapters, official wave-3 report) |
-| `data/` | *(phase 2)* `sources.yaml`, `stats.yaml`, `questions.yaml`, `calibration.yaml` |
 
 ## Provenance rules (non-negotiable)
 
@@ -49,12 +54,14 @@ ILO, WHO, UNESCO, IMF, WVS) + measurement projects (OONI, Freedom House).
 **GAMAAN is rejected** (funding concerns, user decision 2026-08-05) — see
 `SOURCES.md` → Rejected.
 
-## Next-phase checklist
+## Development
 
-1. Build `data/sources.yaml` from `SOURCES.md` (14+ source records).
-2. Build `data/stats.yaml` from `INDEXES.md` (one row per number).
-3. Draft 20–30 questions in `data/questions.yaml` — bilingual (fa/en),
-   4 options each, difficulty 1–5 with `surprise_note` (see `DATA_MODEL.md`).
-4. Pydantic validation script + pytest (ids unique, stat refs resolve,
-   correct_index in range, difficulty in [1,5]).
-5. Decide the game client: CLI / web / Bale bot — with the user.
+```
+python3 tools/export_web.py
+python3 scripts/validate.py
+python3 tests/test_validate.py
+cd web && python3 -m http.server
+```
+
+Re-export after any `data/` change; validate before commit; serve `web/`
+locally to preview.

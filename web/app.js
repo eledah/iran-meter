@@ -196,6 +196,7 @@ function renderQuestion() {
   const t = STR[lang];
   const q = QUIZ[idx];
   $("progress-fill").style.width = `${(idx / QUIZ.length) * 100}%`;
+  $("progress-fill").parentElement.setAttribute("aria-valuenow", String(Math.round((idx / QUIZ.length) * 100)));
   $("progress-label").textContent = t.progress(idx + 1, QUIZ.length);
   $("q-category").textContent = q.category || "";
   const g = $("q-gauge");
@@ -203,6 +204,7 @@ function renderQuestion() {
   g.title = `${DIFF_LABEL[lang][q.difficulty] || ""} (${num(q.difficulty)}/${num(5)})`;
   g.setAttribute("aria-label", g.title);
   $("q-prompt").textContent = lang === "fa" ? q.prompt_fa : q.prompt_en;
+  $("q-range").setAttribute("aria-label", $("q-prompt").textContent);
   const hintText = lang === "fa" ? (q.hint_fa || "") : (q.hint_en || "");
   $("q-hint").textContent = hintText;
   $("q-hint").classList.toggle("hidden", !hintText);
@@ -346,6 +348,7 @@ function showFeedback(tier, tierClass, lines, reveal) {
   $("btn-next").textContent = last ? t.finish : t.next;
   $("q-feedback").classList.remove("hidden");
   $("progress-fill").style.width = `${((idx + 1) / QUIZ.length) * 100}%`;
+  $("progress-fill").parentElement.setAttribute("aria-valuenow", String(Math.round(((idx + 1) / QUIZ.length) * 100)));
   $("btn-next").focus();
 }
 
@@ -425,6 +428,12 @@ async function init() {
   $("btn-next").addEventListener("click", next);
   $("btn-restart").addEventListener("click", startQuiz);
   $("q-range").addEventListener("input", updateGuessOutput);
+  const thread = $("progress-fill").parentElement;
+  thread.setAttribute("role", "progressbar");
+  thread.setAttribute("aria-valuemin", "0");
+  thread.setAttribute("aria-valuemax", "100");
+  thread.setAttribute("aria-valuenow", "0");
+  thread.removeAttribute("aria-hidden");
   $("btn-submit-guess").addEventListener("click", submitGuess);
   try {
     const res = await fetch("app-data.json");
