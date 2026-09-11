@@ -305,8 +305,8 @@
     }
    ],
    "correct_index": 1,
-   "fun_fact_en": "Just 14%.",
-   "fun_fact_fa": "فقط ۱۴٪.",
+   "fun_fact_en": "Just 14% — for men it is 67.2%.",
+   "fun_fact_fa": "فقط ۱۴٪. برای مردها ۶۷٫۲٪ است.",
    "answer_stats": [
     {
      "id": "female-labor-force-participation-2025",
@@ -545,8 +545,8 @@
     }
    ],
    "correct_index": 0,
-   "fun_fact_en": "81.9% name inflation the top national problem.",
-   "fun_fact_fa": "۸۱٫۹٪ تورم را مشکل اول کشور می‌دانند.",
+   "fun_fact_en": "81.9% name inflation the top problem; 47.9% name unemployment.",
+   "fun_fact_fa": "۸۱٫۹٪ تورم را مشکل اول می‌دانند؛ ۴۷٫۹٪ بیکاری را.",
    "answer_stats": [
     {
      "id": "inflation-most-important-national-problem-1402",
@@ -593,8 +593,8 @@
     }
    ],
    "correct_index": 2,
-   "fun_fact_en": "38.6% say they would leave permanently if they could.",
-   "fun_fact_fa": "۳۸٫۶٪ می‌گویند اگر بتوانند برای همیشه می‌روند.",
+   "fun_fact_en": "38.6% say they would leave permanently if they could. Canada is the top destination at 22%.",
+   "fun_fact_fa": "۳۸٫۶٪ می‌گویند اگر بتوانند برای همیشه می‌روند. کانادا با ۲۲٪ مقصد اول است.",
    "answer_stats": [
     {
      "id": "would-emigrate-permanently-if-possible-1402",
@@ -977,8 +977,8 @@
     }
    ],
    "correct_index": 2,
-   "fun_fact_en": "At 58.7%, well over half the college-age cohort is enrolled in tertiary education.",
-   "fun_fact_fa": "۵۸٫۷٪. یعنی بیش از نیمی از جوان‌های سن دانشگاه در آموزش عالی‌اند.",
+   "fun_fact_en": "58.7% enrolled — and youth literacy stands at 98.7%.",
+   "fun_fact_fa": "۵۸٫۷٪ ثبت‌نام کرده‌اند؛ باسوادی جوان‌ها ۹۸٫۷٪ است.",
    "answer_stats": [
     {
      "id": "tertiary-gross-enrollment-2022",
@@ -1025,8 +1025,8 @@
     }
    ],
    "correct_index": 2,
-   "fun_fact_en": "67% say the internet must never be cut.",
-   "fun_fact_fa": "۶۷٪ می‌گویند اینترنت هیچ‌وقت نباید قطع شود.",
+   "fun_fact_en": "67% say the internet must never be cut. 57.6% oppose even crisis-time cutoffs.",
+   "fun_fact_fa": "۶۷٪ می‌گویند اینترنت هیچ‌وقت نباید قطع شود. ۵۷٫۶٪ حتی در بحران هم مخالف قطع‌اند.",
    "answer_stats": [
     {
      "id": "internet-must-never-be-cut-2026",
@@ -1121,8 +1121,8 @@
     }
    ],
    "correct_index": 1,
-   "fun_fact_en": "Only 40.7% participate.",
-   "fun_fact_fa": "فقط ۴۰٫۷٪.",
+   "fun_fact_en": "Only 40.7%. Youth NEET is 24.3%.",
+   "fun_fact_fa": "فقط ۴۰٫۷٪. جوان‌های نه‌درس‌نه‌کار ۲۴٫۳٪‌اند.",
    "answer_stats": [
     {
      "id": "labor-force-participation-15-1405",
