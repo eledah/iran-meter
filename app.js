@@ -44,6 +44,8 @@ const STR = {
     restart: "یک دست دیگر",
     loadErr: "app-data.json بارگذاری نشد",
     streak: (s) => `زنجیره‌ی ${toFa(s)}تایی`,
+    goFull: "تمام‌صفحه",
+    exitFull: "خروج از تمام‌صفحه",
     // slider closeness tiers
     exact: "آفرین، دقیق زدید",
     close: "درست است و خیلی نزدیک",
@@ -77,6 +79,8 @@ const STR = {
     diffRow: (d, c, t) => `Level ${d}: ${c} of ${t} correct`,
     restart: "Play again",
     loadErr: "Failed to load app-data.json",
+    goFull: "Fullscreen",
+    exitFull: "Exit fullscreen",
     streak: (s) => `Streak of ${s}`,
     exact: "Bullseye",
     close: "Correct, and close",
@@ -103,6 +107,28 @@ function rankFor(s) {
   return STR[lang].ranks[STR[lang].ranks.length - 1][1];
 }
 
+function syncFullLabel() {
+  const btn = $("btn-full");
+  if (!btn) return;
+  const t = STR[lang];
+  btn.textContent = document.fullscreenElement ? t.exitFull : t.goFull;
+}
+
+function setupFullscreen() {
+  const btn = $("btn-full");
+  if (!btn || !document.fullscreenEnabled) {
+    if (btn) btn.classList.add("hidden");
+    return;
+  }
+  btn.addEventListener("click", async () => {
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await document.documentElement.requestFullscreen();
+    } catch (e) { /* stay inline, game works the same */ }
+  });
+  document.addEventListener("fullscreenchange", syncFullLabel);
+}
+
 function applyLang() {
   const t = STR[lang];
   document.documentElement.lang = lang;
@@ -114,6 +140,7 @@ function applyLang() {
   $("start-rules").textContent = t.startRules;
   $("btn-start").textContent = t.start;
   $("btn-restart").textContent = t.restart;
+  syncFullLabel();
   $("btn-fa").classList.toggle("active", lang === "fa");
   $("btn-en").classList.toggle("active", lang === "en");
   updateGuessOutput();
@@ -427,6 +454,7 @@ async function init() {
   $("btn-start").addEventListener("click", startQuiz);
   $("btn-next").addEventListener("click", next);
   $("btn-restart").addEventListener("click", startQuiz);
+  setupFullscreen();
   $("q-range").addEventListener("input", updateGuessOutput);
   const thread = $("progress-fill").parentElement;
   thread.setAttribute("role", "progressbar");
