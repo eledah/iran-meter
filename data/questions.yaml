@@ -54,8 +54,8 @@
   stat_ids:
   - female-labor-force-participation-2025
   correct_index: 1
-  fun_fact_en: Just 14% — one of the world's lowest female participation rates.
-  fun_fact_fa: فقط ۱۴٪. جزو پایین‌ترین عددهای جهان است.
+  fun_fact_en: Just 14%.
+  fun_fact_fa: فقط ۱۴٪.
   options:
   - label_en: 8%
     label_fa: ٪۸
@@ -123,9 +123,8 @@
   stat_ids:
   - separation-of-religion-politics-agree-1402
   correct_index: 2
-  fun_fact_en: Agreement leapt from 30.7% (1394) to 72.9% (1402) — a generational
-    flip.
-  fun_fact_fa: از ۳۰٫۷٪ در ۱۳۹۴ به ۷۲٫۹٪ در ۱۴۰۲ رسید. یک نسل کامل عوض شده است.
+  fun_fact_en: Only 30.7% agreed in 1394; 72.9% in 1402.
+  fun_fact_fa: در ۱۳۹۴ فقط ۳۰٫۷٪ موافق بودند؛ در ۱۴۰۲ به ۷۲٫۹٪ رسید.
   options:
   - label_en: 51%
     label_fa: ٪۵۱
@@ -170,8 +169,8 @@
   stat_ids:
   - inflation-most-important-national-problem-1402
   correct_index: 0
-  fun_fact_en: 81.9% name inflation the top national problem — an overwhelming consensus.
-  fun_fact_fa: ۸۱٫۹٪ تورم را مشکل اول کشور می‌دانند. تقریبا همه هم‌نظرند.
+  fun_fact_en: 81.9% name inflation the top national problem.
+  fun_fact_fa: ۸۱٫۹٪ تورم را مشکل اول کشور می‌دانند.
   options:
   - label_en: 82%
     label_fa: ٪۸۲
@@ -193,8 +192,8 @@
   stat_ids:
   - would-emigrate-permanently-if-possible-1402
   correct_index: 2
-  fun_fact_en: 38.6% would leave permanently — the top named destination is Canada.
-  fun_fact_fa: ۳۸٫۶٪ برای همیشه می‌رفتند. کانادا پرتکرارترین مقصدی بود که گفتند.
+  fun_fact_en: 38.6% say they would leave permanently if they could.
+  fun_fact_fa: ۳۸٫۶٪ می‌گویند اگر بتوانند برای همیشه می‌روند.
   options:
   - label_en: 19%
     label_fa: ٪۱۹
@@ -263,10 +262,8 @@
   stat_ids:
   - low-trust-in-irib-1394-81-trusted-1402
   correct_index: 2
-  fun_fact_en: From 54.8% trust (1394) to 58% low trust (1402) — a complete reversal
-    for state TV.
-  fun_fact_fa: از ۵۴٫۸٪ اعتماد در ۱۳۹۴ به ۵۸٪ بی‌اعتمادی در ۱۴۰۲ رسید. ورق کاملا
-    برگشته است.
+  fun_fact_en: Trust was 54.8% in 1394; low trust was 58% in 1402.
+  fun_fact_fa: در ۱۳۹۴ اعتماد ۵۴٫۸٪ بود؛ در ۱۴۰۲ بی‌اعتمادی ۵۸٪.
   options:
   - label_en: 34%
     label_fa: ٪۳۴
@@ -356,10 +353,10 @@
   stat_ids:
   - divorce-per-100-marriages-1403
   correct_index: 2
-  fun_fact_en: 41 divorces per 100 marriages — ثبت احوال itself warns this same-year
-    ratio is statistically misleading, but its rise still signals deep family change.
-  fun_fact_fa: ۴۱ طلاق به‌ازای هر ۱۰۰ ازدواج. خود ثبت احوال می‌گوید این سنجه هم‌سال
-    از نظر آماری گمراه‌کننده است، ولی بالا رفتنش از تغییر عمیق خانواده خبر می‌دهد.
+  fun_fact_en: 41 divorces per 100 marriages in one year. ثبت احوال itself warns
+    this same-year ratio is misleading.
+  fun_fact_fa: ۴۱ طلاق به‌ازای هر ۱۰۰ ازدواج در یک سال. خود ثبت احوال می‌گوید
+    این سنجه هم‌سال گمراه‌کننده است.
   options:
   - label_en: 18 per 100
     label_fa: ۱۸ در هر ۱۰۰
@@ -403,8 +400,8 @@
   stat_ids:
   - internet-must-never-be-cut-2026
   correct_index: 2
-  fun_fact_en: 67% say never — and 57.6% oppose even crisis-time cutoffs.
-  fun_fact_fa: ۶۷٪ می‌گویند هیچ‌وقت. ۵۷٫۶٪ حتی با قطعی اینترنت در بحران هم مخالف‌اند.
+  fun_fact_en: 67% say the internet must never be cut.
+  fun_fact_fa: ۶۷٪ می‌گویند اینترنت هیچ‌وقت نباید قطع شود.
   options:
   - label_en: 44%
     label_fa: ٪۴۴
@@ -447,10 +444,8 @@
   stat_ids:
   - labor-force-participation-15-1405
   correct_index: 1
-  fun_fact_en: Only 40.7% participate — women's participation near 14% drives the
-    low total.
-  fun_fact_fa: فقط ۴۰٫۷٪. مشارکت پایین زنان، با حدود ۱۴٪، میانگین کل را پایین نگه
-    داشته است.
+  fun_fact_en: Only 40.7% participate.
+  fun_fact_fa: فقط ۴۰٫۷٪.
   options:
   - label_en: 28.4%
     label_fa: ٪۲۸٫۴

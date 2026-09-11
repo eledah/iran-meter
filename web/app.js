@@ -7,6 +7,7 @@ const QUIZ_SIZE = 20;
 const SLIDER_UNITS = {
   percent: { max: 100, tol: 5 },
   years: { max: 100, tol: 3 },
+  ratio: { max: 100, tol: 5 }, // e.g. divorces per 100 marriages, 0-100 scale
 };
 const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let lang = "fa"; // default fa
@@ -37,7 +38,7 @@ const STR = {
     progress: (a, b) => `سؤال ${toFa(a)} از ${toFa(b)}`,
     submit: "ثبت حدس",
     unitName: (u) => (u === "years" ? "سال" : "٪"),
-    fmtVal: (v, u) => (u === "years" ? `${toFa(v)} سال` : `${toFa(v)}٪`),
+    fmtVal: (v, u) => (u === "years" ? `${toFa(v)} سال` : u === "ratio" ? `${toFa(v)} از ۱۰۰` : `${toFa(v)}٪`),
     source: (n) => `منبع: ${n}`,
     scoreTitle: "کارنامه‌ات بر اساس سختی سؤال‌ها",
     diffRow: (d, c, t) => `سطح ${toFa(d)}: ${toFa(c)} از ${toFa(t)} درست`,
@@ -73,7 +74,7 @@ const STR = {
     progress: (a, b) => `Question ${a} of ${b}`,
     submit: "Submit guess",
     unitName: (u) => (u === "years" ? "yrs" : "%"),
-    fmtVal: (v, u) => (u === "years" ? `${v} yrs` : `${v}%`),
+    fmtVal: (v, u) => (u === "years" ? `${v} yrs` : u === "ratio" ? `${v} per 100` : `${v}%`),
     source: (n) => `Source: ${n}`,
     scoreTitle: "Your report card by difficulty",
     diffRow: (d, c, t) => `Level ${d}: ${c} of ${t} correct`,
@@ -235,6 +236,11 @@ function renderQuestion() {
   const hintText = lang === "fa" ? (q.hint_fa || "") : (q.hint_en || "");
   $("q-hint").textContent = hintText;
   $("q-hint").classList.toggle("hidden", !hintText);
+  // source lives with the question now, not the reveal
+  const srcUp = q.answer_stats && q.answer_stats[0];
+  const srcUpName = (srcUp && (lang === "fa" ? srcUp.source_name_fa : srcUp.source_name)) || "";
+  $("q-source").textContent = srcUpName ? t.source(srcUpName) : "";
+  $("q-source").classList.toggle("hidden", !srcUpName);
   const box = $("q-options");
   const slider = $("q-slider");
   box.innerHTML = "";
@@ -358,8 +364,8 @@ function showFeedback(tier, tierClass, lines, reveal) {
     // unit suffix after the animated number
     const unitEl = $("fb-truth-unit");
     unitEl.textContent = lang === "fa"
-      ? (reveal.spec.unit === "years" ? " سال" : "٪")
-      : (reveal.spec.unit === "years" ? " yrs" : "%");
+      ? (reveal.spec.unit === "years" ? " سال" : reveal.spec.unit === "ratio" ? " از ۱۰۰" : "٪")
+      : (reveal.spec.unit === "years" ? " yrs" : reveal.spec.unit === "ratio" ? " per 100" : "%");
     paintTrack(reveal.guess, reveal.spec, reveal.ok);
   } else {
     truthBox.classList.add("hidden");
@@ -367,10 +373,6 @@ function showFeedback(tier, tierClass, lines, reveal) {
   $("fb-gap").textContent = lines;
   const fact = lang === "fa" ? (q.fun_fact_fa || "") : (q.fun_fact_en || "");
   $("fb-fact").textContent = fact;
-  const st0 = q.answer_stats && q.answer_stats[0];
-  const srcName = (st0 && (lang === "fa" ? st0.source_name_fa : st0.source_name)) || "";
-  $("fb-source").textContent = srcName ? t.source(srcName) : "";
-  $("fb-source").classList.toggle("hidden", !srcName);
   const last = idx === QUIZ.length - 1;
   $("btn-next").textContent = last ? t.finish : t.next;
   $("q-feedback").classList.remove("hidden");
@@ -419,8 +421,9 @@ function submitGuess() {
   if (cls === "tier-exact") confettiBurst();
   if (cls === "tier-off") shakeTicket();
   const r1 = Math.round(diff * 10) / 10;
-  showFeedback(tier, cls,
-    `${t.yourGuess(guess, spec.unit)} • ${t.truth(Math.round(truth * 10) / 10, spec.unit)} • ${t.gap(r1, spec.unit)}`,
+  // markers already show guess + truth — the line only notes the gap when it matters
+  const lines = (cls === "tier-near" || cls === "tier-off") ? t.gap(r1, spec.unit) : "";
+  showFeedback(tier, cls, lines,
     { guess, truth, spec, ok });
 }
 
