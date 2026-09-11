@@ -60,8 +60,18 @@ ILO, WHO, UNESCO, IMF, WVS) + measurement projects (OONI, Freedom House).
 python3 tools/export_web.py
 python3 scripts/validate.py
 python3 tests/test_validate.py
+node --test tests/test_web_app.js
+node --check web/app.js
 cd web && python3 -m http.server
 ```
 
 Re-export after any `data/` change; validate before commit; serve `web/`
 locally to preview.
+
+### Observatory interface
+
+The static UI uses a midnight-navy instrument theme with a calibrated slider,
+amber guess marker, cyan true-value marker, and an inline answer reveal.
+Persian/English switching preserves drafts, submitted answers, and scores.
+Keyboard and touch input, reduced motion, and recoverable data-loading errors
+are supported. See `DESIGN.md` for the visual and interaction constraints.

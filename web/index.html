@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ایران‌متر | Iran-meter Quiz</title>
+<title>ایران‌متر | Iran Observatory</title>
 <meta name="description" content="ایران‌متر: ۲۰ سؤال دوزبانه (فارسی/English) درباره‌ی ایران از آمار و نظرسنجی‌های رسمی — حدس بزن، زنجیره بساز، عدد واقعی را ببین. Iran-meter: a bilingual fa/en quiz — 20 guesses about Iran from official stats and polls.">
-<meta name="theme-color" content="#f7f3ea">
+<meta name="theme-color" content="#09131f">
 <meta property="og:title" content="ایران‌متر | Iran-meter Quiz">
 <meta property="og:description" content="۲۰ حدس دوزبانه درباره‌ی ایران — زنجیره بساز و عدد واقعی را ببین. A bilingual fa/en quiz: 20 guesses about Iran, build a streak, see the true number.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://eledah.github.io/iran-meter/">
 <meta property="og:locale" content="fa_IR">
 <meta property="og:locale:alternate" content="en_US">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='5' y='5' width='54' height='54' rx='10' fill='%23d9a62e' stroke='%2323201a' stroke-width='4'/%3E%3Cline x1='5' y1='32' x2='59' y2='32' stroke='%2323201a' stroke-width='3' stroke-dasharray='7 6'/%3E%3Ccircle cx='32' cy='17' r='6' fill='%23fffdf7' stroke='%2323201a' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2309131f'/%3E%3Cpath d='M8 32h48M32 8v48' stroke='%2366dfce' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='11' fill='none' stroke='%23f3bd69' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%2366dfce'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -20,30 +20,33 @@
 </head>
 <body>
 <a class="skip-link" href="#app">پرش به محتوا / Skip to content</a>
-<h1 id="app-title" class="sr-only">ایران‌متر</h1>
+<h1 id="app-title" class="sr-only">رصدخانه ایران</h1>
 <div class="float-controls">
   <button id="btn-full" type="button">تمام‌صفحه</button>
   <div class="lang-toggle" role="group" aria-label="Language / زبان">
-    <button id="btn-fa" class="active" type="button">فارسی</button>
-    <button id="btn-en" type="button">English</button>
+    <button id="btn-fa" class="active" type="button" aria-pressed="true">فارسی</button>
+    <button id="btn-en" type="button" aria-pressed="false">English</button>
   </div>
 </div>
 
 <main id="app" tabindex="-1">
+  <p id="observatory-brand" class="observatory-brand">رصدخانه ایران</p>
   <!-- start screen: the hook is the quiz itself -->
-  <section id="screen-start" class="screen start">
+  <section id="screen-start" class="screen start" aria-labelledby="start-title">
     <div class="hook-ticket">
       <h2 id="start-title">ایران را چقدر می‌شناسید؟</h2>
       <p id="start-hook" class="hook-line"></p>
       <p id="start-desc"></p>
-      <button id="btn-start" class="primary" type="button">بزن بریم</button>
+      <button id="btn-start" class="primary" type="button" disabled>بزن بریم</button>
       <p id="start-rules" class="muted"></p>
+      <p id="load-status" class="load-status" role="status" aria-live="polite"></p>
+      <button id="btn-retry" class="primary hidden" type="button" disabled>تلاش دوباره</button>
     </div>
   </section>
 
   <!-- question screen -->
-  <section id="screen-quiz" class="screen hidden">
-    <div class="thread" aria-hidden="true"><div id="progress-fill"></div></div>
+  <section id="screen-quiz" class="screen hidden" aria-labelledby="q-prompt">
+    <div class="thread" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill"></div></div>
     <div class="quiz-head">
       <p id="progress-label" class="muted"></p>
       <p id="quiz-streak" class="streak-inline hidden" aria-live="polite"></p>
@@ -51,9 +54,9 @@
     <article class="ticket">
       <div class="ticket-row">
         <span id="q-category" class="chip"></span>
-        <span id="q-source" class="source-chip"></span>
+        <a id="q-source" class="source-chip" href="#"></a>
       </div>
-      <h2 id="q-prompt"></h2>
+      <h2 id="q-prompt" tabindex="-1"></h2>
       <p id="q-hint" class="hint"></p>
       <div id="q-options" class="options"></div>
       <div id="q-slider" class="slider-block hidden">
@@ -64,11 +67,16 @@
             <div id="q-marks" class="marks" aria-hidden="true"></div>
           </div>
         </div>
+        <div class="scale-endpoints" aria-hidden="true">
+          <span id="scale-min"></span>
+          <span id="scale-max"></span>
+        </div>
         <button id="btn-submit-guess" class="primary" type="button"></button>
       </div>
       <div id="q-feedback" class="feedback hidden">
-        <div class="reveal-card">
+        <div class="reveal-card" aria-live="polite">
           <p id="fb-result" class="fb-result"></p>
+          <p id="fb-scale-summary" class="sr-only"></p>
           <p id="fb-fact" class="fb-fact"></p>
         </div>
         <button id="btn-next" class="primary" type="button"></button>
@@ -79,7 +87,7 @@
   <!-- score screen -->
   <section id="screen-score" class="screen hidden">
     <div class="rank-stamp">
-      <h2 id="score-rank"></h2>
+      <h2 id="score-rank" tabindex="-1"></h2>
       <p id="score-total"></p>
     </div>
     <h3 id="score-title" class="score-sub"></h3>
@@ -88,6 +96,7 @@
     <button id="btn-restart" class="primary" type="button"></button>
   </section>
 </main>
+
 
 <script src="app.js"></script>
 </body>

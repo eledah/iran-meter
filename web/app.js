@@ -1,21 +1,24 @@
 "use strict";
-/* Static quiz app — no dependencies. Loads app-data.json (same dir). */
+/* Iran Observatory — static, dependency-free bilingual quiz. */
+
 let DATA = null;
-let QUIZ = []; // shuffled subset per round
+let QUIZ = [];
 const QUIZ_SIZE = 20;
-/* Slider specs per stat unit: range max + tolerance that counts as correct */
 const SLIDER_UNITS = {
   percent: { max: 100, tol: 5 },
   years: { max: 100, tol: 3 },
-  ratio: { max: 100, tol: 5 }, // e.g. divorces per 100 marriages, 0-100 scale
+  ratio: { max: 100, tol: 5 },
 };
-const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-let lang = "fa"; // default fa
+
+let lang = "fa";
 let idx = 0;
 let score = 0;
 let streak = 0;
 let bestStreak = 0;
-let perDiff = {}; // difficulty -> {total, correct}
+let perDiff = {};
+let loadState = "loading";
+const answers = {};
+const drafts = {};
 
 const FA_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
 const CAT_FA = {
@@ -26,431 +29,608 @@ const CAT_FA = {
   demographics: "جمعیت",
   education: "آموزش",
 };
-const toFa = (n) => String(n).replace(/[0-9]/g, (d) => FA_DIGITS[d]);
+
+const toFa = (value) => String(value).replace(/[0-9]/g, (d) => FA_DIGITS[d]);
 
 const STR = {
   fa: {
-    title: "ایران‌متر",
+    title: "ایران‌متر | رصدخانه ایران",
+    brand: "ایران‌متر / رصدخانه ایران",
     startTitle: "ایران را چقدر می‌شناسی؟",
-    startHook: "می‌گی می‌شناسی؟ بزن بریم سراغ آمارها",
-    startDesc: "۲۰ سؤال تصادفی درباره ایران داریم. همه از آمار رسمی و نظرسنجی‌هاست. حدس بزن و زنجیره بساز. بعد هر جواب، عدد درست را با نکته پشتش می‌بینی.",
-    startRules: "درصدی‌ها تا ۵ واحد خطا قبول است. سنی‌ها تا ۳ سال. چندگزینه‌ای یا درست است یا غلط. هر جواب درست زنجیره را یکی بیشتر می‌کند. با یک غلط زنجیره می‌پرد.",
-    start: "بزن بریم",
-    next: "سؤال بعدی", finish: "نتیجه را ببین",
-    progress: (a, b) => `سؤال ${toFa(a)} از ${toFa(b)}`,
+    startHook: "تصویر ذهنی‌ات را با آمار بسنج",
+    startDesc: "۲۰ سؤال تصادفی درباره ایران؛ بر پایه آمار رسمی و پیمایش‌ها. حدس بزن، پاسخ را ثبت کن و بعد عدد واقعی و نکته‌اش را ببین.",
+    startRules: "درصدها تا ۵ واحد و سال‌ها تا ۳ سال خطا را درست حساب می‌کنیم. چندگزینه‌ای‌ها درست یا غلط‌اند. هر پاسخ درست یک امتیاز و زنجیره می‌سازد؛ با خطا زنجیره از نو شروع می‌شود.",
+    start: "شروع رصد",
+    retry: "تلاش دوباره",
+    next: "سؤال بعدی",
+    finish: "گزارش نهایی",
     submit: "ثبت حدس",
-    unitName: (u) => (u === "years" ? "سال" : "٪"),
+    progress: (a, b) => `سؤال ${toFa(a)} از ${toFa(b)}`,
+    progressValue: (a, b) => `${toFa(a)} از ${toFa(b)} پاسخ داده شده`,
+    progressAria: "پیشرفت آزمون",
     fmtVal: (v, u) => (u === "years" ? `${toFa(v)} سال` : u === "ratio" ? `${toFa(v)} از ۱۰۰` : `${toFa(v)}٪`),
     source: (n) => `منبع: ${n}`,
-    scoreTitle: "کارنامه‌ات بر اساس سختی سؤال‌ها",
+    sourcePeriod: (y) => (y ? `دوره مرجع: ${toFa(y)}` : ""),
+    scoreTitle: "گزارش رصد بر اساس سختی سؤال‌ها",
+    scoreTotal: (s, n) => `${toFa(s)} پاسخ درست از ${toFa(n)} سؤال`,
     diffRow: (d, c, t) => `سطح ${toFa(d)}: ${toFa(c)} از ${toFa(t)} درست`,
-    restart: "یک دست دیگر",
-    loadErr: "app-data.json بارگذاری نشد",
-    streak: (s) => `زنجیره‌ی ${toFa(s)}تایی`,
+    restart: "رصد دوباره",
+    loadErr: "بارگذاری داده‌ها انجام نشد. اتصال را بررسی و دوباره تلاش کنید.",
+    loading: "داده‌ها در حال بارگذاری…",
+    streak: (s) => `زنجیره ${toFa(s)}تایی`,
+    best: (s) => `بهترین زنجیره: ${toFa(s)}`,
     goFull: "تمام‌صفحه",
     exitFull: "خروج از تمام‌صفحه",
-    // slider closeness tiers
-    exact: "آفرین، دقیق زدید",
-    close: "درست است و خیلی نزدیک",
-    near: "نزدیک بود ولی نشد",
-    off: "این یکی خیلی دور بود",
-    choiceOk: "آفرین، درست است",
-    choiceBad: "این را اشتباه گفتید",
-    yourGuess: (g, u) => `حدس شما: ${fmtV(g, u)}`,
-    truth: (v, u) => `عدد درست: ${fmtV(v, u)}`,
-    gap: (d, u) => `فاصله‌ی شما: ${toFa(d)} ${u === "years" ? "سال" : "واحد"}`,
+    exact: "دقیق روی هدف",
+    close: "درست و نزدیک",
+    near: "نزدیک بود، اما نه کافی",
+    off: "فاصله زیاد بود",
+    choiceOk: "پاسخ درست",
+    choiceBad: "پاسخ درست این نبود",
+    yourGuess: (g, u) => `حدس شما: ${formatValue(g, u)}`,
+    truth: (v, u) => `مقدار واقعی: ${formatValue(v, u)}`,
+    gap: (d, u) => `فاصله: ${toFa(d)} ${u === "years" ? "سال" : "واحد"}`,
+    yourMarker: "حدس شما",
+    truthMarker: "مقدار واقعی",
     ranks: [
-      [17, "ایران‌شناس"], [13, "آمارباز قهار"], [9, "چانه‌زن بازار"],
-      [5, "حدس‌زن کنجکاو"], [0, "تازه‌وارد بازار"],
+      [17, "ایران‌سنج"],
+      [13, "آمارشناس تیزبین"],
+      [9, "رصدگر کنجکاو"],
+      [5, "حدس‌زن پیگیر"],
+      [0, "رصدگر تازه‌کار"],
     ],
-    best: (b) => `بهترین زنجیره‌ی شما: ${toFa(b)}`,
   },
   en: {
-    title: "Iran-meter",
+    title: "Iran-meter | Iran Observatory",
+    brand: "Iran-meter / Observatory",
     startTitle: "How well do you know Iran?",
-    startHook: "Well, let's check with the statistics",
-    startDesc: "20 random questions about Iran from official stats and polls. Haggle over the number, build a streak, and after each answer see the true value and a fun fact.",
-    startRules: "Number guesses: percents count within 5 points, ages within 3 years. Multiple choice is right or wrong. Your streak grows with every correct answer and breaks on one miss.",
-    start: "Deal me in",
-    next: "Next question", finish: "See results",
-    progress: (a, b) => `Question ${a} of ${b}`,
+    startHook: "Calibrate your mental picture against the data",
+    startDesc: "20 random questions about Iran, grounded in official statistics and surveys. Make a guess, submit it, then inspect the true value and its context.",
+    startRules: "Percentage guesses are correct within 5 points; year guesses within 3 years. Multiple choice is right or wrong. Correct answers build your score and streak; a miss resets the streak.",
+    start: "Start observing",
+    retry: "Try loading again",
+    next: "Next question",
+    finish: "View report",
     submit: "Submit guess",
-    unitName: (u) => (u === "years" ? "yrs" : "%"),
+    progress: (a, b) => `Question ${a} of ${b}`,
+    progressValue: (a, b) => `${a} of ${b} answered`,
+    progressAria: "Quiz progress",
     fmtVal: (v, u) => (u === "years" ? `${v} yrs` : u === "ratio" ? `${v} per 100` : `${v}%`),
     source: (n) => `Source: ${n}`,
-    scoreTitle: "Your report card by difficulty",
+    sourcePeriod: (y) => (y ? `Reference period: ${y}` : ""),
+    scoreTitle: "Calibration report",
+    scoreTotal: (s, n) => `${s} correct out of ${n} questions`,
     diffRow: (d, c, t) => `Level ${d}: ${c} of ${t} correct`,
-    restart: "Play again",
-    loadErr: "Failed to load app-data.json",
+    restart: "Observe again",
+    loadErr: "The data could not be loaded. Check the connection and try again.",
+    loading: "Loading data…",
+    streak: (s) => `Streak of ${s}`,
+    best: (s) => `Best streak: ${s}`,
     goFull: "Fullscreen",
     exitFull: "Exit fullscreen",
-    streak: (s) => `Streak of ${s}`,
     exact: "Bullseye",
-    close: "Correct, and close",
-    near: "Close but no deal",
-    off: "Way off",
-    choiceOk: "You got it",
-    choiceBad: "Not this time",
-    yourGuess: (g, u) => `Your guess: ${fmtV(g, u)}`,
-    truth: (v, u) => `True value: ${fmtV(v, u)}`,
-    gap: (d, u) => `You were off by ${d} ${u === "years" ? "years" : "points"}`,
+    close: "Correct and close",
+    near: "Close, but not enough",
+    off: "Far from the mark",
+    choiceOk: "Correct answer",
+    choiceBad: "Not the correct answer",
+    yourGuess: (g, u) => `Your guess: ${formatValue(g, u)}`,
+    truth: (v, u) => `True value: ${formatValue(v, u)}`,
+    gap: (d, u) => `Gap: ${d} ${u === "years" ? "years" : "points"}`,
+    yourMarker: "Your guess",
+    truthMarker: "True value",
     ranks: [
-      [17, "Iran knower"], [13, "Sharp stat-spotter"], [9, "Bazaar haggler"],
-      [5, "Curious guesser"], [0, "New in the bazaar"],
+      [17, "Iran calibrator"],
+      [13, "Sharp stat-spotter"],
+      [9, "Curious observer"],
+      [5, "Persistent guesser"],
+      [0, "New observer"],
     ],
-    best: (b) => `Your best streak: ${b}`,
   },
 };
 
 const $ = (id) => document.getElementById(id);
-const fmtV = (v, u) => STR[lang].fmtVal(v, u);
+const formatValue = (value, unit) => STR[lang].fmtVal(value, unit);
 
-function rankFor(s) {
-  for (const [min, name] of STR[lang].ranks) if (s >= min) return name;
+function rankFor(value) {
+  for (const [minimum, name] of STR[lang].ranks) {
+    if (value >= minimum) return name;
+  }
   return STR[lang].ranks[STR[lang].ranks.length - 1][1];
 }
 
+function shuffle(items) {
+  for (let i = items.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+  return items;
+}
+
+function sliderSpec(question) {
+  const stat = question.answer_stats && question.answer_stats.length === 1
+    ? question.answer_stats[0]
+    : null;
+  const unit = stat && SLIDER_UNITS[stat.unit];
+  if (!unit || typeof stat.value !== "number") return null;
+  return {
+    max: Math.max(unit.max, Math.ceil((stat.value * 1.25) / 10) * 10),
+    tol: unit.tol,
+    unit: stat.unit,
+    truth: stat.value,
+  };
+}
+
+function isSlider(question) {
+  return sliderSpec(question) !== null;
+}
+
 function syncFullLabel() {
-  const btn = $("btn-full");
-  if (!btn) return;
-  const t = STR[lang];
-  btn.textContent = document.fullscreenElement ? t.exitFull : t.goFull;
+  const button = $("btn-full");
+  if (button) {
+    button.textContent = document.fullscreenElement
+      ? STR[lang].exitFull
+      : STR[lang].goFull;
+  }
 }
 
 function setupFullscreen() {
-  const btn = $("btn-full");
-  if (!btn || !document.fullscreenEnabled) {
-    if (btn) btn.classList.add("hidden");
+  const button = $("btn-full");
+  if (!button || !document.fullscreenEnabled) {
+    if (button) button.classList.add("hidden");
     return;
   }
-  btn.addEventListener("click", async () => {
+  button.addEventListener("click", async () => {
     try {
       if (document.fullscreenElement) await document.exitFullscreen();
       else await document.documentElement.requestFullscreen();
-    } catch (e) { /* stay inline, game works the same */ }
+    } catch (_) {
+      // Fullscreen is optional; the game remains usable inline.
+    }
   });
   document.addEventListener("fullscreenchange", syncFullLabel);
 }
 
-function applyLang() {
-  const t = STR[lang];
+function show(screenId) {
+  ["screen-start", "screen-quiz", "screen-score"].forEach((id) => {
+    $(id).classList.toggle("hidden", id !== screenId);
+  });
+}
+
+function clearObject(object) {
+  Object.keys(object).forEach((key) => delete object[key]);
+}
+
+function updateStreakUI() {
+  const element = $("quiz-streak");
+  const visible = streak >= 2;
+  element.classList.toggle("hidden", !visible);
+  if (visible) element.textContent = STR[lang].streak(streak);
+}
+
+function setLoadStatus(message, error) {
+  const status = $("load-status");
+  status.textContent = message;
+  status.classList.toggle("error", Boolean(error));
+}
+
+function updateProgress() {
+  const answered = Object.keys(answers).length;
+  const total = QUIZ.length || QUIZ_SIZE;
+  const percent = Math.round((answered / total) * 100);
+  const thread = $("progress-fill").parentElement;
+  $("progress-fill").style.width = `${percent}%`;
+  thread.setAttribute("aria-label", STR[lang].progressAria);
+  thread.setAttribute("aria-valuenow", String(percent));
+  thread.setAttribute("aria-valuetext", STR[lang].progressValue(answered, total));
+  $("progress-label").textContent = STR[lang].progress(idx + 1, total);
+}
+
+function sourceFor(question) {
+  const stat = question.answer_stats && question.answer_stats[0];
+  const source = stat && DATA.sources && DATA.sources[stat.source_id];
+  const url = (source && /^https?:\/\//i.test(source.url || "") ? source.url : "")
+    || (source && /^https?:\/\//i.test(source.doc_url || "") ? source.doc_url : "");
+  return {
+    name: stat && (lang === "fa" ? (stat.source_name_fa || stat.source_name) : (stat.source_name || stat.source_name_fa)),
+    year: stat && stat.year,
+    url,
+  };
+}
+
+function applyLanguage() {
+  const strings = STR[lang];
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
-  $("app-title").textContent = t.title;
-  $("start-title").textContent = t.startTitle;
-  $("start-hook").textContent = t.startHook;
-  $("start-desc").textContent = t.startDesc;
-  $("start-rules").textContent = t.startRules;
-  $("btn-start").textContent = t.start;
-  $("btn-restart").textContent = t.restart;
-  syncFullLabel();
+  document.title = strings.title;
+  $("app-title").textContent = strings.title;
+  $("observatory-brand").textContent = strings.brand;
+  $("start-title").textContent = strings.startTitle;
+  $("start-hook").textContent = strings.startHook;
+  $("start-desc").textContent = strings.startDesc;
+  $("start-rules").textContent = strings.startRules;
+  $("btn-start").textContent = strings.start;
+  $("btn-retry").textContent = strings.retry;
+  $("btn-restart").textContent = strings.restart;
   $("btn-fa").classList.toggle("active", lang === "fa");
   $("btn-en").classList.toggle("active", lang === "en");
-  updateStreakUI(false);
-  if (!$("screen-quiz").classList.contains("hidden")) renderQuestion();
+  $("btn-fa").setAttribute("aria-pressed", String(lang === "fa"));
+  $("btn-en").setAttribute("aria-pressed", String(lang === "en"));
+  syncFullLabel();
+  updateStreakUI();
+  updateLoadUI();
+  if (!$("screen-quiz").classList.contains("hidden")) renderQuestion(true);
   if (!$("screen-score").classList.contains("hidden")) renderScore();
 }
 
-function show(id) {
-  for (const s of ["screen-start", "screen-quiz", "screen-score"]) $(s).classList.add("hidden");
-  $(id).classList.remove("hidden");
-}
-
-function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-function dealIn() {
-  // ONE orchestrated start moment: ticket deals in once per round
-  document.body.classList.remove("dealing");
-  void document.body.offsetWidth;
-  document.body.classList.add("dealing");
+function updateLoadUI() {
+  const strings = STR[lang];
+  const ready = loadState === "ready";
+  const failed = loadState === "error";
+  $("btn-start").disabled = !ready;
+  $("btn-retry").classList.toggle("hidden", !failed);
+  $("btn-retry").disabled = !failed;
+  if (loadState === "loading") setLoadStatus(strings.loading, false);
+  if (failed) setLoadStatus(strings.loadErr, true);
+  if (ready) setLoadStatus("", false);
 }
 
 function startQuiz() {
-  idx = 0; score = 0; streak = 0; bestStreak = 0; perDiff = {};
+  if (loadState !== "ready" || !DATA || !Array.isArray(DATA.questions)) return;
+  idx = 0;
+  score = 0;
+  streak = 0;
+  bestStreak = 0;
+  perDiff = {};
+  clearObject(answers);
+  clearObject(drafts);
   QUIZ = shuffle([...DATA.questions]).slice(0, QUIZ_SIZE);
   show("screen-quiz");
-  dealIn();
-  renderQuestion();
+  renderQuestion(false);
+  $("q-prompt").focus();
 }
 
-function optLabel(opt) {
-  return lang === "fa" ? (opt.label_fa || opt.label_en) : (opt.label_en || opt.label_fa);
+function optLabel(option) {
+  return lang === "fa"
+    ? (option.label_fa || option.label_en)
+    : (option.label_en || option.label_fa);
 }
 
-/* Slider mode: single-stat numeric questions (percents AND years) are
-   answered with a guess on a range. Returns {max, tol, unit} or null. */
-function sliderSpec(q) {
-  const st = q.answer_stats && q.answer_stats[0];
-  if (!q.answer_stats || q.answer_stats.length !== 1 || !st) return null;
-  const spec = SLIDER_UNITS[st.unit];
-  if (!spec || typeof st.value !== "number") return null;
-  // ceiling leaves headroom past 100 when the truth runs hot (e.g. 83.9% inflation)
-  const max = Math.max(spec.max, Math.ceil((st.value * 1.25) / 10) * 10);
-  return { max, tol: spec.tol, unit: st.unit, truth: st.value };
-}
-const isSlider = (q) => sliderSpec(q) !== null;
-
-function updateStreakUI(pop) {
-  const t = STR[lang];
-  const showIt = streak >= 2;
-  const el = $("quiz-streak");
-  if (!el) return;
-  el.classList.toggle("hidden", !showIt);
-  if (showIt) el.textContent = t.streak(streak);
-  el.classList.remove("pop");
-  if (pop && showIt) { void el.offsetWidth; el.classList.add("pop"); }
+function setEdgeClass(element, percent, container) {
+  element.classList.remove("is-start", "is-end");
+  if (!container || typeof element.getBoundingClientRect !== "function") return;
+  const box = container.getBoundingClientRect();
+  const label = element.getBoundingClientRect();
+  const center = box.left + (box.width * percent) / 100;
+  if (label.width && center - label.width / 2 < box.left) element.classList.add("is-start");
+  if (label.width && center + label.width / 2 > box.right) element.classList.add("is-end");
 }
 
-/* Live drag bubble: follows the thumb with the current value. */
 function updateBubble() {
-  const b = $("q-bubble-val");
-  if (!b || !QUIZ[idx]) return;
-  const spec = sliderSpec(QUIZ[idx]);
+  const question = QUIZ[idx];
+  const spec = question && sliderSpec(question);
   const range = $("q-range");
-  const g = Number(range.value);
-  const pct = Math.max(0, Math.min(100, (g / spec.max) * 100));
-  b.style.left = pct + "%";
-  b.textContent = fmtV(g, spec.unit);
-  range.setAttribute("aria-valuetext", fmtV(g, spec.unit));
+  const bubble = $("q-bubble-val");
+  const overlay = $("q-bubble");
+  if (!spec || !range || !bubble || !overlay) return;
+  const guess = Number(range.value);
+  const percent = Math.max(0, Math.min(100, (guess / spec.max) * 100));
+  bubble.style.left = `${percent}%`;
+  bubble.textContent = formatValue(guess, spec.unit);
+  bubble.setAttribute("aria-label", STR[lang].yourMarker + ": " + formatValue(guess, spec.unit));
+  range.setAttribute("aria-valuetext", formatValue(guess, spec.unit));
+  setEdgeClass(bubble, percent, overlay);
 }
 
-function renderQuestion() {
-  const t = STR[lang];
-  const q = QUIZ[idx];
-  $("progress-fill").style.width = `${(idx / QUIZ.length) * 100}%`;
-  $("progress-fill").parentElement.setAttribute("aria-valuenow", String(Math.round((idx / QUIZ.length) * 100)));
-  $("progress-label").textContent = t.progress(idx + 1, QUIZ.length);
-  $("q-category").textContent = lang === "fa" ? (CAT_FA[q.category] || q.category || "") : (q.category || "");
-  $("q-prompt").textContent = lang === "fa" ? q.prompt_fa : q.prompt_en;
-  $("q-range").setAttribute("aria-label", $("q-prompt").textContent);
-  const hintText = lang === "fa" ? (q.hint_fa || "") : (q.hint_en || "");
-  $("q-hint").textContent = hintText;
-  $("q-hint").classList.toggle("hidden", !hintText);
-  // source lives with the question now, not the reveal
-  const srcUp = q.answer_stats && q.answer_stats[0];
-  const srcUpName = (srcUp && (lang === "fa" ? srcUp.source_name_fa : srcUp.source_name)) || "";
-  $("q-source").textContent = srcUpName ? t.source(srcUpName) : "";
-  $("q-source").classList.toggle("hidden", !srcUpName);
+function renderSource(question) {
+  const source = sourceFor(question);
+  const element = $("q-source");
+  const period = source.year ? STR[lang].sourcePeriod(source.year) : "";
+  element.textContent = source.name
+    ? `${STR[lang].source(source.name)}${period ? ` · ${period}` : ""}`
+    : "";
+  element.title = period;
+  element.classList.toggle("hidden", !source.name);
+  element.removeAttribute("aria-label");
+  element.removeAttribute("target");
+  element.removeAttribute("rel");
+  element.removeAttribute("href");
+  if (source.url) {
+    element.href = source.url;
+    element.target = "_blank";
+    element.rel = "noopener";
+    element.setAttribute("aria-label", element.textContent);
+  }
+}
+
+function renderChoiceOptions(question, saved) {
   const box = $("q-options");
-  const slider = $("q-slider");
   box.innerHTML = "";
-  if (isSlider(q)) {
-    const spec = sliderSpec(q);
-    box.classList.add("hidden");
-    slider.classList.remove("hidden");
-    const range = $("q-range");
-    range.max = spec.max;
-    range.value = Math.round(spec.max / 2);
-    range.disabled = false;
-    $("btn-submit-guess").disabled = false;
-    $("btn-submit-guess").classList.remove("hidden");
-    $("q-marks").innerHTML = "";
-    $("q-bubble").classList.remove("hidden");
-    updateBubble();
-    $("btn-submit-guess").textContent = t.submit;
-  } else {
-    slider.classList.add("hidden");
-    box.classList.remove("hidden");
-    q.options.forEach((opt, i) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.textContent = optLabel(opt);
-      b.addEventListener("click", () => answerChoice(i));
-      box.appendChild(b);
-    });
-  }
-  $("q-feedback").classList.add("hidden");
+  box.classList.remove("hidden");
+  question.options.forEach((option, optionIndex) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = optLabel(option);
+    button.setAttribute("aria-pressed", saved ? String(saved.choice === optionIndex) : "false");
+    button.disabled = Boolean(saved);
+    button.addEventListener("click", () => answerChoice(optionIndex));
+    if (saved) {
+      const status = document.createElement("span");
+      status.className = "choice-status";
+      if (optionIndex === question.correct_index) {
+        status.textContent = lang === "fa" ? " — پاسخ درست" : " — correct answer";
+        button.classList.add("correct");
+      } else if (optionIndex === saved.choice) {
+        status.textContent = lang === "fa" ? " — انتخاب شما" : " — your answer";
+        button.classList.add("wrong");
+      } else {
+        status.textContent = "";
+        button.classList.add("dim");
+      }
+      button.appendChild(status);
+    }
+    box.appendChild(button);
+  });
 }
 
-function recordResult(ok) {
-  if (ok) {
-    score++;
-    streak++;
-    if (streak > bestStreak) bestStreak = streak;
-  } else {
-    streak = 0;
-  }
-  const d = QUIZ[idx].difficulty;
-  perDiff[d] = perDiff[d] || { total: 0, correct: 0 };
-  perDiff[d].total++;
-  if (ok) perDiff[d].correct++;
+function renderScale(question, saved) {
+  const spec = sliderSpec(question);
+  const slider = $("q-slider");
+  const box = $("q-options");
+  const range = $("q-range");
+  box.classList.add("hidden");
+  slider.classList.remove("hidden");
+  range.max = spec.max;
+  range.value = saved ? saved.guess : (Object.prototype.hasOwnProperty.call(drafts, idx) ? drafts[idx] : Math.round(spec.max / 2));
+  range.disabled = Boolean(saved);
+  $("btn-submit-guess").disabled = Boolean(saved);
+  $("btn-submit-guess").classList.toggle("hidden", Boolean(saved));
+  $("btn-submit-guess").textContent = STR[lang].submit;
+  $("q-bubble").classList.toggle("hidden", Boolean(saved));
+  $("scale-min").textContent = formatValue(0, spec.unit);
+  $("scale-max").textContent = formatValue(spec.max, spec.unit);
+  updateBubble();
+  if (saved) paintTrack(saved.guess, spec, saved.ok);
 }
 
-/* Reveal helpers: slider data points, confetti, shake.
-   All motion answers the user's action; skipped under reduced-motion. */
-function paintTrack(guess, spec, ok) {
-  // Data points right on the custom slider: your-guess pill above,
-  // true-value pill below, and a colored zone spanning the distance.
-  // Overlay is LTR so % maps to left%.
+function renderQuestion(languageOnly) {
+  const question = QUIZ[idx];
+  if (!question) return;
+  const saved = answers[idx];
+  updateProgress();
+  $("q-category").textContent = lang === "fa"
+    ? (CAT_FA[question.category] || question.category || "")
+    : (question.category || "");
+  $("q-prompt").textContent = lang === "fa" ? question.prompt_fa : question.prompt_en;
+  $("q-prompt").tabIndex = -1;
+  $("q-range").setAttribute("aria-label", $("q-prompt").textContent);
+  const hint = lang === "fa" ? (question.hint_fa || "") : (question.hint_en || "");
+  $("q-hint").textContent = hint;
+  $("q-hint").classList.toggle("hidden", !hint);
+  renderSource(question);
+  $("q-marks").innerHTML = "";
+
+  if (isSlider(question)) renderScale(question, saved);
+  else {
+    $("q-slider").classList.add("hidden");
+    renderChoiceOptions(question, saved);
+  }
+
+  $("q-feedback").classList.toggle("hidden", !saved);
+  if (saved) renderFeedback(saved);
+  if (!languageOnly) updateStreakUI();
+}
+
+function placeMark(element, value, spec, container) {
+  const percent = Math.max(0, Math.min(100, (value / spec.max) * 100));
+  element.style.left = `${percent}%`;
+  setEdgeClass(element, percent, container);
+}
+
+function paintTrack(guess, spec, correct) {
   const marks = $("q-marks");
+  const container = marks;
   marks.innerHTML = "";
-  const truth = Math.round(spec.truth * 10) / 10;
-  const pct = (v) => Math.max(0, Math.min(100, (v / spec.max) * 100));
-  const pctPill = (v) => Math.max(6, Math.min(94, pct(v))); // pills stay inside
+  const guessPercent = Math.max(0, Math.min(100, (guess / spec.max) * 100));
+  const truthPercent = Math.max(0, Math.min(100, (spec.truth / spec.max) * 100));
   const zone = document.createElement("span");
-  zone.className = "zone " + (ok ? "good" : "miss");
-  const lo = Math.min(pct(guess), pct(truth)), hi = Math.max(pct(guess), pct(truth));
-  zone.style.left = lo + "%";
-  zone.style.width = Math.max(hi - lo, 1.5) + "%";
+  zone.className = `zone ${correct ? "good" : "miss"}`;
+  zone.style.left = `${Math.min(guessPercent, truthPercent)}%`;
+  zone.style.width = `${Math.abs(guessPercent - truthPercent)}%`;
+  zone.setAttribute("aria-hidden", "true");
   marks.appendChild(zone);
-  // the answer's own circle, sitting on the track
-  const dot = document.createElement("span");
-  dot.className = "dot-truth " + (ok ? "good" : "miss");
-  dot.style.left = pct(truth) + "%";
-  marks.appendChild(dot);
-  const mk = (v, cls, label) => {
-    const s = document.createElement("span");
-    s.className = "mark " + cls + (cls === "mark-truth" ? (ok ? " good" : " miss") : "");
-    s.style.left = pctPill(v) + "%";
-    s.textContent = label;
-    marks.appendChild(s);
+
+  const truthDot = document.createElement("span");
+  truthDot.className = `dot-truth ${correct ? "good" : "miss"}`;
+  truthDot.style.left = `${truthPercent}%`;
+  truthDot.setAttribute("aria-hidden", "true");
+  marks.appendChild(truthDot);
+
+  const guessMark = document.createElement("span");
+  guessMark.className = "mark mark-guess";
+  guessMark.textContent = `${STR[lang].yourMarker}: ${formatValue(guess, spec.unit)}`;
+  guessMark.setAttribute("aria-hidden", "true");
+  marks.appendChild(guessMark);
+  placeMark(guessMark, guess, spec, container);
+
+  const truthMark = document.createElement("span");
+  truthMark.className = "mark mark-truth";
+  truthMark.textContent = `${STR[lang].truthMarker}: ${formatValue(roundDisplay(spec.truth, spec.unit), spec.unit)}`;
+  truthMark.setAttribute("aria-hidden", "true");
+  marks.appendChild(truthMark);
+  placeMark(truthMark, spec.truth, spec, container);
+}
+
+function roundDisplay(value) {
+  return Math.round(value * 10) / 10;
+}
+
+// Refit labels after viewport or font changes without resetting game state or focus.
+function refreshScaleLayout() {
+  if ($("screen-quiz").classList.contains("hidden")) return;
+  const question = QUIZ[idx];
+  const spec = question && sliderSpec(question);
+  if (!spec) return;
+  const saved = answers[idx];
+  if (saved) paintTrack(saved.guess, spec, saved.ok);
+  else updateBubble();
+}
+
+function verdictText(key) {
+  return STR[lang][key] || "";
+}
+
+function renderFeedback(saved) {
+  const question = QUIZ[idx];
+  const spec = sliderSpec(question);
+  $("fb-result").textContent = verdictText(saved.tierKey);
+  $("fb-result").className = `fb-result ${saved.tierClass}`;
+  $("fb-scale-summary").textContent = spec
+    ? `${STR[lang].yourGuess(saved.guess, spec.unit)}. ${STR[lang].truth(roundDisplay(spec.truth, spec.unit), spec.unit)}. ${STR[lang].gap(roundDisplay(Math.abs(saved.guess - spec.truth), spec.unit), spec.unit)}`
+    : "";
+  $("fb-fact").textContent = lang === "fa" ? (question.fun_fact_fa || "") : (question.fun_fact_en || "");
+  $("btn-next").textContent = idx === QUIZ.length - 1 ? STR[lang].finish : STR[lang].next;
+}
+
+function tierFor(diff, tolerance) {
+  if (diff <= 1) return ["exact", "tier-exact"];
+  if (diff <= tolerance) return ["close", "tier-close"];
+  if (diff <= 15) return ["near", "tier-near"];
+  return ["off", "tier-off"];
+}
+
+function recordAnswer(ok, difficulty) {
+  if (answers[idx]) return false;
+  if (ok) {
+    score += 1;
+    streak += 1;
+    bestStreak = Math.max(bestStreak, streak);
+  } else streak = 0;
+  perDiff[difficulty] = perDiff[difficulty] || { total: 0, correct: 0 };
+  perDiff[difficulty].total += 1;
+  if (ok) perDiff[difficulty].correct += 1;
+  return true;
+}
+
+function answerChoice(choice) {
+  const question = QUIZ[idx];
+  if (!question || answers[idx]) return;
+  const ok = choice === question.correct_index;
+  if (!recordAnswer(ok, question.difficulty)) return;
+  answers[idx] = {
+    choice,
+    ok,
+    tierKey: ok ? "choiceOk" : "choiceBad",
+    tierClass: ok ? "tier-choice-ok" : "tier-choice-bad",
   };
-  mk(guess, "mark-guess", fmtV(guess, spec.unit));
-  mk(truth, "mark-truth", fmtV(truth, spec.unit));
-}
-
-function confettiBurst() {
-  if (reduceMotion()) return;
-  const ticket = document.querySelector(".ticket");
-  if (!ticket) return;
-  const colors = ["#b3402a", "#3e7a4e", "#d9a62e", "#23201a"];
-  for (let i = 0; i < 22; i++) {
-    const s = document.createElement("i");
-    s.className = "confetti";
-    s.style.background = colors[i % colors.length];
-    s.style.left = (20 + Math.random() * 60) + "%";
-    s.style.setProperty("--dx", (Math.random() * 160 - 80).toFixed(0) + "px");
-    s.style.setProperty("--rot", (Math.random() * 540 - 270).toFixed(0) + "deg");
-    s.style.animationDelay = (Math.random() * 0.15).toFixed(2) + "s";
-    ticket.appendChild(s);
-    s.addEventListener("animationend", () => s.remove());
-  }
-}
-
-function shakeTicket() {
-  if (reduceMotion()) return;
-  const ticket = document.querySelector(".ticket");
-  if (!ticket) return;
-  ticket.classList.remove("shake");
-  void ticket.offsetWidth;
-  ticket.classList.add("shake");
-}
-
-function showFeedback(tier, tierClass, reveal) {
-  const t = STR[lang];
-  const q = QUIZ[idx];
-  const r = $("fb-result");
-  r.textContent = tier;
-  r.className = "fb-result " + tierClass;
-  // Reveal: tier + labeled markers painted onto the original slider.
-  // No repeated answer number, no gap line — the slider says it all.
-  if (reveal) paintTrack(reveal.guess, reveal.spec, reveal.ok);
-  const fact = lang === "fa" ? (q.fun_fact_fa || "") : (q.fun_fact_en || "");
-  $("fb-fact").textContent = fact;
-  const last = idx === QUIZ.length - 1;
-  $("btn-next").textContent = last ? t.finish : t.next;
-  $("q-feedback").classList.remove("hidden");
-  $("progress-fill").style.width = `${((idx + 1) / QUIZ.length) * 100}%`;
-  $("progress-fill").parentElement.setAttribute("aria-valuenow", String(Math.round(((idx + 1) / QUIZ.length) * 100)));
+  renderQuestion(false);
   $("btn-next").focus();
 }
 
-function answerChoice(i) {
-  const t = STR[lang];
-  const q = QUIZ[idx];
-  const ok = i === q.correct_index;
-  recordResult(ok);
-  updateStreakUI(ok);
-  const btns = $("q-options").querySelectorAll("button");
-  btns.forEach((b, j) => {
-    b.disabled = true;
-    if (j === q.correct_index) b.classList.add("correct");
-    else if (j === i) b.classList.add("wrong");
-    else b.classList.add("dim");
-  });
-  showFeedback(
-    ok ? t.choiceOk : t.choiceBad,
-    ok ? "tier-choice-ok" : "tier-choice-bad"
-  );
-}
-
 function submitGuess() {
-  const t = STR[lang];
-  const q = QUIZ[idx];
-  const spec = sliderSpec(q);
-  const truth = spec.truth;
+  const question = QUIZ[idx];
+  const spec = question && sliderSpec(question);
+  if (!spec || answers[idx]) return;
   const guess = Number($("q-range").value);
-  const diff = Math.abs(guess - truth);
+  drafts[idx] = guess;
+  const diff = Math.abs(guess - spec.truth);
   const ok = diff <= spec.tol;
-  recordResult(ok);
-  updateStreakUI(ok);
-  $("q-range").disabled = true;
-  $("btn-submit-guess").disabled = true;
-  $("btn-submit-guess").classList.add("hidden");
-  $("q-bubble").classList.add("hidden");
-  let tier, cls;
-  if (diff <= 1) { tier = t.exact; cls = "tier-exact"; }
-  else if (diff <= spec.tol) { tier = t.close; cls = "tier-close"; }
-  else if (diff <= 15) { tier = t.near; cls = "tier-near"; }
-  else { tier = t.off; cls = "tier-off"; }
-  if (cls === "tier-exact") confettiBurst();
-  if (cls === "tier-off") shakeTicket();
-  showFeedback(tier, cls, { guess, truth, spec, ok });
+  if (!recordAnswer(ok, question.difficulty)) return;
+  const [tierKey, tierClass] = tierFor(diff, spec.tol);
+  answers[idx] = { guess, ok, tierKey, tierClass };
+  delete drafts[idx];
+  renderQuestion(false);
+  $("btn-next").focus();
 }
 
 function next() {
-  if (idx + 1 >= QUIZ.length) { renderScore(); show("screen-score"); }
-  else { idx++; renderQuestion(); }
+  if (!answers[idx]) return;
+  if (idx + 1 >= QUIZ.length) {
+    renderScore();
+    show("screen-score");
+    $("score-rank").focus();
+    return;
+  }
+  idx += 1;
+  renderQuestion(false);
+  $("q-marks").innerHTML = "";
+  $("q-prompt").focus();
 }
 
 function renderScore() {
-  const t = STR[lang];
   $("score-rank").textContent = rankFor(score);
-  $("score-total").textContent = t.scoreTotal
-    ? t.scoreTotal(score, QUIZ.length)
-    : (lang === "fa"
-      ? `${toFa(score)} پاسخ درست از ${toFa(QUIZ.length)} سؤال`
-      : `${score} correct out of ${QUIZ.length}`);
-  $("score-title").textContent = t.scoreTitle;
-  const ul = $("score-breakdown");
-  ul.innerHTML = "";
-  Object.keys(perDiff).sort().forEach((d) => {
-    const li = document.createElement("li");
-    li.textContent = t.diffRow(d, perDiff[d].correct, perDiff[d].total);
-    ul.appendChild(li);
+  $("score-total").textContent = STR[lang].scoreTotal(score, QUIZ.length);
+  $("score-title").textContent = STR[lang].scoreTitle;
+  const list = $("score-breakdown");
+  list.innerHTML = "";
+  Object.keys(perDiff).sort().forEach((difficulty) => {
+    const row = document.createElement("li");
+    row.textContent = STR[lang].diffRow(
+      difficulty,
+      perDiff[difficulty].correct,
+      perDiff[difficulty].total,
+    );
+    list.appendChild(row);
   });
-  $("score-best").textContent = t.best(bestStreak);
+  $("score-best").textContent = STR[lang].best(bestStreak);
 }
 
-async function init() {
-  $("btn-fa").addEventListener("click", () => { lang = "fa"; applyLang(); });
-  $("btn-en").addEventListener("click", () => { lang = "en"; applyLang(); });
+async function loadData() {
+  loadState = "loading";
+  DATA = null;
+  updateLoadUI();
+  try {
+    const response = await fetch("app-data.json");
+    if (!response.ok) throw new Error(String(response.status));
+    const payload = await response.json();
+    if (!payload || !Array.isArray(payload.questions) || payload.questions.length === 0) {
+      throw new Error("invalid data");
+    }
+    DATA = payload;
+    loadState = "ready";
+  } catch (_) {
+    DATA = null;
+    loadState = "error";
+  }
+  updateLoadUI();
+}
+
+function init() {
+  $("btn-fa").addEventListener("click", () => {
+    lang = "fa";
+    applyLanguage();
+  });
+  $("btn-en").addEventListener("click", () => {
+    lang = "en";
+    applyLanguage();
+  });
   $("btn-start").addEventListener("click", startQuiz);
+  $("btn-retry").addEventListener("click", loadData);
   $("btn-next").addEventListener("click", next);
   $("btn-restart").addEventListener("click", startQuiz);
-  setupFullscreen();
-  $("q-range").addEventListener("input", updateBubble);
-  const thread = $("progress-fill").parentElement;
-  thread.setAttribute("role", "progressbar");
-  thread.setAttribute("aria-valuemin", "0");
-  thread.setAttribute("aria-valuemax", "100");
-  thread.setAttribute("aria-valuenow", "0");
-  thread.removeAttribute("aria-hidden");
+  $("q-range").addEventListener("input", () => {
+    drafts[idx] = Number($("q-range").value);
+    updateBubble();
+  });
   $("btn-submit-guess").addEventListener("click", submitGuess);
-  try {
-    const res = await fetch("app-data.json");
-    if (!res.ok) throw new Error(res.status);
-    DATA = await res.json();
-  } catch (e) {
-    $("start-desc").textContent = STR[lang].loadErr + ": " + e;
-    return;
-  }
-  applyLang();
+  window.addEventListener("resize", refreshScaleLayout);
+  if (document.fonts) document.fonts.ready.then(refreshScaleLayout);
+  setupFullscreen();
+  applyLanguage();
+  loadData();
 }
+
+if (typeof window !== "undefined") {
+  window.IranMeter = {
+    applyLanguage,
+    answerChoice,
+    getState: () => ({ lang, idx, score, answers, drafts, loadState }),
+    init,
+    loadData,
+    next,
+    renderQuestion,
+    submitGuess,
+  };
+}
+
 document.addEventListener("DOMContentLoaded", init);
