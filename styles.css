@@ -141,12 +141,8 @@ main {
 /* Reveal: the payoff, color answers the action */
 .feedback { margin-top: 1rem; border-top: 2px dashed var(--clay); padding-top: 0.9rem; }
 .feedback.hidden { display: none; }
-.reveal-card {
-  background: var(--paper);
-  border: 2px solid var(--ink);
-  border-radius: 12px;
-  padding: 0.9rem 1rem 1rem;
-}
+/* Reveal flows with the question — no separate box, the answer completes it */
+.reveal-card { margin-top: 0.6rem; }
 .fb-result { font-size: 1.2rem; font-weight: 900; margin: 0; }
 .fb-result.tier-exact { color: var(--pistachio); }
 .fb-result.tier-close { color: var(--pistachio); }
@@ -168,8 +164,32 @@ main {
 /* Data labels on the original slider: guess pill above, truth pill below.
    Overlay is forced LTR so % always maps to left%. */
 .range-wrap { position: relative; flex: 1; min-width: 0; display: flex; align-items: center; }
-.range-wrap input[type="range"] { width: 100%; min-width: 0; direction: ltr; min-height: 56px; }
-.marks { position: absolute; top: 0; bottom: 0; left: 10px; right: 10px; pointer-events: none; direction: ltr; }
+/* Custom slider: our own track + thumb (26px), so the data-point overlay
+   aligns exactly — overlay inset equals half a thumb (13px) each side. */
+.range-wrap input[type="range"] {
+  width: 100%; min-width: 0; direction: ltr; min-height: 56px;
+  -webkit-appearance: none; appearance: none; background: transparent; margin: 0;
+}
+.range-wrap input[type="range"]::-webkit-slider-runnable-track {
+  height: 12px; background: var(--clay);
+  border: 2px solid var(--ink); border-radius: 999px;
+}
+.range-wrap input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 26px; height: 26px; margin-top: -9px; border-radius: 50%;
+  background: var(--marigold); border: 2px solid var(--ink); cursor: pointer;
+}
+.range-wrap input[type="range"]::-moz-range-track {
+  height: 12px; background: var(--clay);
+  border: 2px solid var(--ink); border-radius: 999px;
+}
+.range-wrap input[type="range"]::-moz-range-thumb {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--marigold); border: 2px solid var(--ink); cursor: pointer;
+}
+.range-wrap input[type="range"]:disabled::-webkit-slider-thumb { background: var(--clay); cursor: default; }
+.range-wrap input[type="range"]:disabled::-moz-range-thumb { background: var(--clay); cursor: default; }
+.marks { position: absolute; top: 0; bottom: 0; left: 13px; right: 13px; pointer-events: none; direction: ltr; }
 .mark {
   position: absolute; top: -1.7rem; transform: translateX(-50%);
   font-size: 0.8rem; font-weight: 700; white-space: nowrap;
@@ -187,6 +207,7 @@ main {
 .source-chip:not(.hidden) {
   border: 1px dashed var(--muted); border-radius: 999px; padding: 0 0.7rem;
 }
+#q-source { margin-top: 0.35rem; }
 /* Celebration + commiseration (JS-gated on reduced motion) */
 .ticket { position: relative; overflow: hidden; }
 .confetti {
@@ -210,7 +231,6 @@ main {
 #q-feedback:not(.hidden) #fb-truth { animation: rise 0.45s ease 0.3s both; }
 #q-feedback:not(.hidden) .fb-gap { animation: rise 0.45s ease 0.95s both; }
 #q-feedback:not(.hidden) .fb-fact { animation: rise 0.45s ease 1.2s both; }
-#q-feedback:not(.hidden) #fb-source { animation: rise 0.45s ease 1.45s both; }
 #q-feedback:not(.hidden) #btn-next { animation: rise 0.45s ease 1.7s both; }
 @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
 #q-marks .mark { animation: markpop 0.35s ease both; }
