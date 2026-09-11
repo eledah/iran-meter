@@ -11,9 +11,11 @@
   --muted: #6f675a;
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; height: 100%; }
 body {
   margin: 0;
+  min-height: 100%; min-height: 100dvh;
+  display: flex; flex-direction: column;
   font-family: "Vazirmatn", system-ui, "Segoe UI", Tahoma, sans-serif;
   background: var(--paper);
   color: var(--ink);
@@ -39,13 +41,20 @@ button, input, output { font-family: inherit; }
 .topbar h1 { font-size: 1.25rem; margin: 0; font-weight: 900; }
 .topbar-side { display: flex; align-items: center; gap: 0.6rem; }
 .lang-toggle { display: flex; gap: 0.3rem; }
-.lang-toggle button {
+.lang-toggle button, #btn-full {
   border: 2px solid var(--ink); background: var(--ticket); color: var(--ink);
   padding: 0.2rem 0.8rem; cursor: pointer; border-radius: 999px; font-size: 0.9rem;
 }
+#btn-full.hidden { display: none; }
 .lang-toggle button.active { background: var(--ink); color: var(--paper); }
 
-main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+main {
+  flex: 1; width: 100%; max-width: 720px; margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+  display: flex; flex-direction: column;
+}
+/* Full-screen stage: each screen centers itself vertically without clipping */
+.screen { width: 100%; margin: auto 0; }
 .screen.hidden { display: none; }
 .muted { color: var(--muted); font-size: 0.9rem; }
 
@@ -92,7 +101,7 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 .gauge { display: inline-flex; gap: 4px; }
 .gauge i { width: 20px; height: 10px; border-radius: 999px; background: var(--clay); border: 1px solid var(--ink); }
 .gauge i.on { background: var(--ink); }
-#q-prompt { font-size: 1.3rem; font-weight: 700; line-height: 1.7; margin: 0.8rem 0 0; max-width: 34ch; }
+#q-prompt { font-size: 1.45rem; font-weight: 700; line-height: 1.7; margin: 0.8rem 0 0; max-width: 34ch; }
 /* Explainer subtitle for jargon terms (gross ratio, point-to-point, participation…) */
 .hint { margin: 0.35rem 0 0; font-size: 0.95rem; color: var(--muted); max-width: 60ch; }
 .hint.hidden { display: none; }
@@ -101,7 +110,7 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 .options.hidden { display: none; }
 .options { display: grid; gap: 0.6rem; margin-top: 1rem; }
 .options button {
-  text-align: start; padding: 0.65rem 0.9rem; font-size: 1.05rem; font-weight: 500;
+  text-align: start; padding: 0.85rem 1rem; font-size: 1.15rem; font-weight: 500;
   border: 2px solid var(--ink); border-radius: 10px; background: var(--paper);
   color: var(--ink); cursor: pointer;
 }
@@ -117,7 +126,7 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 .slider-row { display: flex; align-items: center; gap: 0.9rem; }
 .slider-row input[type="range"] { flex: 1; accent-color: var(--bazaar); min-height: 44px; }
 .slider-row output {
-  min-width: 5rem; text-align: center; font-size: 1.5rem; font-weight: 900;
+  min-width: 5.5rem; text-align: center; font-size: 1.8rem; font-weight: 900;
   border: 2px solid var(--ink); border-radius: 10px; background: var(--paper); padding: 0 0.4rem;
 }
 
@@ -151,7 +160,7 @@ main { max-width: 620px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 /* Data labels on the original slider: guess pill above, truth pill below.
    Overlay is forced LTR so % always maps to left%. */
 .range-wrap { position: relative; flex: 1; min-width: 0; display: flex; align-items: center; }
-.range-wrap input[type="range"] { width: 100%; min-width: 0; direction: ltr; }
+.range-wrap input[type="range"] { width: 100%; min-width: 0; direction: ltr; min-height: 56px; }
 .marks { position: absolute; top: 0; bottom: 0; left: 10px; right: 10px; pointer-events: none; direction: ltr; }
 .mark {
   position: absolute; top: -1.7rem; transform: translateX(-50%);
